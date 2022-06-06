@@ -1,74 +1,57 @@
 import React, { Component } from "react";
 import Header from "./components/Header";
-import Search from "./components/Footer";
+import Search from "./components/Search";
 import Footer from "./components/Footer";
+import Characters from "./components/Characters";
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      phonetics: [
+      charcters: [
         {
-          text: "/həˈloʊ/",
-          audio: "https://lex-audio.useremarkable.com/mp3/hello_us_1_rr.mp3",
-        },
-        {
-          text: "/hɛˈloʊ/",
-          audio: "https://lex-audio.useremarkable.com/mp3/hello_us_2_rr.mp3",
-        },
-      ],
-      meanings: [
-        {
-          partOfSpeech: "exclamation",
-          definitions: [
+          name: "Superman",
+          characteristics: [
             {
-              definition:
-                "Used as a greeting or to begin a phone conversation.",
-              example: "hello there, Katie!",
-            },
-          ],
+              "gender": "male", "species": "Human",
+              "gender": "male", "species": "Kryptonian",
+              "show": "Superman", "allShows": ["Superman", "Shazam!", "Superman II", "Superman III", "Superman IV", "Superman Returns"],
+              "genre": "superhero", "allGenres": ["superhero", "action", "adventure", "action-adventure", "sci-fi", "children's film", "drama"],
+              "platform": "movies", "allPlatforms": ["movies", "tv", "video games"],
+              "role": "main protagonist/title character", "genRole": "good",
+              "year": 1933, "decade": 1930,
+              "id": 1
+            }
+          ]
         },
         {
-          partOfSpeech: "noun",
-          definitions: [
+          name: "Batman",
+          characteristics: [
             {
-              definition: "An utterance of “hello”; a greeting.",
-              example: "she was getting polite nods and hellos from people",
-              synonyms: [
-                "greeting",
-                "welcome",
-                "salutation",
-                "saluting",
-                "hailing",
-                "address",
-                "hello",
-                "hallo",
-              ],
-            },
-          ],
-        },
-        {
-          partOfSpeech: "intransitive verb",
-          definitions: [
-            {
-              definition: "Say or shout “hello”; greet someone.",
-              example: "I pressed the phone button and helloed",
-            },
-          ],
-        },
+              "gender": "male", "species": "Human",
+              "show": "Batman", "allShows": ["Batman"],
+              "genre": "superhero", "allGenres": ["superhero"],
+              "platform": "movies", "allPlatforms": ["movies", "tv", "video games"],
+              "role": "main protagonist/title character", "genRole": "good",
+              "year": 1939, "decade": 1930,
+              "id": 2
+            }
+          ]
+        }
       ],
     };
   }
 
-  updateDefinitionsAndPhonetics = (data) => {
-    this.setState({ ...data });
+  updateGuesses = (data) => {
+    this.setState(...{ ...data });
   };
 
   render() {
     return (
       <>
         <Header />
-        <Search />
+        <Search updateUI={this.updateGuesses} />
+        <Characters characters={this.state.characters} />
         <Footer />
       </>
     );

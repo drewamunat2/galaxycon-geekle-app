@@ -5,7 +5,7 @@ function Header() {
         <p className="title has-text-centered">
           Geekle
         </p>
-        <p class="subtitle has-text-centered">
+        <p className="subtitle has-text-centered">
           GALAXYCON CHARACTER GUESSING GAME       
         </p>
       </div>

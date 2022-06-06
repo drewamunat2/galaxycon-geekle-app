@@ -1,0 +1,160 @@
+{
+  "characters": [
+    {
+      "name": "Superman",
+      "characteristics": [{
+        "gender": "male", "species": "Kryptonian",
+        "show": "Superman", "allShows": ["Superman", "Shazam!", "Superman II", "Superman III", "Superman IV", "Superman Returns"],
+        "genre": "superhero", "allGenres": ["superhero", "action", "adventure", "action-adventure", "sci-fi", "children's film", "drama"],
+        "platform": "movies", "allPlatforms": ["movies", "tv", "video games"],
+        "role": "main protagonist/title character", "genRole": "good",
+        "year": 1933, "decade": 1930,
+        "id": 1
+      }]
+    },
+    {
+      "name": "Batman",
+      "characteristics": [{
+        "gender": "male", "species": "Human",
+        "show": "Batman", "allShows": ["Batman"],
+        "genre": "superhero", "allGenres": ["superhero"],
+        "platform": "movies", "allPlatforms": ["movies", "tv", "video games"],
+        "role": "main protagonist/title character", "genRole": "good",
+        "year": 1939, "decade": 1930,
+        "id": 2
+      }]
+    },
+    {
+      "name": "Darth Vader",
+      "characteristics": [{
+        "gender": "male", "species": "Human",
+        "show": "Star Wars", "allShows": ["Star Wars"],
+        "genre": "sci-fi", "allGenres": ["sci-fi"],
+        "platform": "movies", "allPlatforms": ["movies", "tv", "video games"],
+        "role": "main antagonist", "genRole": "bad",
+        "year": 1983, "decade": 1980,
+        "id": 3
+      }]
+    },
+    {
+      "name": "Bubbles",
+      "characteristics": [{
+        "gender": "female", "species": "Human",
+        "show": "The Powerpuff Girls", "allShows": ["The Powerpuff Girls"],
+        "genre": "cartoon", "allGenres": ["cartoon"],
+        "platform": "tv", "allPlatforms": ["tv"],
+        "role": "deutertagonist", "genRole": "good",
+        "year": 1998, "decade": 1990,
+        "id": 4
+      }]
+    },
+    {
+      "name": "Harry Potter",
+      "characteristics": [{
+        "gender": "male", "species": "Human",
+        "show": "Harry Potter", "allShows": ["Harry Potter"],
+        "genre": "fantasy", "allGenres": ["fantasy"],
+        "platform": "movies", "allPlatforms": ["movies", "video games"],
+        "role": "main protagonist/title character", "genRole": "good",
+        "year": 2001, "decade": 2000,
+        "id": 5
+      }]
+    },
+    {
+      "name": "Captain Kirk",
+      "characteristics": [{
+        "gender": "male", "species": "Human",
+        "show": "Star Trek", "allShows": ["Star Trek"],
+        "genre": "sci-fi", "allGenres": ["sci-fi"],
+        "platform": "tv", "allPlatforms": ["movies", "tv", "video games"],
+        "role": "main protagonist", "genRole": "good",
+        "year": 1966, "decade": 1960,
+        "id": 6
+      }]
+    },
+    {
+      "name": "Zelda",
+      "characteristics": [{
+        "gender": "female", "species": "Human",
+        "show": "The Legend of Zelda", "allShows": ["The Legend of Zelda"],
+        "genre": "action-adventure", "allGenres": ["action-adventure"],
+        "platform": "video games", "allPlatforms": ["movies", "tv", "video games"],
+        "role": "main protagonist/title character", "genRole": "good",
+        "year": 1986, "decade": 1980,
+        "id": 7
+      }]
+    },
+    {
+      "name": "Skeletor",
+      "characteristics": [{
+        "gender": "male", "species": "Demon",
+        "show": "The Masters of the Universe", "allShows": ["The Masters of the Universe", "He-man"],
+        "genre": "fantasy", "allGenres": ["fantasy"],
+        "platform": "tv", "allPlatforms": ["movies", "tv", "video games"],
+        "role": "main antagonist", "genRole": "bad",
+        "year": 1981, "decade": 1980,
+        "id": 8
+      }]
+    },
+    {
+      "name": "Mario",
+      "characteristics": [{
+        "gender": "male", "species": "Human",
+        "show": "Super Mario", "allShows": ["Super Mario"],
+        "genre": "fantasy", "allGenres": ["fantasy"],
+        "platform": "video games", "allPlatforms": ["tv", "video games"],
+        "role": "main protagonist/title character", "genRole": "good",
+        "year": 1983, "decade": 1980,
+        "id": 9
+      }]
+    },
+    {
+      "name": "Rick O’Connell",
+      "characteristics": [{
+        "gender": "male", "species": "Human",
+        "show": "The Mummy", "allShows": ["The Mummy"],
+        "genre": "action adventure", "allGenres": ["action adventure"],
+        "platform": "movie", "allPlatforms": ["movies", "tv", "video games"],
+        "role": "main protagonist", "genRole": "good",
+        "year": 1999, "decade": 1990,
+        "id": 10
+      }]
+    },
+    {
+      "name": "Gill-man",
+      "characteristics": [{
+        "gender": "male", "species": "Humanoid",
+        "show": "The Black Lagoon", "allShows": ["The Black Lagoon"],
+        "genre": "horror", "allGenres": ["horror"],
+        "platform": "movie", "allPlatforms": ["movies", "video games"],
+        "role": "main antagonist", "genRole": "bad",
+        "year": 1954, "decade": 1950,
+        "id": 11
+      }]
+    },
+    {
+      "name": "Frank N. Furter",
+      "characteristics": [{
+        "gender": "male", "species": "Transylvanian",
+        "show": "The Rocky Horror Show", "allShows": ["The Rocky Horror Show"],
+        "genre": "horror", "allGenres": ["horror"],
+        "platform": "movie", "allPlatforms": ["movies", "video games"],
+        "role": "main antagonist", "genRole": "bad",
+        "year": 1973, "decade": 1970,
+        "id": 12
+      }]
+    },
+    {
+      "name": "Deku",
+      "characteristics": [{
+        "gender": "male", "species": "Humanoid",
+        "show": "My Hero Academia", "allShows": ["My Hero Academia"],
+        "genre": "anime", "allGenres": ["anime"],
+        "platform": "tv", "allPlatforms": ["movies", "tv", "video games"],
+        "role": "main protagonist", "genRole": "good",
+        "year": 2014, "decade": 2010,
+        "id": 13
+      }]
+    }
+  ]
+}
