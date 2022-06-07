@@ -18,6 +18,7 @@ class Search extends Component {
   }
 
   changeCharacter = (char) => {
+    console.log(char);
     this.setState({ currentGuess: char });
   };
 

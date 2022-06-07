@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Title from "./components/Title";
 import Search from "./components/Search";
 import Characters from "./components/Characters";
+import Categories from "./components/Categories"
 
 class App extends Component {
   constructor(props) {
@@ -41,6 +42,8 @@ class App extends Component {
   updateGuesses = (data) => {
     this.setState((old) => 
       ({...old, ...data }));
+      console.log(data);
+      console.log(this.state.characters);
   };
 
   render() {
@@ -48,6 +51,7 @@ class App extends Component {
       <>
         <Title />
         <Search updateUI={this.updateGuesses} />
+        <Categories />
         <Characters characters={this.state.characters} />
       </>
     );

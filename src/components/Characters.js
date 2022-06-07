@@ -12,29 +12,29 @@ function Characters(props) {
           {
             characters.map((character, index) => {
               return (
-                <Container className="is-max-widescreen" key={index}>
-                  <div className="tile is-ancestor">
+                <Container className="is-max-widescreen guess-border" key={index}>
+                  <div className="tile is-ancestor has-text-centered">
                     <div className="tile is-3">
-                        <p className="title">{character.name}</p>
+                        <p className="title has-text-info-dark">{character.name}</p>
                     </div>
-                    <div className="tile">
-                        <p className="sub-title">{character.characteristics.gender}</p>
-                    </div>
-                    <div className="tile">
-                        <p className="sub-title">{character.characteristics.show}</p>
-                    </div>
-                    <div className="tile">
-                        <p className="sub-title">{character.characteristics.genre}</p>
-                    </div>
-                    <div className="tile">
-                        <p className="sub-title">{character.characteristics.platform}</p>
-                    </div>
-                    <div className="tile">
-                        <p className="sub-title">{character.characteristics.role}</p>
-                    </div>
-                    <div className="tile">
-                        <p className="sub-title">{character.characteristics.year}</p>
-                    </div>
+                      <div className="tile character-characteristics">
+                          <p className="sub-title has-text-link">{character.characteristics.gender}</p>
+                      </div>
+                      <div className="tile character-characteristics">
+                          <p className="sub-title has-text-link">{character.characteristics.show}</p>
+                      </div>
+                      <div className="tile character-characteristics">
+                          <p className="sub-title has-text-link">{character.characteristics.genre}</p>
+                      </div>
+                      <div className="tile character-characteristics">
+                          <p className="sub-title has-text-link">{character.characteristics.platform}</p>
+                      </div>
+                      <div className="tile character-characteristics">
+                          <p className="sub-title has-text-link">{character.characteristics.role}</p>
+                      </div>
+                      <div className="tile character-characteristics">
+                          <p className="sub-title has-text-link">{character.characteristics.year}</p>
+                      </div>
                   </div>
                 </Container>
               )
