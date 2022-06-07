@@ -14,6 +14,7 @@ class Search extends Component {
     super(props);
     this.state = {
       currentGuess: {},
+      allCharactersNames: [],
     };
   }
 
@@ -21,6 +22,10 @@ class Search extends Component {
     console.log(char);
     this.setState({ currentGuess: char });
   };
+
+  addAllNames = (names) => {
+    this.setState({ allCharactersNames: names });
+  }
 
   /*fetchDefinitions = async (event) => {
     event.preventDefault();
@@ -49,6 +54,34 @@ class Search extends Component {
     }
   };
 
+  fetchAllCharacterNames = async () => {
+    const charactersAPI = 'http://localhost:3001/characters';
+    let nameArray = [];
+    let nameObject = {
+      id: '',
+      value: ''
+    };
+    try {
+      const response = await axios.get(`${charactersAPI}`);
+      const data = response.data;
+      data.forEach(n => {
+        nameObject = {
+          id: n.name,
+          value: n.name
+        };
+        nameArray.push(nameObject);
+      });
+      this.addAllNames(nameArray);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  getItems() {
+    this.fetchAllCharacterNames();
+    return this.state.allCharactersNames;
+  }
+
   render() {
     return (
       <Container className="is-max-widescreen">
@@ -56,21 +89,7 @@ class Search extends Component {
           <div className="control is-expanded">
             <DatalistInput
               onSelect={(item) => this.fetchCharacter(item.value)}
-              items={[
-                { id: 'Superman', value: 'Superman' },
-                { id: 'Batman', value: 'Batman' },
-                { id: 'Darth Vader', value: 'Darth Vader' },
-                { id: 'Bubbles', value: 'Bubbles' },
-                { id: 'Harry Potter', value: 'Harry Potter' },
-                { id: 'Captain Kirk', value: 'Captain Kirk' },
-                { id: 'Zelda', value: 'Zelda' },
-                { id: 'Skeletor', value: 'Skeletor' },
-                { id: 'Mario', value: 'Mario' },
-                { id: "Rick O'Connell", value: "Rick O'Connell" },
-                { id: 'Gill-man', value: 'Gill-man' },
-                { id: 'Frank N. Furter', value: 'Frank N. Furter' },
-                { id: 'Deku', value: 'Deku' },
-              ]}
+              items={this.getItems()}
             />
           </div>
         </div>
