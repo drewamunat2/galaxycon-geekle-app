@@ -5,7 +5,7 @@ function Footer() {
         Copyright © 2022, <a 
           href="https://galaxycon.com/"
           target="_blank" 
-          rel="noreferrer">Free
+          rel="noreferrer">
             GalaxyCon
         </a>.
       </div>

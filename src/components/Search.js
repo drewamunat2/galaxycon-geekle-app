@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Container, } from "@mui/system";
 import PropTypes from "prop-types";
 import axios from "axios";
 
@@ -49,7 +50,7 @@ class Search extends Component {
 
   render() {
     return (
-      <section className="section">
+      <Container className="is-max-widescreen">
         <div className="field has-addons">
           <div className="control is-expanded">
             <DatalistInput
@@ -72,7 +73,7 @@ class Search extends Component {
             />
           </div>
         </div>
-      </section>
+      </Container>
     );
   }
 }

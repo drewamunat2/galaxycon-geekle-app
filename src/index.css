@@ -1,0 +1,24 @@
+body {
+  background-color: #ffeeff;
+}
+
+.title {
+  padding: 10px;
+  font-size: 700;
+}
+
+.has-background-lighter-pink {
+  background-color: #f5d5f2;
+}
+
+.to-bottom {
+  flex: 1;
+}
+
+#react-datalist-input {
+  background-color: #fba3c8;
+}
+
+.characters-container {
+  margin: 5% 0px;
+}
