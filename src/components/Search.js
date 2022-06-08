@@ -2,13 +2,8 @@ import React, { Component } from "react";
 import { Container, } from "@mui/system";
 import PropTypes from "prop-types";
 import axios from "axios";
-//import AsyncSelect from 'react-select/async';
-//import Async, { useAsync } from 'react-select/async';
 import Select from 'react-select'
-
-//import DatalistInput from 'react-datalist-input';
-//import 'react-datalist-input/dist/styles.css';
-//import { ChargingStationSharp } from "@mui/icons-material";
+import { getTabUtilityClass } from "@mui/material";
 
 class Search extends Component {
   constructor(props) {
@@ -19,28 +14,90 @@ class Search extends Component {
     };
   }
 
-  /*changeCharacter = (char) => {
-    console.log(char);
-    this.setState({ currentGuess: char });
-  };*/
+  isYellow = (guessedTrait, closeArray) => {
+    for (let l of closeArray) {
+      if (l === guessedTrait) {
+        return true;
+      }
+    }
+    return false;
+  };
+
+  assertColors = (guess) => {
+    let colorObj = {
+      "name": "wrong",
+      "gender": "wrong",
+      "show": "wrong",
+      "genre": "wrong",
+      "platform": "wrong",
+      "role": "wrong",
+      "year": "wrong",
+    };
+
+    if (guess.name === this.props.solution.name) {
+      colorObj.name = 'name-correct';
+    }
+
+    //set gender color
+
+    //same gender : set green
+    if(guess.characteristics.gender === this.props.solution.characteristics.gender) {
+      colorObj.gender = 'correct';
+    } else if(guess.characteristics.species === this.props.solution.characteristics.species) {
+      colorObj.gender = 'almost-correct';
+    }
+
+    //set show color
+
+    //same show : set green
+    if(guess.characteristics.show === this.props.solution.characteristics.show) {
+      colorObj.show = 'correct';
+    } else if (this.isYellow(guess.characteristics.show, this.props.solution.characteristics.allShows)) {
+      colorObj.show = 'almost-correct';
+    }
+
+    //set genre color
+
+    //same genre : set green
+    if(guess.characteristics.genre === this.props.solution.characteristics.genre) {
+      colorObj.genre = 'correct';
+    } else if (this.isYellow(guess.characteristics.genre, this.props.solution.characteristics.allGenres)) {
+      colorObj.genre = 'almost-correct';
+    }
+
+    //set platform color
+
+    //same platform : set green
+    if(guess.characteristics.platform === this.props.solution.characteristics.platform) {
+      colorObj.platform = 'correct';
+    } else if(this.isYellow(guess.characteristics.platform, this.props.solution.characteristics.allPlatforms)) {
+      colorObj.platform = 'almost-correct';
+    }
+
+    //set role color
+
+    //same role : set green
+    if(guess.characteristics.role === this.props.solution.characteristics.role) {
+      colorObj.role = 'correct';
+    } else if(guess.characteristics.genRole === this.props.solution.characteristics.genRole) {
+      colorObj.role = 'almost-correct';
+    }
+
+    //set year color
+
+    //same year : set green
+    if(guess.characteristics.year === this.props.solution.characteristics.year) {
+      colorObj.year = 'correct';
+    } else if(guess.characteristics.decade === this.props.solution.characteristics.decade) {
+      colorObj.year = 'almost-correct';
+    }
+
+    this.props.updateColors(colorObj);
+  };
 
   addAllNames = (names) => {
     this.setState({ allCharactersNames: names });
-  }
-
-  /*fetchDefinitions = async (event) => {
-    event.preventDefault();
-    const dictionaryAPI = "https://api.dictionaryapi.dev/api/v2/entries/en_US/";
-    const wordToDefine = this.state.word;
-    try {
-      const response = await axios.get(`${dictionaryAPI}${wordToDefine}`);
-      const data = response.data;
-      console.log(data[0]);
-      this.props.updateUI(data[0]);
-    } catch (err) {
-      console.log(err);
-    }
-  };*/
+  };
 
   fetchCharacter = async (guess) => {
     const characterAPI = 'http://localhost:3001/characters?name=';
@@ -48,25 +105,12 @@ class Search extends Component {
     try {
       const response = await axios.get(`${characterAPI}${char}`);
       const data = response.data;
-      this.props.updateUI(data[0]);
+      this.props.updateCharacters(data[0]);
+      this.assertColors(data[0]);
     } catch (err) {
       console.log(err);
     }
   };
-
-  /*fetchCharacterFromState = async (event) => {
-    event.preventDefault();
-    const characterAPI = 'http://localhost:3001/characters?name=';
-    const char = this.state.currentGuess;
-    try {
-      const response = await axios.get(`${characterAPI}${char}`);
-      const data = response.data;
-      console.log(data[0]);
-      this.props.updateUI(data[0]);
-    } catch (err) {
-      console.log(err);
-    }
-  };*/
 
   componentDidMount = async () => {
     const charactersAPI = 'http://localhost:3001/characters';
@@ -91,22 +135,10 @@ class Search extends Component {
     }
   }
 
-  /*getItems() {
-    this.fetchAllCharacterNames();
-    return this.state.allCharactersNames;
-  }*/
-
   handleChange = (selectedOption) => {
-    //this.setState({ currentGuess: selectedOption.label });
     this.fetchCharacter(selectedOption.label);
     console.log(`Option selected:`, selectedOption);
-    //console.log(this.state.currentGuess);
   }
-
-  /*changeGuess = (event) => {
-    this.setState({ currentGuess: event.target.value });
-  };*/
-
 
   render() {
     return (
@@ -134,5 +166,6 @@ class Search extends Component {
 export default Search;
 
 Search.propTypes = {
-  updateUI: PropTypes.func.isRequired
+  updateCharacters: PropTypes.func.isRequired,
+  updateColors: PropTypes.func.isRequired
 };

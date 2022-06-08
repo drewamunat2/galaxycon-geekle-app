@@ -29,10 +29,6 @@ body {
   background-color: #f237d90f;
 }
 
-.character-characteristics {
-  background-color: #f237d90a;
-}
-
 .to-bottom {
   flex: 1;
 }
@@ -59,12 +55,20 @@ body {
   padding-bottom: 10px;
 }
 
+.name-correct {
+  background-color: rgb(72, 176, 72);
+}
+
 .correct {
-  background-color: green;
+  background-color: rgb(7, 176, 7);
 }
 
 .almost-correct {
   background-color: yellow;
+}
+
+.wrong {
+  background-color: #f237d90a;
 }
 
 .guess-border {

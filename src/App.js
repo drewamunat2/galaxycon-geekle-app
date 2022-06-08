@@ -11,13 +11,13 @@ class App extends Component {
     this.state = {
       characters: [],
       solution: {},
+      colors: []
     };
   }
 
   //set a random character as the solution
   componentDidMount = async () => {
     const response = await axios.get(`http://localhost:3001/characters`);
-    console.log(response)
     const randomCharacter = response.data[Math.floor(Math.random() * response.data.length)];
     console.log(randomCharacter);
     this.setState(() => ({ 
@@ -32,23 +32,33 @@ class App extends Component {
       console.log(this.state.characters);
   };*/
 
-  updateGuesses = (data) => {
+  updateCharacters = (data) => {
     this.setState( prevState => ({ 
       characters: [...prevState.characters, data]
     }));
+    console.log(data);
   };
 
+  updateColors = (data) => {
+    this.setState( prevState => ({ 
+      colors: [...prevState.colors, data]
+    }));
+    console.log(data);
+  };
+  
   render() {
     return (
       <>
         <Title />
         <Search 
-          updateUI={this.updateGuesses} 
+          updateCharacters={this.updateCharacters}
+          updateColors={this.updateColors}
+          solution={this.state.solution} 
         />
         <Categories />
         <Characters 
           characters={this.state.characters}
-          solution={this.state.solution} 
+          colors={this.state.colors}
         />
       </>
     );
