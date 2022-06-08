@@ -7,7 +7,7 @@ import Async, { useAsync } from 'react-select/async';
 import Select from 'react-select'
 
 import DatalistInput from 'react-datalist-input';
-//import 'react-datalist-input/dist/styles.css';
+import 'react-datalist-input/dist/styles.css';
 import { ChargingStationSharp } from "@mui/icons-material";
 
 class Search extends Component {
@@ -56,13 +56,12 @@ class Search extends Component {
     }
   };*/
 
-  fetchCharacter = async (char) => {
+  fetchCharacter = async (guess) => {
     const characterAPI = 'http://localhost:3001/characters?name=';
+    const char = guess;
     try {
       const response = await axios.get(`${characterAPI}${char}`);
       const data = response.data;
-      console.log(data[0]);
-      this.changeCharacter(data[0]);
       this.props.updateUI(data[0]);
     } catch (err) {
       console.log(err);
@@ -112,7 +111,8 @@ class Search extends Component {
   }
 
   handleChange = (selectedOption) => {
-    this.setState({ currentGuess: selectedOption.label });
+    //this.setState({ currentGuess: selectedOption.label });
+    this.fetchCharacter(selectedOption.label);
     console.log(`Option selected:`, selectedOption);
     console.log(this.state.currentGuess);
   }
@@ -127,23 +127,18 @@ class Search extends Component {
       <Container className="is-max-widescreen">
         <div className="field has-addons">
           <div className="control is-expanded">
-            <input
-                className="input is-large is-fullwidth"
-                id="define-input"
-                type="text"
-                value={this.state.currentGuess}
-                onChange={this.changeGuess}
-              />
-            </div>
-            <div className="control">
-              <button
-                className="button is-info is-large"
-                id="define-btn"
-                onClick={this.fetchCharacterFromState}
-              >
-                Go!
-              </button>
-            </div>
+            <Select 
+              placeholder={null}
+              options={this.state.allCharactersNames}
+              onChange={this.handleChange}
+              autoFocus={true}
+              closeMenuOnSelect={true}
+              controlShouldRenderValue={false}
+              openMenuOnClick={true}
+              openMenuOnFocus={false}
+              captureMenuScroll={true}
+            />
+          </div>
         </div>
       </Container>
     );

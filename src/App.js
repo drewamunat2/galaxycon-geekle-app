@@ -50,8 +50,6 @@ class App extends Component {
     this.setState( prevState => ({ 
       characters: [...prevState.characters, data]
     }));
-    console.log(data);
-    console.log(this.state.characters);
   };
 
   render() {
