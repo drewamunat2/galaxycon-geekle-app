@@ -2,19 +2,34 @@ import React, { Component } from "react";
 import { Container, } from "@mui/system";
 import PropTypes from "prop-types";
 import axios from "axios";
+import AsyncSelect from 'react-select/async';
+import Async, { useAsync } from 'react-select/async';
+import Select from 'react-select'
 
 import DatalistInput from 'react-datalist-input';
 import 'react-datalist-input/dist/styles.css';
 import { ChargingStationSharp } from "@mui/icons-material";
 
-
-
 class Search extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      currentGuess: {},
-      allCharactersNames: [],
+      currentGuess: '',
+      allCharactersNames: [
+        { label: 'Superman', value: 'Superman' },
+        { label: 'Batman', value: 'Batman' },
+        { label: 'Darth Vader', value: 'Darth Vader' },
+        { label: 'Bubbles', value: 'Bubbles' },
+        { label: 'Harry Potter', value: 'Harry Potter' },
+        { label: 'Captain Kirk', value: 'Captain Kirk' },
+        { label: 'Zelda', value: 'Zelda' },
+        { label: 'Skeletor', value: 'Skeletor' },
+        { label: 'Mario', value: 'Mario' },
+        { label: "Rick O'Connell", value: "Rick O'Connell" },
+        { label: 'Gill-man', value: 'Gill-man' },
+        { label: 'Frank N. Furter', value: 'Frank N. Furter' },
+        { label: 'Deku', value: 'Deku' },
+      ]
     };
   }
 
@@ -82,14 +97,22 @@ class Search extends Component {
     return this.state.allCharactersNames;
   }
 
+  handleChange = (selectedOption) => {
+    this.setState({ currentGuess: selectedOption.label });
+    console.log(`Option selected:`, selectedOption);
+    console.log(this.state.currentGuess);
+  }
+
   render() {
     return (
       <Container className="is-max-widescreen">
         <div className="field has-addons">
           <div className="control is-expanded">
-            <DatalistInput
-              onSelect={(item) => this.fetchCharacter(item.value)}
-              items={this.getItems()}
+            <Select 
+              options={this.state.allCharactersNames}
+              onChange={this.handleChange}
+              autoFocus={true}
+              ///onSelect={(item) => this.fetchCharacter(item.value)}
             />
           </div>
         </div>
