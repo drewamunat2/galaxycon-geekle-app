@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import React, { Component } from "react";
 import Title from "./components/Title";
 import Search from "./components/Search";
 import Characters from "./components/Characters";
