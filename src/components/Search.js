@@ -69,6 +69,20 @@ class Search extends Component {
     }
   };
 
+  fetchCharacterFromState = async (event) => {
+    event.preventDefault();
+    const characterAPI = 'http://localhost:3001/characters?name=';
+    const char = this.state.currentGuess;
+    try {
+      const response = await axios.get(`${characterAPI}${char}`);
+      const data = response.data;
+      console.log(data[0]);
+      this.props.updateUI(data[0]);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
   fetchAllCharacterNames = async () => {
     const charactersAPI = 'http://localhost:3001/characters';
     let nameArray = [];
@@ -103,18 +117,33 @@ class Search extends Component {
     console.log(this.state.currentGuess);
   }
 
+  changeGuess = (event) => {
+    this.setState({ currentGuess: event.target.value });
+  };
+
+
   render() {
     return (
       <Container className="is-max-widescreen">
         <div className="field has-addons">
           <div className="control is-expanded">
-            <Select 
-              options={this.state.allCharactersNames}
-              onChange={this.handleChange}
-              autoFocus={true}
-              ///onSelect={(item) => this.fetchCharacter(item.value)}
-            />
-          </div>
+            <input
+                className="input is-large is-fullwidth"
+                id="define-input"
+                type="text"
+                value={this.state.currentGuess}
+                onChange={this.changeGuess}
+              />
+            </div>
+            <div className="control">
+              <button
+                className="button is-info is-large"
+                id="define-btn"
+                onClick={this.fetchCharacterFromState}
+              >
+                Go!
+              </button>
+            </div>
         </div>
       </Container>
     );

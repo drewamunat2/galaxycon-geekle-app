@@ -39,11 +39,17 @@ class App extends Component {
     };
   }
 
-  updateGuesses = (data) => {
+  /*updateGuesses = (data) => {
     this.setState((old) => 
       ({...old, ...data }));
       console.log(data);
       console.log(this.state.characters);
+  };*/
+
+  updateGuesses = (data) => {
+    this.setState({ ...data });
+    console.log(data);
+    console.log(this.state.characters);
   };
 
   render() {
