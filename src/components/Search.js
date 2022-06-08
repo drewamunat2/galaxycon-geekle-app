@@ -7,7 +7,7 @@ import Async, { useAsync } from 'react-select/async';
 import Select from 'react-select'
 
 import DatalistInput from 'react-datalist-input';
-import 'react-datalist-input/dist/styles.css';
+//import 'react-datalist-input/dist/styles.css';
 import { ChargingStationSharp } from "@mui/icons-material";
 
 class Search extends Component {

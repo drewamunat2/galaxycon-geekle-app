@@ -47,7 +47,9 @@ class App extends Component {
   };*/
 
   updateGuesses = (data) => {
-    this.setState({ ...data });
+    this.setState( prevState => ({ 
+      characters: [...prevState.characters, data]
+    }));
     console.log(data);
     console.log(this.state.characters);
   };
