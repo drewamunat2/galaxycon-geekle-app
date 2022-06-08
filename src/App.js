@@ -20,7 +20,7 @@ class App extends Component {
     console.log(response)
     const randomCharacter = response.data[Math.floor(Math.random() * response.data.length)];
     console.log(randomCharacter);
-    this.setState((randomCharacter) => ({ 
+    this.setState(() => ({ 
       solution: randomCharacter
     }));
   }

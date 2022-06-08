@@ -100,7 +100,7 @@ class Search extends Component {
     //this.setState({ currentGuess: selectedOption.label });
     this.fetchCharacter(selectedOption.label);
     console.log(`Option selected:`, selectedOption);
-    console.log(this.state.currentGuess);
+    //console.log(this.state.currentGuess);
   }
 
   /*changeGuess = (event) => {
