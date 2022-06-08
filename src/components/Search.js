@@ -2,13 +2,13 @@ import React, { Component } from "react";
 import { Container, } from "@mui/system";
 import PropTypes from "prop-types";
 import axios from "axios";
-import AsyncSelect from 'react-select/async';
-import Async, { useAsync } from 'react-select/async';
+//import AsyncSelect from 'react-select/async';
+//import Async, { useAsync } from 'react-select/async';
 import Select from 'react-select'
 
-import DatalistInput from 'react-datalist-input';
-import 'react-datalist-input/dist/styles.css';
-import { ChargingStationSharp } from "@mui/icons-material";
+//import DatalistInput from 'react-datalist-input';
+//import 'react-datalist-input/dist/styles.css';
+//import { ChargingStationSharp } from "@mui/icons-material";
 
 class Search extends Component {
   constructor(props) {

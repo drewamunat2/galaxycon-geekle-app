@@ -1,5 +1,5 @@
 import { Container, } from "@mui/system";
-import { Card } from "@mui/material";
+//import { Card } from "@mui/material";
 import PropTypes from "prop-types";
 
 function Characters(props) {
