@@ -42,7 +42,12 @@ body {
 }
 
 .react-datalist-input__container {
-  width: 50%;
+  width:50%;
+}
+
+.css-1oqqzyl-MuiContainer-root {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .characters-container {
@@ -64,4 +69,6 @@ body {
 
 .guess-border {
   border-top: 2px black;
+  padding-left: 0;
+  padding-right: 0;
 }

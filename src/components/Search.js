@@ -15,28 +15,14 @@ class Search extends Component {
     super(props);
     this.state = {
       currentGuess: '',
-      allCharactersNames: [
-        { label: 'Superman', value: 'Superman' },
-        { label: 'Batman', value: 'Batman' },
-        { label: 'Darth Vader', value: 'Darth Vader' },
-        { label: 'Bubbles', value: 'Bubbles' },
-        { label: 'Harry Potter', value: 'Harry Potter' },
-        { label: 'Captain Kirk', value: 'Captain Kirk' },
-        { label: 'Zelda', value: 'Zelda' },
-        { label: 'Skeletor', value: 'Skeletor' },
-        { label: 'Mario', value: 'Mario' },
-        { label: "Rick O'Connell", value: "Rick O'Connell" },
-        { label: 'Gill-man', value: 'Gill-man' },
-        { label: 'Frank N. Furter', value: 'Frank N. Furter' },
-        { label: 'Deku', value: 'Deku' },
-      ]
+      allCharactersNames: []
     };
   }
 
-  changeCharacter = (char) => {
+  /*changeCharacter = (char) => {
     console.log(char);
     this.setState({ currentGuess: char });
-  };
+  };*/
 
   addAllNames = (names) => {
     this.setState({ allCharactersNames: names });
@@ -68,7 +54,7 @@ class Search extends Component {
     }
   };
 
-  fetchCharacterFromState = async (event) => {
+  /*fetchCharacterFromState = async (event) => {
     event.preventDefault();
     const characterAPI = 'http://localhost:3001/characters?name=';
     const char = this.state.currentGuess;
@@ -80,9 +66,9 @@ class Search extends Component {
     } catch (err) {
       console.log(err);
     }
-  };
+  };*/
 
-  fetchAllCharacterNames = async () => {
+  componentDidMount = async () => {
     const charactersAPI = 'http://localhost:3001/characters';
     let nameArray = [];
     let nameObject = {
@@ -94,7 +80,7 @@ class Search extends Component {
       const data = response.data;
       data.forEach(n => {
         nameObject = {
-          id: n.name,
+          label: n.name,
           value: n.name
         };
         nameArray.push(nameObject);
@@ -103,12 +89,12 @@ class Search extends Component {
     } catch (err) {
       console.log(err);
     }
-  };
+  }
 
-  getItems() {
+  /*getItems() {
     this.fetchAllCharacterNames();
     return this.state.allCharactersNames;
-  }
+  }*/
 
   handleChange = (selectedOption) => {
     //this.setState({ currentGuess: selectedOption.label });
@@ -117,9 +103,9 @@ class Search extends Component {
     console.log(this.state.currentGuess);
   }
 
-  changeGuess = (event) => {
+  /*changeGuess = (event) => {
     this.setState({ currentGuess: event.target.value });
-  };
+  };*/
 
 
   render() {

@@ -3,7 +3,9 @@ import { Card } from "@mui/material";
 import PropTypes from "prop-types";
 
 function Characters(props) {
-  const { characters } = props;
+  const { characters, solution } = props;
+
+  console.log(solution);
 
   return (
     <div className='to-bottom characters-container'>

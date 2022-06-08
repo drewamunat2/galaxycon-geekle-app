@@ -1,42 +1,28 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 import Title from "./components/Title";
 import Search from "./components/Search";
 import Characters from "./components/Characters";
 import Categories from "./components/Categories"
+import axios from "axios";
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      characters: [
-        {
-          name: "Superman",
-          characteristics: 
-          {
-            "gender": "male", "species": "Kryptonian",
-            "show": "Superman", "allShows": ["Superman", "Shazam!", "Superman II", "Superman III", "Superman IV", "Superman Returns"],
-            "genre": "superhero", "allGenres": ["superhero", "action", "adventure", "action-adventure", "sci-fi", "children's film", "drama"],
-            "platform": "movies", "allPlatforms": ["movies", "tv", "video games"],
-            "role": "main protagonist/title character", "genRole": "good",
-            "year": 1933, "decade": 1930,
-            "id": 1
-          }
-        },
-        {
-          name: "Batman",
-          characteristics: 
-          {
-            "gender": "male", "species": "Human",
-            "show": "Batman", "allShows": ["Batman"],
-            "genre": "superhero", "allGenres": ["superhero"],
-            "platform": "movies", "allPlatforms": ["movies", "tv", "video games"],
-            "role": "main protagonist/title character", "genRole": "good",
-            "year": 1939, "decade": 1930,
-            "id": 2
-          }
-        }
-      ],
+      characters: [],
+      solution: {},
     };
+  }
+
+  //set a random character as the solution
+  componentDidMount = async () => {
+    const response = await axios.get(`http://localhost:3001/characters`);
+    console.log(response)
+    const randomCharacter = response.data[Math.floor(Math.random() * response.data.length)];
+    console.log(randomCharacter);
+    this.setState((randomCharacter) => ({ 
+      solution: randomCharacter
+    }));
   }
 
   /*updateGuesses = (data) => {
@@ -56,9 +42,14 @@ class App extends Component {
     return (
       <>
         <Title />
-        <Search updateUI={this.updateGuesses} />
+        <Search 
+          updateUI={this.updateGuesses} 
+        />
         <Categories />
-        <Characters characters={this.state.characters} />
+        <Characters 
+          characters={this.state.characters}
+          solution={this.state.solution} 
+        />
       </>
     );
   }
