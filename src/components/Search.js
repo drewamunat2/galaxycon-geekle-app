@@ -154,6 +154,9 @@ class Search extends Component {
               openMenuOnClick={true}
               openMenuOnFocus={false}
               captureMenuScroll={true}
+              components={{
+                IndicatorSeparator: () => null
+              }}
             />
           </div>
         </div>

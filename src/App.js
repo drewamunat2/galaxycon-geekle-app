@@ -55,6 +55,7 @@ class App extends Component {
         <Characters 
           characters={this.state.characters}
           colors={this.state.colors}
+          solution={this.state.solution}
         />
       </>
     );

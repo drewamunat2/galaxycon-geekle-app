@@ -1,14 +1,29 @@
-import { Container, } from "@mui/system";
+import { Container } from "@mui/system";
 import PropTypes from "prop-types";
-import {useState} from "react";
+import { BsArrowUp, BsArrowDown } from "react-icons/bs";
 
 function Characters(props) {
 
-  const { characters, colors } = props;
+  const { characters, colors, solution } = props;
   let colorMap = {};
 
-  console.log(characters);
-  console.log(colors);
+  const arrow = (year) => {
+    if (year < solution.characteristics.year) {
+      return 'bi-BsArrowUp';
+    } else if (year > solution.characteristics.year) {
+      return 'bi-BsArrowDown';
+    }
+    return '';
+  }
+
+  const icon = (year) => {
+    if (year < solution.characteristics.year) {
+      return '↑';
+    } else if (year > solution.characteristics.year) {
+      return '↓';
+    }
+    return '';
+  }
 
 
   return (
@@ -40,7 +55,7 @@ function Characters(props) {
                           <p className="sub-title has-text-link">{character.characteristics.role}</p>
                       </div>
                       <div className={`tile ${colorMap.colors.year}`}>
-                          <p className="sub-title has-text-link">{character.characteristics.year}</p>
+                        <p className="sub-title has-text-link">{character.characteristics.year} <i className={`${arrow(character.characteristics.year)}`}>{icon(character.characteristics.year)}</i></p>
                       </div>
                   </div>
                 </Container>
