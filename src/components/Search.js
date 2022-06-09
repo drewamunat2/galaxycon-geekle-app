@@ -3,7 +3,6 @@ import { Container, } from "@mui/system";
 import PropTypes from "prop-types";
 import axios from "axios";
 import Select from 'react-select'
-import { getTabUtilityClass } from "@mui/material";
 
 class Search extends Component {
   constructor(props) {
@@ -92,7 +91,7 @@ class Search extends Component {
       colorObj.year = 'almost-correct';
     }
 
-    this.props.updateColors(colorObj);
+    this.props.updateColors(guess.name, colorObj);
   };
 
   addAllNames = (names) => {

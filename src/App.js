@@ -25,13 +25,7 @@ class App extends Component {
     }));
   }
 
-  /*updateGuesses = (data) => {
-    this.setState((old) => 
-      ({...old, ...data }));
-      console.log(data);
-      console.log(this.state.characters);
-  };*/
-
+  //update UI with new character guess data
   updateCharacters = (data) => {
     this.setState( prevState => ({ 
       characters: [...prevState.characters, data]
@@ -39,11 +33,13 @@ class App extends Component {
     console.log(data);
   };
 
-  updateColors = (data) => {
-    this.setState( prevState => ({ 
-      colors: [...prevState.colors, data]
+  //update UI with new character guess colors
+  updateColors = (name, data) => {
+    this.setState( (prevState) => ({ 
+      colors: [...prevState.colors, {key: name, colors: data}]
     }));
-    console.log(data);
+    console.log(name, data);
+    console.log(this.state.colors);
   };
   
   render() {
