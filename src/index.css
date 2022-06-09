@@ -1,5 +1,6 @@
-body {
+html, body {
   background-color: #ffeeff;
+  height: 100%;
 }
 
 .title {
@@ -10,11 +11,16 @@ body {
   width: 50%;
 }
 
+.header-tile {
+  height: 10px;
+}
+
 .tile {
   display: flex;
   height: 100px;
   align-items: center;
   justify-content: center;
+  font-weight: 600;
 }
 
 .section {
@@ -25,29 +31,14 @@ body {
   margin-top: 1%;
 }
 
-.has-background-lighter-pink {
-  background-color: #f237d90f;
-}
-
 .to-bottom {
   flex: 1;
 }
 
-.react-datalist-input__textbox {
-  background-color: #ffeeff;
-}
-
-.react-datalist-input__container {
-  width:50%;
-}
-
-.css-1oqqzyl-MuiContainer-root {
-  padding-left: 0;
-  padding-right: 0;
-}
-
-.characters-container {
-  margin: auto;
+.tile.is-ancestor {
+  margin-top: 15px;
+  margin-right: 0;
+  margin-left: 0;
 }
 
 .no-padding-vertical {
@@ -55,22 +46,38 @@ body {
   padding-bottom: 10px;
 }
 
+.character-container {
+  margin-bottom: 10px;
+}
+
+/* < - - - colors - - - > */
+
+/* game canvas */
+.game-background {
+  background-color: black;
+}
+
+/* green color for tile if name is correct */
 .name-correct {
-  background-color: rgb(72, 176, 72);
+  background-color: rgb(56, 142, 56);
 }
 
+/* darker green color for tile if characteristic is correct */
 .correct {
-  background-color: rgb(7, 176, 7);
+  background-color: rgb(7, 178, 7);
 }
 
+/* yellow color for tile if characteristic is close */
 .almost-correct {
-  background-color: yellow;
+  background-color: rgb(242, 242, 51);
 }
 
+/* color for the name tile if guess is wrong */
 .wrong {
-  background-color: #f237d90a;
+  background-color: #f237d927;
 }
 
-.guess-border {
-  border-top: 2px black;
+/* color for the characteristic tile if guess is wrong */
+.characteristic-wrong {
+  background-color: rgb(222, 178, 233);
 }

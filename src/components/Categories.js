@@ -4,10 +4,10 @@ function Categories() {
 
   return (
     <div className='categories'>
-      <Container className="is-max-widescreen" id="categories">
+      <Container className="is-max-widescreen" id="categories" disableGutters={true}>
         <section className="section is-small no-padding-vertical">
           {
-            <Container className="is-max-widescreen">
+            <Container className="is-max-widescreen" disableGutters={true}>
               <div className="tile is-ancestor has-text-center">
                 <div className="tile is-3">
                     <p className="title"></p>

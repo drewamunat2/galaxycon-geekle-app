@@ -4,6 +4,35 @@ import PropTypes from "prop-types";
 import axios from "axios";
 import Select from 'react-select'
 
+const customStyles = {
+  control: (base, state) => ({
+    ...base,
+    background: "#ffeeff",
+    // match with the menu
+    borderRadius: state.isFocused ? "3px 3px 0 0" : 3,
+    // Overwrittes the different states of border
+    borderColor: state.isFocused ? "#00d5ff" : "blue",
+    // Removes weird border around container
+    boxShadow: state.isFocused ? null : null,
+    "&:hover": {
+      // Overwrittes the different states of border
+      borderColor:  "#00d5ff"
+    }
+  }),
+  menu: base => ({
+    ...base,
+    // override border radius to match the box
+    borderRadius: 0,
+    // kill the gap
+    marginTop: 0
+  }),
+  menuList: base => ({
+    ...base,
+    // kill the white space on first and last option
+    padding: 0
+  })
+};
+
 class Search extends Component {
   constructor(props) {
     super(props);
@@ -25,16 +54,17 @@ class Search extends Component {
   assertColors = (guess) => {
     let colorObj = {
       "name": "wrong",
-      "gender": "wrong",
-      "show": "wrong",
-      "genre": "wrong",
-      "platform": "wrong",
-      "role": "wrong",
-      "year": "wrong",
+      "gender": "characteristic-wrong",
+      "show": "characteristic-wrong",
+      "genre": "characteristic-wrong",
+      "platform": "characteristic-wrong",
+      "role": "characteristic-wrong",
+      "year": "characteristic-wrong",
     };
 
     if (guess.name === this.props.solution.name) {
       colorObj.name = 'name-correct';
+      this.props.updateIsCorrect(true);
     }
 
     //set gender color
@@ -94,10 +124,6 @@ class Search extends Component {
     this.props.updateColors(guess.name, colorObj);
   };
 
-  addAllNames = (names) => {
-    this.setState({ allCharactersNames: names });
-  };
-
   fetchCharacter = async (guess) => {
     const characterAPI = 'http://localhost:3001/characters?name=';
     const char = guess;
@@ -128,7 +154,7 @@ class Search extends Component {
         };
         nameArray.push(nameObject);
       });
-      this.addAllNames(nameArray);
+      this.setState({allCharactersNames: nameArray});
     } catch (err) {
       console.log(err);
     }
@@ -145,6 +171,7 @@ class Search extends Component {
         <div className="field has-addons">
           <div className="control is-expanded">
             <Select 
+              styles={customStyles}
               placeholder={null}
               options={this.state.allCharactersNames}
               onChange={this.handleChange}

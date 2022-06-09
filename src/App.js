@@ -1,5 +1,7 @@
 import React, { Component } from "react";
+import Header from "./components/Header";
 import Title from "./components/Title";
+import Turn from "./components/Turn";
 import Search from "./components/Search";
 import Characters from "./components/Characters";
 import Categories from "./components/Categories"
@@ -11,7 +13,9 @@ class App extends Component {
     this.state = {
       characters: [],
       solution: {},
-      colors: []
+      colors: [],
+      turn: 0,
+      isCorrect: false
     };
   }
 
@@ -41,15 +45,33 @@ class App extends Component {
     console.log(name, data);
     console.log(this.state.colors);
   };
+
+  updateTurn = data => {
+    this.setState(() => ({ 
+      turn: data
+    }));
+  };
+
+  updateIsCorrect = data => {
+    this.setState(() => ({ 
+      isCorrect: data
+    }));
+  };
   
   render() {
     return (
       <>
+        <Header />
         <Title />
+        <Turn 
+          turn={this.state.characters.length}
+          updateTurn={this.updateTurn}
+        />
         <Search 
           updateCharacters={this.updateCharacters}
           updateColors={this.updateColors}
-          solution={this.state.solution} 
+          solution={this.state.solution}
+          updateIsCorrect={this.updateIsCorrect} 
         />
         <Categories />
         <Characters 

@@ -1,12 +1,12 @@
 import { Container } from "@mui/system";
 import PropTypes from "prop-types";
-import { BsArrowUp, BsArrowDown } from "react-icons/bs";
 
 function Characters(props) {
 
   const { characters, colors, solution } = props;
   let colorMap = {};
 
+  //arrow icon class
   const arrow = (year) => {
     if (year < solution.characteristics.year) {
       return 'bi-BsArrowUp';
@@ -16,6 +16,7 @@ function Characters(props) {
     return '';
   }
 
+  //show respective arrow icon
   const icon = (year) => {
     if (year < solution.characteristics.year) {
       return '↑';
@@ -25,16 +26,15 @@ function Characters(props) {
     return '';
   }
 
-
   return (
-    <div className='to-bottom characters-container'>
-      <Container className="is-max-widescreen" id="characters">
-        <section className="section has-background-lighter-pink is-small">
+    <div className='characters-container'>
+      <Container className="is-max-widescreen" id="characters" disableGutters={true}>
+        <section className="section is-small">
           {
             characters.map((character, index) => {
               colorMap = colors.find(item => item.key === character.name);
               return (
-                <Container className="is-max-widescreen guess-border" key={index}>
+                <Container className="is-max-widescreen" key={index} disableGutters={true}>
                   <div className="tile is-ancestor has-text-centered">
                     <div className={`tile is-3 ${colorMap.colors.name}`}>
                         <p className="title has-text-info-dark">{character.name}</p>
