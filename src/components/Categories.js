@@ -1,40 +1,130 @@
-import { Container } from "@mui/system";
+import { Grid, Paper } from "@mui/material";
 
 function Categories() {
 
   return (
-    <div className='categories'>
-      <Container className="is-max-widescreen" id="categories" disableGutters={true}>
-        <section className="section is-small no-padding-vertical">
-          {
-            <Container className="is-max-widescreen" disableGutters={true}>
-              <div className="tile is-ancestor has-text-center">
-                <div className="tile is-3">
-                    <p className="title"></p>
-                </div>
-                <div className="tile">
-                    <p className="sub-title">gender</p>
-                </div>
-                <div className="tile">
-                    <p className="sub-title">Appears In</p>
-                </div>
-                <div className="tile">
-                    <p className="sub-title">genre</p>
-                </div>
-                <div className="tile">
-                    <p className="sub-title">platform</p>
-                </div>
-                <div className="tile">
-                    <p className="sub-title">role</p>
-                </div>
-                <div className="tile">
-                    <p className="sub-title">year</p>
-                </div>
-              </div>
-            </Container>
-          }
-        </section>
-      </Container>
+    <div className="categories">
+      <Grid container>
+        <Grid 
+          container
+          justifyContent="center"
+          alignItems="center"
+          sx={{
+            mx: "10%"
+          }}
+        >
+          <Grid item xs={0} lg={4}>
+            <Paper 
+              elevation={0} 
+              square={true}
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                textAlign: "center",
+                verticalAlign: "middle",
+                backgroundColor: '#ffeeff' 
+              }}
+            />
+          </Grid>
+          <Grid item xs={2} lg>
+            <Paper 
+              elevation={0} 
+              square={true}
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                textAlign: "center",
+                verticalAlign: "middle",
+                backgroundColor: '#ffeeff' 
+              }}
+            >
+              gender
+            </Paper>
+          </Grid>
+          <Grid item xs={2} lg>
+            <Paper 
+              elevation={0} 
+              square={true}
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                textAlign: "center",
+                verticalAlign: "middle",
+                backgroundColor: '#ffeeff' 
+              }}
+            >
+              Appears In
+            </Paper>
+          </Grid>
+          <Grid item xs={2} lg>
+            <Paper 
+              elevation={0} 
+              square={true}
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                textAlign: "center",
+                verticalAlign: "middle",
+                backgroundColor: '#ffeeff' 
+              }}
+            >
+              Genre
+            </Paper>
+          </Grid>
+          <Grid item xs={2} lg>
+            <Paper 
+              elevation={0} 
+              square={true}
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                textAlign: "center",
+                verticalAlign: "middle",
+                backgroundColor: '#ffeeff' 
+              }}
+            >
+              Platform
+            </Paper>
+          </Grid>
+          <Grid item xs={2} lg>
+            <Paper 
+              elevation={0} 
+              square={true}
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                textAlign: "center",
+                verticalAlign: "middle",
+                backgroundColor: '#ffeeff' 
+              }}
+            >
+              Role
+            </Paper>
+          </Grid>
+          <Grid item xs={2} lg>
+            <Paper 
+              elevation={0} 
+              square={true}
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                textAlign: "center",
+                verticalAlign: "middle",
+                backgroundColor: '#ffeeff' 
+              }}
+            >
+              Year
+            </Paper>
+          </Grid>
+        </Grid>
+      </Grid>
     </div>
   );
 }

@@ -53,17 +53,17 @@ class Search extends Component {
 
   assertColors = (guess) => {
     let colorObj = {
-      "name": "wrong",
-      "gender": "characteristic-wrong",
-      "show": "characteristic-wrong",
-      "genre": "characteristic-wrong",
-      "platform": "characteristic-wrong",
-      "role": "characteristic-wrong",
-      "year": "characteristic-wrong",
+      "name": "#78586F27",
+      "gender": "#fff0ff",
+      "show": "#fff0ff",
+      "genre": "#fff0ff",
+      "platform": "#fff0ff",
+      "role": "#fff0ff",
+      "year": "#fff0ff",
     };
 
     if (guess.name === this.props.solution.name) {
-      colorObj.name = 'name-correct';
+      colorObj.name = "#BDD358";
       this.props.updateIsCorrect(true);
     }
 
@@ -71,54 +71,54 @@ class Search extends Component {
 
     //same gender : set green
     if(guess.characteristics.gender === this.props.solution.characteristics.gender) {
-      colorObj.gender = 'correct';
+      colorObj.gender = "#BDD358";
     } else if(guess.characteristics.species === this.props.solution.characteristics.species) {
-      colorObj.gender = 'almost-correct';
+      colorObj.gender = "#E5E059";
     }
 
     //set show color
 
     //same show : set green
     if(guess.characteristics.show === this.props.solution.characteristics.show) {
-      colorObj.show = 'correct';
+      colorObj.show = "#BDD358";
     } else if (this.isYellow(guess.characteristics.show, this.props.solution.characteristics.allShows)) {
-      colorObj.show = 'almost-correct';
+      colorObj.show = "#E5E059";
     }
 
     //set genre color
 
     //same genre : set green
     if(guess.characteristics.genre === this.props.solution.characteristics.genre) {
-      colorObj.genre = 'correct';
+      colorObj.genre = "#BDD358";
     } else if (this.isYellow(guess.characteristics.genre, this.props.solution.characteristics.allGenres)) {
-      colorObj.genre = 'almost-correct';
+      colorObj.genre = "#E5E059";
     }
 
     //set platform color
 
     //same platform : set green
     if(guess.characteristics.platform === this.props.solution.characteristics.platform) {
-      colorObj.platform = 'correct';
+      colorObj.platform = "#BDD358";
     } else if(this.isYellow(guess.characteristics.platform, this.props.solution.characteristics.allPlatforms)) {
-      colorObj.platform = 'almost-correct';
+      colorObj.platform = "#E5E059";
     }
 
     //set role color
 
     //same role : set green
     if(guess.characteristics.role === this.props.solution.characteristics.role) {
-      colorObj.role = 'correct';
+      colorObj.role = "#BDD358";
     } else if(guess.characteristics.genRole === this.props.solution.characteristics.genRole) {
-      colorObj.role = 'almost-correct';
+      colorObj.role = "#E5E059";
     }
 
     //set year color
 
     //same year : set green
     if(guess.characteristics.year === this.props.solution.characteristics.year) {
-      colorObj.year = 'correct';
+      colorObj.year = "#BDD358";
     } else if(guess.characteristics.decade === this.props.solution.characteristics.decade) {
-      colorObj.year = 'almost-correct';
+      colorObj.year = "#E5E059";
     }
 
     this.props.updateColors(guess.name, colorObj);
