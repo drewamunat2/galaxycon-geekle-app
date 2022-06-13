@@ -121,7 +121,7 @@ class Search extends Component {
     } else if(guess.characteristics.decade === this.props.solution.characteristics.decade) {
       colorObj.year = "#E5E059";
     }
-
+    this.props.updateTurn();
     this.props.updateColors(guess.name, colorObj);
   };
 

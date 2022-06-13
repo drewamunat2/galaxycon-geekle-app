@@ -38,7 +38,7 @@ function Character(props) {
           elevation={0} 
           square={true}
           sx={{
-            height: "50px",
+            height: "35px",
             display: "flex",
             justifyContent: "center",
             alignItems: "center",

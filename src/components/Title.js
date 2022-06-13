@@ -4,7 +4,7 @@ import Turn from "./Turn";
 
 function Title(props) {
 
-  const { turn, updateTurn } = props;
+  const { turn } = props;
 
   return (
     
@@ -13,7 +13,7 @@ function Title(props) {
         elevation={0} 
         square={true}
         sx={{
-          height: "150px",
+          height: "100px",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
@@ -43,7 +43,6 @@ function Title(props) {
       </Paper>
       <Turn 
         turn={turn}
-        updateTurn={updateTurn}
       />
     </Stack>
   );

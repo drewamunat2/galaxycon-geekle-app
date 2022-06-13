@@ -45,13 +45,13 @@ class App extends Component {
     console.log(this.state.colors);
   };
 
-  updateTurn = data => {
-    this.setState(() => ({ 
-      turn: data
+  updateTurn = () => {
+    this.setState((prevState) => ({ 
+      turn: prevState.turn + 1
     }));
   };
 
-  updateIsCorrect = data => {
+  updateIsCorrect = (data) => {
     this.setState(() => ({ 
       isCorrect: data
     }));
@@ -61,16 +61,18 @@ class App extends Component {
     return (
       <>
         <Title
-          turn={this.state.characters.length}
-          updateTurn={this.updateTurn}
+          turn={this.state.turn}
         />
         <Search 
           updateCharacters={this.updateCharacters}
           updateColors={this.updateColors}
           solution={this.state.solution}
           updateIsCorrect={this.updateIsCorrect} 
+          updateTurn={this.updateTurn}
         />
-        <Categories />
+        <Categories 
+          turn={this.state.turn}
+        />
         <Game 
           characters={this.state.characters}
           colors={this.state.colors}
