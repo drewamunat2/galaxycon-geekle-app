@@ -33,15 +33,12 @@ function Game(props) {
         characters.map((character, index) => {
           colorMap = colors.find(item => item.key === character.name);
           return (
-            <Grid 
+            <Grid
               container
               key={index}
               justifyContent="center"
               alignItems="center"
-              sx={{
-                border: "1px solid black",
-                mx: "10%"
-              }}
+              //sx={{backgroundColor: '#78586F40'}}
             >
               <Character
                 character={character}
@@ -53,8 +50,7 @@ function Game(props) {
                 roleColor={colorMap.colors.role}
                 yearColor={colorMap.colors.year}
                 arrow={arrow(character.characteristics.year)}
-                icon={icon(character.characteristics.year)}
-              />
+                icon={icon(character.characteristics.year)} />
             </Grid>
           )
         })

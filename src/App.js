@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Header from "./components/Header";
 import Title from "./components/Title";
-import Turn from "./components/Turn";
 import Search from "./components/Search";
 import Game from "./components/Game";
 import Categories from "./components/Categories"
@@ -61,8 +60,7 @@ class App extends Component {
   render() {
     return (
       <>
-        <Title />
-        <Turn 
+        <Title
           turn={this.state.characters.length}
           updateTurn={this.updateTurn}
         />

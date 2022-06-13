@@ -7,13 +7,11 @@ function Categories() {
       <Grid container>
         <Grid 
           container
+          key="categories"
           justifyContent="center"
           alignItems="center"
-          sx={{
-            mx: "10%"
-          }}
         >
-          <Grid item xs={0} lg={4}>
+          <Grid item xs={0} lg={2}>
             <Paper 
               elevation={0} 
               square={true}
@@ -23,7 +21,22 @@ function Categories() {
                 alignItems: "center",
                 textAlign: "center",
                 verticalAlign: "middle",
-                backgroundColor: '#ffeeff' 
+                backgroundColor: '#fff0ff' 
+              }}
+            />
+          </Grid>
+          <Grid item xs={0} lg={3}>
+            <Paper 
+              elevation={0} 
+              square={true}
+              sx={{
+                height: "50%",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                textAlign: "center",
+                verticalAlign: "middle",
+                backgroundColor: `#fff0ff`
               }}
             />
           </Grid>
@@ -40,7 +53,7 @@ function Categories() {
                 backgroundColor: '#ffeeff' 
               }}
             >
-              gender
+              Gender
             </Paper>
           </Grid>
           <Grid item xs={2} lg>
@@ -122,6 +135,20 @@ function Categories() {
             >
               Year
             </Paper>
+          </Grid>
+          <Grid item xs={0} lg={2}>
+            <Paper 
+              elevation={0} 
+              square={true}
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                textAlign: "center",
+                verticalAlign: "middle",
+                backgroundColor: '#fff0ff' 
+              }}
+            />
           </Grid>
         </Grid>
       </Grid>

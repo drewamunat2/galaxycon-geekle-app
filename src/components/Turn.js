@@ -1,3 +1,5 @@
+import { Paper } from "@mui/material";
+
 function Turn(props) {
 
   const { turn, updateTurn } = props;
@@ -8,13 +10,21 @@ function Turn(props) {
   };
 
   return (
-    <header className="is-small">
-      <div className="hero-body">
-        <p className="subtitle has-text-centered has-text-danger">
-          {printAndUpdateTurn()}      
-        </p>
-      </div>
-    </header>
+    <Paper 
+      elevation={0} 
+      square={true}
+      sx={{
+        height: "40px",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        textAlign: "center",
+        verticalAlign: "middle",
+        backgroundColor: "#fff0ff",
+        color: "#FF4242"
+    }}>
+      {printAndUpdateTurn()} 
+    </Paper>
   );
 }
 
