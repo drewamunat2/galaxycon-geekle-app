@@ -3,7 +3,7 @@ import Header from "./components/Header";
 import Title from "./components/Title";
 import Turn from "./components/Turn";
 import Search from "./components/Search";
-import Characters from "./components/Characters";
+import Game from "./components/Game";
 import Categories from "./components/Categories"
 import axios from "axios";
 
@@ -61,7 +61,6 @@ class App extends Component {
   render() {
     return (
       <>
-        <Header />
         <Title />
         <Turn 
           turn={this.state.characters.length}
@@ -74,7 +73,7 @@ class App extends Component {
           updateIsCorrect={this.updateIsCorrect} 
         />
         <Categories />
-        <Characters 
+        <Game 
           characters={this.state.characters}
           colors={this.state.colors}
           solution={this.state.solution}

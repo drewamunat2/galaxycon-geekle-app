@@ -54,30 +54,35 @@ html, body {
 
 /* game canvas */
 .game-background {
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.679);
 }
 
 /* green color for tile if name is correct */
 .name-correct {
-  background-color: rgb(56, 142, 56);
+  background-color: #BDD358;
 }
 
 /* darker green color for tile if characteristic is correct */
 .correct {
-  background-color: rgb(7, 178, 7);
+  background-color: #BDD358;
 }
 
 /* yellow color for tile if characteristic is close */
 .almost-correct {
-  background-color: rgb(242, 242, 51);
+  background-color: #E5E059;
 }
 
 /* color for the name tile if guess is wrong */
 .wrong {
-  background-color: #f237d927;
+  background-color: #78586F27;
 }
 
 /* color for the characteristic tile if guess is wrong */
 .characteristic-wrong {
-  background-color: rgb(222, 178, 233);
+  background-color: #78586F27;
+}
+
+/* color for the text in the game */
+.game-font-color {
+  color: #086788;
 }
