@@ -1,5 +1,5 @@
 import { Grid, Paper } from "@mui/material";
-import CharacterBorder from "./components/CharacterBorder";
+import CharacterBorder from "./CharacterBorder";
 
 function Character(props) {
 

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Container, } from "@mui/system";
+import { Grid } from "@mui/material";
 import PropTypes from "prop-types";
 import axios from "axios";
 import Select from 'react-select'
@@ -17,7 +17,8 @@ const customStyles = {
     "&:hover": {
       // Overwrittes the different states of border
       borderColor:  "#00d5ff"
-    }
+    },
+    height: "50px"
   }),
   menu: base => ({
     ...base,
@@ -168,27 +169,29 @@ class Search extends Component {
 
   render() {
     return (
-      <Container className="is-max-widescreen">
-        <div className="field has-addons">
-          <div className="control is-expanded">
-            <Select 
-              styles={customStyles}
-              placeholder={null}
-              options={this.state.allCharactersNames}
-              onChange={this.handleChange}
-              autoFocus={true}
-              closeMenuOnSelect={true}
-              controlShouldRenderValue={false}
-              openMenuOnClick={true}
-              openMenuOnFocus={false}
-              captureMenuScroll={true}
-              components={{
-                IndicatorSeparator: () => null
-              }}
-            />
-          </div>
-        </div>
-      </Container>
+      <Grid
+        container
+        alignItems="center"
+        justifyContent="center"
+      >
+        <Grid item xs={10} sm={8} md={7} lg={5} xl={3}>
+          <Select 
+            styles={customStyles}
+            placeholder={null}
+            options={this.state.allCharactersNames}
+            onChange={this.handleChange}
+            autoFocus={true}
+            closeMenuOnSelect={true}
+            controlShouldRenderValue={false}
+            openMenuOnClick={true}
+            openMenuOnFocus={false}
+            captureMenuScroll={true}
+            components={{
+              IndicatorSeparator: () => null
+            }}
+          />
+        </Grid>
+      </Grid>
     );
   }
 }

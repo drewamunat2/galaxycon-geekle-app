@@ -1,6 +1,6 @@
 import { Grid } from "@mui/material";
 import PropTypes from "prop-types";
-import Character from "../Character";
+import Character from "./Character";
 
 function Game(props) {
 
