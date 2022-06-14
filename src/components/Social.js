@@ -13,17 +13,17 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 
 const customStyles = {
-  control: (base, state) => ({
+  control: (base) => ({
     ...base,
-    background: "#fff0ff",
+    backgroundColor: "#fff0ff",
   }),
   menu: base => ({
     ...base,
-    background: "#fff0ff",
+    backgroundColor: "#fff0ff",
   }),
   menuList: base => ({
     ...base,
-    background: "#fff0ff",
+    backgroundColor: "#fff0ff",
   })
 };
 
@@ -109,7 +109,7 @@ function Social() {
             horizontal: 'left',
           }}
         >
-          <MenuItem backgroundColor='#fff0ff'>
+          <MenuItem>
             <IconButton color="primary" href='https://www.facebook.com/galaxyconlive/'>
               <FacebookIcon/>
             </IconButton>

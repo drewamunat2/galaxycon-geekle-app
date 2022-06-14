@@ -1,15 +1,24 @@
+import { useState } from 'react';
 import IconButton from '@mui/material/IconButton';
 //import logo from '../assets/GalaxyconlogoSmall.jpeg'
-import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
-import SettingsIcon from '@mui/icons-material/Settings';
-import {IoIosStats} from "react-icons/io"
 //import HistoryIcon from '@mui/icons-material/History';
 //import TimelineIcon from '@mui/icons-material/Timeline';
 //import InfoIcon from '@mui/icons-material/Info';
 
 import { Paper } from '@mui/material';
+import Settings from './Settings';
+import Help from './Help';
+import Stats from './Stats';
 
-function Info() {
+function Info(props) {
+
+  const [open, setOpen] = useState(false);
+    const handleOpen = () => {
+        setOpen(true);
+    };
+    const handleClose = () => {
+        setOpen(false);
+    };
 
   return (
     <>
@@ -26,15 +35,9 @@ function Info() {
         }}
       > 
       <IconButton />
-      <IconButton color="primary">
-        <HelpOutlineIcon/>
-      </IconButton>
-      <IconButton color="primary">
-        <SettingsIcon/>
-      </IconButton>
-      <IconButton color="primary">
-        <IoIosStats/>
-      </IconButton>
+      <Help />
+      <Settings />
+      <Stats />
     </Paper>
   </>
   );
