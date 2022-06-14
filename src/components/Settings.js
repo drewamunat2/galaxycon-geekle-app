@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import IconButton from '@mui/material/IconButton';
+import { Modal } from '@mui/material';
 import SettingsIcon from '@mui/icons-material/Settings';
 
 
@@ -15,7 +16,7 @@ function Settings(props) {
 
   return (
     <>
-      <IconButton color="primary">
+      <IconButton color="primary" onClick={handleOpen}>
         <SettingsIcon/>
       </IconButton>
     </>

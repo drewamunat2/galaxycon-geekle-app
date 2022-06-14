@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import IconButton from '@mui/material/IconButton';
+import { Modal } from '@mui/material';
 import {IoIosStats} from "react-icons/io"
 
 
@@ -15,7 +16,7 @@ function Stats(props) {
 
   return (
     <>
-      <IconButton color="primary">
+      <IconButton color="primary" onClick={handleOpen}>
         <IoIosStats/>
       </IconButton>
     </>
