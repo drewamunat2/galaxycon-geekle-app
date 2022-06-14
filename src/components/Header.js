@@ -89,16 +89,7 @@ function Header() {
                     <SettingsIcon/>
                   </IconButton>
                   <IconButton color="primary">
-                    <HistoryIcon/>
-                  </IconButton>
-                  <IconButton color="primary">
-                    <FaTiktok/>
-                  </IconButton>
-                  <IconButton color="primary">
                     <IoIosStats/>
-                  </IconButton>
-                  <IconButton color="primary">
-                    <InfoIcon/>
                   </IconButton>
                 </Paper>
               </Grid>

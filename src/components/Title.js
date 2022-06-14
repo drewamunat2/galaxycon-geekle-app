@@ -26,10 +26,10 @@ function Title(props) {
           Geekle
       </Paper>
       <Paper 
-         elevation={0} 
+        elevation={0} 
         square={true}
         sx={{
-          height: "50px",
+          height: "60px",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
@@ -38,6 +38,7 @@ function Title(props) {
           backgroundColor: "#fff0ff",
           color: "#086788",
           fontSize: "20px",
+          mx: 10
         }}>
           GALAXYCON CHARACTER GUESSING GAME 
       </Paper>
