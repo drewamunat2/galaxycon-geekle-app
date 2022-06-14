@@ -2,33 +2,25 @@ import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
-import logo from '../assets/GalaxyconlogoSmall.jpeg'
+//import logo from '../assets/GalaxyconlogoSmall.jpeg'
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 import SettingsIcon from '@mui/icons-material/Settings';
 import HistoryIcon from '@mui/icons-material/History';
-import TimelineIcon from '@mui/icons-material/Timeline';
+//import TimelineIcon from '@mui/icons-material/Timeline';
 import InfoIcon from '@mui/icons-material/Info';
 import LanguageIcon from '@mui/icons-material/Language';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import EmailIcon from '@mui/icons-material/Email';
 import FacebookIcon from '@mui/icons-material/Facebook';
-import {IoIosStats, IoShareSocialOutline} from "react-icons/io"
+import {IoIosStats} from "react-icons/io"
+//IoShareSocialOutline
 import {FaTiktok, FaYoutube} from "react-icons/fa";
 import {AiOutlineMenu} from "react-icons/ai";
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Grid, Paper } from '@mui/material';
-
-import Divider from '@mui/material/Divider';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
-import ListItemText from '@mui/material/ListItemText';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import Typography from '@mui/material/Typography';
-import ContentCut from '@mui/icons-material/ContentCut';
-import ContentCopy from '@mui/icons-material/ContentCopy';
-import ContentPaste from '@mui/icons-material/ContentPaste';
-import Cloud from '@mui/icons-material/Cloud';
 
 const theme = createTheme({
   palette: {
@@ -51,6 +43,21 @@ const theme = createTheme({
     }
   },
 });
+
+const customStyles = {
+  control: (base, state) => ({
+    ...base,
+    background: "#fff0ff",
+  }),
+  menu: base => ({
+    ...base,
+    background: "#fff0ff",
+  }),
+  menuList: base => ({
+    ...base,
+    background: "#fff0ff",
+  })
+};
 
 function Header() {
 
@@ -157,6 +164,7 @@ function Header() {
                     <AiOutlineMenu/>
                   </IconButton>
                   <Menu 
+                    style={customStyles}
                     id='social-menu' 
                     open={Boolean(profileMenu)} 
                     anchorEl={profileMenu}
@@ -171,7 +179,7 @@ function Header() {
                       horizontal: 'left',
                     }}
                   >
-                    <MenuItem>
+                    <MenuItem backgroundColor='#fff0ff'>
                       <IconButton color="primary" href='https://www.facebook.com/galaxyconlive/'>
                         <FacebookIcon/>
                       </IconButton>
