@@ -5,9 +5,9 @@ import IconButton from '@mui/material/IconButton';
 //import logo from '../assets/GalaxyconlogoSmall.jpeg'
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 import SettingsIcon from '@mui/icons-material/Settings';
-import HistoryIcon from '@mui/icons-material/History';
+//import HistoryIcon from '@mui/icons-material/History';
 //import TimelineIcon from '@mui/icons-material/Timeline';
-import InfoIcon from '@mui/icons-material/Info';
+//import InfoIcon from '@mui/icons-material/Info';
 import LanguageIcon from '@mui/icons-material/Language';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
