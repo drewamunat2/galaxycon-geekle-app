@@ -60,6 +60,7 @@ class App extends Component {
   render() {
     return (
       <>
+        <Header />
         <Title
           turn={this.state.turn}
         />

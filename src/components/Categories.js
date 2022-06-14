@@ -28,7 +28,7 @@ function Categories(props) {
                 }}
               />
             </Grid>
-            <Grid item xs={0} lg={3}>
+            <Grid item xs={0} lg={2}>
               <Paper 
                 elevation={0} 
                 square={true}
@@ -43,7 +43,7 @@ function Categories(props) {
                 }}
               />
             </Grid>
-            <Grid item xs={2} lg>
+            <Grid item xs={4} sm={2} lg>
               <Paper 
                 elevation={0} 
                 square={true}
@@ -59,55 +59,7 @@ function Categories(props) {
                 Gender
               </Paper>
             </Grid>
-            <Grid item xs={2} lg>
-              <Paper 
-                elevation={0} 
-                square={true}
-                sx={{
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  textAlign: "center",
-                  verticalAlign: "middle",
-                  backgroundColor: '#ffeeff' 
-                }}
-              >
-                Appears In
-              </Paper>
-            </Grid>
-            <Grid item xs={2} lg>
-              <Paper 
-                elevation={0} 
-                square={true}
-                sx={{
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  textAlign: "center",
-                  verticalAlign: "middle",
-                  backgroundColor: '#ffeeff' 
-                }}
-              >
-                Genre
-              </Paper>
-            </Grid>
-            <Grid item xs={2} lg>
-              <Paper 
-                elevation={0} 
-                square={true}
-                sx={{
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  textAlign: "center",
-                  verticalAlign: "middle",
-                  backgroundColor: '#ffeeff' 
-                }}
-              >
-                Platform
-              </Paper>
-            </Grid>
-            <Grid item xs={2} lg>
+            <Grid item xs={4} sm={2} lg>
               <Paper 
                 elevation={0} 
                 square={true}
@@ -123,7 +75,55 @@ function Categories(props) {
                 Role
               </Paper>
             </Grid>
-            <Grid item xs={2} lg>
+            <Grid item xs={4} sm={2} lg>
+              <Paper 
+                elevation={0} 
+                square={true}
+                sx={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  textAlign: "center",
+                  verticalAlign: "middle",
+                  backgroundColor: '#ffeeff' 
+                }}
+              >
+                Appears In
+              </Paper>
+            </Grid>
+            <Grid item xs={4} sm={2} lg>
+              <Paper 
+                elevation={0} 
+                square={true}
+                sx={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  textAlign: "center",
+                  verticalAlign: "middle",
+                  backgroundColor: '#ffeeff' 
+                }}
+              >
+                Genre
+              </Paper>
+            </Grid>
+            <Grid item xs={4} sm={2} lg>
+              <Paper 
+                elevation={0} 
+                square={true}
+                sx={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  textAlign: "center",
+                  verticalAlign: "middle",
+                  backgroundColor: '#ffeeff' 
+                }}
+              >
+                Platform
+              </Paper>
+            </Grid>
+            <Grid item xs={4} sm={2} lg>
               <Paper 
                 elevation={0} 
                 square={true}

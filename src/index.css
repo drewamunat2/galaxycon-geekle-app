@@ -4,6 +4,11 @@ html, body {
   margin: 0;
 }
 
+.ROOT-CSS {
+  height: 600;
+  width: 400;
+}
+
 .title {
   font-size: 700;
 }
@@ -60,7 +65,7 @@ html, body {
 
 /* green color for tile if name is correct */
 .name-correct {
-  background-color: #BDD358;
+  background-color: #aabe4d;
 }
 
 /* darker green color for tile if characteristic is correct */

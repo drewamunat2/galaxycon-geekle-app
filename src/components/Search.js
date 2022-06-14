@@ -54,7 +54,6 @@ class Search extends Component {
 
   assertColors = (guess) => {
     let colorObj = {
-      //"name": "#78586F00",
       "name": "#78586F40",
       "gender": "#78586F27",
       "show": "#78586F27",
@@ -65,7 +64,7 @@ class Search extends Component {
     };
 
     if (guess.name === this.props.solution.name) {
-      colorObj.name = "#BDD358";
+      colorObj.name = "#AABE4D";
       this.props.updateIsCorrect(true);
     }
 

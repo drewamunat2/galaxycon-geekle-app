@@ -33,25 +33,45 @@ function Character(props) {
           }}
         />
       </Grid>
-      <Grid item xs={12} lg={3}>
+      <Grid item xs={12} lg={2} color='primary'>
         <Paper 
           elevation={0} 
           square={true}
           sx={{
-            height: "35px",
-            display: "flex",
+            height: "100px",
+            display: { lg: 'flex', xs: 'none' },
             justifyContent: "center",
             alignItems: "center",
             textAlign: "center",
             verticalAlign: "middle",
             backgroundColor: `${nameColor}`,
-            color: "#080357"
+            color: "#080357",
+            fontSize: 25,
+            fontWeight: 500
+          }}
+        >
+          {character.name}
+        </Paper>
+        <Paper 
+          elevation={0} 
+          square={true}
+          sx={{
+            height: "50px",
+            display: { lg: 'none', xs: 'flex' },
+            justifyContent: "center",
+            alignItems: "center",
+            textAlign: "center",
+            verticalAlign: "middle",
+            backgroundColor: `${nameColor}`,
+            color: "#080357",
+            fontSize: 25,
+            fontWeight: 500
           }}
         >
           {character.name}
         </Paper>
       </Grid>
-      <Grid item xs={2} lg>
+      <Grid item xs={4} sm={2} lg>
         <Paper 
           elevation={0} 
           square={true}
@@ -69,61 +89,7 @@ function Character(props) {
           {character.characteristics.gender}
         </Paper>
       </Grid>
-      <Grid item xs={2} lg>
-        <Paper 
-          elevation={0} 
-          square={true}
-          sx={{
-            height: "100px", 
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            textAlign: "center",
-            verticalAlign: "middle",
-            backgroundColor: `${showColor}`,
-            color: "#086788"
-          }}
-        >
-          {character.characteristics.show}
-        </Paper>
-      </Grid>
-      <Grid item xs={2} lg>
-        <Paper 
-          elevation={0} 
-          square={true}
-          sx={{
-            height: "100px", 
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            textAlign: "center",
-            verticalAlign: "middle", 
-            backgroundColor: `${genreColor}`,
-            color: "#086788"
-          }}
-        >
-          {character.characteristics.genre}
-        </Paper>
-      </Grid>
-      <Grid item xs={2} lg>
-        <Paper 
-          elevation={0} 
-          square={true}
-          sx={{
-            height: "100px", 
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            textAlign: "center",
-            verticalAlign: "middle",
-            backgroundColor: `${platformColor}`,
-            color: "#086788"
-          }}
-        >
-          {character.characteristics.platform}
-        </Paper>
-      </Grid>
-      <Grid item xs={2} lg>
+      <Grid item xs={4} sm={2} lg>
         <Paper 
           elevation={0} 
           square={true}
@@ -141,7 +107,61 @@ function Character(props) {
           {character.characteristics.role}
         </Paper>
       </Grid>
-      <Grid item xs={2} lg>
+      <Grid item xs={4} sm={2} lg>
+        <Paper 
+          elevation={0} 
+          square={true}
+          sx={{
+            height: "100px", 
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            textAlign: "center",
+            verticalAlign: "middle",
+            backgroundColor: `${showColor}`,
+            color: "#086788"
+          }}
+        >
+          {character.characteristics.show}
+        </Paper>
+      </Grid>
+      <Grid item xs={4} sm={2} lg>
+        <Paper 
+          elevation={0} 
+          square={true}
+          sx={{
+            height: "100px", 
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            textAlign: "center",
+            verticalAlign: "middle", 
+            backgroundColor: `${genreColor}`,
+            color: "#086788"
+          }}
+        >
+          {character.characteristics.genre}
+        </Paper>
+      </Grid>
+      <Grid item xs={4} sm={2} lg>
+        <Paper 
+          elevation={0} 
+          square={true}
+          sx={{
+            height: "100px", 
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            textAlign: "center",
+            verticalAlign: "middle",
+            backgroundColor: `${platformColor}`,
+            color: "#086788"
+          }}
+        >
+          {character.characteristics.platform}
+        </Paper>
+      </Grid>
+      <Grid item xs={4} sm={2} lg>
         <Paper 
           elevation={0} 
           square={true}

@@ -38,7 +38,7 @@ function Game(props) {
               key={index}
               justifyContent="center"
               alignItems="center"
-              //sx={{backgroundColor: '#78586F40'}}
+              //backgroundColor={colorMap.colors.name}
             >
               <Character
                 character={character}
