@@ -56,7 +56,7 @@ function Help() {
         display='block'
         sx={{
           position: 'absolute',
-          overflowY: 'scroll',
+          overflowY: 'auto',
         }}
       >
         <Grid container sx={style}>
