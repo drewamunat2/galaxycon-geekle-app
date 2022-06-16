@@ -9,13 +9,17 @@ import Social from "./Social"
 const theme = createTheme({
   palette: {
     primary: {
-      // Purple and green play nicely together.
       main: '#78586F90',
     },
     secondary: {
-      // This is green.A700 as hex.
       main: '#fff0ff',
     },
+    success: {
+      main: '#BDD358',
+    },
+    warning: {
+      main: '#fff700',
+    }
   },
   components: {
     MuiMenu: {

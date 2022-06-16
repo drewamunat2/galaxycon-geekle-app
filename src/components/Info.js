@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import IconButton from '@mui/material/IconButton';
 //import logo from '../assets/GalaxyconlogoSmall.jpeg'
 //import HistoryIcon from '@mui/icons-material/History';
@@ -11,14 +10,6 @@ import Help from './Help';
 import Stats from './Stats';
 
 function Info(props) {
-
-  const [open, setOpen] = useState(false);
-    const handleOpen = () => {
-        setOpen(true);
-    };
-    const handleClose = () => {
-        setOpen(false);
-    };
 
   return (
     <>

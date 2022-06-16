@@ -43,6 +43,7 @@ function Social() {
           textAlign: "center",
           verticalAlign: "middle",
           backgroundColor: '#fff0ff' 
+          //bgcolor: '#FFF0FF',
         }}
       > 
         <IconButton color="primary" href='https://www.facebook.com/galaxyconlive/'>
