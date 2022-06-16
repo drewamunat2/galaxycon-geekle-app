@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import IconButton from '@mui/material/IconButton';
-import { Modal, Grid } from '@mui/material';
+import { Modal, Grid, Typography } from '@mui/material';
 import {IoIosStats} from "react-icons/io"
 
 import CloseIcon from '@mui/icons-material/Close';
@@ -48,6 +48,18 @@ function Stats(props) {
                 <CloseIcon />
               </IconButton>
             </Grid>
+          <Grid container justifyContent="center" alignItems="center" sx={{mt: -3}}>
+            <Typography id="help-modal" color="#080357" variant="h3" component="h2">
+              How to Play
+            </Typography>
+          </Grid>
+          <Grid container justifyContent="center" alignItems="center">
+            <Typography id="rules-of-the-game" color="#086788" sx={{ mb: 2, mt: 2 }}>
+              Guess the Galaxycon character in as few tries as possible, where 
+              each character guessed will provide hints about the 
+              target character
+            </Typography>
+          </Grid>
         </Grid>
       </Modal>
     </>

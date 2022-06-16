@@ -33,7 +33,7 @@ const section = {
   textDecoration: 'underline'
 }
 
-function Help(props) {
+function Help() {
 
   const [open, setOpen] = useState(false);
   const handleOpen = () => {
@@ -56,7 +56,7 @@ function Help(props) {
         display='block'
         sx={{
           position: 'absolute',
-          overflow: 'scroll',
+          overflowY: 'scroll',
         }}
       >
         <Grid container sx={style}>
