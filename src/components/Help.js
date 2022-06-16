@@ -3,7 +3,6 @@ import IconButton from '@mui/material/IconButton';
 import { Modal, Typography, Grid, Box } from '@mui/material';
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 import CloseIcon from '@mui/icons-material/Close';
-import { green, yellow } from '@mui/material/colors';
 
 const style = {
   position: 'absolute',
