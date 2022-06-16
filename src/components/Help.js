@@ -4,7 +4,7 @@ import { Modal, Typography, Grid, Box } from '@mui/material';
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 import CloseIcon from '@mui/icons-material/Close';
 
-const style = {
+/*const style = {
   position: 'absolute',
   top: '50%',
   left: '50%',
@@ -16,7 +16,18 @@ const style = {
   textAlign: 'center',
   px: 3,
   py: 2
-};
+};*/
+
+const style = {
+  maxWidth: '75%',
+  bgcolor: '#eddee1',
+  borderRadius: '10px',
+  margin: '10% auto',
+  textAlign: 'center',
+  boxShadow: '2px 2px 10px rgba(0,0,0,0.3)',
+  px: 3,
+  py: 2
+}
 
 const section = {
   textDecoration: 'underline'
@@ -44,9 +55,8 @@ function Help(props) {
         onClose={handleClose}
         display='block'
         sx={{
-          mx: "10px",
-          msOverflowY: 'scroll',
           position: 'absolute',
+          overflow: 'scroll',
         }}
       >
         <Grid container sx={style}>
