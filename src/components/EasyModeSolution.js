@@ -2,8 +2,15 @@ import { Grid, Typography, Button} from '@mui/material';
 
 function EasyModeSolution(props) {
 
-  const { solution } = props;
+  const { solution, isCorrect } = props;
   //  const { turn, solution, noTurn, isCorrect } = props;
+
+  const nameColor = () => {
+    if(isCorrect){
+      return '#06b506';
+    }
+    return '#FF4242'
+  };
 
   return (
     <Grid container>
@@ -17,7 +24,7 @@ function EasyModeSolution(props) {
         <Typography display='block' id="rules-of-the-game" color="#086788">
           Solution
         </Typography>
-        <Typography display='block' id="rules-of-the-game" color="#a8a8a8" sx={{ mb: 2, mt: 0 }}>
+        <Typography display='block' id="rules-of-the-game" color={nameColor()} sx={{ mb: 2, mt: 0 }}>
           {solution.name}
         </Typography>
         <Button sx={{ mb: 2, mt: 0 }} display='block' color="info" variant="contained" href='/'> 
