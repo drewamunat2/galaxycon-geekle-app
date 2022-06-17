@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import IconButton from '@mui/material/IconButton';
-import { Modal, Grid, Typography, Button} from '@mui/material';
+import { Modal, Grid, Typography } from '@mui/material';
 import {IoIosStats} from "react-icons/io"
 import CloseIcon from '@mui/icons-material/Close';
 
@@ -21,6 +21,9 @@ const style = {
 function Stats(props) {
 
   const { turn, solution, noTurn, isCorrect } = props;
+  const [winPopUpHappened, setWinPopUpHappened] = useState(false);
+
+
 
   const [open, setOpen] = useState(false);
   const handleOpen = () => {
@@ -31,6 +34,12 @@ function Stats(props) {
   };
 
   if(noTurn || isCorrect) {
+
+    if(!winPopUpHappened){
+      setOpen(true);
+      setWinPopUpHappened(true);
+    }
+
     return (
       <>
         <IconButton color="primary" onClick={handleOpen}>
