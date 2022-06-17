@@ -55,7 +55,6 @@ class App extends Component {
     this.setState(() => ({ 
       isCorrect: data
     }));
-    console.log("is correct: " + data);
   };
 
   //lose state
@@ -63,7 +62,6 @@ class App extends Component {
     this.setState(() => ({ 
       outOfTurns: data
     }));
-    console.log("is out of turns: " + data);
   };
   
   render() {
@@ -71,9 +69,9 @@ class App extends Component {
       <>
         <Header 
           solution={this.state.solution}
-          turn={this.state.turn}
           noTurn={this.state.outOfTurns}
           isCorrect={this.state.isCorrect}
+          colors={this.state.colors}
         />
         <Title
           turn={this.state.turn}

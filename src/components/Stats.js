@@ -20,7 +20,7 @@ const style = {
 
 function Stats(props) {
 
-  const { turn, solution, noTurn, isCorrect } = props;
+  const { solution, noTurn, isCorrect, colors } = props;
   const [winPopUpHappened, setWinPopUpHappened] = useState(false);
 
 
@@ -58,7 +58,7 @@ function Stats(props) {
         >
           <Grid container sx={style}>
             <Grid container justifyContent="right" alignItems="center">
-              <IconButton onClick={() => setOpen(false)} sx={{ px: -6 }}>
+              <IconButton onClick={() => setOpen(false)} sx={{ mx: -3, mt: -3, pt: 2 }}>
                 <CloseIcon />
               </IconButton>
             </Grid>
@@ -69,9 +69,8 @@ function Stats(props) {
             </Grid>
             <EasyModeSolution 
               solution={solution}
-              turn={turn}
               isCorrect={isCorrect}
-              noTurn={noTurn}
+              colors={colors}
             />  
             <Grid container justifyContent="center" alignItems="center">
               <Grid item>
@@ -106,7 +105,7 @@ function Stats(props) {
         >
           <Grid container sx={style}>
             <Grid container justifyContent="right" alignItems="center">
-              <IconButton onClick={() => setOpen(false)} sx={{ px: -6 }}>
+              <IconButton onClick={() => setOpen(false)} sx={{ mx: -3, mt: -3, pt: 2 }}>
                 <CloseIcon />
               </IconButton>
             </Grid>
@@ -119,7 +118,7 @@ function Stats(props) {
             <Grid container justifyContent="center" alignItems="center">
               <Grid item>
                 <Typography display='block' id="rules-of-the-game" color="#086788" variant="h6" sx={{ mt: 1, mb: 0 }}>
-                  New Players in
+                  New Character in
                 </Typography>
                 <Typography display='block' id="rules-of-the-game" color="#a8a8a8" sx={{ mb: 2, mt: -1 }}>
                   countdown coming soon

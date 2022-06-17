@@ -47,7 +47,7 @@ function Help() {
       >
         <Grid container sx={style}>
           <Grid container justifyContent="right" alignItems="center">
-            <IconButton onClick={() => setOpen(false)} sx={{ px: -6 }}>
+            <IconButton onClick={() => setOpen(false)} sx={{ mx: -3, mt: -3, pt: 2 }}>
               <CloseIcon />
             </IconButton>
           </Grid>

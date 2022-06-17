@@ -44,75 +44,75 @@ function Settings(props) {
       >
         <Grid container sx={style}>
           <Grid container justifyContent="right" alignItems="center">
-              <IconButton onClick={() => setOpen(false)} sx={{ px: -6 }}>
-                <CloseIcon />
-              </IconButton>
-            </Grid>
-            <Grid container justifyContent="center" alignItems="center" sx={{mt: -3}}>
-              <Typography id="help-modal" color="#086788" variant="h3" component="h2">
-                Settings
+            <IconButton onClick={() => setOpen(false)} sx={{ mx: -3, mt: -3, pt: 2 }}>
+              <CloseIcon />
+            </IconButton>
+          </Grid>
+          <Grid container justifyContent="center" alignItems="center" sx={{mt: -3}}>
+            <Typography id="help-modal" color="#086788" variant="h3" component="h2">
+              Settings
+            </Typography>
+          </Grid>
+          <Grid container>
+            <Grid item alignItems="left" textAlign='left' xs={6}>
+              <Typography display='block' id="rules-of-the-game" color="#086788" variant="h6" sx={{ mt: 2, mb: 0 }}>
+                HARD MODE
+              </Typography>
+              <Typography display='block' id="rules-of-the-game" color="#a8a8a8" sx={{ mb: 2, mt: -1 }}>
+                coming soon
               </Typography>
             </Grid>
-            <Grid container>
-              <Grid item alignItems="left" textAlign='left' xs={6}>
-                <Typography display='block' id="rules-of-the-game" color="#086788" variant="h6" sx={{ mt: 2, mb: 0 }}>
-                  HARD MODE
-                </Typography>
-                <Typography display='block' id="rules-of-the-game" color="#a8a8a8" sx={{ mb: 2, mt: -1 }}>
-                  coming soon
-                </Typography>
-              </Grid>
-              <Grid item alignItems="right" textAlign='right' xs={6}>
-                <Typography id="rules-of-the-game" color="#086788" sx={{ mb: 2, mt: 2 }}>
-                  <Switch disabled />
-                </Typography>
-              </Grid>
+            <Grid item alignItems="right" textAlign='right' xs={6}>
+              <Typography id="rules-of-the-game" color="#086788" sx={{ mb: 2, mt: 2 }}>
+                <Switch disabled />
+              </Typography>
             </Grid>
-            <Grid container>
-              <Grid item alignItems="left" textAlign='left' xs={6}>
-                <Typography display='block' id="rules-of-the-game" color="#086788" variant="h6" sx={{ mt: 1, mb: 0 }}>
-                  DARK MODE
-                </Typography>
-                <Typography display='block' id="rules-of-the-game" color="#a8a8a8" sx={{ mb: 2, mt: -1 }}>
-                  coming soon
-                </Typography>
-              </Grid>
-              <Grid item alignItems="right" textAlign='right' xs={6}>
-                <Typography id="rules-of-the-game" color="#086788" sx={{ mb: 2, mt: 2 }}>
-                  <Switch disabled />
-                </Typography>
-              </Grid>
+          </Grid>
+          <Grid container>
+            <Grid item alignItems="left" textAlign='left' xs={6}>
+              <Typography display='block' id="rules-of-the-game" color="#086788" variant="h6" sx={{ mt: 1, mb: 0 }}>
+                DARK MODE
+              </Typography>
+              <Typography display='block' id="rules-of-the-game" color="#a8a8a8" sx={{ mb: 2, mt: -1 }}>
+                coming soon
+              </Typography>
             </Grid>
-            <Grid container sx={{ mt: 2, mb: 0 }}>
-              <Grid item alignItems="left" textAlign='left' xs={6}>
-                <Typography display='block' id="rules-of-the-game" color="#086788" variant="h6">
-                  CONTACT US
-                </Typography>
-              </Grid>
-              <Grid item alignItems="right" textAlign='right' xs={6}>
-                <Link href='mailto:info@galaxycon.com?subject=Geekle'>{'Email'}</Link>
-              </Grid>
+            <Grid item alignItems="right" textAlign='right' xs={6}>
+              <Typography id="rules-of-the-game" color="#086788" sx={{ mb: 2, mt: 2 }}>
+                <Switch disabled />
+              </Typography>
             </Grid>
-            <Grid container sx={{ mt: 2, mb: 0 }}>
-              <Grid item alignItems="left" textAlign='left' xs={6}>
-                <Typography display='block' id="rules-of-the-game" color="#086788" variant="h6">
-                  CHARACTERS
-                </Typography>
-              </Grid>
-              <Grid item alignItems="right" textAlign='right' xs={6}>
-                <Link href='https://galaxycon.com/pages/galaxycon-store'>{'Store'}</Link>
-              </Grid>
+          </Grid>
+          <Grid container sx={{ mt: 2, mb: 0 }}>
+            <Grid item alignItems="left" textAlign='left' xs={6}>
+              <Typography display='block' id="rules-of-the-game" color="#086788" variant="h6">
+                CONTACT US
+              </Typography>
             </Grid>
-            <Grid container sx={{ mt: 2, mb: 0 }}>
-              <Grid item alignItems="left" textAlign='left' xs={6}>
-                <Typography display='block' id="rules-of-the-game" color="#086788" variant="h6">
-                  WEBSITE
-                </Typography>
-              </Grid>
-              <Grid item alignItems="right" textAlign='right' xs={6}>
-                <Link href='https://galaxycon.com/'>{'GalaxyCon'}</Link>
-              </Grid>
+            <Grid item alignItems="right" textAlign='right' xs={6}>
+              <Link href='mailto:info@galaxycon.com?subject=Geekle'>{'Email'}</Link>
             </Grid>
+          </Grid>
+          <Grid container sx={{ mt: 2, mb: 0 }}>
+            <Grid item alignItems="left" textAlign='left' xs={6}>
+              <Typography display='block' id="rules-of-the-game" color="#086788" variant="h6">
+                CHARACTERS
+              </Typography>
+            </Grid>
+            <Grid item alignItems="right" textAlign='right' xs={6}>
+              <Link href='https://galaxycon.com/pages/galaxycon-store'>{'Store'}</Link>
+            </Grid>
+          </Grid>
+          <Grid container sx={{ mt: 2, mb: 0 }}>
+            <Grid item alignItems="left" textAlign='left' xs={6}>
+              <Typography display='block' id="rules-of-the-game" color="#086788" variant="h6">
+                WEBSITE
+              </Typography>
+            </Grid>
+            <Grid item alignItems="right" textAlign='right' xs={6}>
+              <Link href='https://galaxycon.com/'>{'GalaxyCon'}</Link>
+            </Grid>
+          </Grid>
         </Grid>
       </Modal>
     </>

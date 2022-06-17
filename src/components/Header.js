@@ -38,7 +38,7 @@ const theme = createTheme({
 
 function Header(props) {
 
-  const {turn, solution, noTurn, isCorrect} = props;
+  const {solution, noTurn, isCorrect, colors} = props;
 
   return (
     <ThemeProvider theme={theme}>
@@ -48,9 +48,9 @@ function Header(props) {
               <Grid item xs={6}>
                 <Info 
                   solution={solution}
-                  turn={turn}
                   isCorrect={isCorrect}
                   noTurn={noTurn}
+                  colors={colors}
                 />
               </Grid>
               <Grid item xs={6}>
