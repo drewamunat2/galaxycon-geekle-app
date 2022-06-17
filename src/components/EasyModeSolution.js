@@ -2,7 +2,8 @@ import { Grid, Typography, Button} from '@mui/material';
 
 function EasyModeSolution(props) {
 
-  const { turn, solution, noTurn, isCorrect } = props;
+  const { solution } = props;
+  //  const { turn, solution, noTurn, isCorrect } = props;
 
   return (
     <Grid container>
