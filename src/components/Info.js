@@ -11,6 +11,8 @@ import Stats from './Stats';
 
 function Info(props) {
 
+  const { turn, solution, noTurn, isCorrect } = props;
+
   return (
     <>
       <Paper 
@@ -28,7 +30,12 @@ function Info(props) {
       <IconButton />
       <Help />
       <Settings />
-      <Stats />
+      <Stats 
+        solution={solution}
+        turn={turn}
+        isCorrect={isCorrect}
+        noTurn={noTurn}
+      />
     </Paper>
   </>
   );

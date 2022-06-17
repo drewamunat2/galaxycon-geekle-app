@@ -49,7 +49,7 @@ function Settings(props) {
               </IconButton>
             </Grid>
             <Grid container justifyContent="center" alignItems="center" sx={{mt: -3}}>
-              <Typography id="help-modal" color="#080357" variant="h3" component="h2">
+              <Typography id="help-modal" color="#086788" variant="h3" component="h2">
                 Settings
               </Typography>
             </Grid>

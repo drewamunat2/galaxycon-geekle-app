@@ -1,7 +1,6 @@
 import { Stack, Paper } from "@mui/material";
 import Turn from "./Turn";
 
-
 function Title(props) {
 
   const { turn } = props;

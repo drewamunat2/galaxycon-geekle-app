@@ -122,6 +122,9 @@ class Search extends Component {
       colorObj.year = "#E5E059";
     }
     this.props.updateTurn();
+    if (this.props.turn >= 7) {
+      this.props.updateOutOfTurns(true);
+    }
     this.props.updateColors(guess.name, colorObj);
   };
 
@@ -163,35 +166,62 @@ class Search extends Component {
 
   handleChange = (selectedOption) => {
     this.fetchCharacter(selectedOption.label);
-    console.log(`Option selected:`, selectedOption);
   }
 
   render() {
-    return (
-      <Grid
-        container
-        alignItems="center"
-        justifyContent="center"
-      >
-        <Grid item xs={10} sm={8} md={7} lg={5} xl={3}>
-          <Select 
-            styles={customStyles}
-            placeholder={null}
-            options={this.state.allCharactersNames}
-            onChange={this.handleChange}
-            autoFocus={true}
-            closeMenuOnSelect={true}
-            controlShouldRenderValue={false}
-            openMenuOnClick={true}
-            openMenuOnFocus={false}
-            captureMenuScroll={true}
-            components={{
-              IndicatorSeparator: () => null
-            }}
-          />
+    if(this.props.noTurn || this.props.isCorrect) {
+      return (
+        <Grid
+          container
+          alignItems="center"
+          justifyContent="center"
+        >
+          <Grid item xs={10} sm={8} md={7} lg={5} xl={3}>
+            <Select 
+              isDisabled={true}
+              placeholder={null}
+              options={this.state.allCharactersNames}
+              onChange={this.handleChange}
+              autoFocus={true}
+              closeMenuOnSelect={true}
+              controlShouldRenderValue={false}
+              openMenuOnClick={true}
+              openMenuOnFocus={false}
+              captureMenuScroll={true}
+              components={{
+                IndicatorSeparator: () => null
+              }}
+            />
+          </Grid>
         </Grid>
-      </Grid>
-    );
+      );
+    } else {
+      return (
+        <Grid
+          container
+          alignItems="center"
+          justifyContent="center"
+        >
+          <Grid item xs={10} sm={8} md={7} lg={5} xl={3}>
+            <Select 
+              styles={customStyles}
+              placeholder={null}
+              options={this.state.allCharactersNames}
+              onChange={this.handleChange}
+              autoFocus={true}
+              closeMenuOnSelect={true}
+              controlShouldRenderValue={false}
+              openMenuOnClick={true}
+              openMenuOnFocus={false}
+              captureMenuScroll={true}
+              components={{
+                IndicatorSeparator: () => null
+              }}
+            />
+          </Grid>
+        </Grid>
+      );
+    }
   }
 }
 
@@ -199,5 +229,6 @@ export default Search;
 
 Search.propTypes = {
   updateCharacters: PropTypes.func.isRequired,
-  updateColors: PropTypes.func.isRequired
+  updateColors: PropTypes.func.isRequired,
+  updateOutOfTurns: PropTypes.func.isRequired
 };

@@ -10,6 +10,7 @@ const theme = createTheme({
   palette: {
     primary: {
       main: '#78586F90',
+      dark: '#78586F',
     },
     secondary: {
       main: '#fff0ff',
@@ -19,6 +20,9 @@ const theme = createTheme({
     },
     warning: {
       main: '#fff700',
+    },
+    info: {
+      main: '#086788'
     }
   },
   components: {
@@ -32,7 +36,9 @@ const theme = createTheme({
   },
 });
 
-function Header() {
+function Header(props) {
+
+  const {turn, solution, noTurn, isCorrect} = props;
 
   return (
     <ThemeProvider theme={theme}>
@@ -40,7 +46,12 @@ function Header() {
           <Toolbar disableGutters>
             <Grid container>
               <Grid item xs={6}>
-                <Info />
+                <Info 
+                  solution={solution}
+                  turn={turn}
+                  isCorrect={isCorrect}
+                  noTurn={noTurn}
+                />
               </Grid>
               <Grid item xs={6}>
                 <Social />

@@ -4,25 +4,11 @@ import { Modal, Typography, Grid, Box } from '@mui/material';
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 import CloseIcon from '@mui/icons-material/Close';
 
-/*const style = {
-  position: 'absolute',
-  top: '50%',
-  left: '50%',
-  transform: 'translate(-50%, -50%)',
-  width: '50%',
-  bgcolor: '#eddee1',
-  boxShadow: 10,
-  borderRadius: '1%',
-  textAlign: 'center',
-  px: 3,
-  py: 2
-};*/
-
 const style = {
-  maxWidth: '75%',
+  maxWidth: '750px',
   bgcolor: '#eddee1',
   borderRadius: '10px',
-  margin: '10% auto',
+  margin: '2% auto',
   textAlign: 'center',
   boxShadow: '2px 2px 10px rgba(0,0,0,0.3)',
   px: 3,

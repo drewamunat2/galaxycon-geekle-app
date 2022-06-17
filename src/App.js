@@ -14,7 +14,8 @@ class App extends Component {
       solution: {},
       colors: [],
       turn: 0,
-      isCorrect: false
+      isCorrect: false,
+      outOfTurns: false
     };
   }
 
@@ -33,7 +34,6 @@ class App extends Component {
     this.setState( prevState => ({ 
       characters: [...prevState.characters, data]
     }));
-    console.log(data);
   };
 
   //update UI with new character guess colors
@@ -41,26 +41,40 @@ class App extends Component {
     this.setState( (prevState) => ({ 
       colors: [...prevState.colors, {key: name, colors: data}]
     }));
-    console.log(name, data);
-    console.log(this.state.colors);
   };
 
+  //turn count
   updateTurn = () => {
     this.setState((prevState) => ({ 
       turn: prevState.turn + 1
     }));
   };
 
+  //win state
   updateIsCorrect = (data) => {
     this.setState(() => ({ 
       isCorrect: data
     }));
+    console.log("is correct: " + data);
+  };
+
+  //lose state
+  updateOutOfTurns = (data) => {
+    this.setState(() => ({ 
+      outOfTurns: data
+    }));
+    console.log("is out of turns: " + data);
   };
   
   render() {
     return (
       <>
-        <Header />
+        <Header 
+          solution={this.state.solution}
+          turn={this.state.turn}
+          noTurn={this.state.outOfTurns}
+          isCorrect={this.state.isCorrect}
+        />
         <Title
           turn={this.state.turn}
         />
@@ -70,6 +84,10 @@ class App extends Component {
           solution={this.state.solution}
           updateIsCorrect={this.updateIsCorrect} 
           updateTurn={this.updateTurn}
+          updateOutOfTurns={this.updateOutOfTurns}
+          turn={this.state.turn}
+          noTurn={this.state.outOfTurns}
+          isCorrect={this.state.isCorrect}
         />
         <Categories 
           turn={this.state.turn}
