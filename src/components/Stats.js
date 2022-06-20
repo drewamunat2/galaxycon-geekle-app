@@ -20,7 +20,7 @@ const style = {
 
 function Stats(props) {
 
-  const { solution, noTurn, isCorrect, colors } = props;
+  const { solution, noTurn, isCorrect, colors, totalGamesWon, totalGamesPlayed } = props;
   const [winPopUpHappened, setWinPopUpHappened] = useState(false);
 
 
@@ -72,6 +72,8 @@ function Stats(props) {
               solution={solution}
               isCorrect={isCorrect}
               colors={colors}
+              totalGamesPlayed={totalGamesPlayed}
+              totalGamesWon={totalGamesWon}
             />  
             <Grid container justifyContent="center" alignItems="center">
               <Grid item>
@@ -115,7 +117,10 @@ function Stats(props) {
                 Statistics
               </Typography>
             </Grid>
-            <EasyModeNoSolution />  
+            <EasyModeNoSolution 
+              totalGamesPlayed={totalGamesPlayed}
+              totalGamesWon={totalGamesWon}
+            />  
             <Grid container justifyContent="center" alignItems="center">
               <Grid item>
                 <Typography display='block' id="rules-of-the-game" color="#086788" variant="h6" sx={{ mt: 1, mb: 0 }}>

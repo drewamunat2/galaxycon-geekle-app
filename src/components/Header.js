@@ -47,7 +47,7 @@ const theme = createTheme({
 
 function Header(props) {
 
-  const {solution, noTurn, isCorrect, colors} = props;
+  const {solution, noTurn, isCorrect, colors, totalGamesWon, totalGamesPlayed} = props;
 
   return (
     <ThemeProvider theme={theme}>
@@ -60,6 +60,8 @@ function Header(props) {
                   isCorrect={isCorrect}
                   noTurn={noTurn}
                   colors={colors}
+                  totalGamesPlayed={totalGamesPlayed}
+                  totalGamesWon={totalGamesWon}
                 />
               </Grid>
               <Grid item xs={6}>

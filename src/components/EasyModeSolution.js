@@ -10,8 +10,9 @@ class EasyModeSolution extends Component {
     super(props);
     this.state = {
       grid: '',
-      turns: 0
-    };
+      turns: 0,
+      gamesWinPercentage: 0
+    }
   }
 
   emoji = (color) => {
@@ -32,7 +33,6 @@ class EasyModeSolution extends Component {
   }
 
   componentDidMount = () => {
-    console.log(this.props.colors);
     for (const name of this.props.colors) {
       let row = '';
       let genderColor = this.emoji(name.colors.genderColor);
@@ -48,8 +48,11 @@ class EasyModeSolution extends Component {
       this.setState( prevState => ({ 
         turns: prevState.turns + 1
       }));
+      let winPercentage = this.props.totalGamesWon / this.props.totalGamesPlayed;
+      this.setState({gamesWinPercentage: winPercentage});
     }
   }
+
 
   nameColor = () => {
     if(this.props.isCorrect){
@@ -66,7 +69,7 @@ class EasyModeSolution extends Component {
             EASY MODE
           </Typography>
           <Typography display='block' id="rules-of-the-game" color="#a8a8a8" sx={{ mb: 2, mt: 0 }}>
-            local storage stats coming soon
+          {this.props.gamesWinPercentage}
           </Typography>
           <Typography display='block' id="rules-of-the-game" variant="h6" color="#086788" sx={{ mb: .5, mt: 0, textDecoration: 'underline' }}>
             Solution

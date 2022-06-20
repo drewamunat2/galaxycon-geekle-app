@@ -15,13 +15,41 @@ class App extends Component {
       colors: [],
       turn: 0,
       isCorrect: false,
-      outOfTurns: false
+      outOfTurns: false,
+      gameStarted: false,
+      totalGamesPlayed: 0,
+      totalGamesWon: 0
     };
   }
 
   saveCharacters = () => {
     window.localStorage.setItem("characters", JSON.stringify(this.state.characters));
-};
+  };
+
+  saveTotalWins = () => {
+    let totalWinsObj = JSON.parse(window.localStorage.getItem("totalGamesWon"));
+    console.log(totalWinsObj);
+    let totalGamesWon = 1;
+    if(totalWinsObj) {
+      totalGamesWon = totalWinsObj.totalGamesWon + 1;
+    } 
+    window.localStorage.setItem("totalGamesWon", JSON.stringify({"totalGamesWon": totalGamesWon}));
+    this.setState(() => ({ 
+      totalGamesWon: totalGamesWon,
+    }));
+  }
+
+  saveTotalGamesPlayed = () => {
+    let saveTotalGamesPlayedObj = JSON.parse(window.localStorage.getItem("totalGamesPlayed"));
+    let totalGamesPlayed = 1;
+    if(saveTotalGamesPlayedObj) {
+      totalGamesPlayed = saveTotalGamesPlayedObj.totalGamesPlayed + 1;
+    } 
+    window.localStorage.setItem("totalGamesPlayed", JSON.stringify({"totalGamesPlayed": totalGamesPlayed}));
+    this.setState(() => ({ 
+      totalGamesPlayed: totalGamesPlayed,
+    }));
+  }
 
   //set a random character as the solution
   componentDidMount = async () => {
@@ -29,8 +57,23 @@ class App extends Component {
     const randomCharacter = response.data[Math.floor(Math.random() * response.data.length)];
     console.log(randomCharacter);
     this.setState(() => ({ 
-      solution: randomCharacter
+      solution: randomCharacter,
     }));
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (prevState.characters !== this.state.characters) {
+      // ... do something
+      this.saveCharacters();
+    }
+    if (prevState.isCorrect !== this.state.isCorrect) {
+      // ... do something
+      this.saveTotalWins();
+    }
+    if (prevState.gameStarted !== this.state.gameStarted) {
+      // ... do something
+      this.saveTotalGamesPlayed();
+    }
   }
 
   //update UI with new character guess data
@@ -38,7 +81,6 @@ class App extends Component {
     this.setState( prevState => ({ 
       characters: [...prevState.characters, data]
     }));
-    this.saveCharacters();
   };
 
   //update UI with new character guess colors
@@ -68,6 +110,13 @@ class App extends Component {
       outOfTurns: data
     }));
   };
+
+  //game started state
+  updateGameStarted = (data) => {
+    this.setState(() => ({ 
+      gameStarted: data
+    }));
+  };
   
   render() {
     return (
@@ -77,6 +126,8 @@ class App extends Component {
           noTurn={this.state.outOfTurns}
           isCorrect={this.state.isCorrect}
           colors={this.state.colors}
+          totalGamesPlayed={this.state.totalGamesPlayed}
+          totalGamesWon={this.state.totalGamesWon}
         />
         <Title
           turn={this.state.turn}
@@ -91,6 +142,7 @@ class App extends Component {
           turn={this.state.turn}
           noTurn={this.state.outOfTurns}
           isCorrect={this.state.isCorrect}
+          updateGameStarted={this.updateGameStarted}
         />
         <Categories 
           turn={this.state.turn}

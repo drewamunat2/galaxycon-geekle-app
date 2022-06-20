@@ -149,6 +149,7 @@ class Search extends Component {
       this.props.updateOutOfTurns(true);
     }
     this.props.updateColors(guess.name, colorObj);
+    this.props.updateGameStarted(true);
   };
 
   fetchCharacter = async (guess) => {
