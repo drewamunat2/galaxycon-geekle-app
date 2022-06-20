@@ -9,7 +9,8 @@ class EasyModeSolution extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      grid: ''
+      grid: '',
+      turns: 0
     };
   }
 
@@ -21,6 +22,13 @@ class EasyModeSolution extends Component {
     } else {
       return "⬛️";
     }
+  }
+
+  onShare = () => {
+    let topRow = "Geekle 1 " + this.state.turns + "/8\n";
+    let grid = this.state.grid;
+    let link = 'https://galaxycon-geekle-app.netlify.app/'
+    return topRow + grid + link;
   }
 
   componentDidMount = () => {
@@ -36,6 +44,9 @@ class EasyModeSolution extends Component {
       row = genderColor + ' ' + roleColor + ' ' + showColor + ' ' + genreColor + ' ' + platformColor + ' ' + yearColor + '\n';
       this.setState( prevState => ({ 
         grid: prevState.grid + row
+      }));
+      this.setState( prevState => ({ 
+        turns: prevState.turns + 1
       }));
     }
   }
@@ -64,7 +75,7 @@ class EasyModeSolution extends Component {
             {this.props.solution.name}
           </Typography>
           <EmojiSolution colors={this.props.colors} updateGrid={this.updateGrid}/>
-          <CopyToClipboard text={this.state.grid}>
+          <CopyToClipboard text={this.onShare()}>
             <Button sx={{ mb: 2, mt: 0 }} display='block' color="info" variant="contained"> 
               Share<HiOutlineClipboardCopy/>
             </Button>
