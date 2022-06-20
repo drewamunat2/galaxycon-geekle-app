@@ -4,20 +4,6 @@ import { Component } from "react";
 
 class EmojiSolution extends Component {
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      results: ''
-    };
-  }
-
-  //update results with new emojis
-  updateResults = (data) => {
-    this.setState( prevState => ({ 
-      results: prevState.results + data
-    }));
-  };
-
   render () {
     return(
         <Grid container sx={{ mb: 1, mt: 0 }}>
@@ -32,7 +18,7 @@ class EmojiSolution extends Component {
               >
                 <EmojiSolutionRow 
                   colors={name.colors}
-                  updateResules={this.updateResults}
+                  updateResults={this.updateResults}
                 />
               </Grid>
             )

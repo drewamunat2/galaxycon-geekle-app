@@ -75,7 +75,7 @@ function Stats(props) {
             <Grid container justifyContent="center" alignItems="center">
               <Grid item>
                 <Typography display='block' id="rules-of-the-game" color="#086788" variant="h6" sx={{ mt: 1, mb: 0 }}>
-                  New Players in
+                  New Characters in
                 </Typography>
                 <Typography display='block' id="rules-of-the-game" color="#a8a8a8" sx={{ mb: 2, mt: -1 }}>
                   countdown coming soon

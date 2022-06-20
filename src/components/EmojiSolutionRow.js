@@ -1,15 +1,8 @@
 import Emoji from "./Emoji";
 import { Grid } from "@mui/material";
 import { Component } from "react";
-import PropTypes from "prop-types";
 
 class EmojiSolutionRow extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      row: {}
-    };
-  }
 
   emoji = (color) => {
     if (color === 'green') {
@@ -49,7 +42,3 @@ class EmojiSolutionRow extends Component {
 }
 
 export default EmojiSolutionRow;
-
-EmojiSolutionRow.propTypes = {
-  updateResults: PropTypes.func.isRequired,
-};
