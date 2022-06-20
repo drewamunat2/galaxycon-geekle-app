@@ -18,6 +18,9 @@ const customStyles = {
       // Overwrittes the different states of border
       borderColor:  "#00d5ff"
     },
+    "&:disabled": {
+      background: "#ffeeff"
+    },
     height: "50px"
   }),
   menu: base => ({

@@ -19,6 +19,10 @@ class App extends Component {
     };
   }
 
+  saveCharacters = () => {
+    window.localStorage.setItem("characters", JSON.stringify(this.state.characters));
+};
+
   //set a random character as the solution
   componentDidMount = async () => {
     const response = await axios.get(`http://localhost:3001/characters`);
@@ -34,6 +38,7 @@ class App extends Component {
     this.setState( prevState => ({ 
       characters: [...prevState.characters, data]
     }));
+    this.saveCharacters();
   };
 
   //update UI with new character guess colors
