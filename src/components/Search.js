@@ -71,7 +71,7 @@ class Search extends Component {
     };
 
     if (guess.name === this.props.solution.name) {
-      colorObj.name = "#AABE4D";
+      colorObj.name = "#66a05d";
       colorObj.nameColor = 'green';
       this.props.updateIsCorrect(true);
     }
@@ -80,10 +80,10 @@ class Search extends Component {
 
     //same gender : set green
     if(guess.characteristics.gender === this.props.solution.characteristics.gender) {
-      colorObj.gender = "#BDD358";
+      colorObj.gender = "#6CA663";
       colorObj.genderColor = 'green';
     } else if(guess.characteristics.species === this.props.solution.characteristics.species) {
-      colorObj.gender = "#E5E059";
+      colorObj.gender = "#E0CA3C";
       colorObj.genderColor = 'yellow';
     }
 
@@ -91,10 +91,10 @@ class Search extends Component {
 
     //same show : set green
     if(guess.characteristics.show === this.props.solution.characteristics.show) {
-      colorObj.show = "#BDD358";
+      colorObj.show = "#6CA663";
       colorObj.showColor = 'green';
     } else if (this.isYellow(guess.characteristics.show, this.props.solution.characteristics.allShows)) {
-      colorObj.show = "#E5E059";
+      colorObj.show = "#E0CA3C";
       colorObj.showColor = 'yellow';
     }
 
@@ -102,10 +102,10 @@ class Search extends Component {
 
     //same genre : set green
     if(guess.characteristics.genre === this.props.solution.characteristics.genre) {
-      colorObj.genre = "#BDD358";
+      colorObj.genre = "#6CA663";
       colorObj.genreColor = 'green';
     } else if (this.isYellow(guess.characteristics.genre, this.props.solution.characteristics.allGenres)) {
-      colorObj.genre = "#E5E059";
+      colorObj.genre = "#E0CA3C";
       colorObj.genreColor = 'yellow';
     }
 
@@ -113,10 +113,10 @@ class Search extends Component {
 
     //same platform : set green
     if(guess.characteristics.platform === this.props.solution.characteristics.platform) {
-      colorObj.platform = "#BDD358";
+      colorObj.platform = "#6CA663";
       colorObj.platformColor = 'green';
     } else if(this.isYellow(guess.characteristics.platform, this.props.solution.characteristics.allPlatforms)) {
-      colorObj.platform = "#E5E059";
+      colorObj.platform = "#E0CA3C";
       colorObj.platformColor = 'yellow';
     }
 
@@ -124,10 +124,10 @@ class Search extends Component {
 
     //same role : set green
     if(guess.characteristics.role === this.props.solution.characteristics.role) {
-      colorObj.role = "#BDD358";
+      colorObj.role = "#6CA663";
       colorObj.roleColor = 'green';
     } else if(guess.characteristics.genRole === this.props.solution.characteristics.genRole) {
-      colorObj.role = "#E5E059";
+      colorObj.role = "#E0CA3C";
       colorObj.roleColor = 'yellow';
     }
 
@@ -135,10 +135,10 @@ class Search extends Component {
 
     //same year : set green
     if(guess.characteristics.year === this.props.solution.characteristics.year) {
-      colorObj.year = "#BDD358";
+      colorObj.year = "#6CA663";
       colorObj.yearColor = 'green';
     } else if(guess.characteristics.decade === this.props.solution.characteristics.decade) {
-      colorObj.year = "#E5E059";
+      colorObj.year = "#E0CA3C";
       colorObj.yearColor = 'yellow';
     }
     this.props.updateTurn();

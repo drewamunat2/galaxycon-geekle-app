@@ -24,7 +24,7 @@ function Categories(props) {
                   alignItems: "center",
                   textAlign: "center",
                   verticalAlign: "middle",
-                  backgroundColor: '#fff0ff' 
+                  backgroundColor: '#fff0ff'
                 }}
               />
             </Grid>
@@ -53,7 +53,8 @@ function Categories(props) {
                   alignItems: "center",
                   textAlign: "center",
                   verticalAlign: "middle",
-                  backgroundColor: '#ffeeff' 
+                  backgroundColor: '#ffeeff',
+                  color: '#086788'  
                 }}
               >
                 Gender
@@ -69,7 +70,8 @@ function Categories(props) {
                   alignItems: "center",
                   textAlign: "center",
                   verticalAlign: "middle",
-                  backgroundColor: '#ffeeff' 
+                  backgroundColor: '#ffeeff',
+                  color: '#086788'  
                 }}
               >
                 Role
@@ -85,7 +87,8 @@ function Categories(props) {
                   alignItems: "center",
                   textAlign: "center",
                   verticalAlign: "middle",
-                  backgroundColor: '#ffeeff' 
+                  backgroundColor: '#ffeeff',
+                  color: '#086788' 
                 }}
               >
                 Appears In
@@ -101,7 +104,8 @@ function Categories(props) {
                   alignItems: "center",
                   textAlign: "center",
                   verticalAlign: "middle",
-                  backgroundColor: '#ffeeff' 
+                  backgroundColor: '#ffeeff',
+                  color: '#086788' 
                 }}
               >
                 Genre
@@ -117,7 +121,8 @@ function Categories(props) {
                   alignItems: "center",
                   textAlign: "center",
                   verticalAlign: "middle",
-                  backgroundColor: '#ffeeff' 
+                  backgroundColor: '#ffeeff',
+                  color: '#086788'  
                 }}
               >
                 Platform
@@ -133,7 +138,8 @@ function Categories(props) {
                   alignItems: "center",
                   textAlign: "center",
                   verticalAlign: "middle",
-                  backgroundColor: '#ffeeff' 
+                  backgroundColor: '#ffeeff',
+                  color: '#086788'  
                 }}
               >
                 Year

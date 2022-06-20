@@ -63,9 +63,9 @@ function Character(props) {
             textAlign: "center",
             verticalAlign: "middle",
             backgroundColor: `${nameColor}`,
+            fontWeight: 500,
             color: "#080357",
             fontSize: 25,
-            fontWeight: 500
           }}
         >
           {character.name}
@@ -83,7 +83,6 @@ function Character(props) {
             textAlign: "center",
             verticalAlign: "middle",
             backgroundColor: `${genderColor}`,
-            color: "#086788"
           }}
         >
           {character.characteristics.gender}
@@ -101,7 +100,6 @@ function Character(props) {
             textAlign: "center",
             verticalAlign: "middle",
             backgroundColor: `${roleColor}`,
-            color: "#086788"
           }}
         >
           {character.characteristics.role}
@@ -119,7 +117,6 @@ function Character(props) {
             textAlign: "center",
             verticalAlign: "middle",
             backgroundColor: `${showColor}`,
-            color: "#086788"
           }}
         >
           {character.characteristics.show}
@@ -137,7 +134,6 @@ function Character(props) {
             textAlign: "center",
             verticalAlign: "middle", 
             backgroundColor: `${genreColor}`,
-            color: "#086788"
           }}
         >
           {character.characteristics.genre}
@@ -155,7 +151,6 @@ function Character(props) {
             textAlign: "center",
             verticalAlign: "middle",
             backgroundColor: `${platformColor}`,
-            color: "#086788"
           }}
         >
           {character.characteristics.platform}
@@ -173,7 +168,6 @@ function Character(props) {
             textAlign: "center",
             verticalAlign: "middle",
             backgroundColor: `${yearColor}`,
-            color: "#086788"
           }}
         >
           {character.characteristics.year} <i className={`${arrow}`}>{icon}</i>

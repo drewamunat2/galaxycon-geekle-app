@@ -71,6 +71,7 @@ html, body {
 /* darker green color for tile if characteristic is correct */
 .correct {
   background-color: #BDD358;
+  color:#66a05d
 }
 
 /* yellow color for tile if characteristic is close */
