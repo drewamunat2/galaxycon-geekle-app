@@ -25,7 +25,7 @@ class EasyModeSolution extends Component {
   }
 
   onShare = () => {
-    let topRow = "Geekle 1 " + this.state.turns + "/8\n";
+    let topRow = "Geekle 1 " + this.state.turns + "/8\n\n";
     let grid = this.state.grid;
     let link = 'https://galaxycon-geekle-app.netlify.app/'
     return topRow + grid + link;
