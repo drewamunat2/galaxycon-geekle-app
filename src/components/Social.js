@@ -5,27 +5,28 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import EmailIcon from '@mui/icons-material/Email';
 import FacebookIcon from '@mui/icons-material/Facebook';
-//IoShareSocialOutline
 import {FaTiktok, FaYoutube} from "react-icons/fa";
 import {AiOutlineMenu} from "react-icons/ai";
 import { Paper } from '@mui/material';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 
-const customStyles = {
+/*const customStyles = {
   control: (base) => ({
     ...base,
     backgroundColor: "#fff0ff",
   }),
   menu: base => ({
     ...base,
-    backgroundColor: "#fff0ff",
+    root: {
+      backgroundColor: "lightblue"
+    }
   }),
   menuList: base => ({
     ...base,
     backgroundColor: "#fff0ff",
   })
-};
+};*/
 
 function Social() {
 
@@ -42,8 +43,7 @@ function Social() {
           alignItems: "center",
           textAlign: "center",
           verticalAlign: "middle",
-          backgroundColor: '#fff0ff' 
-          //bgcolor: '#FFF0FF',
+          backgroundColor: '#fff0ff'
         }}
       > 
         <IconButton color="primary" href='https://www.facebook.com/galaxyconlive/'>
@@ -94,8 +94,7 @@ function Social() {
         >
           <AiOutlineMenu/>
         </IconButton>
-        <Menu 
-          style={customStyles}
+        <Menu
           id='social-menu' 
           open={Boolean(profileMenu)} 
           anchorEl={profileMenu}

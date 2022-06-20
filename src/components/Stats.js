@@ -51,6 +51,7 @@ function Stats(props) {
           open={open}
           onClose={handleClose}
           display='block'
+          disableAutoFocus={true}
           sx={{
             position: 'absolute',
             overflow: 'scroll',

@@ -28,8 +28,17 @@ const theme = createTheme({
   components: {
     MuiMenu: {
       styleOverrides: {
-        control: {
+        list: {
           backgroundColor: '#fff0ff'
+        }
+      }
+    },
+    MuiIconButton: {
+      styleOverrides: {
+        root: {
+          "&:hover" :{
+            backgroundColor: 'transparent'
+          }
         }
       }
     }
