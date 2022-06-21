@@ -22,13 +22,32 @@ class App extends Component {
     };
   }
 
+  saveGameStarted = () => {
+    window.localStorage.setItem("gameStarted", JSON.stringify(this.state.gameStarted));
+  };
+
+  saveOutOfTurns = () => {
+    window.localStorage.setItem("outOfTurns", JSON.stringify(this.state.outOfTurns));
+  };
+
+  saveColors = () => {
+    window.localStorage.setItem("colors", JSON.stringify(this.state.colors));
+  };
+
   saveCharacters = () => {
     window.localStorage.setItem("characters", JSON.stringify(this.state.characters));
   };
 
+  saveTurn = () => {
+    window.localStorage.setItem("turn", JSON.stringify(this.state.turn));
+  };
+
+  saveIsCorrect = () => {
+    window.localStorage.setItem("isCorrect", JSON.stringify(this.state.isCorrect));
+  };
+
   saveTotalWins = () => {
     let totalWinsObj = JSON.parse(window.localStorage.getItem("totalGamesWon"));
-    console.log(totalWinsObj);
     let totalGamesWon = 1;
     if(totalWinsObj) {
       totalGamesWon = totalWinsObj.totalGamesWon + 1;
@@ -54,11 +73,51 @@ class App extends Component {
   //set a random character as the solution
   componentDidMount = async () => {
     const response = await axios.get(`http://localhost:3001/characters`);
-    const randomCharacter = response.data[Math.floor(Math.random() * response.data.length)];
-    console.log(randomCharacter);
+    //const randomCharacter = response.data[Math.floor(Math.random() * response.data.length)];
+    const randomCharacter = response.data[0];
     this.setState(() => ({ 
-      solution: randomCharacter,
+      solution: randomCharacter
     }));
+    if(JSON.parse(window.localStorage.getItem("characters"))) {
+      this.setState({ 
+        characters: JSON.parse(window.localStorage.getItem("characters"))
+      });
+    }
+    if(JSON.parse(window.localStorage.getItem("colors"))) {
+      this.setState({ 
+        colors: JSON.parse(window.localStorage.getItem("colors"))
+      });
+    }
+    if(JSON.parse(window.localStorage.getItem("turn"))) {
+      this.setState({ 
+        turn: JSON.parse(window.localStorage.getItem("turn"))
+      });
+    }
+    if(JSON.parse(window.localStorage.getItem("isCorrect"))) {
+      this.setState({ 
+        isCorrect: JSON.parse(window.localStorage.getItem("isCorrect"))
+      });
+    }
+    if(JSON.parse(window.localStorage.getItem("outOfTurns"))) {
+      this.setState({ 
+        outOfTurns: JSON.parse(window.localStorage.getItem("outOfTurns"))
+      });
+    }
+    if(JSON.parse(window.localStorage.getItem("gameStarted"))) {
+      this.setState({ 
+        gameStarted: JSON.parse(window.localStorage.getItem("gameStarted"))
+      });
+    }
+    if(JSON.parse(window.localStorage.getItem("totalGamesPlayed"))) {
+      this.setState({ 
+        totalGamesPlayed: JSON.parse(window.localStorage.getItem("totalGamesPlayed"))
+      });
+    }
+    if(JSON.parse(window.localStorage.getItem("totalGamesWon"))) {
+      this.setState({ 
+        totalGamesWon: JSON.parse(window.localStorage.getItem("totalGamesWon"))
+      });
+    }
   }
 
   componentDidUpdate(prevProps, prevState) {
@@ -66,12 +125,26 @@ class App extends Component {
       // ... do something
       this.saveCharacters();
     }
+    if (prevState.colors !== this.state.colors) {
+      // ... do something
+      this.saveColors();
+    }
+    if (prevState.turn !== this.state.turn) {
+      // ... do something
+      this.saveTurn();
+    }
     if (prevState.isCorrect !== this.state.isCorrect) {
       // ... do something
+      this.saveIsCorrect();
       this.saveTotalWins();
+    }
+    if (prevState.outOfTurns !== this.state.outOfTurns) {
+      // ... do something
+      this.saveOutOfTurns();
     }
     if (prevState.gameStarted !== this.state.gameStarted) {
       // ... do something
+      this.saveGameStarted();
       this.saveTotalGamesPlayed();
     }
   }
