@@ -121,10 +121,6 @@ class App extends Component {
   }
 
   componentDidUpdate(prevProps, prevState) {
-    if (prevState.characters !== this.state.characters) {
-      // ... do something
-      this.saveCharacters();
-    }
     if (prevState.colors !== this.state.colors) {
       // ... do something
       this.saveColors();
@@ -151,9 +147,11 @@ class App extends Component {
 
   //update UI with new character guess data
   updateCharacters = (data) => {
-    this.setState( prevState => ({ 
-      characters: [...prevState.characters, data]
-    }));
+    this.setState( prevState => { 
+      return {
+        characters: [...prevState.characters, data]
+      }
+    }, this.saveCharacters());
   };
 
   //update UI with new character guess colors
