@@ -3,6 +3,7 @@ import EmojiSolution from './EmojiSolution';
 import {HiOutlineClipboardCopy} from "react-icons/hi"
 import {CopyToClipboard} from 'react-copy-to-clipboard';
 import { Component } from "react";
+import PercentagesEasy from './PercentagesEasy';
 
 class EasyModeSolution extends Component {
 
@@ -11,7 +12,6 @@ class EasyModeSolution extends Component {
     this.state = {
       grid: '',
       turns: 0,
-      gamesWinPercentage: 0
     }
   }
 
@@ -48,8 +48,6 @@ class EasyModeSolution extends Component {
       this.setState( prevState => ({ 
         turns: prevState.turns + 1
       }));
-      let winPercentage = this.props.totalGamesWon / this.props.totalGamesPlayed;
-      this.setState({gamesWinPercentage: winPercentage});
     }
   }
 
@@ -64,12 +62,12 @@ class EasyModeSolution extends Component {
   render () {
     return (
       <Grid container>
-        <Grid item xs={6}>
+        <Grid item /*xs={12}*/ xs={6}>
           <Typography display='block' id="rules-of-the-game" color="#086788" variant="h6" sx={{ mt: 2, mb: 0 }}>
             EASY MODE
           </Typography>
           <Typography display='block' id="rules-of-the-game" color="#a8a8a8" sx={{ mb: 2, mt: 0 }}>
-          {this.props.gamesWinPercentage}
+            <PercentagesEasy/>
           </Typography>
           <Typography display='block' id="rules-of-the-game" variant="h6" color="#086788" sx={{ mb: .5, mt: 0, textDecoration: 'underline' }}>
             Solution
@@ -84,7 +82,7 @@ class EasyModeSolution extends Component {
             </Button>
           </CopyToClipboard>
         </Grid>
-        <Grid item xs={6}>
+        <Grid item /*sx={{display: {xs: 'none'}}}*/ xs={6}>
           <Typography display='block' id="rules-of-the-game" color="#086788" variant="h6" sx={{ mt: 2, mb: 0 }}>
             HARD MODE
           </Typography>

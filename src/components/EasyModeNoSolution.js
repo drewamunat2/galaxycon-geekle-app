@@ -1,3 +1,4 @@
+import PercentagesEasy from './PercentagesEasy';
 import { Grid, Typography, Button} from '@mui/material';
 
 function EasyModeNoSolution() {
@@ -9,7 +10,7 @@ function EasyModeNoSolution() {
           EASY MODE
         </Typography>
         <Typography display='block' id="rules-of-the-game" color="#a8a8a8" sx={{ mb: 2, mt: 0 }}>
-          local storage stats coming soon
+          <PercentagesEasy/>
         </Typography>
         <Typography display='block' id="rules-of-the-game" variant="h6" color="#086788" sx={{textDecoration: 'underline'}}>
           Solution
@@ -29,7 +30,7 @@ function EasyModeNoSolution() {
           coming soon
         </Typography>
         <Typography display='block' id="rules-of-the-game" color="#a8a8a8" sx={{ mb: 2, mt: 0 }}>
-          coming soon
+            coming soon
         </Typography>
         <Typography display='block' id="rules-of-the-game" variant="h6" color="#086788" sx={{textDecoration: 'underline'}}>
           Solution
