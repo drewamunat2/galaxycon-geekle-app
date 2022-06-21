@@ -6,6 +6,8 @@ import CloseIcon from '@mui/icons-material/Close';
 
 import EasyModeNoSolution from './EasyModeNoSolution';
 import EasyModeSolution from './EasyModeSolution';
+import Timer from './Timer';
+import CountdownTimer from './CountDownTimer';
 
 const style = {
   maxWidth: '350px',
@@ -22,9 +24,6 @@ function Stats(props) {
 
   const { solution, noTurn, isCorrect, colors } = props;
   const [winPopUpHappened, setWinPopUpHappened] = useState(false);
-
-
-
   const [open, setOpen] = useState(false);
   const handleOpen = () => {
       setOpen(true);
@@ -122,7 +121,7 @@ function Stats(props) {
                   New Character in
                 </Typography>
                 <Typography display='block' id="rules-of-the-game" color="#a8a8a8" sx={{ mb: 2, mt: -1 }}>
-                  countdown coming soon
+                  <Timer/>
                 </Typography>
               </Grid>
             </Grid>
