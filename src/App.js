@@ -176,9 +176,11 @@ class App extends Component {
 
   //game started state
   updateGameStarted = (data) => {
+    if(!this.state.gameStarted){
     this.setState(() => ({ 
       gameStarted: data
     }), this.saveTotalGamesPlayed());
+  }
   };
   
   render() {
