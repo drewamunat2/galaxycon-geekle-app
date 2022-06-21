@@ -26,7 +26,7 @@ class EasyModeSolution extends Component {
   }
 
   onShare = () => {
-    let topRow = "Geekle 1 " + this.state.turns + "/8\n\n";
+    let topRow = "Geekle 1 - " + this.state.turns + "/8\n\n";
     let grid = this.state.grid;
     let link = 'https://galaxycon-geekle-app.netlify.app/'
     return topRow + grid + link;
@@ -66,7 +66,7 @@ class EasyModeSolution extends Component {
           <Typography display='block' id="rules-of-the-game" color="#086788" variant="h6" sx={{ mt: 2, mb: 0 }}>
             EASY MODE
           </Typography>
-          <Typography display='block' id="rules-of-the-game" color="#a8a8a8" sx={{ mb: 2, mt: 0 }}>
+          <Typography display='block' id="rules-of-the-game" sx={{ mb: 2, mt: 0 }}>
             <PercentagesEasy/>
           </Typography>
           <Typography display='block' id="rules-of-the-game" variant="h6" color="#086788" sx={{ mb: .5, mt: 0, textDecoration: 'underline' }}>
@@ -86,7 +86,7 @@ class EasyModeSolution extends Component {
           <Typography display='block' id="rules-of-the-game" color="#086788" variant="h6" sx={{ mt: 2, mb: 0 }}>
             HARD MODE
           </Typography>
-          <Typography display='block' id="rules-of-the-game" color="#a8a8a8">
+          <Typography display='block' id="rules-of-the-game" variant="h6" color="#a8a8a8">
             coming soon
           </Typography>
           <Typography display='block' id="rules-of-the-game" color="#a8a8a8" sx={{ mb: 2, mt: 0 }}>
@@ -98,7 +98,7 @@ class EasyModeSolution extends Component {
           <Typography display='block' id="rules-of-the-game" color="#a8a8a8" sx={{ mb: .5, mt: 0 }}>
             ?
           </Typography>
-          <Button sx={{ mb: 2, mt: 0 }} display='block' color="info" variant="contained" href='/'> 
+          <Button sx={{ mb: 2, mt: 0 }} disabled display='block' color="info" variant="contained" href='/'> 
             Play Now 
           </Button>
         </Grid>
