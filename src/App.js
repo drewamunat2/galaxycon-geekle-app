@@ -16,9 +16,7 @@ class App extends Component {
       turn: 0,
       isCorrect: false,
       outOfTurns: false,
-      gameStarted: false,
-      totalGamesPlayed: 0,
-      totalGamesWon: 0
+      gameStarted: false
     };
   }
 
@@ -53,9 +51,6 @@ class App extends Component {
       totalGamesWon = totalWinsObj.totalGamesWon + 1;
     } 
     window.localStorage.setItem("totalGamesWon", JSON.stringify({"totalGamesWon": totalGamesWon}));
-    this.setState(() => ({ 
-      totalGamesWon: totalGamesWon,
-    }));
   }
 
   saveTotalGamesPlayed = () => {
@@ -65,9 +60,6 @@ class App extends Component {
       totalGamesPlayed = saveTotalGamesPlayedObj.totalGamesPlayed + 1;
     } 
     window.localStorage.setItem("totalGamesPlayed", JSON.stringify({"totalGamesPlayed": totalGamesPlayed}));
-    this.setState(() => ({ 
-      totalGamesPlayed: totalGamesPlayed,
-    }));
   }
 
   //set a random character as the solution
@@ -121,6 +113,10 @@ class App extends Component {
   }
 
   componentDidUpdate(prevProps, prevState) {
+    if (prevState.characters !== this.state.characters) {
+      // ... do something
+      this.saveCharacters();
+    }
     if (prevState.colors !== this.state.colors) {
       // ... do something
       this.saveColors();
@@ -132,7 +128,6 @@ class App extends Component {
     if (prevState.isCorrect !== this.state.isCorrect) {
       // ... do something
       this.saveIsCorrect();
-      this.saveTotalWins();
     }
     if (prevState.outOfTurns !== this.state.outOfTurns) {
       // ... do something
@@ -141,17 +136,14 @@ class App extends Component {
     if (prevState.gameStarted !== this.state.gameStarted) {
       // ... do something
       this.saveGameStarted();
-      this.saveTotalGamesPlayed();
     }
   }
 
   //update UI with new character guess data
   updateCharacters = (data) => {
-    this.setState( prevState => { 
-      return {
-        characters: [...prevState.characters, data]
-      }
-    }, this.saveCharacters());
+    this.setState( prevState => ({
+      characters: [...prevState.characters, data]
+    }));
   };
 
   //update UI with new character guess colors
@@ -172,7 +164,7 @@ class App extends Component {
   updateIsCorrect = (data) => {
     this.setState(() => ({ 
       isCorrect: data
-    }));
+    }), this.saveTotalWins());
   };
 
   //lose state
@@ -186,7 +178,7 @@ class App extends Component {
   updateGameStarted = (data) => {
     this.setState(() => ({ 
       gameStarted: data
-    }));
+    }), this.saveTotalGamesPlayed());
   };
   
   render() {
