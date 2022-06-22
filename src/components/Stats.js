@@ -20,7 +20,7 @@ const style = {
 
 function Stats(props) {
 
-  const { solution, noTurn, isCorrect, colors } = props;
+  const { solution, noTurn, isCorrect, colors, tomorrow } = props;
   const [winPopUpHappened, setWinPopUpHappened] = useState(false);
   const [open, setOpen] = useState(false);
   const handleOpen = () => {
@@ -76,7 +76,7 @@ function Stats(props) {
                   New Characters in
                 </Typography>
                 <Typography display='block' id="rules-of-the-game" color="#a8a8a8" sx={{ mb: 2, mt: -1 }}>
-                  <Timer/>
+                  <Timer tom={tomorrow}/>
                 </Typography>
               </Grid>
             </Grid>
@@ -119,7 +119,7 @@ function Stats(props) {
                   New Character in
                 </Typography>
                 <Typography display='block' id="rules-of-the-game" color="#a8a8a8" sx={{ mb: 2, mt: -1 }}>
-                  <Timer/>
+                  <Timer tom={tomorrow}/>
                 </Typography>
               </Grid>
             </Grid>

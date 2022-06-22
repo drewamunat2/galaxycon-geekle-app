@@ -16,7 +16,8 @@ class App extends Component {
       turn: 0,
       isCorrect: false,
       outOfTurns: false,
-      gameStarted: false
+      gameStarted: false,
+      tomorrow: {}
     };
   }
 
@@ -67,10 +68,19 @@ class App extends Component {
     const response = await axios.get(`http://localhost:3001/characters`);
     //const randomCharacter = response.data[Math.floor(Math.random() * response.data.length)];
     const randomCharacter = response.data[0];
+    let today = new Date();
+    let day = today.getDate() + 1;
+    let tom = new Date();
+    tom.setDate(day);
+    tom.setHours(0);
+    tom.setMinutes(0)
+    tom.setSeconds(0);
+    console.log(tom)
     this.setState(() => ({ 
-      solution: randomCharacter
+      solution: randomCharacter,
+      tomorrow: tom
     }));
-    if(JSON.parse(window.localStorage.getItem("characters"))) {
+    if(JSON.parse(window.localStorage.getItem("charact/Applications/Visual Studio Code.app/Contents/Resources/app/out/vs/code/electron-browser/workbench/workbench.htmlers"))) {
       this.setState({ 
         characters: JSON.parse(window.localStorage.getItem("characters"))
       });
@@ -193,6 +203,7 @@ class App extends Component {
           colors={this.state.colors}
           totalGamesPlayed={this.state.totalGamesPlayed}
           totalGamesWon={this.state.totalGamesWon}
+          tomorrow={this.state.tomorrow}
         />
         <Title
           turn={this.state.turn}

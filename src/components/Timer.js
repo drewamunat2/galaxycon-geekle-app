@@ -2,17 +2,18 @@ import React, { useEffect, useState } from 'react'
 
 function Timer() {
 
-  const [tomorrow, setTomorrow] = useState({});
-  const [timer, setTimer] = useState("00:00:00");
+  //const { tom } = props;
+  //const [tomorrow, setTomorrow] = useState(new Date().setDate(new Date().getDate + 1));
+  const [timer, setTimer] = useState();
+  const [tomorrow, setTomorrow] = useState(new Date());
 
   const getTimeRemaining = () => {
     const total = tomorrow - Date.parse(new Date());
     const seconds = Math.floor((total / 1000) % 60);
     const minutes = Math.floor((total / 1000 / 60) % 60);
     const hours = Math.floor((total / 1000 / 60 / 60) % 24);
-    console.log(total, hours, minutes, seconds);
     return {
-        hours, minutes, seconds
+        total, hours, minutes, seconds
     };
   }
 
@@ -25,9 +26,6 @@ function Timer() {
       tom.setHours(0);
       tom.setMinutes(0)
       tom.setSeconds(0);
-      tom.setMilliseconds(0);
-
-      console.log(tom)
       setTomorrow(tom);
       getTime();
     }, 1000);
@@ -35,21 +33,23 @@ function Timer() {
   });
 
   const getTime = () => {
-    let { hours, minutes, seconds } 
-      = getTimeRemaining();
-    
-    setTimer(
-      (hours > 9 ? hours : '0' + hours) + ':' +
-      (minutes > 9 ? minutes : '0' + minutes) + ':'
-      + (seconds > 9 ? seconds : '0' + seconds)
-    )  
+    let { total, hours, minutes, seconds } = getTimeRemaining();
+    if(total >= 0){
+      setTimer(
+        (hours > 9 ? hours : '0' + hours) + ':' +
+        (minutes > 9 ? minutes : '0' + minutes) + ':'
+        + (seconds > 9 ? seconds : '0' + seconds)
+      )  
+    }
   }
 
-  return (
-    <>
-      {timer}
-    </>
-  );
+  if(tomorrow) {
+    return (
+      <>
+        {timer}
+      </>
+    );
+  }
 
 }
 
