@@ -17,6 +17,8 @@ class App extends Component {
       isCorrect: false,
       outOfTurns: false,
       gameStarted: false,
+      totalGamesPlayed: 0,
+      totalGamesWon: 0,
       tomorrow: {}
     };
   }
@@ -45,23 +47,25 @@ class App extends Component {
     window.localStorage.setItem("isCorrect", JSON.stringify(this.state.isCorrect));
   };
 
-  saveTotalWins = () => {
-    let totalWinsObj = JSON.parse(window.localStorage.getItem("totalGamesWon"));
-    let totalGamesWon = 1;
-    if(totalWinsObj) {
-      totalGamesWon = totalWinsObj.totalGamesWon + 1;
-    } 
-    window.localStorage.setItem("totalGamesWon", JSON.stringify({"totalGamesWon": totalGamesWon}));
-  }
-
   saveTotalGamesPlayed = () => {
-    let saveTotalGamesPlayedObj = JSON.parse(window.localStorage.getItem("totalGamesPlayed"));
-    let totalGamesPlayed = 1;
-    if(saveTotalGamesPlayedObj) {
-      totalGamesPlayed = saveTotalGamesPlayedObj.totalGamesPlayed + 1;
-    } 
-    window.localStorage.setItem("totalGamesPlayed", JSON.stringify({"totalGamesPlayed": totalGamesPlayed}));
-  }
+    window.localStorage.setItem("totalGamesPlayed", JSON.stringify(this.state.totalGamesPlayed));
+  };
+
+  saveTotalGamesWon = () => {
+    window.localStorage.setItem("totalGamesWon", JSON.stringify(this.state.totalGamesWon));
+  };
+
+  incrementTotalGamesPlayed = () => {
+    this.setState((prevState) => ({ 
+      totalGamesPlayed: prevState.totalGamesPlayed + 1
+    }));
+  };
+  
+  incrementTotalWins = () => {
+    this.setState((prevState) => ({ 
+      totalGamesWon: prevState.totalGamesWon + 1
+    }));
+  };
 
   //set a random character as the solution
   componentDidMount = async () => {
@@ -75,12 +79,11 @@ class App extends Component {
     tom.setHours(0);
     tom.setMinutes(0)
     tom.setSeconds(0);
-    console.log(tom)
     this.setState(() => ({ 
       solution: randomCharacter,
       tomorrow: tom
     }));
-    if(JSON.parse(window.localStorage.getItem("charact/Applications/Visual Studio Code.app/Contents/Resources/app/out/vs/code/electron-browser/workbench/workbench.htmlers"))) {
+    if(JSON.parse(window.localStorage.getItem("characters"))) {      
       this.setState({ 
         characters: JSON.parse(window.localStorage.getItem("characters"))
       });
@@ -147,6 +150,14 @@ class App extends Component {
       // ... do something
       this.saveGameStarted();
     }
+    if (prevState.totalGamesPlayed !== this.state.totalGamesPlayed) {
+      // ... do something
+      this.saveTotalGamesPlayed();
+    }
+    if (prevState.totalGamesWon !== this.state.totalGamesWon) {
+      // ... do something
+      this.saveTotalGamesWon();
+    }
   }
 
   //update UI with new character guess data
@@ -172,9 +183,10 @@ class App extends Component {
 
   //win state
   updateIsCorrect = (data) => {
-    this.setState(() => ({ 
-      isCorrect: data
-    }), this.saveTotalWins());
+    this.setState((prevState) => ({ 
+      isCorrect: data,
+      totalGamesWon: prevState.totalGamesWon + 1
+    }));
   };
 
   //lose state
@@ -187,9 +199,10 @@ class App extends Component {
   //game started state
   updateGameStarted = (data) => {
     if(!this.state.gameStarted){
-    this.setState(() => ({ 
-      gameStarted: data
-    }), this.saveTotalGamesPlayed());
+    this.setState((prevState) => ({ 
+      gameStarted: data,
+      totalGamesPlayed: prevState.totalGamesPlayed + 1
+    }));
   }
   };
   

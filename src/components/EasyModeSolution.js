@@ -66,7 +66,10 @@ class EasyModeSolution extends Component {
           <Typography display='block' id="rules-of-the-game" color="#086788" variant="h6" sx={{ mt: 2, mb: 0 }}>
             EASY MODE
           </Typography>
-          <PercentagesEasy/>
+          <PercentagesEasy
+            totalGamesPlayed={this.props.totalGamesPlayed}
+            totalGamesWon={this.props.totalGamesWon}
+          />
           <Typography display='block' id="rules-of-the-game" variant="h6" color="#086788" sx={{ mb: .5, mt: 0, textDecoration: 'underline' }}>
             Solution
           </Typography>

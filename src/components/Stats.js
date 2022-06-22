@@ -20,7 +20,7 @@ const style = {
 
 function Stats(props) {
 
-  const { solution, noTurn, isCorrect, colors, tomorrow } = props;
+  const { solution, noTurn, isCorrect, colors, tomorrow, totalGamesWon, totalGamesPlayed } = props;
   const [winPopUpHappened, setWinPopUpHappened] = useState(false);
   const [open, setOpen] = useState(false);
   const handleOpen = () => {
@@ -69,13 +69,15 @@ function Stats(props) {
               solution={solution}
               isCorrect={isCorrect}
               colors={colors}
+              totalGamesPlayed={totalGamesPlayed}
+              totalGamesWon={totalGamesWon}
             />  
             <Grid container justifyContent="center" alignItems="center">
               <Grid item>
-                <Typography display='block' id="rules-of-the-game" color="#086788" variant="h6" sx={{ mt: 1, mb: 0 }}>
-                  New Characters in
+                <Typography display='block' id="rules-of-the-game" color="#086788" variant="h6" sx={{ mt: 1, mb: 1 }}>
+                  New Characters in:
                 </Typography>
-                <Typography display='block' id="rules-of-the-game" color="#a8a8a8" sx={{ mb: 2, mt: -1 }}>
+                <Typography display='block' id="rules-of-the-game" color="#a8a8a8" variant="h3" sx={{ mb: 2, mt: -1 }}>
                   <Timer tom={tomorrow}/>
                 </Typography>
               </Grid>
@@ -112,13 +114,16 @@ function Stats(props) {
                 Statistics
               </Typography>
             </Grid>
-            <EasyModeNoSolution/>  
+            <EasyModeNoSolution
+              totalGamesPlayed={totalGamesPlayed}
+              totalGamesWon={totalGamesWon}
+            />  
             <Grid container justifyContent="center" alignItems="center">
               <Grid item>
-                <Typography display='block' id="rules-of-the-game" color="#086788" variant="h6" sx={{ mt: 1, mb: 0 }}>
-                  New Character in
+                <Typography display='block' id="rules-of-the-game" color="#086788" variant="h6" sx={{ mt: 1, mb: 1 }}>
+                  New Character in:
                 </Typography>
-                <Typography display='block' id="rules-of-the-game" color="#a8a8a8" sx={{ mb: 2, mt: -1 }}>
+                <Typography display='block' id="rules-of-the-game" color="#a8a8a8" variant="h3" sx={{ mb: 2, mt: -1 }}>
                   <Timer tom={tomorrow}/>
                 </Typography>
               </Grid>
