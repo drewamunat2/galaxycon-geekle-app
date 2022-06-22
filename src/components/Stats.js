@@ -3,11 +3,9 @@ import IconButton from '@mui/material/IconButton';
 import { Modal, Grid, Typography } from '@mui/material';
 import {IoIosStats} from "react-icons/io"
 import CloseIcon from '@mui/icons-material/Close';
-
 import EasyModeNoSolution from './EasyModeNoSolution';
 import EasyModeSolution from './EasyModeSolution';
 import Timer from './Timer';
-import CountdownTimer from './CountDownTimer';
 
 const style = {
   maxWidth: '350px',
@@ -78,7 +76,7 @@ function Stats(props) {
                   New Characters in
                 </Typography>
                 <Typography display='block' id="rules-of-the-game" color="#a8a8a8" sx={{ mb: 2, mt: -1 }}>
-                  countdown coming soon
+                  <Timer/>
                 </Typography>
               </Grid>
             </Grid>
