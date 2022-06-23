@@ -59,14 +59,14 @@ class Search extends Component {
     let colorObj = {
       "name": "#78586F40",
       "gender": "#78586F27",
-      "show": "#78586F27",
+      "appearsIn": "#78586F27",
       "genre": "#78586F27",
       "platform": "#78586F27",
       "role": "#78586F27",
       "year": "#78586F27",
       "nameColor": "grey",
       "genderColor": "grey",
-      "showColor": "grey",
+      "appearsInColor": "grey",
       "genreColor": "grey",
       "platformColor": "grey",
       "roleColor": "grey",
@@ -93,12 +93,12 @@ class Search extends Component {
     //set show color
 
     //same show : set green
-    if(guess.characteristics.show === this.props.solution.characteristics.show) {
-      colorObj.show = "#6CA663";
-      colorObj.showColor = 'green';
-    } else if (this.isYellow(guess.characteristics.show, this.props.solution.characteristics.allShows)) {
-      colorObj.show = "#E0CA3C";
-      colorObj.showColor = 'yellow';
+    if(guess.characteristics.appearsIn === this.props.solution.characteristics.appearsIn) {
+      colorObj.appearsIn = "#6CA663";
+      colorObj.appearsInColor = 'green';
+    } else if (guess.characteristics.owner === this.props.solution.characteristics.owner) {
+      colorObj.appearsIn = "#E0CA3C";
+      colorObj.appearsInColor = 'yellow';
     }
 
     //set genre color
@@ -153,7 +153,7 @@ class Search extends Component {
   };
 
   fetchCharacter = async (guess) => {
-    const characterAPI = 'https://192.168.1.18:3000/characters?name=';
+    const characterAPI = 'http://192.168.1.18:3000/characters?name=';
     const char = guess;
     try {
       const response = await axios.get(`${characterAPI}${char}`);
@@ -166,7 +166,7 @@ class Search extends Component {
   };
 
   componentDidMount = async () => {
-    const charactersAPI = 'https://192.168.1.18:3000/characters';
+    const charactersAPI = 'http://192.168.1.18:3000/characters';
     let nameArray = [];
     let nameObject = {
       id: '',

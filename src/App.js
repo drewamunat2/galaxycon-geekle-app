@@ -90,7 +90,7 @@ class App extends Component {
   }*/
 
   setSolution = async () => {
-    const response = await axios.get(`https://192.168.1.18:3000/characters`);
+    const response = await axios.get(`http://192.168.1.18:3000/characters`);
     //const randomCharacter = response.data[Math.floor(Math.random() * response.data.length)];
     const randomCharacter = response.data[0];
     this.setState(() => ({ 
@@ -122,7 +122,7 @@ class App extends Component {
 
   //set a random character as the solution
   componentDidMount = async () => {
-    const response = await axios.get(`https://192.168.1.18:3000/characters`);
+    const response = await axios.get(`http://192.168.1.18:3000/characters`);
     //const randomCharacter = response.data[Math.floor(Math.random() * response.data.length)];
     const randomCharacter = response.data[0];
     this.setState(() => ({ 

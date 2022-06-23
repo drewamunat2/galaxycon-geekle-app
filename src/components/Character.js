@@ -7,7 +7,7 @@ function Character(props) {
     character,
     nameColor,
     genderColor,
-    showColor,
+    appearsInColor,
     genreColor,
     platformColor,
     roleColor,
@@ -117,10 +117,10 @@ function Character(props) {
             alignItems: "center",
             textAlign: "center",
             verticalAlign: "middle",
-            backgroundColor: `${showColor}`,
+            backgroundColor: `${appearsInColor}`,
           }}
         >
-          {character.characteristics.show}
+          {character.characteristics.appearsIn}
         </Paper>
       </Grid>
       <Grid item xs={2} sm={2} lg>

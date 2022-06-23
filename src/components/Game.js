@@ -52,7 +52,7 @@ function Game(props) {
                   character={character}
                   nameColor={colorMap.colors.name}
                   genderColor={colorMap.colors.gender}
-                  showColor={colorMap.colors.show}
+                  appearsInColor={colorMap.colors.appearsIn}
                   genreColor={colorMap.colors.genre}
                   platformColor={colorMap.colors.platform}
                   roleColor={colorMap.colors.role}
