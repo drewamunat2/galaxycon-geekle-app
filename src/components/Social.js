@@ -11,23 +11,6 @@ import { Paper } from '@mui/material';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 
-/*const customStyles = {
-  control: (base) => ({
-    ...base,
-    backgroundColor: "#fff0ff",
-  }),
-  menu: base => ({
-    ...base,
-    root: {
-      backgroundColor: "lightblue"
-    }
-  }),
-  menuList: base => ({
-    ...base,
-    backgroundColor: "#fff0ff",
-  })
-};*/
-
 function Social() {
 
   const [profileMenu, setProfileMenu] = useState(null);

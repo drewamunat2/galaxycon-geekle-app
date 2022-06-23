@@ -71,7 +71,7 @@ function Character(props) {
           {character.name}
         </Paper>
       </Grid>
-      <Grid item xs={4} sm={2} lg>
+      <Grid item xs={2} sm={2} lg /*sx={{minWidth: '200px'}}*/>
         <Paper 
           elevation={0} 
           square={true}
@@ -88,7 +88,7 @@ function Character(props) {
           {character.characteristics.gender}
         </Paper>
       </Grid>
-      <Grid item xs={4} sm={2} lg>
+      <Grid item xs={2} sm={2} lg>
         <Paper 
           elevation={0} 
           square={true}
@@ -105,7 +105,7 @@ function Character(props) {
           {character.characteristics.role}
         </Paper>
       </Grid>
-      <Grid item xs={4} sm={2} lg>
+      <Grid item xs={2} sm={2} lg>
         <Paper 
           elevation={0} 
           square={true}
@@ -122,7 +122,7 @@ function Character(props) {
           {character.characteristics.show}
         </Paper>
       </Grid>
-      <Grid item xs={4} sm={2} lg>
+      <Grid item xs={2} sm={2} lg>
         <Paper 
           elevation={0} 
           square={true}
@@ -139,7 +139,7 @@ function Character(props) {
           {character.characteristics.genre}
         </Paper>
       </Grid>
-      <Grid item xs={4} sm={2} lg>
+      <Grid item xs={2} sm={2} lg>
         <Paper 
           elevation={0} 
           square={true}
@@ -156,7 +156,7 @@ function Character(props) {
           {character.characteristics.platform}
         </Paper>
       </Grid>
-      <Grid item xs={4} sm={2} lg>
+      <Grid item xs={2} sm={2} lg>
         <Paper 
           elevation={0} 
           square={true}

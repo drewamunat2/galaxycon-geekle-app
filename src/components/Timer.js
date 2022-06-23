@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from 'react'
 
-function Timer() {
+function Timer(props) {
 
-  //const { tom } = props;
-  //const [tomorrow, setTomorrow] = useState(new Date().setDate(new Date().getDate + 1));
+  const { tom } = props;
   const [timer, setTimer] = useState();
-  const [tomorrow, setTomorrow] = useState(new Date());
+  const [tomorrow] = useState(tom);
 
   const getTimeRemaining = () => {
     const total = tomorrow - Date.parse(new Date());
@@ -19,14 +18,6 @@ function Timer() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      let today = new Date();
-      let day = today.getDate() + 1;
-      let tom = new Date();
-      tom.setDate(day);
-      tom.setHours(0);
-      tom.setMinutes(0)
-      tom.setSeconds(0);
-      setTomorrow(tom);
       getTime();
     }, 1000);
     return () => clearInterval(interval);

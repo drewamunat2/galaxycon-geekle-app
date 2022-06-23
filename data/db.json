@@ -17,7 +17,7 @@
       "characteristics": {
         "gender": "male", "species": "Human",
         "show": "Batman", "allShows": ["Batman"],
-        "genre": "superhero", "allGenres": ["superhero"],
+        "genre": "superhero", "allGenres": ["superhero", "action", "adventure", "action-adventure", "crime film", "drama", "mystery"],
         "platform": "movies", "allPlatforms": ["movies", "tv series", "video games"],
         "role": "main protagonist/title character", "genRole": "good",
         "year": 1939, "decade": 1930,
@@ -29,7 +29,7 @@
       "characteristics": {
         "gender": "male", "species": "Human",
         "show": "Star Wars", "allShows": ["Star Wars"],
-        "genre": "sci-fi", "allGenres": ["sci-fi"],
+        "genre": "sci-fi", "allGenres": ["sci-fi", "action", "adventure", "action-adventure", "space opera", "fantasy"],
         "platform": "movies", "allPlatforms": ["movies", "tv series", "video games"],
         "role": "main antagonist", "genRole": "bad",
         "year": 1983, "decade": 1980,
@@ -41,7 +41,8 @@
       "characteristics": {
         "gender": "female", "species": "Human",
         "show": "The Powerpuff Girls", "allShows": ["The Powerpuff Girls"],
-        "genre": "cartoon", "allGenres": ["cartoon"],
+        "genre": "cartoon", "allGenres": ["cartoon, children's film, comedy, superhero"],
+        "network": "Cartoon Network",
         "platform": "tv series", "allPlatforms": ["tv series"],
         "role": "deutertagonist", "genRole": "good",
         "year": 1998, "decade": 1990,

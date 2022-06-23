@@ -78,7 +78,9 @@ function Stats(props) {
                   New Characters in:
                 </Typography>
                 <Typography display='block' id="rules-of-the-game" color="#a8a8a8" variant="h3" sx={{ mb: 2, mt: -1 }}>
-                  <Timer tom={tomorrow}/>
+                  <Timer 
+                    tom={tomorrow}
+                  />
                 </Typography>
               </Grid>
             </Grid>
@@ -124,7 +126,9 @@ function Stats(props) {
                   New Character in:
                 </Typography>
                 <Typography display='block' id="rules-of-the-game" color="#a8a8a8" variant="h3" sx={{ mb: 2, mt: -1 }}>
-                  <Timer tom={tomorrow}/>
+                  <Timer 
+                    tom={tomorrow}
+                  />
                 </Typography>
               </Grid>
             </Grid>

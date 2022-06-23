@@ -1,4 +1,4 @@
-import { Grid, Paper } from "@mui/material";
+import { Grid, Paper, Box } from "@mui/material";
 
 function Categories(props) {
 
@@ -7,7 +7,12 @@ function Categories(props) {
   if(turn > 0){
     return (
       <div className="categories">
-        <Grid container>
+        <Box 
+      sx={{
+        overflowX: 'scroll',
+        minWidth: 615
+      }}
+    >
           <Grid 
             container
             key="categories"
@@ -43,7 +48,7 @@ function Categories(props) {
                 }}
               />
             </Grid>
-            <Grid item xs={4} sm={2} lg>
+            <Grid item xs={2} lg>
               <Paper 
                 elevation={0} 
                 square={true}
@@ -60,7 +65,7 @@ function Categories(props) {
                 Gender
               </Paper>
             </Grid>
-            <Grid item xs={4} sm={2} lg>
+            <Grid item xs={2} lg>
               <Paper 
                 elevation={0} 
                 square={true}
@@ -77,7 +82,7 @@ function Categories(props) {
                 Role
               </Paper>
             </Grid>
-            <Grid item xs={4} sm={2} lg>
+            <Grid item xs={2} lg>
               <Paper 
                 elevation={0} 
                 square={true}
@@ -94,7 +99,7 @@ function Categories(props) {
                 Appears In
               </Paper>
             </Grid>
-            <Grid item xs={4} sm={2} lg>
+            <Grid item xs={2} lg>
               <Paper 
                 elevation={0} 
                 square={true}
@@ -111,7 +116,7 @@ function Categories(props) {
                 Genre
               </Paper>
             </Grid>
-            <Grid item xs={4} sm={2} lg>
+            <Grid item xs={2} lg>
               <Paper 
                 elevation={0} 
                 square={true}
@@ -128,7 +133,7 @@ function Categories(props) {
                 Platform
               </Paper>
             </Grid>
-            <Grid item xs={4} sm={2} lg>
+            <Grid item xs={2} lg>
               <Paper 
                 elevation={0} 
                 square={true}
@@ -159,8 +164,8 @@ function Categories(props) {
                 }}
               />
             </Grid>
-          </Grid>
-        </Grid>
+            </Grid>
+          </Box>
       </div>
     );
   }

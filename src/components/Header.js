@@ -29,11 +29,20 @@ const theme = createTheme({
     MuiMenu: {
       styleOverrides: {
         list: {
-          backgroundColor: '#fff0ff'
+          backgroundColor: '#fff0ff',
         }
       }
     },
     MuiIconButton: {
+      styleOverrides: {
+        root: {
+          "&:hover" :{
+            backgroundColor: 'transparent'
+          }
+        }
+      }
+    },
+    MuiMenuItem: {
       styleOverrides: {
         root: {
           "&:hover" :{

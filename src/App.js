@@ -5,7 +5,7 @@ import Search from "./components/Search";
 import Game from "./components/Game";
 import Categories from "./components/Categories"
 import axios from "axios";
-
+import { Box } from "@mui/material";
 class App extends Component {
   constructor(props) {
     super(props);
@@ -19,7 +19,8 @@ class App extends Component {
       gameStarted: false,
       totalGamesPlayed: 0,
       totalGamesWon: 0,
-      tomorrow: {}
+      tomorrow: {},
+      time: new Date()
     };
   }
 
@@ -55,6 +56,10 @@ class App extends Component {
     window.localStorage.setItem("totalGamesWon", JSON.stringify(this.state.totalGamesWon));
   };
 
+  saveChangeTime = () => {
+    window.localStorage.setItem("changeTime", JSON.stringify(this.state.tomorrow));
+  }
+
   incrementTotalGamesPlayed = () => {
     this.setState((prevState) => ({ 
       totalGamesPlayed: prevState.totalGamesPlayed + 1
@@ -67,21 +72,42 @@ class App extends Component {
     }));
   };
 
+  //makeshift tomorrow strictly for testing purposes
+  getTomorrow = () => {
+    let tom = new Date();
+    tom.setSeconds(tom.getSeconds() + 6);
+    tom.setMilliseconds(0);
+    return tom;
+  }
+
+  /*getTomorrow = () => {
+    let tom = new Date();
+    tom.setDate(tom.getDate() + 1);
+    tom.setHours(0);
+    tom.setMinutes(0);
+    tom.setSeconds(0);
+    tom.setMilliseconds(0);
+    return tom;
+  }*/
+
+  setSolution = async () => {
+    const response = await axios.get(`http://localhost:3001/characters`);
+    //const randomCharacter = response.data[Math.floor(Math.random() * response.data.length)];
+    const randomCharacter = response.data[0];
+    this.setState(() => ({ 
+      solution: randomCharacter,
+      tomorrow: this.getTomorrow()
+    }));
+  }
+
   //set a random character as the solution
   componentDidMount = async () => {
     const response = await axios.get(`http://localhost:3001/characters`);
     //const randomCharacter = response.data[Math.floor(Math.random() * response.data.length)];
     const randomCharacter = response.data[0];
-    let today = new Date();
-    let day = today.getDate() + 1;
-    let tom = new Date();
-    tom.setDate(day);
-    tom.setHours(0);
-    tom.setMinutes(0)
-    tom.setSeconds(0);
     this.setState(() => ({ 
       solution: randomCharacter,
-      tomorrow: tom
+      tomorrow: this.getTomorrow()
     }));
     if(JSON.parse(window.localStorage.getItem("characters"))) {      
       this.setState({ 
@@ -158,6 +184,14 @@ class App extends Component {
       // ... do something
       this.saveTotalGamesWon();
     }
+    if(this.state.tomorrow !== prevState.tomorrow) {
+      // ... do something
+      //this.resetGame(true);
+      this.saveChangeTime();
+    }
+    if(this.state.tomorrow.getTime() === this.state.time.getTime()) {
+      this.resetGame(true);
+    }
   }
 
   //update UI with new character guess data
@@ -199,16 +233,36 @@ class App extends Component {
   //game started state
   updateGameStarted = (data) => {
     if(!this.state.gameStarted){
-    this.setState((prevState) => ({ 
-      gameStarted: data,
-      totalGamesPlayed: prevState.totalGamesPlayed + 1
-    }));
-  }
+      this.setState((prevState) => ({ 
+        gameStarted: data,
+        totalGamesPlayed: prevState.totalGamesPlayed + 1
+      }));
+    }
   };
+
+  resetGame = (isMidnight) => {
+    if(isMidnight) {
+      this.setState(() => ({ 
+        characters: [],
+        //solution: this.getSolution(),
+        colors: [],
+        turn: 0,
+        isCorrect: false,
+        outOfTurns: false,
+        gameStarted: false,
+        tomorrow: this.getTomorrow()
+      }));
+    }
+  }
   
   render() {
     return (
-      <>
+      <Box 
+        sx={{
+          overflowX: 'scroll',
+          minWidth: 615
+        }}
+      >
         <Header 
           solution={this.state.solution}
           noTurn={this.state.outOfTurns}
@@ -241,7 +295,7 @@ class App extends Component {
           colors={this.state.colors}
           solution={this.state.solution}
         />
-      </>
+      </Box>
     );
   }
 }
