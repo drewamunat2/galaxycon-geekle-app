@@ -153,7 +153,7 @@ class Search extends Component {
   };
 
   fetchCharacter = async (guess) => {
-    const characterAPI = 'http://192.168.1.18:3000/characters?name=';
+    const characterAPI = 'https://192.168.1.18:3000/characters?name=';
     const char = guess;
     try {
       const response = await axios.get(`${characterAPI}${char}`);
@@ -166,7 +166,7 @@ class Search extends Component {
   };
 
   componentDidMount = async () => {
-    const charactersAPI = 'http://192.168.1.18:3000/characters';
+    const charactersAPI = 'https://192.168.1.18:3000/characters';
     let nameArray = [];
     let nameObject = {
       id: '',
