@@ -5,7 +5,6 @@ import {IoIosStats} from "react-icons/io"
 import CloseIcon from '@mui/icons-material/Close';
 import EasyModeNoSolution from './EasyModeNoSolution';
 import EasyModeSolution from './EasyModeSolution';
-import Timer from './Timer';
 
 const style = {
   maxWidth: '350px',
@@ -20,7 +19,7 @@ const style = {
 
 function Stats(props) {
 
-  const { solution, noTurn, isCorrect, colors, tomorrow, totalGamesWon, totalGamesPlayed } = props;
+  const { solution, noTurn, isCorrect, colors, timer, totalGamesWon, totalGamesPlayed } = props;
   const [winPopUpHappened, setWinPopUpHappened] = useState(false);
   const [open, setOpen] = useState(false);
   const handleOpen = () => {
@@ -78,9 +77,7 @@ function Stats(props) {
                   New Characters in:
                 </Typography>
                 <Typography display='block' id="rules-of-the-game" color="#a8a8a8" variant="h3" sx={{ mb: 2, mt: -1 }}>
-                  <Timer 
-                    tom={tomorrow}
-                  />
+                  {timer}
                 </Typography>
               </Grid>
             </Grid>
@@ -126,9 +123,7 @@ function Stats(props) {
                   New Character in:
                 </Typography>
                 <Typography display='block' id="rules-of-the-game" color="#a8a8a8" variant="h3" sx={{ mb: 2, mt: -1 }}>
-                  <Timer 
-                    tom={tomorrow}
-                  />
+                  {timer}
                 </Typography>
               </Grid>
             </Grid>

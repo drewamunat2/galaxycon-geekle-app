@@ -3,7 +3,6 @@ import Header from "./components/Header";
 import Title from "./components/Title";
 import Search from "./components/Search";
 import Game from "./components/Game";
-import Categories from "./components/Categories"
 import axios from "axios";
 import { Box } from "@mui/material";
 class App extends Component {
@@ -91,7 +90,7 @@ class App extends Component {
   }*/
 
   setSolution = async () => {
-    const response = await axios.get(`http://localhost:3001/characters`);
+    const response = await axios.get(`https://d27a-2603-3020-759-68a0-c01-ed13-e405-d38e.ngrok.io/characters`);
     //const randomCharacter = response.data[Math.floor(Math.random() * response.data.length)];
     const randomCharacter = response.data[0];
     this.setState(() => ({ 
@@ -100,15 +99,39 @@ class App extends Component {
     }));
   }
 
+  getTimeRemaining = () => {
+    const total = this.state.tomorrow - Date.parse(new Date());
+    const seconds = Math.floor((total / 1000) % 60);
+    const minutes = Math.floor((total / 1000 / 60) % 60);
+    const hours = Math.floor((total / 1000 / 60 / 60) % 24);
+    return {
+        total, hours, minutes, seconds
+    };
+  }
+
+  getTime = () => {
+    let { total, hours, minutes, seconds } = this.getTimeRemaining();
+    if(total >= 0){
+      this.setState(() => ({
+        timer: (hours > 9 ? hours : '0' + hours) + ':' +
+        (minutes > 9 ? minutes : '0' + minutes) + ':'
+        + (seconds > 9 ? seconds : '0' + seconds)
+      }));
+    }
+  }
+
   //set a random character as the solution
   componentDidMount = async () => {
-    const response = await axios.get(`http://localhost:3001/characters`);
+    const response = await axios.get(`https://d27a-2603-3020-759-68a0-c01-ed13-e405-d38e.ngrok.io/characters`);
     //const randomCharacter = response.data[Math.floor(Math.random() * response.data.length)];
     const randomCharacter = response.data[0];
     this.setState(() => ({ 
       solution: randomCharacter,
       tomorrow: this.getTomorrow()
     }));
+    const interval = setInterval(() => {
+      this.getTime();
+    }, 1000);
     if(JSON.parse(window.localStorage.getItem("characters"))) {      
       this.setState({ 
         characters: JSON.parse(window.localStorage.getItem("characters"))
@@ -149,6 +172,7 @@ class App extends Component {
         totalGamesWon: JSON.parse(window.localStorage.getItem("totalGamesWon"))
       });
     }
+    return () => clearInterval(interval);
   }
 
   componentDidUpdate(prevProps, prevState) {
@@ -257,11 +281,7 @@ class App extends Component {
   
   render() {
     return (
-      <Box 
-        sx={{
-          minWidth: '615'
-        }}
-      >
+      <Box sx={{ minWidth: '315' }}>
         <Header 
           solution={this.state.solution}
           noTurn={this.state.outOfTurns}
@@ -269,7 +289,7 @@ class App extends Component {
           colors={this.state.colors}
           totalGamesPlayed={this.state.totalGamesPlayed}
           totalGamesWon={this.state.totalGamesWon}
-          tomorrow={this.state.tomorrow}
+          timer={this.state.timer}
         />
         <Title
           turn={this.state.turn}
@@ -286,13 +306,11 @@ class App extends Component {
           isCorrect={this.state.isCorrect}
           updateGameStarted={this.updateGameStarted}
         />
-        <Categories 
-          turn={this.state.turn}
-        />
         <Game 
           characters={this.state.characters}
           colors={this.state.colors}
           solution={this.state.solution}
+          turn={this.state.turn}
         />
       </Box>
     );

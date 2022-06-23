@@ -58,7 +58,7 @@ function Character(props) {
           sx={{
             height: "50px",
             display: { lg: 'none', xs: 'flex' },
-            justifyContent: "center",
+            justifyContent: "left",
             alignItems: "center",
             textAlign: "center",
             verticalAlign: "middle",
@@ -66,12 +66,13 @@ function Character(props) {
             fontWeight: 500,
             color: "#080357",
             fontSize: 25,
+            pl: "2%"
           }}
         >
           {character.name}
         </Paper>
       </Grid>
-      <Grid item xs={2} sm={2} lg /*sx={{minWidth: '200px'}}*/>
+      <Grid item xs={2} sm={2} lg>
         <Paper 
           elevation={0} 
           square={true}

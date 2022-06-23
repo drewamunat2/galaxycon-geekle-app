@@ -1,10 +1,11 @@
 import { Box, Grid } from "@mui/material";
 import PropTypes from "prop-types";
 import Character from "./Character";
+import Categories from "./Categories";
 
 function Game(props) {
 
-  const { characters, colors, solution } = props;
+  const { characters, colors, solution, turn } = props;
   let colorMap = {};
 
   //arrow icon class
@@ -34,6 +35,9 @@ function Game(props) {
         minWidth: 615
       }}
     >
+    <Categories 
+        turn={turn}
+      />
       {
         characters.map((character, index) => {
           colorMap = colors.find(item => item.key === character.name);

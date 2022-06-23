@@ -153,7 +153,7 @@ class Search extends Component {
   };
 
   fetchCharacter = async (guess) => {
-    const characterAPI = 'http://localhost:3001/characters?name=';
+    const characterAPI = 'https://d27a-2603-3020-759-68a0-c01-ed13-e405-d38e.ngrok.io/characters?name=';
     const char = guess;
     try {
       const response = await axios.get(`${characterAPI}${char}`);
@@ -166,7 +166,7 @@ class Search extends Component {
   };
 
   componentDidMount = async () => {
-    const charactersAPI = 'http://localhost:3001/characters';
+    const charactersAPI = 'https://d27a-2603-3020-759-68a0-c01-ed13-e405-d38e.ngrok.io/characters';
     let nameArray = [];
     let nameObject = {
       id: '',
