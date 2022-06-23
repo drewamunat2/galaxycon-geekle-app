@@ -90,7 +90,7 @@ class App extends Component {
   }*/
 
   setSolution = async () => {
-    const response = await axios.get(`https://d27a-2603-3020-759-68a0-c01-ed13-e405-d38e.ngrok.io/characters`);
+    const response = await axios.get(`https://7f52-2603-3020-759-68a0-c01-ed13-e405-d38e.ngrok.io/characters`);
     //const randomCharacter = response.data[Math.floor(Math.random() * response.data.length)];
     const randomCharacter = response.data[0];
     this.setState(() => ({ 
@@ -122,7 +122,7 @@ class App extends Component {
 
   //set a random character as the solution
   componentDidMount = async () => {
-    const response = await axios.get(`https://d27a-2603-3020-759-68a0-c01-ed13-e405-d38e.ngrok.io/characters`);
+    const response = await axios.get(`https://7f52-2603-3020-759-68a0-c01-ed13-e405-d38e.ngrok.io/characters`);
     //const randomCharacter = response.data[Math.floor(Math.random() * response.data.length)];
     const randomCharacter = response.data[0];
     this.setState(() => ({ 
