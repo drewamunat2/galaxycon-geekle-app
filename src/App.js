@@ -259,8 +259,7 @@ class App extends Component {
     return (
       <Box 
         sx={{
-          overflowX: 'scroll',
-          minWidth: 615
+          minWidth: '615'
         }}
       >
         <Header 
