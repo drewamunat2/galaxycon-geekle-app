@@ -90,6 +90,14 @@ class App extends Component {
     return tom;
   }*/
 
+  setRightNow = () => {
+    let now = new Date();
+    now.setMilliseconds(0);
+    this.setState(() => ({ 
+      time: now
+    }));
+  }
+
   setSolution = async () => {
     //const response = await axios.get(`http://192.168.1.18:3000/characters`);
     //const randomCharacter = response.data[Math.floor(Math.random() * response.data.length)];
@@ -136,6 +144,7 @@ class App extends Component {
     }));
     const interval = setInterval(() => {
       this.getTime();
+      this.setRightNow();
     }, 1000);
     if(JSON.parse(window.localStorage.getItem("characters"))) {      
       this.setState({ 
@@ -218,8 +227,12 @@ class App extends Component {
       //this.resetGame(true);
       this.saveChangeTime();
     }
-    if(this.state.tomorrow.getTime() === this.state.time.getTime()) {
-      this.resetGame(true);
+    if(this.state.time !== prevState.time) {
+      console.log(this.state.time);
+      if(this.state.time.getTime() === this.state.tomorrow.getTime()) {
+        console.log("reset!")
+        this.resetGame(true);
+      }
     }
   }
 

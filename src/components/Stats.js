@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import IconButton from '@mui/material/IconButton';
 import { Modal, Grid, Typography } from '@mui/material';
 import {IoIosStats} from "react-icons/io"
@@ -28,6 +28,10 @@ function Stats(props) {
   const handleClose = () => {
       setOpen(false);
   };
+
+  useEffect(() => {
+    setOpen(isCorrect);
+  },[isCorrect]);
 
   if(noTurn || isCorrect) {
 
