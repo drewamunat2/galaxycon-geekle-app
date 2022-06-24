@@ -75,7 +75,7 @@ class App extends Component {
   //makeshift tomorrow strictly for testing purposes
   getTomorrow = () => {
     let tom = new Date();
-    tom.setSeconds(tom.getSeconds() + 6);
+    tom.setSeconds(tom.getSeconds() + 60);
     tom.setMilliseconds(0);
     return tom;
   }

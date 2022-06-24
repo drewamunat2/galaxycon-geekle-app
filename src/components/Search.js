@@ -165,10 +165,12 @@ class Search extends Component {
       console.log(err);
     }*/
     const db = JSON.parse(JSON.stringify(data))
-    for(const char in db.characters) {
-      if(char === guess) {
+    for(let i = 0; i < 13; i++) {
+      let char = data.characters[i]
+      if(char.name === guess) {
         this.props.updateCharacters(char);
         this.assertColors(char);
+        console.log(char.name)
       }
     }
   };
@@ -199,14 +201,12 @@ class Search extends Component {
       id: '',
       value: ''
     };
-    const db = JSON.parse(JSON.stringify(data))
-    console.log(db)
+    const db = JSON.parse(JSON.stringify(data));
     for(let i = 0; i < 13; i++) {
       nameObject = {
         label: db.characters[i].name,
         value: db.characters[i].name
       };
-      console.log(nameObject)
       nameArray.push(nameObject);
     };
     this.setState({allCharactersNames: nameArray});
