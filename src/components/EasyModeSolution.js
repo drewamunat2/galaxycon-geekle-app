@@ -37,11 +37,11 @@ class EasyModeSolution extends Component {
       let row = '';
       let genderColor = this.emoji(name.colors.genderColor);
       let roleColor = this.emoji(name.colors.roleColor);
-      let showColor = this.emoji(name.colors.showColor);
+      let appearsInColor = this.emoji(name.colors.appearsInColor);
       let genreColor = this.emoji(name.colors.genreColor);
       let platformColor = this.emoji(name.colors.platformColor);
       let yearColor = this.emoji(name.colors.yearColor);
-      row = genderColor + roleColor + showColor + genreColor + platformColor + yearColor + '\n';
+      row = genderColor + roleColor + appearsInColor + genreColor + platformColor + yearColor + '\n';
       this.setState( prevState => ({ 
         grid: prevState.grid + row
       }));

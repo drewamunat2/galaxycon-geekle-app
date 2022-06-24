@@ -24,7 +24,7 @@ class EmojiSolutionRow extends Component {
           <Emoji symbol={this.emoji(this.props.colors.roleColor)} label={this.props.colors.roleColor}/> 
         </Grid>
         <Grid item sx={{mr:.5}}>
-          <Emoji symbol={this.emoji(this.props.colors.showColor)} label={this.props.colors.showColor}/> 
+          <Emoji symbol={this.emoji(this.props.colors.appearsInColor)} label={this.props.colors.appearsInColor}/> 
         </Grid>
         <Grid item sx={{mr:.5}}>
           <Emoji symbol={this.emoji(this.props.colors.genreColor)} label={this.props.colors.genreColor}/> 
