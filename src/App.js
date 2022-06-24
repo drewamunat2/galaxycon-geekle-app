@@ -129,9 +129,7 @@ class App extends Component {
     //const response = await axios.get(`http://192.168.1.18:3000/characters`);
     //const randomCharacter = response.data[Math.floor(Math.random() * response.data.length)];
     const db = JSON.parse(JSON.stringify(data))
-    console.log(db);
-    const randomCharacter = db.characters[0];
-    console.log(randomCharacter);
+    const randomCharacter = db.characters[8];
     this.setState(() => ({ 
       solution: randomCharacter,
       tomorrow: this.getTomorrow()

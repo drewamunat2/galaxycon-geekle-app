@@ -4,6 +4,8 @@ import {HiOutlineClipboardCopy} from "react-icons/hi"
 import {CopyToClipboard} from 'react-copy-to-clipboard';
 import { Component } from "react";
 import PercentagesEasy from './PercentagesEasy';
+import { Snackbar } from '@mui/material';
+import Alert from '@mui/material/Alert';
 
 class EasyModeSolution extends Component {
 
@@ -12,6 +14,7 @@ class EasyModeSolution extends Component {
     this.state = {
       grid: '',
       turns: 0,
+      copied: false,
     }
   }
 
@@ -51,7 +54,6 @@ class EasyModeSolution extends Component {
     }
   }
 
-
   nameColor = () => {
     if(this.props.isCorrect){
       return '#06b506';
@@ -77,11 +79,22 @@ class EasyModeSolution extends Component {
             {this.props.solution.name}
           </Typography>
           <EmojiSolution colors={this.props.colors} updateGrid={this.updateGrid}/>
-          <CopyToClipboard text={this.onShare()}>
+          <CopyToClipboard text={this.onShare()} onCopy={() => this.setState({copied: true})}>
             <Button sx={{ mb: 2, mt: 0 }} display='block' color="info" variant="contained"> 
               Share<HiOutlineClipboardCopy/>
             </Button>
           </CopyToClipboard>
+          <Snackbar 
+            key={'topcenter'}
+            anchorOrigin={{vertical: 'top', horizontal: 'center'}}
+            open={this.state.copied} 
+            autoHideDuration={6000} 
+            onClose={() => this.setState({copied: false})}
+          >
+            <Alert variant="filled" severity="success">
+              Copied to Clipboard!
+            </Alert>
+          </Snackbar>
         </Grid>
         <Grid item /*sx={{display: {xs: 'none'}}}*/ xs={6}>
           <Typography display='block' id="rules-of-the-game" color="#086788" variant="h6" sx={{ mt: 2, mb: 0 }}>
