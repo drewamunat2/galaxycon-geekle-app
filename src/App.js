@@ -73,14 +73,14 @@ class App extends Component {
   };
 
   //makeshift tomorrow strictly for testing purposes
-  getTomorrow = () => {
+  /*getTomorrow = () => {
     let tom = new Date();
-    tom.setSeconds(tom.getSeconds() + 60);
+    tom.setSeconds(tom.getSeconds() + 6);
     tom.setMilliseconds(0);
     return tom;
-  }
+  }*/
 
-  /*getTomorrow = () => {
+  getTomorrow = () => {
     let tom = new Date();
     tom.setDate(tom.getDate() + 1);
     tom.setHours(0);
@@ -88,7 +88,7 @@ class App extends Component {
     tom.setSeconds(0);
     tom.setMilliseconds(0);
     return tom;
-  }*/
+  }
 
   setRightNow = () => {
     let now = new Date();
@@ -98,17 +98,14 @@ class App extends Component {
     }));
   }
 
-  setSolution = async () => {
+  setSolution = () => {
     //const response = await axios.get(`http://192.168.1.18:3000/characters`);
     //const randomCharacter = response.data[Math.floor(Math.random() * response.data.length)];
     const db = JSON.parse(JSON.stringify(data))
     console.log(db);
-    const randomCharacter = db.characters[0];
-    console.log("setting tomorrow's solution as: " + randomCharacter);
-    this.setState(() => ({ 
-      solution: randomCharacter,
-      tomorrow: this.getTomorrow()
-    }));
+    let randomCharacter = db.characters[Math.floor(Math.random() * db.characters.length)];
+    console.log("setting tomorrow's solution as: " + randomCharacter.name);
+    return randomCharacter;
   }
 
   getTimeRemaining = () => {
@@ -137,7 +134,7 @@ class App extends Component {
     //const response = await axios.get(`http://192.168.1.18:3000/characters`);
     //const randomCharacter = response.data[Math.floor(Math.random() * response.data.length)];
     const db = JSON.parse(JSON.stringify(data))
-    const randomCharacter = db.characters[8];
+    const randomCharacter = db.characters[Math.floor(Math.random() * db.characters.length)];
     this.setState(() => ({ 
       solution: randomCharacter,
       tomorrow: this.getTomorrow()
@@ -228,12 +225,37 @@ class App extends Component {
       this.saveChangeTime();
     }
     if(this.state.time !== prevState.time) {
+      if(this.state.time.getTime() === this.state.tomorrow.getTime()) {
+        console.log("reset!")
+        this.setState({ 
+          characters: [],
+          solution: this.setSolution(),
+          colors: [],
+          turn: 0,
+          isCorrect: false,
+          outOfTurns: false,
+          gameStarted: false,
+          tomorrow: this.getTomorrow()
+        });
+        this.saveOutOfTurns();
+        this.saveGameStarted();
+        this.saveTotalGamesPlayed();
+        this.saveTotalGamesWon();
+        this.saveChangeTime();
+        this.saveIsCorrect();
+        this.saveTurn();
+        this.saveColors();
+        this.saveCharacters();
+      }
+    }
+    /*if(this.state.time !== prevState.time) {
       console.log(this.state.time);
       if(this.state.time.getTime() === this.state.tomorrow.getTime()) {
         console.log("reset!")
         this.resetGame(true);
       }
-    }
+    }*/
+    //console.log(this.state);
   }
 
   //update UI with new character guess data
@@ -286,7 +308,7 @@ class App extends Component {
     if(isMidnight) {
       this.setState(() => ({ 
         characters: [],
-        //solution: this.getSolution(),
+        //solution: this.setSolution(),
         colors: [],
         turn: 0,
         isCorrect: false,
