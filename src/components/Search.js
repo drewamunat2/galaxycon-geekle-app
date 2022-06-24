@@ -166,7 +166,7 @@ class Search extends Component {
     }*/
     const db = JSON.parse(JSON.stringify(data))
     for(let i = 0; i < 13; i++) {
-      let char = data.characters[i]
+      let char = db.characters[i]
       if(char.name === guess) {
         this.props.updateCharacters(char);
         this.assertColors(char);
