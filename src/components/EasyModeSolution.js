@@ -13,7 +13,6 @@ class EasyModeSolution extends Component {
     super(props);
     this.state = {
       grid: '',
-      turns: 0,
       copied: false,
     }
   }
@@ -29,7 +28,11 @@ class EasyModeSolution extends Component {
   }
 
   onShare = () => {
-    let topRow = "Geekle 1 - " + this.state.turns + "/8\n\n";
+    let numTurns = this.props.turn;
+    if(!this.props.isCorrect && this.props.turn === 8) {
+      numTurns = 'X';
+    }
+    let topRow = "Geekle 1 - " + numTurns + "/8\n\n";
     let grid = this.state.grid;
     let link = 'https://galaxycon-geekle-app.netlify.app/'
     return topRow + grid + link;
@@ -47,9 +50,6 @@ class EasyModeSolution extends Component {
       row = genderColor + roleColor + appearsInColor + genreColor + platformColor + yearColor + '\n';
       this.setState( prevState => ({ 
         grid: prevState.grid + row
-      }));
-      this.setState( prevState => ({ 
-        turns: prevState.turns + 1
       }));
     }
   }

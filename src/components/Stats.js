@@ -19,7 +19,7 @@ const style = {
 
 function Stats(props) {
 
-  const { solution, noTurn, isCorrect, colors, timer, totalGamesWon, totalGamesPlayed } = props;
+  const { solution, noTurn, turn, isCorrect, colors, timer, totalGamesWon, totalGamesPlayed } = props;
   const [winPopUpHappened, setWinPopUpHappened] = useState(false);
   const [open, setOpen] = useState(false);
   const handleOpen = () => {
@@ -74,6 +74,7 @@ function Stats(props) {
               colors={colors}
               totalGamesPlayed={totalGamesPlayed}
               totalGamesWon={totalGamesWon}
+              turn={turn}
             />  
             <Grid container justifyContent="center" alignItems="center">
               <Grid item>

@@ -248,14 +248,6 @@ class App extends Component {
         this.saveCharacters();
       }
     }
-    /*if(this.state.time !== prevState.time) {
-      console.log(this.state.time);
-      if(this.state.time.getTime() === this.state.tomorrow.getTime()) {
-        console.log("reset!")
-        this.resetGame(true);
-      }
-    }*/
-    //console.log(this.state);
   }
 
   //update UI with new character guess data
@@ -303,21 +295,6 @@ class App extends Component {
       }));
     }
   };
-
-  resetGame = (isMidnight) => {
-    if(isMidnight) {
-      this.setState(() => ({ 
-        characters: [],
-        //solution: this.setSolution(),
-        colors: [],
-        turn: 0,
-        isCorrect: false,
-        outOfTurns: false,
-        gameStarted: false,
-        tomorrow: this.getTomorrow()
-      }));
-    }
-  }
   
   render() {
     return (
@@ -330,6 +307,7 @@ class App extends Component {
           totalGamesPlayed={this.state.totalGamesPlayed}
           totalGamesWon={this.state.totalGamesWon}
           timer={this.state.timer}
+          turn={this.state.turn}
         />
         <Title
           turn={this.state.turn}

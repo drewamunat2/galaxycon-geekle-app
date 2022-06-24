@@ -11,7 +11,7 @@ import Stats from './Stats';
 
 function Info(props) {
 
-  const { solution, noTurn, isCorrect, colors, timer, totalGamesWon, totalGamesPlayed } = props;
+  const { solution, noTurn, turn, isCorrect, colors, timer, totalGamesWon, totalGamesPlayed } = props;
 
   return (
     <>
@@ -38,6 +38,7 @@ function Info(props) {
         totalGamesPlayed={totalGamesPlayed}
         totalGamesWon={totalGamesWon}
         timer={timer}
+        turn={turn}
       />
     </Paper>
   </>
