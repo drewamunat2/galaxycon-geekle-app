@@ -3,9 +3,8 @@ import Header from "./components/Header";
 import Title from "./components/Title";
 import Search from "./components/Search";
 import Game from "./components/Game";
-import axios from "axios";
+//import axios from "axios";
 import { Box } from "@mui/material";
-import { Deblur } from "@mui/icons-material";
 import data from './data/db.json';
 class App extends Component {
   constructor(props) {
@@ -94,7 +93,7 @@ class App extends Component {
   setSolution = async () => {
     //const response = await axios.get(`http://192.168.1.18:3000/characters`);
     //const randomCharacter = response.data[Math.floor(Math.random() * response.data.length)];
-    const db = JSON.parse(db)
+    const db = JSON.parse(JSON.stringify(data))
     console.log(db);
     const randomCharacter = db.characters[0];
     console.log("setting tomorrow's solution as: " + randomCharacter);
