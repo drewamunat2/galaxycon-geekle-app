@@ -3,6 +3,7 @@ import { Grid } from "@mui/material";
 import PropTypes from "prop-types";
 import axios from "axios";
 import Select from 'react-select'
+import data from '../data/db.json';
 
 const customStyles = {
   control: (base, state) => ({
@@ -152,8 +153,8 @@ class Search extends Component {
     this.props.updateGameStarted(true);
   };
 
-  fetchCharacter = async (guess) => {
-    const characterAPI = 'http://192.168.1.18:3000/characters?name=';
+  fetchCharacter = /*async*/ (guess) => {
+    /*const characterAPI = 'http://192.168.1.18:3000/characters?name=';
     const char = guess;
     try {
       const response = await axios.get(`${characterAPI}${char}`);
@@ -162,11 +163,18 @@ class Search extends Component {
       this.assertColors(data[0]);
     } catch (err) {
       console.log(err);
+    }*/
+    const db = JSON.parse(JSON.stringify(data))
+    for(const char in db.characters) {
+      if(char === guess) {
+        this.props.updateCharacters(char);
+        this.assertColors(char);
+      }
     }
   };
 
   componentDidMount = async () => {
-    const charactersAPI = 'http://192.168.1.18:3000/characters';
+    /*const charactersAPI = 'http://192.168.1.18:3000/characters';
     let nameArray = [];
     let nameObject = {
       id: '',
@@ -185,7 +193,23 @@ class Search extends Component {
       this.setState({allCharactersNames: nameArray});
     } catch (err) {
       console.log(err);
-    }
+    }*/
+    let nameArray = [];
+    let nameObject = {
+      id: '',
+      value: ''
+    };
+    const db = JSON.parse(JSON.stringify(data))
+    console.log(db)
+    for(let i = 0; i < 13; i++) {
+      nameObject = {
+        label: db.characters[i].name,
+        value: db.characters[i].name
+      };
+      console.log(nameObject)
+      nameArray.push(nameObject);
+    };
+    this.setState({allCharactersNames: nameArray});
   }
 
   handleChange = (selectedOption) => {

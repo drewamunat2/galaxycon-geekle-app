@@ -5,6 +5,8 @@ import Search from "./components/Search";
 import Game from "./components/Game";
 import axios from "axios";
 import { Box } from "@mui/material";
+import { Deblur } from "@mui/icons-material";
+import data from './data/db.json';
 class App extends Component {
   constructor(props) {
     super(props);
@@ -90,9 +92,12 @@ class App extends Component {
   }*/
 
   setSolution = async () => {
-    const response = await axios.get(`http://192.168.1.18:3000/characters`);
+    //const response = await axios.get(`http://192.168.1.18:3000/characters`);
     //const randomCharacter = response.data[Math.floor(Math.random() * response.data.length)];
-    const randomCharacter = response.data[0];
+    const db = JSON.parse(db)
+    console.log(db);
+    const randomCharacter = db.characters[0];
+    console.log("setting tomorrow's solution as: " + randomCharacter);
     this.setState(() => ({ 
       solution: randomCharacter,
       tomorrow: this.getTomorrow()
@@ -122,9 +127,12 @@ class App extends Component {
 
   //set a random character as the solution
   componentDidMount = async () => {
-    const response = await axios.get(`http://192.168.1.18:3000/characters`);
+    //const response = await axios.get(`http://192.168.1.18:3000/characters`);
     //const randomCharacter = response.data[Math.floor(Math.random() * response.data.length)];
-    const randomCharacter = response.data[0];
+    const db = JSON.parse(JSON.stringify(data))
+    console.log(db);
+    const randomCharacter = db.characters[0];
+    console.log(randomCharacter);
     this.setState(() => ({ 
       solution: randomCharacter,
       tomorrow: this.getTomorrow()
