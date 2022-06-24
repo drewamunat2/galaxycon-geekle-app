@@ -100,7 +100,7 @@ function Help() {
           <Grid container justifyContent="center" alignItems="center">
             <Typography component='div' id="rules-of-the-game" color="#086788" sx={{ mt: 1 }}>
               Appears In: correctly identifying a show, movie, or video game that<Typography></Typography> the target character 
-              is in, but it is not the appearance they are must known for
+              is in, but it is not the appearance they are most known for
             </Typography>
           </Grid>
           <Grid container justifyContent="center" alignItems="center">
@@ -110,7 +110,7 @@ function Help() {
           </Grid>
           <Grid container justifyContent="center" alignItems="center">
             <Typography id="rules-of-the-game" color="#086788" sx={{ mt: 1 }}>
-              Platform: correctly identifying a platform the target character is in, but it is not the platform they are must known for
+              Platform: correctly identifying a platform the target character is in, but it is not the platform they are most known for
             </Typography>
           </Grid>
           <Grid container justifyContent="center" alignItems="center">
