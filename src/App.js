@@ -19,7 +19,7 @@ class App extends Component {
       gameStarted: false,
       totalGamesPlayed: 0,
       totalGamesWon: 0,
-      tomorrow: {},
+      tomorrow: new Date(),
       time: new Date()
     };
   }
@@ -58,7 +58,7 @@ class App extends Component {
 
   saveChangeTime = () => {
     window.localStorage.setItem("changeTime", JSON.stringify(this.state.tomorrow));
-  }
+  };
 
   incrementTotalGamesPlayed = () => {
     this.setState((prevState) => ({ 
@@ -133,11 +133,19 @@ class App extends Component {
   componentDidMount = async () => {
     //const response = await axios.get(`http://192.168.1.18:3000/characters`);
     //const randomCharacter = response.data[Math.floor(Math.random() * response.data.length)];
+    if(JSON.parse(window.localStorage.getItem("changeTime"))) {     
+      this.setState({ 
+        tomorrow: JSON.parse(window.localStorage.getItem("changeTime"))
+      });
+    } else {
+      this.setState(() => ({ 
+        tomorrow: this.getTomorrow()
+      }));
+    }
     const db = JSON.parse(JSON.stringify(data))
     const randomCharacter = db.characters[Math.floor(Math.random() * db.characters.length)];
     this.setState(() => ({ 
-      solution: randomCharacter,
-      tomorrow: this.getTomorrow()
+      solution: randomCharacter
     }));
     const interval = setInterval(() => {
       this.getTime();
@@ -225,7 +233,7 @@ class App extends Component {
       this.saveChangeTime();
     }
     if(this.state.time !== prevState.time) {
-      if(this.state.time.getTime() === this.state.tomorrow.getTime()) {
+      if(this.state.time.getTime() >= new Date(this.state.tomorrow).getTime()) {
         console.log("reset!")
         this.setState({ 
           characters: [],
