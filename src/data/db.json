@@ -4,7 +4,7 @@
       "name": "Batman",
       "characteristics": {
         "gender": "male", "species": "Human",
-        "appearsIn": "Batman", "owner": "DC Comics",
+        "appearsIn": "Batman", "bothAppearsIn": {},
         "genre": "superhero", "allGenres": ["superhero", "action", "adventure", "action-adventure", "crime film", "drama", "mystery"],
         "platform": "movies", "allPlatforms": ["movies", "tv series", "video games"],
         "role": "main protagonist/title character", "genRole": "good",
@@ -16,7 +16,7 @@
       "name": "Bubbles",
       "characteristics": {
         "gender": "female", "species": "Human",
-        "appearsIn": "The Powerpuff Girls", "owner": "Turner Entertainment",
+        "appearsIn": "The Powerpuff Girls", "bothAppearsIn": {},
         "genre": "cartoon", "allGenres": ["cartoon", "children's film", "comedy", "superhero", "animated series", "adventure", "children's television series", "sci-fi", "fantasy"],
         "network": "Cartoon Network",
         "platform": "tv series", "allPlatforms": ["tv series"],
@@ -29,7 +29,7 @@
       "name": "Captain Kirk",
       "characteristics": {
         "gender": "male", "species": "Human",
-        "appearsIn": "Star Trek", "owner": "Paramount",
+        "appearsIn": "Star Trek", "bothAppearsIn": {},
         "genre": "sci-fi", "allGenres": ["sci-fi", "drama", "adventure", "action", "action adventure", "space western", "fiction"],
         "platform": "tv series", "allPlatforms": ["movies", "tv series", "video games"],
         "role": "main protagonist", "genRole": "good",
@@ -41,7 +41,7 @@
       "name": "Darth Vader",
       "characteristics": {
         "gender": "male", "species": "Human",
-        "appearsIn": "Star Wars", "owner": "Disney",
+        "appearsIn": "Star Wars", "bothAppearsIn": {},
         "genre": "sci-fi", "allGenres": ["sci-fi", "action", "adventure", "action-adventure", "space opera", "fantasy"],
         "platform": "movies", "allPlatforms": ["movies", "tv series", "video games"],
         "role": "main antagonist", "genRole": "bad",
@@ -53,7 +53,7 @@
       "name": "Deku",
       "characteristics": {
         "gender": "male", "species": "Humanoid",
-        "appearsIn": "My Hero Academia", "owner": "Funimation Entertainment",
+        "appearsIn": "My Hero Academia", "bothAppearsIn": {},
         "genre": "anime", "allGenres": ["anime", "superhero", "comedy", "action adventure", "action", "adventure", "science fantasy", "comedy drama"],
         "platform": "tv series", "allPlatforms": ["movies", "tv series", "video games"],
         "role": "main protagonist", "genRole": "good",
@@ -65,7 +65,7 @@
       "name": "Frank N. Furter",
       "characteristics": {
         "gender": "male", "species": "Transylvanian",
-        "appearsIn": "The Rocky Horror Show", "owner": "20th Century Studios films",
+        "appearsIn": "The Rocky Horror Show", "bothAppearsIn": {},
         "genre": "horror", "allGenres": ["horror"],
         "platform": "movies", "allPlatforms": ["movies", "video games"],
         "role": "main antagonist", "genRole": "bad",
@@ -77,7 +77,7 @@
       "name": "Gill-man",
       "characteristics": {
         "gender": "male", "species": "Humanoid",
-        "appearsIn": "The Black Lagoon", "owner": "Universal Pictures",
+        "appearsIn": "The Black Lagoon", "bothAppearsIn": {},
         "genre": "horror", "allGenres": ["horror"],
         "platform": "movies", "allPlatforms": ["movies", "video games"],
         "role": "main antagonist", "genRole": "bad",
@@ -89,7 +89,7 @@
       "name": "Harry Potter",
       "characteristics": {
         "gender": "male", "species": "Human",
-        "appearsIn": "Harry Potter", "owner": "Warner Bros. Entertainment Inc.",
+        "appearsIn": "Harry Potter", "bothAppearsIn": {},
         "genre": "fantasy", "allGenres": ["fantasy", "narrative", "children's film", "adventure", "thriller", "mystery", "family film", "adaption", "action", "action adventure", "drama", "romance"],
         "platform": "movies", "allPlatforms": ["movies", "video games"],
         "role": "main protagonist/title character", "genRole": "good",
@@ -101,7 +101,7 @@
       "name": "Mario",
       "characteristics": {
         "gender": "male", "species": "Human",
-        "appearsIn": "Super Mario", "owner": "Nintendo",
+        "appearsIn": "Super Mario", "bothAppearsIn": {},
         "genre": "adventure", "allGenres": ["fantasy", "adventure", "platform"],
         "platform": "video games", "allPlatforms": ["tv series", "video games"],
         "role": "main protagonist/title character", "genRole": "good",
@@ -113,7 +113,7 @@
       "name": "Rick O’Connell",
       "characteristics": {
         "gender": "male", "species": "Human",
-        "appearsIn": "The Mummy", "owner": "Universal Pictures",
+        "appearsIn": "The Mummy", "bothAppearsIn": {},
         "genre": "action adventure", "allGenres": ["action adventure", "horror", "action", "adventure", "comedy", "fantasy", "mystery"],
         "platform": "movies", "allPlatforms": ["movies", "tv series", "video games"],
         "role": "main protagonist", "genRole": "good",
@@ -125,7 +125,7 @@
       "name": "Skeletor",
       "characteristics": {
         "gender": "male", "species": "Demon",
-        "appearsIn": "He-man and The Masters of the Universe", "owner": "Mattel",
+        "appearsIn": "He-man and The Masters of the Universe", "bothAppearsIn": {},
         "genre": "fantasy", "allGenres": ["fantasy", "cartoon", "animated series", "sci-fi", "superhero", "children's television series", "action", "action adventure", "adventure"],
         "platform": "tv series", "allPlatforms": ["movies", "tv series", "video games"],
         "role": "main antagonist", "genRole": "bad",
@@ -137,7 +137,9 @@
       "name": "Superman",
       "characteristics": {
         "gender": "male", "species": "Kryptonian",
-        "appearsIn": "Superman", "owner": "DC Comics",
+        "appearsIn": "Superman", "bothAppearsIn": {
+          "Batman": "Dawn of Justice"
+        },
         "genre": "superhero", "allGenres": ["superhero", "action", "adventure", "action-adventure", "sci-fi", "children's film", "drama"],
         "platform": "movies", "allPlatforms": ["movies", "tv series", "video games"],
         "role": "main protagonist/title character", "genRole": "good",
@@ -149,7 +151,7 @@
       "name": "Zelda",
       "characteristics": {
         "gender": "female", "species": "Human",
-        "appearsIn": "The Legend of Zelda", "owner": "Nintendo",
+        "appearsIn": "The Legend of Zelda", "bothAppearsIn": {},
         "genre": "action-adventure", "allGenres": ["action-adventure", "action", "role-playing", "action role-playing", "dungeon crawl"],
         "platform": "video games", "allPlatforms": ["movies", "tv series", "video games"],
         "role": "main protagonist/title character", "genRole": "good",

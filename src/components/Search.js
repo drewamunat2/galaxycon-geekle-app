@@ -76,8 +76,10 @@ class Search extends Component {
       "roleColor": "grey",
       "yearColor": "grey",
     };
+    
+    let solutionName = this.props.solution.name;
 
-    if (guess.name === this.props.solution.name) {
+    if (guess.name === solutionName) {
       colorObj.name = "#66a05d";
       colorObj.nameColor = 'green';
       this.props.updateIsCorrect(true);
@@ -100,7 +102,8 @@ class Search extends Component {
     if(guess.characteristics.appearsIn === this.props.solution.characteristics.appearsIn) {
       colorObj.appearsIn = "#6CA663";
       colorObj.appearsInColor = 'green';
-    } else if (guess.characteristics.owner === this.props.solution.characteristics.owner) {
+    } else if (guess.characteristics.bothAppearsIn[solutionName]) {
+      guess.characteristics.appearsIn = guess.characteristics.bothAppearsIn[solutionName];
       colorObj.appearsIn = "#E0CA3C";
       colorObj.appearsInColor = 'yellow';
     }
@@ -153,6 +156,7 @@ class Search extends Component {
       this.props.updateOutOfTurns(true);
     }
     this.props.updateColors(guess.name, colorObj);
+    this.props.updateCharacters(guess);
     this.props.updateGameStarted(true);
   };
 
@@ -171,7 +175,6 @@ class Search extends Component {
     for(let i = 0; i < 13; i++) {
       let char = db.characters[i]
       if(char.name === guess) {
-        this.props.updateCharacters(char);
         this.assertColors(char);
         console.log(char.name)
       }
@@ -232,6 +235,7 @@ class Search extends Component {
               styles={customStyles}
               placeholder={null}
               isDisabled={true}
+              controlShouldRenderValue={false}
               components={{
                 IndicatorSeparator: () => null
               }}

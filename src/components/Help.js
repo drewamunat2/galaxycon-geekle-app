@@ -99,7 +99,7 @@ function Help() {
           </Grid>
           <Grid container justifyContent="center" alignItems="center">
             <Typography component='div' id="rules-of-the-game" color="#086788" sx={{ mt: 1 }}>
-              Appears In: correctly identifying the owner of the target character's production
+              Appears In: correctly identifying a shared appearance with the target character
             </Typography>
           </Grid>
           <Grid container justifyContent="center" alignItems="center">
