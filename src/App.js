@@ -109,7 +109,7 @@ class App extends Component {
   }
 
   getTimeRemaining = () => {
-    const total = this.state.tomorrow - Date.parse(new Date());
+    const total = new Date(this.state.tomorrow).getTime() - Date.parse(new Date());
     const seconds = Math.floor((total / 1000) % 60);
     const minutes = Math.floor((total / 1000 / 60) % 60);
     const hours = Math.floor((total / 1000 / 60 / 60) % 24);
