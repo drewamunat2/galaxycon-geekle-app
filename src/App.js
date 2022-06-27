@@ -104,7 +104,7 @@ class App extends Component {
     //const randomCharacter = response.data[Math.floor(Math.random() * response.data.length)];
     const db = JSON.parse(JSON.stringify(data))
     console.log(db);
-    let randomCharacter = db.characters[Math.floor(Math.random() * db.characters.length)];
+    const randomCharacter = db.characters[Math.floor(new Date(this.getTomorrow()).getTime() % db.characters.length)];
     console.log("setting tomorrow's solution as: " + randomCharacter.name);
     return randomCharacter;
   }
@@ -144,7 +144,8 @@ class App extends Component {
       }));
     }
     const db = JSON.parse(JSON.stringify(data))
-    const randomCharacter = db.characters[Math.floor(Math.random() * db.characters.length)];
+    console.log(this.state.tomorrow)
+    const randomCharacter = db.characters[Math.floor(new Date(this.getTomorrow()).getTime() % db.characters.length)];
     this.setState(() => ({ 
       solution: randomCharacter
     }));

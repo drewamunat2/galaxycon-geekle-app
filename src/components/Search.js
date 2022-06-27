@@ -13,16 +13,13 @@ const customStyles = {
     borderRadius: state.isFocused ? "3px 3px 0 0" : 3,
     // Overwrittes the different states of border
     borderColor: state.isFocused ? "#00d5ff" : "blue",
+    borderColor: state.isDisabled ? "#d3d3d3" : "blue",
+    cursor: state.isDisabled ? 'not-allowed' : 'text',
     // Removes weird border around container
     boxShadow: state.isFocused ? null : null,
     "&:hover": {
       // Overwrittes the different states of border
       borderColor:  "#00d5ff",
-    },
-    cursor: 'text',
-    "&:disabled": {
-      background: "#ffeeff",
-      cursor: 'not-allowed'
     },
     height: "50px"
   }),
@@ -232,16 +229,9 @@ class Search extends Component {
         >
           <Grid item xs={10} sm={8} md={7} lg={5} xl={3}>
             <Select 
-              isDisabled={true}
+              styles={customStyles}
               placeholder={null}
-              options={this.state.allCharactersNames}
-              onChange={this.handleChange}
-              autoFocus={true}
-              closeMenuOnSelect={true}
-              controlShouldRenderValue={false}
-              openMenuOnClick={true}
-              openMenuOnFocus={false}
-              captureMenuScroll={true}
+              isDisabled={true}
               components={{
                 IndicatorSeparator: () => null
               }}
@@ -271,6 +261,7 @@ class Search extends Component {
               escapeClearsValue={true}
               menuShouldBlockScroll={true}
               cacheOptions={true}
+              blurInputOnSelect={true}
               components={{
                 IndicatorSeparator: () => null
               }}

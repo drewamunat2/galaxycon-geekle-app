@@ -30,8 +30,10 @@ function Stats(props) {
   };
 
   useEffect(() => {
-    setOpen(isCorrect);
-  },[isCorrect]);
+    if(isCorrect || noTurn) {
+      setOpen(true);
+    }
+  },[isCorrect, noTurn]);
 
   if(noTurn || isCorrect) {
 
