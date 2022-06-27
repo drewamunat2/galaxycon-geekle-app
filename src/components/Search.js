@@ -12,8 +12,7 @@ const customStyles = {
     // match with the menu
     borderRadius: state.isFocused ? "3px 3px 0 0" : 3,
     // Overwrittes the different states of border
-    borderColor: state.isFocused ? "#00d5ff" : "blue",
-    borderColor: state.isDisabled ? "#d3d3d3" : "blue",
+    borderColor: state.isFocused ? "#00d5ff" : state.isDisabled ? "#d3d3d3" : "blue",
     cursor: state.isDisabled ? 'not-allowed' : 'text',
     // Removes weird border around container
     boxShadow: state.isFocused ? null : null,
@@ -174,9 +173,8 @@ class Search extends Component {
     const db = JSON.parse(JSON.stringify(data))
     for(let i = 0; i < 13; i++) {
       let char = db.characters[i]
-      if(char.name === guess) {
+      if(char["select-name"] === guess) {
         this.assertColors(char);
-        console.log(char.name)
       }
     }
   };
@@ -210,8 +208,8 @@ class Search extends Component {
     const db = JSON.parse(JSON.stringify(data));
     for(let i = 0; i < 13; i++) {
       nameObject = {
-        label: db.characters[i].name,
-        value: db.characters[i].name
+        label: db.characters[i]["select-name"],
+        value: db.characters[i]["select-name"]
       };
       nameArray.push(nameObject);
     };
@@ -266,6 +264,11 @@ class Search extends Component {
               menuShouldBlockScroll={true}
               cacheOptions={true}
               blurInputOnSelect={true}
+              ref={selectRef}
+
+  onInputChange={value => {
+    selectRef.current.select.getNextFocusedOption = () => false;
+  }}
               components={{
                 IndicatorSeparator: () => null
               }}

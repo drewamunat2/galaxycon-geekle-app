@@ -2,9 +2,12 @@
   "characters": [
     {
       "name": "Batman",
+      "select-name": "Batman: The Batman",
       "characteristics": {
         "gender": "male", "species": "Human",
-        "appearsIn": "Batman", "bothAppearsIn": {},
+        "appearsIn": "Batman", "bothAppearsIn": {
+          "Superman": "Justice League"
+        },
         "genre": "superhero", "allGenres": ["superhero", "action", "adventure", "action-adventure", "crime film", "drama", "mystery"],
         "platform": "movies", "allPlatforms": ["movies", "tv series", "video games"],
         "role": "main protagonist/title character", "genRole": "good",
@@ -14,6 +17,7 @@
     },
     {
       "name": "Bubbles",
+      "select-name": "Bubbles: The Powerpuff Girls",
       "characteristics": {
         "gender": "female", "species": "Human",
         "appearsIn": "The Powerpuff Girls", "bothAppearsIn": {},
@@ -27,6 +31,7 @@
     },
     {
       "name": "Captain Kirk",
+      "select-name": "Captain Kirk: Star Trek",
       "characteristics": {
         "gender": "male", "species": "Human",
         "appearsIn": "Star Trek", "bothAppearsIn": {},
@@ -39,6 +44,7 @@
     },
     {
       "name": "Darth Vader",
+      "select-name": "Darth Vader: Star Wars",
       "characteristics": {
         "gender": "male", "species": "Human",
         "appearsIn": "Star Wars", "bothAppearsIn": {},
@@ -51,6 +57,7 @@
     },
     {
       "name": "Deku",
+      "select-name": "Deku: My Hero Academia",
       "characteristics": {
         "gender": "male", "species": "Humanoid",
         "appearsIn": "My Hero Academia", "bothAppearsIn": {},
@@ -63,6 +70,7 @@
     },
     {
       "name": "Frank N. Furter",
+      "select-name": "Frank N. Furter: The Rocky Horror Show",
       "characteristics": {
         "gender": "male", "species": "Transylvanian",
         "appearsIn": "The Rocky Horror Show", "bothAppearsIn": {},
@@ -75,6 +83,7 @@
     },
     {
       "name": "Gill-man",
+      "select-name": "Gill-man: The Black Lagoon",
       "characteristics": {
         "gender": "male", "species": "Humanoid",
         "appearsIn": "The Black Lagoon", "bothAppearsIn": {},
@@ -87,6 +96,7 @@
     },
     {
       "name": "Harry Potter",
+      "select-name": "Harry Potter: Harry Potter Series",
       "characteristics": {
         "gender": "male", "species": "Human",
         "appearsIn": "Harry Potter", "bothAppearsIn": {},
@@ -98,19 +108,38 @@
       }
     },
     {
-      "name": "Mario",
+      "name": "Link",
+      "select-name": "Link: The Legend of Zelda",
       "characteristics": {
-        "gender": "male", "species": "Human",
-        "appearsIn": "Super Mario", "bothAppearsIn": {},
-        "genre": "adventure", "allGenres": ["fantasy", "adventure", "platform"],
-        "platform": "video games", "allPlatforms": ["tv series", "video games"],
+        "gender": "female", "species": "Hylian",
+        "appearsIn": "The Legend of Zelda", "bothAppearsIn": {
+          "Mario": "Super Smash Bros."
+        },
+        "genre": "action-adventure", "allGenres": ["action-adventure", "action", "role-playing", "action role-playing", "dungeon crawl"],
+        "platform": "video games", "allPlatforms": ["movies", "tv series", "video games"],
         "role": "main protagonist/title character", "genRole": "good",
-        "year": 1983, "decade": 1980,
+        "year": 1986, "decade": 1980,
         "id": 9
       }
     },
     {
+      "name": "Mario",
+      "select-name": "Mario: Super Mario Bros",
+      "characteristics": {
+        "gender": "male", "species": "Human",
+        "appearsIn": "Super Mario Bros.", "bothAppearsIn": {
+          "Link": "Super Smash Bros."
+        },
+        "genre": "adventure", "allGenres": ["fantasy", "adventure", "platform"],
+        "platform": "video games", "allPlatforms": ["tv series", "video games"],
+        "role": "main protagonist/title character", "genRole": "good",
+        "year": 1983, "decade": 1980,
+        "id": 10
+      }
+    },
+    {
       "name": "Rick O’Connell",
+      "select-name": "Rick O’Connell: The Mummy",
       "characteristics": {
         "gender": "male", "species": "Human",
         "appearsIn": "The Mummy", "bothAppearsIn": {},
@@ -118,44 +147,34 @@
         "platform": "movies", "allPlatforms": ["movies", "tv series", "video games"],
         "role": "main protagonist", "genRole": "good",
         "year": 1999, "decade": 1990,
-        "id": 10
-      }
-    },
-    {
-      "name": "Skeletor",
-      "characteristics": {
-        "gender": "male", "species": "Demon",
-        "appearsIn": "He-man and The Masters of the Universe", "bothAppearsIn": {},
-        "genre": "fantasy", "allGenres": ["fantasy", "cartoon", "animated series", "sci-fi", "superhero", "children's television series", "action", "action adventure", "adventure"],
-        "platform": "tv series", "allPlatforms": ["movies", "tv series", "video games"],
-        "role": "main antagonist", "genRole": "bad",
-        "year": 1981, "decade": 1980,
         "id": 11
       }
     },
     {
+      "name": "Skeletor",
+      "select-name": "Skeletor: The Masters of the Universe",
+      "characteristics": {
+        "gender": "male", "species": "Demon",
+        "appearsIn": "The Masters of the Universe", "bothAppearsIn": {},
+        "genre": "fantasy", "allGenres": ["fantasy", "cartoon", "animated series", "sci-fi", "superhero", "children's television series", "action", "action adventure", "adventure"],
+        "platform": "tv series", "allPlatforms": ["movies", "tv series", "video games"],
+        "role": "main antagonist", "genRole": "bad",
+        "year": 1981, "decade": 1980,
+        "id": 12
+      }
+    },
+    {
       "name": "Superman",
+      "select-name": "Superman: Superman",
       "characteristics": {
         "gender": "male", "species": "Kryptonian",
         "appearsIn": "Superman", "bothAppearsIn": {
-          "Batman": "Dawn of Justice"
+          "Batman": "Justice League"
         },
         "genre": "superhero", "allGenres": ["superhero", "action", "adventure", "action-adventure", "sci-fi", "children's film", "drama"],
         "platform": "movies", "allPlatforms": ["movies", "tv series", "video games"],
         "role": "main protagonist/title character", "genRole": "good",
         "year": 1933, "decade": 1930,
-        "id": 12
-      }
-    },
-    {
-      "name": "Zelda",
-      "characteristics": {
-        "gender": "female", "species": "Human",
-        "appearsIn": "The Legend of Zelda", "bothAppearsIn": {},
-        "genre": "action-adventure", "allGenres": ["action-adventure", "action", "role-playing", "action role-playing", "dungeon crawl"],
-        "platform": "video games", "allPlatforms": ["movies", "tv series", "video games"],
-        "role": "main protagonist/title character", "genRole": "good",
-        "year": 1986, "decade": 1980,
         "id": 13
       }
     }
