@@ -1,4 +1,4 @@
-import { Grid, Paper, Box } from "@mui/material";
+import { Grid, Paper } from "@mui/material";
 
 function Categories(props) {
 

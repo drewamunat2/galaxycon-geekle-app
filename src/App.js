@@ -6,7 +6,6 @@ import Game from "./components/Game";
 //import axios from "axios";
 import { Box } from "@mui/material";
 import data from './data/db.json';
-import { DataArray } from "@mui/icons-material";
 class App extends Component {
   constructor(props) {
     super(props);
