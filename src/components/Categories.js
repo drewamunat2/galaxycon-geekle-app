@@ -7,17 +7,14 @@ function Categories(props) {
   if(turn > 0){
     return (
       <div className="categories">
-        <Box 
-      sx={{
-        overflowX: 'scroll',
-        minWidth: 615
-      }}
-    >
           <Grid 
             container
             key="categories"
             justifyContent="center"
             alignItems="center"
+            sx={{
+              minWidth: 615
+            }}
           >
             <Grid item xs={0} lg={2}>
               <Paper 
@@ -165,7 +162,6 @@ function Categories(props) {
               />
             </Grid>
             </Grid>
-          </Box>
       </div>
     );
   }

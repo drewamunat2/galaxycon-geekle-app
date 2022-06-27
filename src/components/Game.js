@@ -31,8 +31,7 @@ function Game(props) {
   return (
     <Box 
       sx={{
-        overflowX: 'scroll',
-        minWidth: 615
+        overflowX: 'auto', WebkitTextSizeAdjust: 'none'
       }}
     >
     <Categories 
@@ -47,6 +46,9 @@ function Game(props) {
                 key={index}
                 justifyContent="center"
                 alignItems="center"
+                sx={{
+                  minWidth: 615
+                }}
               >
                 <Character
                   character={character}

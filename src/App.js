@@ -6,6 +6,7 @@ import Game from "./components/Game";
 //import axios from "axios";
 import { Box } from "@mui/material";
 import data from './data/db.json';
+import { DataArray } from "@mui/icons-material";
 class App extends Component {
   constructor(props) {
     super(props);
@@ -20,7 +21,8 @@ class App extends Component {
       totalGamesPlayed: 0,
       totalGamesWon: 0,
       tomorrow: new Date(),
-      time: new Date()
+      time: new Date(),
+      stats: {}
     };
   }
 
@@ -147,6 +149,8 @@ class App extends Component {
     this.setState(() => ({ 
       solution: randomCharacter
     }));
+    this.getTime();
+    this.setRightNow();
     const interval = setInterval(() => {
       this.getTime();
       this.setRightNow();
