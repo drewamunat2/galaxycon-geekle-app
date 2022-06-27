@@ -13,7 +13,7 @@ function Categories(props) {
             justifyContent="center"
             alignItems="center"
             sx={{
-              minWidth: 615
+              minWidth: 823
             }}
           >
             <Grid item xs={0} lg={2}>

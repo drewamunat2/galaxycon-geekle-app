@@ -47,7 +47,7 @@ function Game(props) {
                 justifyContent="center"
                 alignItems="center"
                 sx={{
-                  minWidth: 615
+                  minWidth: 823
                 }}
               >
                 <Character
