@@ -17,10 +17,12 @@ const customStyles = {
     boxShadow: state.isFocused ? null : null,
     "&:hover": {
       // Overwrittes the different states of border
-      borderColor:  "#00d5ff"
+      borderColor:  "#00d5ff",
     },
+    cursor: 'text',
     "&:disabled": {
-      background: "#ffeeff"
+      background: "#ffeeff",
+      cursor: 'not-allowed'
     },
     height: "50px"
   }),
@@ -29,12 +31,16 @@ const customStyles = {
     // override border radius to match the box
     borderRadius: 0,
     // kill the gap
-    marginTop: 0
+    marginTop: 0,
   }),
   menuList: base => ({
     ...base,
     // kill the white space on first and last option
     padding: 0
+  }),
+  option: base => ({
+    ...base,
+    cursor: 'grab'
   })
 };
 
@@ -256,12 +262,15 @@ class Search extends Component {
               placeholder={null}
               options={this.state.allCharactersNames}
               onChange={this.handleChange}
-              autoFocus={true}
+              autoFocus={false}
               closeMenuOnSelect={true}
               controlShouldRenderValue={false}
               openMenuOnClick={true}
               openMenuOnFocus={false}
               captureMenuScroll={true}
+              escapeClearsValue={true}
+              menuShouldBlockScroll={true}
+              cacheOptions={true}
               components={{
                 IndicatorSeparator: () => null
               }}
