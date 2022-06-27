@@ -264,11 +264,6 @@ class Search extends Component {
               menuShouldBlockScroll={true}
               cacheOptions={true}
               blurInputOnSelect={true}
-              ref={selectRef}
-
-  onInputChange={value => {
-    selectRef.current.select.getNextFocusedOption = () => false;
-  }}
               components={{
                 IndicatorSeparator: () => null
               }}
