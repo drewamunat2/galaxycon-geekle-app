@@ -165,6 +165,19 @@
       }
     },
     {
+      "name": "Morty Smith",
+      "select-name": "Morty Smith (Rick and Morty)",
+      "characteristics": {
+        "gender": "male", "species": "Human",
+        "appearsIn": "Rick and Morty", "bothAppearsIn": {},
+        "genre": "cartoon", "allGenres": ["comedy", "adventure", "sitcom", "dark comedy", "animated sitcom", "animated series", "fiction", "sci-fi", "cartoon"],
+        "platform": "video games", "allPlatforms": ["tv series", "video games"],
+        "role": "titular protagonist", "genRole": "good",
+        "year": 1983, "decade": 1980,
+        "id": 18
+      }
+    },
+    {
       "name": "Naruto Uzumaki",
       "select-name": "Naruto Uzumaki (Naruto)",
       "characteristics": {

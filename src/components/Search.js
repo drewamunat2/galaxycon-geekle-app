@@ -120,8 +120,8 @@ class Search extends Component {
       colorObj.genreColor = 'green';
     } else if (this.isYellow(this.props.solution.characteristics.genre, guess.characteristics.allGenres)) {
       guess = this.switchGenres(guess, this.props.solution.characteristics.genre);
-      colorObj.genre = "#E0CA3C";
-      colorObj.genreColor = 'yellow';
+      colorObj.genre = "#6CA663";
+      colorObj.genreColor = 'green';
     } else if (this.isYellow(guess.characteristics.genre, this.props.solution.characteristics.allGenres)) {
       colorObj.genre = "#E0CA3C";
       colorObj.genreColor = 'yellow';
@@ -180,7 +180,7 @@ class Search extends Component {
       console.log(err);
     }*/
     const db = JSON.parse(JSON.stringify(data))
-    for(let i = 0; i < 17; i++) {
+    for(let i = 0; i < db.characters.length; i++) {
       let char = db.characters[i]
       if(char["select-name"] === guess) {
         this.assertColors(char);
@@ -215,7 +215,7 @@ class Search extends Component {
       value: ''
     };
     const db = JSON.parse(JSON.stringify(data));
-    for(let i = 0; i < 17; i++) {
+    for(let i = 0; i < db.characters.length; i++) {
       nameObject = {
         label: db.characters[i]["select-name"],
         value: db.characters[i]["select-name"]
