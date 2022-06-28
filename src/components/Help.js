@@ -104,12 +104,12 @@ function Help() {
           </Grid>
           <Grid container justifyContent="center" alignItems="center">
             <Typography id="rules-of-the-game" color="#086788" sx={{ mt: 1 }}>
-              Genre: correctly identifying a genre of what the target character appears in, but not the main genre
+              Genre: correctly identifying a sub-genre of the target character
             </Typography>
           </Grid>
           <Grid container justifyContent="center" alignItems="center">
             <Typography id="rules-of-the-game" color="#086788" sx={{ mt: 1 }}>
-              Platform: correctly identifying a platform the target character is in, but it is not the platform they are most known for
+              Platform: correctly identifying a sub-platform of the target character
             </Typography>
           </Grid>
           <Grid container justifyContent="center" alignItems="center">
