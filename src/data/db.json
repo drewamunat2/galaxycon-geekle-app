@@ -23,8 +23,8 @@
       "select-name": "Ash Ketchum (Pokémon)",
       "shop": "https://galaxycon.com/collections/pokemon",
       "thumbnail": {
-        "title": "",
-        "image": "images/.webp"
+        "title": "Pokémon",
+        "image": "https://cdn.shopify.com/s/files/1/0275/9209/7837/products/11x17516_8_1024x1024@2x.jpg?v=1652795924"
       },
       "characteristics": {
         "gender": "male", "species": "Human",
@@ -143,7 +143,7 @@
       "shop": "https://galaxycon.com/collections/star-wars",
       "thumbnail": {
         "title": "Star Wars",
-        "image": "./images/StarWars.png"
+        "image": "https://cdn.shopify.com/s/files/1/0275/9209/7837/t/5/assets/pf-307226c9--00Starwars.jpg?v=1624378371"
       },
       "characteristics": {
         "gender": "male", "species": "Human",

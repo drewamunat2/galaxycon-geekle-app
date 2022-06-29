@@ -90,7 +90,7 @@ class EasyModeSolution extends Component {
       eventLink: "https://galaxycon.com/pages/raleigh",
       eventImg: "https://cdn.shopify.com/s/files/1/0275/9209/7837/t/5/assets/raleighnew1080-1-1653068224677.png?v=1653068230",
       solutionLink: this.props.solution.shop,
-      solutionImg: "https://cdn.shopify.com/s/files/1/0275/9209/7837/t/5/assets/pf-307226c9--00Starwars.jpg?v=1624378371",
+      solutionImg: this.props.solution.thumbnail.image,
     });
   }
 
