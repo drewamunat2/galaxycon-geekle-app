@@ -16,8 +16,8 @@ import Alert from '@mui/material/Alert';
 
 
 const styles = StyleSheet.create({
-  raleigh: {
-    width: 325,
+  img: {
+    width: 335,
     height: 335,
   },
   view: {
@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
 
 const stylesMobile = StyleSheet.create({
   raleigh: {
-    width: 125,
+    width: 135,
     height: 135,
   },
   view: {
@@ -125,7 +125,7 @@ class EasyModeSolution extends Component {
             <View style={styles.view}>
               <Link href={this.state.eventLink}>
                 <Image
-                  style={styles.raleigh}
+                  style={styles.img}
                   source={this.state.eventImg}
                 />
               </Link>
@@ -173,7 +173,7 @@ class EasyModeSolution extends Component {
             <View style={styles.view}>
               <Link href={this.state.solutionLink}>
                 <Image
-                  style={styles.raleigh}
+                  style={styles.img}
                   source={this.state.solutionImg}
                 />
               </Link>
@@ -227,7 +227,7 @@ class EasyModeSolution extends Component {
             <View style={stylesMobile.view}>
               <Link href={this.state.solutionLink}>
                 <Image
-                  style={stylesMobile.raleigh}
+                  style={stylesMobile.img}
                   source={this.state.solutionImg}
                 />
               </Link>
@@ -245,7 +245,7 @@ class EasyModeSolution extends Component {
             <View style={stylesMobile.view}>
               <Link href={this.state.eventLink}>
                 <Image
-                  style={stylesMobile.raleigh}
+                  style={stylesMobile.img}
                   source={this.state.eventImg}
                 />
               </Link>

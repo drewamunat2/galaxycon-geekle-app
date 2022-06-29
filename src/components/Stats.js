@@ -7,6 +7,8 @@ import EasyModeNoSolution from './EasyModeNoSolution';
 import EasyModeSolution from './EasyModeSolution';
 
 const style = {
+  maxWidth: 1200,
+  maxHeight: 700,
   width: '75%',
   bgcolor: '#eddee1',
   borderRadius: '10px',
