@@ -17,6 +17,18 @@ const style = {
   py: 2
 };
 
+const styleMobile = {
+  maxWidth: '325px',
+  bgcolor: '#eddee1',
+  borderRadius: '10px',
+  margin: '15% auto',
+  textAlign: 'center',
+  boxShadow: '2px 2px 10px rgba(0,0,0,0.3)',
+  px: 3,
+  py: 2,
+  overflow: 'scroll'
+};
+
 function Stats(props) {
 
   const { solution, noTurn, turn, isCorrect, colors, timer, totalGamesWon, totalGamesPlayed } = props;
@@ -57,6 +69,7 @@ function Stats(props) {
           sx={{
             position: 'absolute',
             overflow: 'scroll',
+            display: { xs: 'none', lg: 'flex'}
           }}
         >
           <Grid container sx={style}>
@@ -84,6 +97,50 @@ function Stats(props) {
                   New Characters in:
                 </Typography>
                 <Typography display='block' id="rules-of-the-game" color="#a8a8a8" variant="h3" sx={{ mb: 2, mt: -1 }}>
+                  {timer}
+                </Typography>
+              </Grid>
+            </Grid>
+          </Grid>
+        </Modal>
+        <Modal
+          aria-labelledby="help-modal"
+          aria-describedby="rules-of-the-game"
+          open={open}
+          onClose={handleClose}
+          display='block'
+          disableAutoFocus={true}
+          sx={{
+            position: 'absolute',
+            overflow: 'scroll',
+            display: { xs: 'flex', lg: 'none'}
+          }}
+        >
+          <Grid container sx={styleMobile}>
+            <Grid container justifyContent="right" alignItems="center">
+              <IconButton onClick={() => setOpen(false)} sx={{ mx: -3, mt: -3, pt: 2 }}>
+                <CloseIcon />
+              </IconButton>
+            </Grid>
+            <Grid container justifyContent="center" alignItems="center" sx={{mt: -3}}>
+              <Typography id="help-modal" color="#086788" variant="h3" component="h2">
+                Statistics
+              </Typography>
+            </Grid>
+            <EasyModeSolution 
+              solution={solution}
+              isCorrect={isCorrect}
+              colors={colors}
+              totalGamesPlayed={totalGamesPlayed}
+              totalGamesWon={totalGamesWon}
+              turn={turn}
+            />  
+            <Grid container justifyContent="center" alignItems="center">
+              <Grid item>
+                <Typography display='block' id="rules-of-the-game" color="#086788" variant="h6" sx={{ mt: 1, mb: 1 }}>
+                  New Characters in:
+                </Typography>
+                <Typography display='block' id="rules-of-the-game" color="#a8a8a8" variant="h3" sx={{ mb: 1, mt: -1 }}>
                   {timer}
                 </Typography>
               </Grid>

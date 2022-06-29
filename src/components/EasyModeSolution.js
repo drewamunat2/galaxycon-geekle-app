@@ -23,18 +23,17 @@ const styles = StyleSheet.create({
   view: {
     alignContent: 'center',
     alignItems: 'center'
+  }
+});
+
+const stylesMobile = StyleSheet.create({
+  raleigh: {
+    width: 125,
+    height: 135,
   },
-  card: {
-    bgcolor: '#eddee1',
+  view: {
     alignContent: 'center',
-    justifyContent: 'center',
     alignItems: 'center'
-  },
-  cardHeader: {
-    bgcolor: '#eddee1'
-  },
-  cardMedia: {
-    bgcolor: '#eddee1'
   }
 });
 
@@ -45,6 +44,10 @@ class EasyModeSolution extends Component {
     this.state = {
       grid: '',
       copied: false,
+      eventLink: '',
+      eventImg: '',
+      solutionLink: '',
+      solutionImg: '',
     }
   }
 
@@ -83,7 +86,12 @@ class EasyModeSolution extends Component {
         grid: prevState.grid + row
       }));
     }
-    console.log(this.props.solution)
+    this.setState({ 
+      eventLink: "https://galaxycon.com/pages/raleigh",
+      eventImg: "https://cdn.shopify.com/s/files/1/0275/9209/7837/t/5/assets/raleighnew1080-1-1653068224677.png?v=1653068230",
+      solutionLink: this.props.solution.shop,
+      solutionImg: "https://cdn.shopify.com/s/files/1/0275/9209/7837/t/5/assets/pf-307226c9--00Starwars.jpg?v=1624378371",
+    });
   }
 
   nameColor = () => {
@@ -108,72 +116,147 @@ class EasyModeSolution extends Component {
 
   render () {
     return (
-      <Grid container>
-        <Grid item xs={5}>
-          <Typography display='block' id="rules-of-the-game" color="#086788" variant="h4" sx={{ mt: 2, mb: 2 }}>
-            Upcoming Events
-          </Typography>
-          <View style={styles.view}>
-            <Link href="https://galaxycon.com/pages/raleigh">
-              <Image
-                style={styles.raleigh}
-                source={"https://cdn.shopify.com/s/files/1/0275/9209/7837/t/5/assets/raleighnew1080-1-1653068224677.png?v=1653068230"}
-              />
-            </Link>
-            <Button sx={{ mt: 2 }} display='block' color="info" variant="contained" href='https://galaxycon.com/pages/raleigh'> 
-              Learn More
-            </Button>
-          </View>
+      <>
+        <Grid container sx={{ display: {xs: 'none', lg: 'flex'}}}>
+          <Grid item xs={5}>
+            <Typography display='block' id="rules-of-the-game" color="#086788" variant="h4" sx={{ mt: 2, mb: 2 }}>
+              Upcoming Events
+            </Typography>
+            <View style={styles.view}>
+              <Link href={this.state.eventLink}>
+                <Image
+                  style={styles.raleigh}
+                  source={this.state.eventImg}
+                />
+              </Link>
+              <Button sx={{ mt: 2 }} display='block' color="info" variant="contained" href={this.state.eventLink}> 
+                Learn More
+              </Button>
+            </View>
+          </Grid>
+          <Grid item xs={2}>
+            <Typography display='block' id="rules-of-the-game" color="#086788" variant="h6" sx={{ mt: 2, mb: 0 }}>
+              EASY MODE
+            </Typography>
+            <PercentagesEasy
+              totalGamesPlayed={this.props.totalGamesPlayed}
+              totalGamesWon={this.props.totalGamesWon}
+            />
+            <Typography display='block' id="rules-of-the-game" variant="h6" color="#086788" sx={{ mb: .5, mt: 0, textDecoration: 'underline' }}>
+              Solution
+            </Typography>
+            <Typography display='block' id="rules-of-the-game" color={this.nameColor()} sx={{ mb: 0, mt: 0 }}>
+              {this.props.solution.name}
+            </Typography>
+            <EmojiSolution colors={this.props.colors} updateGrid={this.updateGrid}/>
+            <CopyToClipboard text={this.onShare()} onCopy={() => this.setState({copied: true})}>
+              <Button sx={{ mb: 2, mt: 0 }} display='block' color="info" variant="contained"> 
+                Share<HiOutlineClipboardCopy/>
+              </Button>
+            </CopyToClipboard>
+            <Snackbar 
+              key={'topcenter'}
+              anchorOrigin={{vertical: 'top', horizontal: 'center'}}
+              open={this.state.copied} 
+              autoHideDuration={6000} 
+              onClose={() => this.setState({copied: false})}
+            >
+              <Alert variant="filled" severity="success">
+                Copied to Clipboard!
+              </Alert>
+            </Snackbar>
+          </Grid>
+          <Grid item xs={5}>
+            <Typography display='block' id="rules-of-the-game" color="#086788" variant="h4" sx={{ mt: 2, mb: 2 }}>
+              Everything {this.props.solution.thumbnail.title}!!
+            </Typography>
+            <View style={styles.view}>
+              <Link href={this.state.solutionLink}>
+                <Image
+                  style={styles.raleigh}
+                  source={this.state.solutionImg}
+                />
+              </Link>
+              <Button sx={{ mt: 2 }} display='block' color="info" variant="contained" href={this.state.solutionLink}> 
+                See All
+              </Button>
+            </View>
+          </Grid>
         </Grid>
-        <Grid item xs={2}>
-          <Typography display='block' id="rules-of-the-game" color="#086788" variant="h6" sx={{ mt: 2, mb: 0 }}>
-            EASY MODE
-          </Typography>
-          <PercentagesEasy
-            totalGamesPlayed={this.props.totalGamesPlayed}
-            totalGamesWon={this.props.totalGamesWon}
-          />
-          <Typography display='block' id="rules-of-the-game" variant="h6" color="#086788" sx={{ mb: .5, mt: 0, textDecoration: 'underline' }}>
-            Solution
-          </Typography>
-          <Typography display='block' id="rules-of-the-game" color={this.nameColor()} sx={{ mb: 0, mt: 0 }}>
-            {this.props.solution.name}
-          </Typography>
-          <EmojiSolution colors={this.props.colors} updateGrid={this.updateGrid}/>
-          <CopyToClipboard text={this.onShare()} onCopy={() => this.setState({copied: true})}>
-            <Button sx={{ mb: 2, mt: 0 }} display='block' color="info" variant="contained"> 
-              Share<HiOutlineClipboardCopy/>
-            </Button>
-          </CopyToClipboard>
-          <Snackbar 
-            key={'topcenter'}
-            anchorOrigin={{vertical: 'top', horizontal: 'center'}}
-            open={this.state.copied} 
-            autoHideDuration={6000} 
-            onClose={() => this.setState({copied: false})}
-          >
-            <Alert variant="filled" severity="success">
-              Copied to Clipboard!
-            </Alert>
-          </Snackbar>
-        </Grid>
-        <Grid item xs={5}>
+
+        <Grid container sx={{ display: {xs: 'flex', lg: 'none'}}}>
+          <Grid item xs={2}></Grid>
+          <Grid item xs={8}>
+            <Typography display='block' id="rules-of-the-game" color="#086788" variant="h6" sx={{ mt: 2, mb: 0 }}>
+              EASY MODE
+            </Typography>
+            <PercentagesEasy
+              totalGamesPlayed={this.props.totalGamesPlayed}
+              totalGamesWon={this.props.totalGamesWon}
+            />
+            <Typography display='block' id="rules-of-the-game" variant="h6" color="#086788" sx={{ mb: .5, mt: 0, textDecoration: 'underline' }}>
+              Solution
+            </Typography>
+            <Typography display='block' id="rules-of-the-game" color={this.nameColor()} sx={{ mb: 0, mt: 0 }}>
+              {this.props.solution.name}
+            </Typography>
+            <EmojiSolution colors={this.props.colors} updateGrid={this.updateGrid}/>
+            <CopyToClipboard text={this.onShare()} onCopy={() => this.setState({copied: true})}>
+              <Button display='block' color="info" variant="contained"> 
+                Share<HiOutlineClipboardCopy/>
+              </Button>
+            </CopyToClipboard>
+            <Snackbar 
+              key={'topcenter'}
+              anchorOrigin={{vertical: 'top', horizontal: 'center'}}
+              open={this.state.copied} 
+              autoHideDuration={6000} 
+              onClose={() => this.setState({copied: false})}
+            >
+              <Alert variant="filled" severity="success">
+                Copied to Clipboard!
+              </Alert>
+            </Snackbar>
+          </Grid>
+          <Grid item xs={2}></Grid> 
           <Typography display='block' id="rules-of-the-game" color="#086788" variant="h4" sx={{ mt: 2, mb: 2 }}>
             Everything {this.props.solution.thumbnail.title}!!
           </Typography>
-          <View style={styles.view}>
-            <Link href={this.props.solution.shop}>
-              <Image
-                style={styles.raleigh}
-                source={"https://cdn.shopify.com/s/files/1/0275/9209/7837/t/5/assets/pf-307226c9--00Starwars.jpg?v=1624378371"}
-              />
-            </Link>
-            <Button sx={{ mt: 2 }} display='block' color="info" variant="contained" href='https://galaxycon.com/pages/raleigh'> 
-              See All
-            </Button>
-          </View>
+          <Grid item xs={2}></Grid>
+          <Grid item xs={8}>
+            <View style={stylesMobile.view}>
+              <Link href={this.state.solutionLink}>
+                <Image
+                  style={stylesMobile.raleigh}
+                  source={this.state.solutionImg}
+                />
+              </Link>
+              <Button sx={{ mt: 2 }} display='block' color="info" variant="contained" href={this.state.solutionLink}> 
+                See All
+              </Button>
+            </View>
+          </Grid>
+          <Grid item xs={2}></Grid>
+          <Typography display='block' id="rules-of-the-game" color="#086788" variant="h4" sx={{ mt: 2, mb: 2 }}>
+              Upcoming Events
+          </Typography>
+          <Grid item xs={2}></Grid>
+          <Grid item xs={8}>
+            <View style={stylesMobile.view}>
+              <Link href={this.state.eventLink}>
+                <Image
+                  style={stylesMobile.raleigh}
+                  source={this.state.eventImg}
+                />
+              </Link>
+              <Button sx={{ mt: 2, mb: 2 }} display='block' color="info" variant="contained" href={this.state.eventLink}> 
+                Learn More
+              </Button>
+            </View>
+          </Grid>
+          <Grid item xs={2}></Grid>
         </Grid>
-      </Grid>
+      </>
     );
   }
 }
