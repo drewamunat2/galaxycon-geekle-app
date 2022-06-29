@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
 });
 
 const stylesMobile = StyleSheet.create({
-  raleigh: {
+  img: {
     width: 135,
     height: 135,
   },
