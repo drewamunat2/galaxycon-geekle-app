@@ -8,9 +8,10 @@ import PercentagesEasy from './PercentagesEasy';
 import { Snackbar } from '@mui/material';
 import Alert from '@mui/material/Alert';
 
-import NarutoUzumaki from '../assets/NarutoUzumaki.webp'
-import Raven from '../assets/Raven.webp'
+//import NarutoUzumaki from '../assets/NarutoUzumaki.webp'
+//import Raven from '../assets/Raven.webp'
 import DarthVader from '../assets/DarthVader.webp'
+import Raleigh from '../assets/raleighnew1080-1-1653068224677.webp'
 
 
 const styles = StyleSheet.create({
@@ -79,7 +80,7 @@ class EasyModeSolution extends Component {
     return '#FF4242'
   };
 
-  link = () => {
+  /*link = () => {
     let store = "https://galaxycon.com/search?q=";
     let name = this.props.solution.name;
     let link = store + name;
@@ -90,7 +91,7 @@ class EasyModeSolution extends Component {
     let name = this.props.solution.name;
     let link = name.replace(/\s/g, '');
     return require(link);
-  }
+  }*/
 
   render () {
     return (
@@ -132,7 +133,7 @@ class EasyModeSolution extends Component {
             <Link href="https://galaxycon.com/pages/raleigh" >
               <Image
                 style={styles.raleigh}
-                source={require('../assets/raleighnew1080-1-1653068224677.webp')}
+                source={Raleigh}
               />
             </Link>
           </View>
