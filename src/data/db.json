@@ -3,6 +3,11 @@
     {
       "name": "Aang",
       "select-name": "Aang (Avatar: The Last Airbender)",
+      "shop": "https://galaxycon.com/collections/avatar-the-last-airbender",
+      "thumbnail": {
+        "title": "Avatar: The last Airbender",
+        "image": "images/AvatarThelastAirbender.png"
+      },
       "characteristics": {
         "gender": "male", "species": "Human",
         "appearsIn": "Avatar: The Last Airbender", "bothAppearsIn": {},
@@ -16,6 +21,11 @@
     {
       "name": "Ash Ketchum",
       "select-name": "Ash Ketchum (Pokémon)",
+      "shop": "https://galaxycon.com/collections/pokemon",
+      "thumbnail": {
+        "title": "",
+        "image": "images/.webp"
+      },
       "characteristics": {
         "gender": "male", "species": "Human",
         "appearsIn": "Pokémon", "bothAppearsIn": {},
@@ -29,6 +39,11 @@
     {
       "name": "Batman",
       "select-name": "Batman (The Batman)",
+      "shop": "https://galaxycon.com/collections/batman",
+      "thumbnail": {
+        "title": "",
+        "image": "images/.webp"
+      },
       "characteristics": {
         "gender": "male", "species": "Human",
         "appearsIn": "Batman", "bothAppearsIn": {
@@ -48,6 +63,11 @@
     {
       "name": "Belle",
       "select-name": "Belle (Beauty and the Beast)",
+      "shop": "https://galaxycon.com/collections/beauty-and-the-beast",
+      "thumbnail": {
+        "title": "",
+        "image": "images/.webp"
+      },
       "characteristics": {
         "gender": "female", "species": "Human",
         "appearsIn": "Beauty and the Beast", "bothAppearsIn": {},
@@ -61,6 +81,11 @@
     {
       "name": "Bubbles",
       "select-name": "Bubbles (The Powerpuff Girls)",
+      "shop": "https://galaxycon.com/search?q=powerpuff+girls",
+      "thumbnail": {
+        "title": "",
+        "image": "images/.webp"
+      },
       "characteristics": {
         "gender": "female", "species": "Human",
         "appearsIn": "The Powerpuff Girls", "bothAppearsIn": {
@@ -77,6 +102,11 @@
     {
       "name": "Captain Kirk",
       "select-name": "Captain Kirk (Star Trek)",
+      "shop": "https://galaxycon.com/collections/star-trek",
+      "thumbnail": {
+        "title": "",
+        "image": "images/.webp"
+      },
       "characteristics": {
         "gender": "male", "species": "Human",
         "appearsIn": "Star Trek", "bothAppearsIn": {},
@@ -90,6 +120,11 @@
     {
       "name": "Daphne Blake",
       "select-name": "Daphne Blake (Scooby-Doo)",
+      "shop": "https://galaxycon.com/collections/scooby-doo",
+      "thumbnail": {
+        "title": "",
+        "image": "images/.webp"
+      },
       "characteristics": {
         "gender": "female", "species": "Human",
         "appearsIn": "Scooby-Doo", "bothAppearsIn": {
@@ -105,6 +140,11 @@
     {
       "name": "Darth Vader",
       "select-name": "Darth Vader (Star Wars)",
+      "shop": "https://galaxycon.com/collections/star-wars",
+      "thumbnail": {
+        "title": "Star Wars",
+        "image": "./images/StarWars.png"
+      },
       "characteristics": {
         "gender": "male", "species": "Human",
         "appearsIn": "Star Wars", "bothAppearsIn": {},
@@ -118,6 +158,11 @@
     {
       "name": "Deku",
       "select-name": "Deku (My Hero Academia)",
+      "shop": "https://galaxycon.com/collections/my-hero-academia",
+      "thumbnail": {
+        "title": "",
+        "image": "images/.webp"
+      },
       "characteristics": {
         "gender": "male", "species": "Humanoid",
         "appearsIn": "My Hero Academia", "bothAppearsIn": {
@@ -134,6 +179,11 @@
     {
       "name": "Flash",
       "select-name": "Flash (The Flash)",
+      "shop": "https://galaxycon.com/collections/the-flash",
+      "thumbnail": {
+        "title": "",
+        "image": "images/.webp"
+      },
       "characteristics": {
         "gender": "male", "species": "Human",
         "appearsIn": "The Flash", "bothAppearsIn": {
@@ -151,6 +201,11 @@
     },
     {
       "name": "Frank N. Furter",
+      "shop": "https://galaxycon.com/collections/rocky-horror-picture-show",
+      "thumbnail": {
+        "title": "",
+        "image": "images/.webp"
+      },
       "select-name": "Frank N. Furter (The Rocky Horror Show)",
       "characteristics": {
         "gender": "male", "species": "Transylvanian",
@@ -165,6 +220,11 @@
     {
       "name": "Gill-man",
       "select-name": "Gill-man (The Black Lagoon)",
+      "shop": "https://galaxycon.com/search?q=the+black+lagoon",
+      "thumbnail": {
+        "title": "",
+        "image": "images/.webp"
+      },
       "characteristics": {
         "gender": "male", "species": "Humanoid",
         "appearsIn": "The Black Lagoon", "bothAppearsIn": {},
@@ -178,6 +238,11 @@
     {
       "name": "Goku",
       "select-name": "Goku (Dragon Ball Z)",
+      "shop": "https://galaxycon.com/collections/dragon-ball",
+      "thumbnail": {
+        "title": "",
+        "image": "images/.webp"
+      },
       "characteristics": {
         "gender": "male", "species": "Saiyan",
         "appearsIn": "Dragon Ball Z", "bothAppearsIn": {
@@ -194,6 +259,11 @@
     {
       "name": "Harry Potter",
       "select-name": "Harry Potter (Harry Potter Series)",
+      "shop": "https://galaxycon.com/search?q=harry+potter",
+      "thumbnail": {
+        "title": "",
+        "image": "images/.webp"
+      },
       "characteristics": {
         "gender": "male", "species": "Human",
         "appearsIn": "Harry Potter", "bothAppearsIn": {},
@@ -207,6 +277,11 @@
     {
       "name": "Link",
       "select-name": "Link (The Legend of Zelda)",
+      "shop": "https://galaxycon.com/search?q=legend+of+zelda",
+      "thumbnail": {
+        "title": "",
+        "image": "images/.webp"
+      },
       "characteristics": {
         "gender": "female", "species": "Hylian",
         "appearsIn": "The Legend of Zelda", "bothAppearsIn": {
@@ -222,6 +297,11 @@
     {
       "name": "Mario",
       "select-name": "Mario (Super Mario Bros)",
+      "shop": "https://galaxycon.com/collections/super-mario",
+      "thumbnail": {
+        "title": "",
+        "image": "images/.webp"
+      },
       "characteristics": {
         "gender": "male", "species": "Human",
         "appearsIn": "Super Mario Bros.", "bothAppearsIn": {
@@ -237,6 +317,11 @@
     {
       "name": "Morty Smith",
       "select-name": "Morty Smith (Rick & Morty)",
+      "shop": "https://galaxycon.com/collections/rick-and-morty",
+      "thumbnail": {
+        "title": "",
+        "image": "images/.webp"
+      },
       "characteristics": {
         "gender": "male", "species": "Human",
         "appearsIn": "Rick & Morty", "bothAppearsIn": {},
@@ -250,6 +335,11 @@
     {
       "name": "Naruto Uzumaki",
       "select-name": "Naruto Uzumaki (Naruto)",
+      "shop": "https://galaxycon.com/search?q=naruto",
+      "thumbnail": {
+        "title": "",
+        "image": "images/.webp"
+      },
       "characteristics": {
         "gender": "male", "species": "Human",
         "appearsIn": "Naruto", "bothAppearsIn": {
@@ -266,6 +356,11 @@
     {
       "name": "Raven",
       "select-name": "Raven (Teen Titans Go!)",
+      "shop": "https://galaxycon.com/search?q=raven",
+      "thumbnail": {
+        "title": "",
+        "image": "images/.webp"
+      },
       "characteristics": {
         "gender": "female", "species": "Cambion",
         "appearsIn": "Teen Titans Go!", "bothAppearsIn": {
@@ -285,6 +380,11 @@
     {
       "name": "Rick O’Connell",
       "select-name": "Rick O’Connell (The Mummy)",
+      "shop": "https://galaxycon.com/search?q=mummy",
+      "thumbnail": {
+        "title": "",
+        "image": "images/.webp"
+      },
       "characteristics": {
         "gender": "male", "species": "Human",
         "appearsIn": "The Mummy", "bothAppearsIn": {},
@@ -298,6 +398,11 @@
     {
       "name": "Skeletor",
       "select-name": "Skeletor (The Masters of the Universe)",
+      "shop": "https://galaxycon.com/search?q=masters+of+the+universe",
+      "thumbnail": {
+        "title": "",
+        "image": "images/.webp"
+      },
       "characteristics": {
         "gender": "male", "species": "Demon",
         "appearsIn": "The Masters of the Universe", "bothAppearsIn": {},
@@ -311,6 +416,11 @@
     {
       "name": "Superman",
       "select-name": "Superman (Superman)",
+      "shop": "https://galaxycon.com/collections/superman",
+      "thumbnail": {
+        "title": "",
+        "image": "images/.webp"
+      },
       "characteristics": {
         "gender": "male", "species": "Kryptonian",
         "appearsIn": "Superman", "bothAppearsIn": {
@@ -329,6 +439,11 @@
     {
       "name": "Wonder Woman",
       "select-name": "Wonder Woman (Wonder Woman)",
+      "shop": "https://galaxycon.com/search?q=wonder+woman",
+      "thumbnail": {
+        "title": "",
+        "image": "images/.webp"
+      },
       "characteristics": {
         "gender": "female", "species": "Amazon",
         "appearsIn": "Wonder Woman", "bothAppearsIn": {

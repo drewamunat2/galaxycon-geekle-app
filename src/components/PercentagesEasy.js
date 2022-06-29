@@ -13,8 +13,8 @@ function PercentagesEasy(props) {
 
   return(
     <>
-      <Grid container justifyContent="center" alignItems="center">
-          <Grid container justifyContent="center" alignItems="center">
+      <Grid container>
+          <Grid container>
             <Grid item xs>
               <Typography variant="h6">
                 {totalGamesPlayed}
@@ -26,7 +26,7 @@ function PercentagesEasy(props) {
               </Typography>
             </Grid>
           </Grid>
-        <Grid container justifyContent="center" alignItems="center" sx={{ mb: 2, mt: 0 }}>
+        <Grid container sx={{ mb: 2, mt: 0 }}>
           <Grid item xs>
             Played
           </Grid>

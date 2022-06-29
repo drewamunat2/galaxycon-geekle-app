@@ -50,6 +50,28 @@ const theme = createTheme({
           }
         }
       }
+    },
+    MuiCard: {
+      styleOverrides: {
+        root: {
+          backgroundColor: 'transparent',
+          boxShadow: 'none'
+        }
+      }
+    },
+    MuiCardHeader: {
+      styleOverrides: {
+        root: {
+          backgroundColor: 'transparent',
+        }
+      }
+    },
+    MuiCardMedia: {
+      styleOverrides: {
+        root: {
+          backgroundColor: 'transparent'
+        }
+      }
     }
   },
 });

@@ -1,4 +1,4 @@
-import { Grid, Typography, Button, Link} from '@mui/material';
+import { Grid, Typography, Button, Link } from '@mui/material';
 import EmojiSolution from './EmojiSolution';
 import { Image, StyleSheet, View } from 'react-native';
 import {HiOutlineClipboardCopy} from "react-icons/hi"
@@ -10,19 +10,31 @@ import Alert from '@mui/material/Alert';
 
 //import NarutoUzumaki from '../assets/NarutoUzumaki.webp'
 //import Raven from '../assets/Raven.webp'
-import DarthVader from '../assets/DarthVader.webp'
-import Raleigh from '../assets/raleighnew1080-1-1653068224677.webp'
+//import DarthVader from '../data/images/DarthVader.png'
+//import Raleigh from '../data/images/Raleigh.png'
+
 
 
 const styles = StyleSheet.create({
   raleigh: {
-    width: 125,
-    height: 135,
+    width: 325,
+    height: 335,
   },
   view: {
     alignContent: 'center',
-    alignItems: 'center',
-    marginTop: 10
+    alignItems: 'center'
+  },
+  card: {
+    bgcolor: '#eddee1',
+    alignContent: 'center',
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+  cardHeader: {
+    bgcolor: '#eddee1'
+  },
+  cardMedia: {
+    bgcolor: '#eddee1'
   }
 });
 
@@ -51,7 +63,7 @@ class EasyModeSolution extends Component {
     if(!this.props.isCorrect && this.props.turn === 8) {
       numTurns = 'X';
     }
-    let topRow = "Geekle 1 - " + numTurns + "/8\n\n";
+    let topRow = "Geekle 4 - " + numTurns + "/8\n\n";
     let grid = this.state.grid;
     let link = 'https://galaxycon-geekle-app.netlify.app/'
     return topRow + grid + link;
@@ -71,6 +83,7 @@ class EasyModeSolution extends Component {
         grid: prevState.grid + row
       }));
     }
+    console.log(this.props.solution)
   }
 
   nameColor = () => {
@@ -96,7 +109,23 @@ class EasyModeSolution extends Component {
   render () {
     return (
       <Grid container>
-        <Grid item /*xs={12}*/ xs={6}>
+        <Grid item xs={5}>
+          <Typography display='block' id="rules-of-the-game" color="#086788" variant="h4" sx={{ mt: 2, mb: 2 }}>
+            Upcoming Events
+          </Typography>
+          <View style={styles.view}>
+            <Link href="https://galaxycon.com/pages/raleigh">
+              <Image
+                style={styles.raleigh}
+                source={"https://cdn.shopify.com/s/files/1/0275/9209/7837/t/5/assets/raleighnew1080-1-1653068224677.png?v=1653068230"}
+              />
+            </Link>
+            <Button sx={{ mt: 2 }} display='block' color="info" variant="contained" href='https://galaxycon.com/pages/raleigh'> 
+              Learn More
+            </Button>
+          </View>
+        </Grid>
+        <Grid item xs={2}>
           <Typography display='block' id="rules-of-the-game" color="#086788" variant="h6" sx={{ mt: 2, mb: 0 }}>
             EASY MODE
           </Typography>
@@ -128,22 +157,20 @@ class EasyModeSolution extends Component {
             </Alert>
           </Snackbar>
         </Grid>
-        <Grid item /*sx={{display: {xs: 'none'}}}*/ xs={6}>
+        <Grid item xs={5}>
+          <Typography display='block' id="rules-of-the-game" color="#086788" variant="h4" sx={{ mt: 2, mb: 2 }}>
+            Everything {this.props.solution.thumbnail.title}!!
+          </Typography>
           <View style={styles.view}>
-            <Link href="https://galaxycon.com/pages/raleigh" >
+            <Link href={this.props.solution.shop}>
               <Image
                 style={styles.raleigh}
-                source={Raleigh}
+                source={"https://cdn.shopify.com/s/files/1/0275/9209/7837/t/5/assets/pf-307226c9--00Starwars.jpg?v=1624378371"}
               />
             </Link>
-          </View>
-          <View style={styles.view}>
-            <Link href={'https://galaxycon.com/search?q=Star+Wars'} >
-              <Image
-                style={styles.raleigh}
-                source={DarthVader}
-              />
-            </Link>
+            <Button sx={{ mt: 2 }} display='block' color="info" variant="contained" href='https://galaxycon.com/pages/raleigh'> 
+              See All
+            </Button>
           </View>
         </Grid>
       </Grid>
@@ -152,3 +179,26 @@ class EasyModeSolution extends Component {
 }
 
 export default EasyModeSolution;
+
+/*
+
+<Grid item /*sx={{display: {xs: 'none'}}}* xs={6}>
+<View style={styles.view}>
+<Link href="https://galaxycon.com/pages/raleigh" >
+  <Image
+    style={styles.raleigh}
+    source={Raleigh}
+  />
+</Link>
+</View>
+<View style={styles.view}>
+<Link href={this.props.solution.shop} >
+  <Image
+    style={styles.raleigh}
+    source={this.props.solution.thumbnail.image}
+  />
+</Link>
+</View>
+</Grid> 
+
+*/
