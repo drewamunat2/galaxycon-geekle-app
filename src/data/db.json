@@ -32,8 +32,11 @@
       "characteristics": {
         "gender": "male", "species": "Human",
         "appearsIn": "Batman", "bothAppearsIn": {
-          "Superman": "Justice League",
-          "Wonder Woman": "Justice League"
+          "Superman": "Batman v Superman: Dawn of Justice",
+          "Wonder Woman": "Justice League",
+          "Daphne Blake": "Scooby-Doo Meets Batman",
+          "Raven": "Injustice",
+          "Flash": "Justice League"
         },
         "genre": "superhero", "allGenres": ["superhero", "action", "adventure", "action-adventure", "crime film", "drama", "mystery"],
         "platform": "movies", "allPlatforms": ["movies", "tv series", "video games"],
@@ -43,11 +46,26 @@
       }
     },
     {
+      "name": "Belle",
+      "select-name": "Belle (Beauty and the Beast)",
+      "characteristics": {
+        "gender": "female", "species": "Human",
+        "appearsIn": "Beauty and the Beast", "bothAppearsIn": {},
+        "genre": "romance", "allGenres": ["romance", "musical", "children's film", "fantasy", "realistic fiction"],
+        "platform": "movies", "allPlatforms": ["movies", "tv series", "video games"],
+        "role": "main protagonist", "genRole": "good",
+        "year": 1991, "decade": 1990,
+        "id": 20
+      }
+    },
+    {
       "name": "Bubbles",
       "select-name": "Bubbles (The Powerpuff Girls)",
       "characteristics": {
         "gender": "female", "species": "Human",
-        "appearsIn": "The Powerpuff Girls", "bothAppearsIn": {},
+        "appearsIn": "The Powerpuff Girls", "bothAppearsIn": {
+          "Raven": "Teen Titans Go!"
+        },
         "genre": "cartoon", "allGenres": ["cartoon", "children's film", "comedy", "superhero", "animated series", "adventure", "children's television series", "sci-fi", "fantasy"],
         "network": "Cartoon Network",
         "platform": "tv series", "allPlatforms": ["tv series"],
@@ -70,6 +88,21 @@
       }
     },
     {
+      "name": "Daphne Blake",
+      "select-name": "Daphne Blake (Scooby-Doo)",
+      "characteristics": {
+        "gender": "female", "species": "Human",
+        "appearsIn": "Scooby-Doo", "bothAppearsIn": {
+          "Batman": "Scooby-Doo Meets Batman"
+        },
+        "genre": "cartoon", "allGenres": ["cartoon", "animated series", "comedy", "children's television series", "adventure", "fiction", "mystery", "comedy horror"],
+        "platform": "tv series", "allPlatforms": ["movies", "tv series", "video games"],
+        "role": "main protagonist", "genRole": "good",
+        "year": 1969, "decade": 1960,
+        "id": 19
+      }
+    },
+    {
       "name": "Darth Vader",
       "select-name": "Darth Vader (Star Wars)",
       "characteristics": {
@@ -87,12 +120,33 @@
       "select-name": "Deku (My Hero Academia)",
       "characteristics": {
         "gender": "male", "species": "Humanoid",
-        "appearsIn": "My Hero Academia", "bothAppearsIn": {},
+        "appearsIn": "My Hero Academia", "bothAppearsIn": {
+          "Goku": "Jump Force",
+          "Naruto Uzumaki": "Jump Force"
+        },
         "genre": "anime", "allGenres": ["anime", "superhero", "comedy", "animated series", "action adventure", "action", "adventure", "science fantasy", "comedy drama"],
         "platform": "tv series", "allPlatforms": ["movies", "tv series", "video games"],
         "role": "main protagonist", "genRole": "good",
         "year": 2014, "decade": 2010,
         "id": 5
+      }
+    },
+    {
+      "name": "Flash",
+      "select-name": "Flash (The Flash)",
+      "characteristics": {
+        "gender": "male", "species": "Human",
+        "appearsIn": "The Flash", "bothAppearsIn": {
+          "Batman": "Justice League",
+          "Superman": "Justice League",
+          "Wonder Woman": "Justice League",
+          "Raven": "Injustice"
+        },
+        "genre": "superhero", "allGenres": ["superhero", "action adventure", "action", "adventure", "mystery", "drama", "sci-fi"],
+        "platform": "tv series", "allPlatforms": ["movies", "video games", "tv series"],
+        "role": "titular protagonist", "genRole": "good",
+        "year": 2014, "decade": 2010,
+        "id": 23
       }
     },
     {
@@ -119,6 +173,22 @@
         "role": "main antagonist", "genRole": "bad",
         "year": 1954, "decade": 1950,
         "id": 7
+      }
+    },
+    {
+      "name": "Goku",
+      "select-name": "Goku (Dragon Ball Z)",
+      "characteristics": {
+        "gender": "male", "species": "Saiyan",
+        "appearsIn": "Dragon Ball Z", "bothAppearsIn": {
+          "Deku": "Jump Force",
+          "Naruto Uzumaki": "Jump Force"
+        },
+        "genre": "anime", "allGenres": ["anime", "action adventure", "action", "adventure", "drama", "comedy", "martial arts", "thriller", "sci-fi"],
+        "platform": "tv series", "allPlatforms": ["movies", "video games", "tv series"],
+        "role": "main protagonist", "genRole": "good",
+        "year": 1989, "decade": 1980,
+        "id": 22
       }
     },
     {
@@ -166,14 +236,14 @@
     },
     {
       "name": "Morty Smith",
-      "select-name": "Morty Smith (Rick and Morty)",
+      "select-name": "Morty Smith (Rick & Morty)",
       "characteristics": {
         "gender": "male", "species": "Human",
-        "appearsIn": "Rick and Morty", "bothAppearsIn": {},
+        "appearsIn": "Rick & Morty", "bothAppearsIn": {},
         "genre": "cartoon", "allGenres": ["comedy", "adventure", "sitcom", "dark comedy", "animated sitcom", "animated series", "fiction", "sci-fi", "cartoon"],
-        "platform": "video games", "allPlatforms": ["tv series", "video games"],
+        "platform": "tv series", "allPlatforms": ["tv series", "video games", "movies"],
         "role": "titular protagonist", "genRole": "good",
-        "year": 1983, "decade": 1980,
+        "year": 2013, "decade": 2010,
         "id": 18
       }
     },
@@ -182,12 +252,34 @@
       "select-name": "Naruto Uzumaki (Naruto)",
       "characteristics": {
         "gender": "male", "species": "Human",
-        "appearsIn": "Naruto", "bothAppearsIn": {},
+        "appearsIn": "Naruto", "bothAppearsIn": {
+          "Deku": "Jump Force",
+          "Goku": "Jump Force"
+        },
         "genre": "anime", "allGenres": ["anime", "animated series", "manga", "adventure", "action", "action-adventure", "fantasy"],
         "platform": "tv series", "allPlatforms": ["movies", "tv series", "video games"],
         "role": "titular protagonist", "genRole": "good",
         "year": 1999, "decade": 1900,
         "id": 15
+      }
+    },
+    {
+      "name": "Raven",
+      "select-name": "Raven (Teen Titans Go!)",
+      "characteristics": {
+        "gender": "female", "species": "Cambion",
+        "appearsIn": "Teen Titans Go!", "bothAppearsIn": {
+          "Batman": "Injustice",
+          "Superman": "Injustice",
+          "Wonder Woman": "Injustice",
+          "Flash": "Injustice",
+          "Bubbles": "Teen Titans Go!"
+        },
+        "genre": "cartoon", "allGenres": ["superhero", "comedy", "adventure", "action", "action-adventure", "children's television series", "slapstick", "animated series", "cartoon"],
+        "platform": "movies", "allPlatforms": ["movies", "tv series", "video games"],
+        "role": "main protagonist", "genRole": "good",
+        "year": 2013, "decade": 2010,
+        "id": 21
       }
     },
     {
@@ -222,8 +314,10 @@
       "characteristics": {
         "gender": "male", "species": "Kryptonian",
         "appearsIn": "Superman", "bothAppearsIn": {
-          "Batman": "Justice League",
-          "Wonder Woman": "Justice League"
+          "Batman": "Batman v Superman: Dawn of Justice",
+          "Wonder Woman": "Justice League",
+          "Raven": "Injustice",
+          "Flash": "Justice League"
         },
         "genre": "superhero", "allGenres": ["superhero", "action", "adventure", "action-adventure", "sci-fi", "children's film", "drama"],
         "platform": "movies", "allPlatforms": ["movies", "tv series", "video games"],
@@ -239,7 +333,9 @@
         "gender": "female", "species": "Amazon",
         "appearsIn": "Wonder Woman", "bothAppearsIn": {
           "Batman": "Justice League",
-          "Superman": "Justice League"
+          "Superman": "Justice League",
+          "Raven": "Injustice",
+          "Flash": "Justice League"
         },
         "genre": "superhero", "allGenres": ["superhero", "action", "adventure", "action-adventure", "sci-fi"],
         "platform": "tv series", "allPlatforms": ["movies", "tv series", "video games"],
