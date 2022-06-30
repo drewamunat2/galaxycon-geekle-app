@@ -31,6 +31,17 @@ const styleMobile = {
   overflow: 'scroll'
 };
 
+const styleNoSolution = {
+  maxWidth: '325px',
+  bgcolor: '#eddee1',
+  borderRadius: '10px',
+  margin: '10% auto',
+  textAlign: 'center',
+  boxShadow: '2px 2px 10px rgba(0,0,0,0.3)',
+  px: 3,
+  py: 2
+};
+
 function Stats(props) {
 
   const { mode, solution, noTurn, turn, isCorrect, colors, timer, totalGamesWon, totalGamesPlayed } = props;
@@ -169,7 +180,7 @@ function Stats(props) {
             overflow: 'scroll',
           }}
         >
-          <Grid container sx={style}>
+          <Grid container sx={styleNoSolution}>
             <Grid container justifyContent="right" alignItems="center">
               <IconButton onClick={() => setOpen(false)} sx={{ mx: -3, mt: -3, pt: 2 }}>
                 <CloseIcon />

@@ -119,7 +119,7 @@ class EasyModeSolution extends Component {
       <>
         <Grid container sx={{ display: {xs: 'none', lg: 'flex'}}}>
           <Grid item xs={5}>
-            <Typography display='block' id="rules-of-the-game" color="#086788" variant="h4" sx={{ mt: 2, mb: 2 }}>
+            <Typography display='block' id="rules-of-the-game" color="#086788" variant="h4" sx={{ mt: 5, mb: 4 }}>
               Upcoming Events
             </Typography>
             <View style={styles.view}>
@@ -168,7 +168,7 @@ class EasyModeSolution extends Component {
           </Grid>
           <Grid item xs={5}>
             <Typography display='block' id="rules-of-the-game" color="#086788" variant="h4" sx={{ mt: 2, mb: 2 }}>
-              Everything {this.props.solution.thumbnail.title}!!
+              Shop Everything {this.props.solution.thumbnail.title}!!
             </Typography>
             <View style={styles.view}>
               <Link href={this.state.solutionLink}>
@@ -220,7 +220,7 @@ class EasyModeSolution extends Component {
           </Grid>
           <Grid item xs={2}></Grid> 
           <Typography display='block' id="rules-of-the-game" color="#086788" variant="h4" sx={{ mt: 2, mb: 2 }}>
-            Everything {this.props.solution.thumbnail.title}!!
+            Shop Everything {this.props.solution.thumbnail.title}!!
           </Typography>
           <Grid item xs={2}></Grid>
           <Grid item xs={8}>
