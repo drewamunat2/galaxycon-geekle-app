@@ -1,9 +1,10 @@
 import React, { Component } from "react";
-import { Grid } from "@mui/material";
+import { Button, Grid } from "@mui/material";
 import PropTypes from "prop-types";
 //import axios from "axios";
 import Select from 'react-select'
 import data from '../data/db.json';
+import { borderRadius } from "@mui/system";
 
 const customStyles = {
   control: (base, state) => ({
@@ -45,7 +46,8 @@ class Search extends Component {
     super(props);
     this.state = {
       currentGuess: '',
-      allCharactersNames: []
+      allCharactersNames: [],
+      showInfo: ''
     };
   }
 
@@ -209,6 +211,11 @@ class Search extends Component {
     } catch (err) {
       console.log(err);
     }*/
+    this.getCharacters();
+  }
+
+  getCharacters = () => {
+    let nameType = this.state.showInfo ? "select-name" : "name";
     let nameArray = [];
     let nameObject = {
       id: '',
@@ -217,16 +224,36 @@ class Search extends Component {
     const db = JSON.parse(JSON.stringify(data));
     for(let i = 0; i < db.characters.length; i++) {
       nameObject = {
-        label: db.characters[i]["select-name"],
-        value: db.characters[i]["select-name"]
+        label: db.characters[i][nameType],
+        value: db.characters[i][nameType]
       };
       nameArray.push(nameObject);
     };
     this.setState({allCharactersNames: nameArray});
   }
 
+  componentDidUpdate (prevProps, prevState) {
+    if(prevState.showInfo != this.state.showInfo){
+      this.getCharacters();
+    }
+  }
+
   handleChange = (selectedOption) => {
     this.fetchCharacter(selectedOption.label);
+  }
+
+  handleClick = () => {
+    this.setState((prevState) => ({
+      showInfo: !prevState.showInfo
+    }));
+  }
+
+  showInfoState = () => {
+    console.log(this.state.showInfo);
+    if (this.state.showInfo) {
+      return 'ON';
+    }
+    return 'OFF';
   }
 
   render() {
@@ -252,33 +279,48 @@ class Search extends Component {
       );
     } else {
       return (
-        <Grid
-          container
-          alignItems="center"
-          justifyContent="center"
-        >
-          <Grid item xs={10} sm={8} md={7} lg={5} xl={3}>
-            <Select 
-              styles={customStyles}
-              placeholder={null}
-              options={this.state.allCharactersNames}
-              onChange={this.handleChange}
-              autoFocus={false}
-              closeMenuOnSelect={true}
-              controlShouldRenderValue={false}
-              openMenuOnClick={true}
-              openMenuOnFocus={false}
-              captureMenuScroll={true}
-              escapeClearsValue={true}
-              menuShouldBlockScroll={true}
-              cacheOptions={true}
-              blurInputOnSelect={true}
-              components={{
-                IndicatorSeparator: () => null
-              }}
-            />
+        <>
+          <Grid
+            container
+            alignItems="center"
+            justifyContent="center"
+          >
+            <Grid item xs={10} sm={8} md={7} lg={5} xl={3}>
+              <Select 
+                styles={customStyles}
+                placeholder={null}
+                options={this.state.allCharactersNames}
+                onChange={this.handleChange}
+                autoFocus={false}
+                closeMenuOnSelect={true}
+                controlShouldRenderValue={false}
+                openMenuOnClick={true}
+                openMenuOnFocus={false}
+                captureMenuScroll={true}
+                escapeClearsValue={true}
+                menuShouldBlockScroll={true}
+                cacheOptions={true}
+                blurInputOnSelect={true}
+                components={{
+                  IndicatorSeparator: () => null
+                }}
+              />
+            </Grid>
           </Grid>
-        </Grid>
+          <Grid
+            container
+            alignItems="center"
+            justifyContent="center"
+          >
+            <Button 
+              variant="contained" 
+              sx={{my: 1, borderColor: "blue", color: '#FFF0FF', borderRadius: 5}}
+              onClick={() => this.handleClick()}
+            >
+              📋 Character Info {this.showInfoState()}
+            </Button>
+          </Grid>
+        </>
       );
     }
   }

@@ -178,7 +178,7 @@ class EasyModeSolution extends Component {
                 />
               </Link>
               <Button sx={{ mt: 2 }} display='block' color="info" variant="contained" href={this.state.solutionLink}> 
-                See All
+                View All
               </Button>
             </View>
           </Grid>

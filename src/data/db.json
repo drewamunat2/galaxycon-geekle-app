@@ -2,7 +2,7 @@
   "characters": [
     {
       "name": "Aang",
-      "select-name": "Aang (Avatar: The Last Airbender)",
+      "select-name": "Aang (Avatar: The Last Airbender) [tv]",
       "shop": "https://galaxycon.com/collections/avatar-the-last-airbender",
       "thumbnail": {
         "title": "Avatar: The last Airbender",
@@ -20,7 +20,7 @@
     },
     {
       "name": "Ash Ketchum",
-      "select-name": "Ash Ketchum (Pokémon)",
+      "select-name": "Ash Ketchum (Pokémon) [vg]",
       "shop": "https://galaxycon.com/collections/pokemon",
       "thumbnail": {
         "title": "Pokémon",
@@ -38,7 +38,7 @@
     },
     {
       "name": "Batman",
-      "select-name": "Batman (The Batman)",
+      "select-name": "Batman (The Batman) [mv]",
       "shop": "https://galaxycon.com/collections/batman",
       "thumbnail": {
         "title": "",
@@ -62,7 +62,7 @@
     },
     {
       "name": "Belle",
-      "select-name": "Belle (Beauty and the Beast)",
+      "select-name": "Belle (Beauty and the Beast) [mv]",
       "shop": "https://galaxycon.com/collections/beauty-and-the-beast",
       "thumbnail": {
         "title": "",
@@ -80,7 +80,7 @@
     },
     {
       "name": "Bubbles",
-      "select-name": "Bubbles (The Powerpuff Girls)",
+      "select-name": "Bubbles (The Powerpuff Girls) [tv]",
       "shop": "https://galaxycon.com/search?q=powerpuff+girls",
       "thumbnail": {
         "title": "",
@@ -101,7 +101,7 @@
     },
     {
       "name": "Captain Kirk",
-      "select-name": "Captain Kirk (Star Trek)",
+      "select-name": "Captain Kirk (Star Trek) [tv]",
       "shop": "https://galaxycon.com/collections/star-trek",
       "thumbnail": {
         "title": "",
@@ -119,7 +119,7 @@
     },
     {
       "name": "Daphne Blake",
-      "select-name": "Daphne Blake (Scooby-Doo)",
+      "select-name": "Daphne Blake (Scooby-Doo) [tv]",
       "shop": "https://galaxycon.com/collections/scooby-doo",
       "thumbnail": {
         "title": "",
@@ -139,7 +139,7 @@
     },
     {
       "name": "Darth Vader",
-      "select-name": "Darth Vader (Star Wars)",
+      "select-name": "Darth Vader (Star Wars) [mv]",
       "shop": "https://galaxycon.com/collections/star-wars",
       "thumbnail": {
         "title": "Star Wars",
@@ -157,7 +157,7 @@
     },
     {
       "name": "Deku",
-      "select-name": "Deku (My Hero Academia)",
+      "select-name": "Deku (My Hero Academia) [tv]",
       "shop": "https://galaxycon.com/collections/my-hero-academia",
       "thumbnail": {
         "title": "",
@@ -178,7 +178,7 @@
     },
     {
       "name": "Flash",
-      "select-name": "Flash (The Flash)",
+      "select-name": "Flash (The Flash) [tv]",
       "shop": "https://galaxycon.com/collections/the-flash",
       "thumbnail": {
         "title": "",
@@ -201,12 +201,12 @@
     },
     {
       "name": "Frank N. Furter",
+      "select-name": "Frank N. Furter (The Rocky Horror Show) [mv]",
       "shop": "https://galaxycon.com/collections/rocky-horror-picture-show",
       "thumbnail": {
         "title": "",
         "image": "images/.webp"
       },
-      "select-name": "Frank N. Furter (The Rocky Horror Show)",
       "characteristics": {
         "gender": "male", "species": "Transylvanian",
         "appearsIn": "The Rocky Horror Show", "bothAppearsIn": {},
@@ -219,7 +219,7 @@
     },
     {
       "name": "Gill-man",
-      "select-name": "Gill-man (The Black Lagoon)",
+      "select-name": "Gill-man (The Black Lagoon) [mv]",
       "shop": "https://galaxycon.com/search?q=the+black+lagoon",
       "thumbnail": {
         "title": "",
@@ -237,7 +237,7 @@
     },
     {
       "name": "Goku",
-      "select-name": "Goku (Dragon Ball Z)",
+      "select-name": "Goku (Dragon Ball Z) [tv]",
       "shop": "https://galaxycon.com/collections/dragon-ball",
       "thumbnail": {
         "title": "",
@@ -258,7 +258,7 @@
     },
     {
       "name": "Harry Potter",
-      "select-name": "Harry Potter (Harry Potter Series)",
+      "select-name": "Harry Potter (Harry Potter Series) [mv]",
       "shop": "https://galaxycon.com/search?q=harry+potter",
       "thumbnail": {
         "title": "",
@@ -276,7 +276,7 @@
     },
     {
       "name": "Link",
-      "select-name": "Link (The Legend of Zelda)",
+      "select-name": "Link (The Legend of Zelda) [vg]",
       "shop": "https://galaxycon.com/search?q=legend+of+zelda",
       "thumbnail": {
         "title": "",
@@ -296,7 +296,7 @@
     },
     {
       "name": "Mario",
-      "select-name": "Mario (Super Mario Bros)",
+      "select-name": "Mario (Super Mario Bros) [vg]",
       "shop": "https://galaxycon.com/collections/super-mario",
       "thumbnail": {
         "title": "",
@@ -316,7 +316,7 @@
     },
     {
       "name": "Morty Smith",
-      "select-name": "Morty Smith (Rick & Morty)",
+      "select-name": "Morty Smith (Rick & Morty) [tv]",
       "shop": "https://galaxycon.com/collections/rick-and-morty",
       "thumbnail": {
         "title": "",
@@ -334,7 +334,7 @@
     },
     {
       "name": "Naruto Uzumaki",
-      "select-name": "Naruto Uzumaki (Naruto)",
+      "select-name": "Naruto Uzumaki (Naruto) [tv]",
       "shop": "https://galaxycon.com/search?q=naruto",
       "thumbnail": {
         "title": "",
@@ -355,7 +355,7 @@
     },
     {
       "name": "Raven",
-      "select-name": "Raven (Teen Titans Go!)",
+      "select-name": "Raven (Teen Titans Go!) [tv]",
       "shop": "https://galaxycon.com/search?q=raven",
       "thumbnail": {
         "title": "",
@@ -371,7 +371,7 @@
           "Bubbles": "Teen Titans Go!"
         },
         "genre": "cartoon", "allGenres": ["superhero", "comedy", "adventure", "action", "action-adventure", "children's television series", "slapstick", "animated series", "cartoon"],
-        "platform": "movies", "allPlatforms": ["movies", "tv series", "video games"],
+        "platform": "tv series", "allPlatforms": ["movies", "tv series", "video games"],
         "role": "main protagonist", "genRole": "good",
         "year": 2013, "decade": 2010,
         "id": 21
@@ -379,7 +379,7 @@
     },
     {
       "name": "Rick O’Connell",
-      "select-name": "Rick O’Connell (The Mummy)",
+      "select-name": "Rick O’Connell (The Mummy) [mv]",
       "shop": "https://galaxycon.com/search?q=mummy",
       "thumbnail": {
         "title": "",
@@ -397,7 +397,7 @@
     },
     {
       "name": "Skeletor",
-      "select-name": "Skeletor (The Masters of the Universe)",
+      "select-name": "Skeletor (The Masters of the Universe) [tv]",
       "shop": "https://galaxycon.com/search?q=masters+of+the+universe",
       "thumbnail": {
         "title": "",
@@ -415,7 +415,7 @@
     },
     {
       "name": "Superman",
-      "select-name": "Superman (Superman)",
+      "select-name": "Superman (Superman) [mv]",
       "shop": "https://galaxycon.com/collections/superman",
       "thumbnail": {
         "title": "",
@@ -438,7 +438,7 @@
     },
     {
       "name": "Wonder Woman",
-      "select-name": "Wonder Woman (Wonder Woman)",
+      "select-name": "Wonder Woman (Wonder Woman) [tv]",
       "shop": "https://galaxycon.com/search?q=wonder+woman",
       "thumbnail": {
         "title": "",
