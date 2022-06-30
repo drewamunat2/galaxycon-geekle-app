@@ -113,12 +113,12 @@ class Search extends Component {
     }
 
     //set show color
-    let bothAppearsIn = 0;
+    let bothAppearsIn = this.isYellowArrays(guess.characteristics.bothAppearsIn, this.props.solution.characteristics.bothAppearsIn);
     //same show : set green
     if(guess.characteristics.appearsIn === this.props.solution.characteristics.appearsIn) {
       colorObj.appearsIn = "#6CA663";
       colorObj.appearsInColor = 'green';
-    } else if (bothAppearsIn = this.isYellowArrays(guess.characteristics.bothAppearsIn, this.props.solution.characteristics.bothAppearsIn)) {
+    } else if (bothAppearsIn) {
       guess.characteristics.appearsIn = bothAppearsIn;
       colorObj.appearsIn = "#E0CA3C";
       colorObj.appearsInColor = 'yellow';
@@ -126,7 +126,7 @@ class Search extends Component {
 
     //set genre color
 
-    let bothGenres = 0;
+    let bothGenres = this.isYellowArrays(guess.characteristics.allGenres, this.props.solution.characteristics.allGenres);
 
     //same genre : set green
     if(guess.characteristics.genre === this.props.solution.characteristics.genre) {
@@ -136,7 +136,7 @@ class Search extends Component {
       guess = this.switchGenres(guess, this.props.solution.characteristics.genre);
       colorObj.genre = "#6CA663";
       colorObj.genreColor = 'green';
-    } else if (bothGenres = this.isYellowArrays(guess.characteristics.allGenres, this.props.solution.characteristics.allGenres)) {
+    } else if (bothGenres) {
       guess.characteristics.genre = bothGenres;
       colorObj.genre = "#E0CA3C";
       colorObj.genreColor = 'yellow';
