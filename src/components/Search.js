@@ -181,9 +181,10 @@ class Search extends Component {
       console.log(err);
     }*/
     const db = JSON.parse(JSON.stringify(data))
+    let nameType = this.state.showInfo ? "select-name" : "name"
     for(let i = 0; i < db.characters.length; i++) {
       let char = db.characters[i]
-      if(char["select-name"] === guess) {
+      if(char[nameType] === guess) {
         this.assertColors(char);
       }
     }
@@ -234,6 +235,7 @@ class Search extends Component {
   componentDidUpdate (prevProps, prevState) {
     if(prevState.showInfo !== this.state.showInfo){
       this.getCharacters();
+      this.props.updateMode()
     }
   }
 

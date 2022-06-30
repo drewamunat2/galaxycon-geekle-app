@@ -21,6 +21,7 @@ class App extends Component {
       totalGamesWon: 0,
       tomorrow: new Date(),
       time: new Date(),
+      mode: 'HARD',
       stats: {}
     };
   }
@@ -55,6 +56,10 @@ class App extends Component {
 
   saveTotalGamesWon = () => {
     window.localStorage.setItem("totalGamesWon", JSON.stringify(this.state.totalGamesWon));
+  };
+
+  saveMode = () => {
+    window.localStorage.setItem("mode", JSON.stringify(this.state.mode));
   };
 
   saveChangeTime = () => {
@@ -189,6 +194,11 @@ class App extends Component {
         totalGamesPlayed: JSON.parse(window.localStorage.getItem("totalGamesPlayed"))
       });
     }
+    if(JSON.parse(window.localStorage.getItem("mode"))) {
+      this.setState({ 
+        mode: JSON.parse(window.localStorage.getItem("mode"))
+      });
+    }
     if(JSON.parse(window.localStorage.getItem("totalGamesWon"))) {
       this.setState({ 
         totalGamesWon: JSON.parse(window.localStorage.getItem("totalGamesWon"))
@@ -234,6 +244,10 @@ class App extends Component {
       // ... do something
       //this.resetGame(true);
       this.saveChangeTime();
+    }
+    if (prevState.mode !== this.state.mode) {
+      // ... do something
+      this.saveMode();
     }
     if(this.state.time !== prevState.time) {
       if(this.state.time.getTime() >= new Date(this.state.tomorrow).getTime()) {
@@ -306,6 +320,10 @@ class App extends Component {
       }));
     }
   };
+
+  updateMode = () => {
+    this.setState({mode: 'EASY'})
+  }
   
   render() {
     return (
@@ -319,6 +337,7 @@ class App extends Component {
           totalGamesWon={this.state.totalGamesWon}
           timer={this.state.timer}
           turn={this.state.turn}
+          mode={this.state.mode}
         />
         <Title
           turn={this.state.turn}
@@ -334,6 +353,7 @@ class App extends Component {
           noTurn={this.state.outOfTurns}
           isCorrect={this.state.isCorrect}
           updateGameStarted={this.updateGameStarted}
+          updateMode={this.updateMode}
         />
         <Game 
           characters={this.state.characters}

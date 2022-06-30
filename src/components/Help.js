@@ -69,17 +69,22 @@ function Help() {
             </Typography>
           </Grid>
           <Grid container justifyContent="center" alignItems="center">
+            <Typography id="rules-of-the-game" color="#086788" sx={{ mb: 1 }}>
+              Guess the character in 8 tries or less and share results with friends!
+            </Typography>
+          </Grid>
+          <Grid container justifyContent="center" alignItems="center">
+            <Typography id="rules-of-the-game" color="#086788" sx={{ mb: 1 }}>
+              Leave character info off for HARD mode, or for hints switch it on for EASY mode
+            </Typography>
+          </Grid>
+          <Grid container justifyContent="center" alignItems="center">
             <Typography id="rules-of-the-game" color="#086788" sx={{ mb: 1, mt: 1 }} component='div'> 
               A <Box color='success.main' display='inline'>
                 green
               </Box> tile represents an exact match of a desired characteristic, and a <Box color='warning.main' display='inline'>
                 yellow
               </Box> tile represents a close guess, which will be further elaborated below..
-            </Typography>
-          </Grid>
-          <Grid container justifyContent="center" alignItems="center">
-            <Typography id="rules-of-the-game" color="#086788" sx={{ mb: 2 }}>
-              Guess the character in 8 tries or less and (coming soon) share results with friends!
             </Typography>
           </Grid>
           <Grid container justifyContent="center" alignItems="center">
@@ -104,12 +109,12 @@ function Help() {
           </Grid>
           <Grid container justifyContent="center" alignItems="center">
             <Typography id="rules-of-the-game" color="#086788" sx={{ mt: 1 }}>
-              Genre: correctly identifying a sub-genre of the target character
+              Genre: correctly identifying a sub-genre of what the target character appears in 
             </Typography>
           </Grid>
           <Grid container justifyContent="center" alignItems="center">
             <Typography id="rules-of-the-game" color="#086788" sx={{ mt: 1 }}>
-              Platform: correctly identifying a sub-platform of the target character
+              Platform: correctly identifying an alternate platform of the target character
             </Typography>
           </Grid>
           <Grid container justifyContent="center" alignItems="center">

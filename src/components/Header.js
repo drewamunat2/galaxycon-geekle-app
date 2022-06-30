@@ -16,10 +16,10 @@ const theme = createTheme({
       main: '#fff0ff',
     },
     success: {
-      main: '#BDD358',
+      main: '#6CA663',
     },
     warning: {
-      main: '#fff700',
+      main: '#E0CA3C',
     },
     info: {
       main: '#086788'
@@ -78,7 +78,7 @@ const theme = createTheme({
 
 function Header(props) {
 
-  const {solution, noTurn, turn, isCorrect, colors, totalGamesWon, totalGamesPlayed, timer} = props;
+  const {mode, solution, noTurn, turn, isCorrect, colors, totalGamesWon, totalGamesPlayed, timer} = props;
 
   return (
     <ThemeProvider theme={theme}>
@@ -95,6 +95,7 @@ function Header(props) {
                   totalGamesWon={totalGamesWon}
                   timer={timer}
                   turn={turn}
+                  mode={mode}
                 />
               </Grid>
               <Grid item xs={6}>

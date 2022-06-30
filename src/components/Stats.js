@@ -33,7 +33,7 @@ const styleMobile = {
 
 function Stats(props) {
 
-  const { solution, noTurn, turn, isCorrect, colors, timer, totalGamesWon, totalGamesPlayed } = props;
+  const { mode, solution, noTurn, turn, isCorrect, colors, timer, totalGamesWon, totalGamesPlayed } = props;
   const [winPopUpHappened, setWinPopUpHappened] = useState(false);
   const [open, setOpen] = useState(false);
   const handleOpen = () => {
@@ -92,6 +92,7 @@ function Stats(props) {
               totalGamesPlayed={totalGamesPlayed}
               totalGamesWon={totalGamesWon}
               turn={turn}
+              mode={mode}
             />  
             <Grid container justifyContent="center" alignItems="center">
               <Grid item>

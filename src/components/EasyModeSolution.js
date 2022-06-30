@@ -66,7 +66,7 @@ class EasyModeSolution extends Component {
     if(!this.props.isCorrect && this.props.turn === 8) {
       numTurns = 'X';
     }
-    let topRow = "Geekle 4 - " + numTurns + "/8\n\n";
+    let topRow = "Geekle 4 - " + this.props.mode + ' ' + numTurns + "/8\n\n";
     let grid = this.state.grid;
     let link = 'https://galaxycon-geekle-app.netlify.app/'
     return topRow + grid + link;
