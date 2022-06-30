@@ -4,7 +4,6 @@ import PropTypes from "prop-types";
 //import axios from "axios";
 import Select from 'react-select'
 import data from '../data/db.json';
-import { borderRadius } from "@mui/system";
 
 const customStyles = {
   control: (base, state) => ({
@@ -233,7 +232,7 @@ class Search extends Component {
   }
 
   componentDidUpdate (prevProps, prevState) {
-    if(prevState.showInfo != this.state.showInfo){
+    if(prevState.showInfo !== this.state.showInfo){
       this.getCharacters();
     }
   }
