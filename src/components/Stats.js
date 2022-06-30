@@ -55,6 +55,7 @@ function Stats(props) {
   };
 
   useEffect(() => {
+    window.scrollTo(0, 0)
     if(isCorrect || noTurn) {
       setOpen(true);
     }

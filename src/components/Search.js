@@ -126,6 +126,8 @@ class Search extends Component {
 
     //set genre color
 
+    let bothGenres = 0;
+
     //same genre : set green
     if(guess.characteristics.genre === this.props.solution.characteristics.genre) {
       colorObj.genre = "#6CA663";
@@ -134,7 +136,8 @@ class Search extends Component {
       guess = this.switchGenres(guess, this.props.solution.characteristics.genre);
       colorObj.genre = "#6CA663";
       colorObj.genreColor = 'green';
-    } else if (this.isYellow(guess.characteristics.genre, this.props.solution.characteristics.allGenres)) {
+    } else if (bothGenres = this.isYellowArrays(guess.characteristics.allGenres, this.props.solution.characteristics.allGenres)) {
+      guess.characteristics.genre = bothGenres;
       colorObj.genre = "#E0CA3C";
       colorObj.genreColor = 'yellow';
     }
