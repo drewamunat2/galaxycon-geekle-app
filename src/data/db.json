@@ -11,7 +11,7 @@
       "characteristics": {
         "gender": "male", "species": "Human",
         "appearsIn": "Avatar: The Last Airbender", "bothAppearsIn": [],
-        "genre": "anime", "allGenres": ["anime", "action", "adventure", "action-adventure", "steampunk", "fantasy", "comedy", "children's television series, children's film"],
+        "genre": "anime", "allGenres": ["anime", "steampunk", "children's television series", "children's film", "comedy", "fantasy", "action-adventure", "action", "adventure"],
         "platform": "tv series", "allPlatforms": ["movies", "tv series", "video games"],
         "role": "main protagonist", "genRole": "good",
         "year": 2005, "decade": 2000,
@@ -29,7 +29,7 @@
       "characteristics": {
         "gender": "male", "species": "Human",
         "appearsIn": "Pokémon", "bothAppearsIn": [],
-        "genre": "role-playing", "allGenres": ["anime", "role-playing", "action", "adventure", "action-adventure", "life simulation", "management"],
+        "genre": "role-playing", "allGenres": ["role-playing", "life simulation", "management", "anime", "action-adventure", "action", "adventure"],
         "platform": "video games", "allPlatforms": ["movies", "tv series", "video games"],
         "role": "main protagonist", "genRole": "good",
         "year": 1996, "decade": 1990,
@@ -41,13 +41,13 @@
       "select-name": "Batman (The Batman) [mv]",
       "shop": "https://galaxycon.com/collections/batman",
       "thumbnail": {
-        "title": "",
-        "image": "images/.webp"
+        "title": "Batman",
+        "image": "https://cdn.shopify.com/s/files/1/0275/9209/7837/products/PXL_20220627_191521728_470x.jpg?v=1656366154"
       },
       "characteristics": {
         "gender": "male", "species": "Human",
         "appearsIn": "Batman", "bothAppearsIn": ["Batman v Superman: Dawn of Justice", "Scooby-Doo Meets Batman", "Justice League", "Injustice"],
-        "genre": "superhero", "allGenres": ["superhero", "action", "adventure", "action-adventure", "crime film", "drama", "mystery"],
+        "genre": "superhero", "allGenres": ["superhero", "crime film", "mystery", "drama", "action-adventure", "action", "adventure"],
         "platform": "movies", "allPlatforms": ["movies", "tv series", "video games"],
         "role": "titular protagonist", "genRole": "good",
         "year": 1939, "decade": 1930,
@@ -59,8 +59,8 @@
       "select-name": "Belle (Beauty and the Beast) [mv]",
       "shop": "https://galaxycon.com/collections/beauty-and-the-beast",
       "thumbnail": {
-        "title": "",
-        "image": "images/.webp"
+        "title": "Beauty and the Beast",
+        "image": "https://cdn.shopify.com/s/files/1/0275/9209/7837/products/ScanDec14_2021_8_1024x1024@2x.jpg?v=1639518595"
       },
       "characteristics": {
         "gender": "female", "species": "Human",
@@ -77,13 +77,13 @@
       "select-name": "Bubbles (The Powerpuff Girls) [tv]",
       "shop": "https://galaxycon.com/search?q=powerpuff+girls",
       "thumbnail": {
-        "title": "",
-        "image": "images/.webp"
+        "title": "Powerpuff Girls",
+        "image": "https://cdn.shopify.com/s/files/1/0275/9209/7837/articles/PowerPuff-Superhero_360x.jpg?v=1644003320"
       },
       "characteristics": {
         "gender": "female", "species": "Human",
         "appearsIn": "The Powerpuff Girls", "bothAppearsIn":  ["Teen Titans Go!"],
-        "genre": "cartoon", "allGenres": ["cartoon", "children's film", "comedy", "superhero", "animated series", "adventure", "children's television series", "sci-fi", "fantasy"],
+        "genre": "cartoon", "allGenres": ["cartoon", "children's television series", "children's film", "superhero", "sci-fi", "comedy", "animated series", "adventure", "fantasy"],
         "network": "Cartoon Network",
         "platform": "tv series", "allPlatforms": ["tv series"],
         "role": "deutertagonist", "genRole": "good",
@@ -96,13 +96,13 @@
       "select-name": "Captain Kirk (Star Trek) [tv]",
       "shop": "https://galaxycon.com/collections/star-trek",
       "thumbnail": {
-        "title": "",
-        "image": "images/.webp"
+        "title": "Star Trek",
+        "image": "https://cdn.shopify.com/s/files/1/0275/9209/7837/t/5/assets/pf-ea19badc--00StarTrek.jpg?v=1623868993"
       },
       "characteristics": {
         "gender": "male", "species": "Human",
         "appearsIn": "Star Trek", "bothAppearsIn": [],
-        "genre": "sci-fi", "allGenres": ["sci-fi", "drama", "adventure", "action", "action adventure", "space western", "fiction"],
+        "genre": "sci-fi", "allGenres": ["sci-fi", "space western", "drama", "action-adventure", "adventure", "action", "fiction"],
         "platform": "tv series", "allPlatforms": ["movies", "tv series", "video games"],
         "role": "main protagonist", "genRole": "good",
         "year": 1966, "decade": 1960,
@@ -120,7 +120,7 @@
       "characteristics": {
         "gender": "female", "species": "Human",
         "appearsIn": "Scooby-Doo", "bothAppearsIn": ["Scooby-Doo Meets Batman"],
-        "genre": "cartoon", "allGenres": ["cartoon", "animated series", "comedy", "children's television series", "adventure", "fiction", "mystery", "comedy horror"],
+        "genre": "cartoon", "allGenres": ["cartoon", "animated series", "children's television series", "mystery", "comedy horror", "comedy", "adventure", "fiction"],
         "platform": "tv series", "allPlatforms": ["movies", "tv series", "video games"],
         "role": "main protagonist", "genRole": "good",
         "year": 1969, "decade": 1960,
@@ -138,7 +138,7 @@
       "characteristics": {
         "gender": "male", "species": "Human",
         "appearsIn": "Star Wars", "bothAppearsIn": [],
-        "genre": "sci-fi", "allGenres": ["sci-fi", "action", "adventure", "action-adventure", "space opera", "fantasy"],
+        "genre": "sci-fi", "allGenres": ["sci-fi", "space opera", "action-adventure", "action", "adventure", "fantasy"],
         "platform": "movies", "allPlatforms": ["movies", "tv series", "video games"],
         "role": "main antagonist", "genRole": "bad",
         "year": 1983, "decade": 1980,
@@ -150,13 +150,13 @@
       "select-name": "Deku (My Hero Academia) [tv]",
       "shop": "https://galaxycon.com/collections/my-hero-academia",
       "thumbnail": {
-        "title": "",
-        "image": "images/.webp"
+        "title": "My Hero Academia",
+        "image": "https://cdn.shopify.com/s/files/1/0275/9209/7837/t/5/assets/pf-291339bf--00MyHeroAcademia.jpg?v=1624458956"
       },
       "characteristics": {
         "gender": "male", "species": "Humanoid",
         "appearsIn": "My Hero Academia", "bothAppearsIn": ["Jump Force"],
-        "genre": "anime", "allGenres": ["anime", "superhero", "comedy", "animated series", "action adventure", "action", "adventure", "science fantasy", "comedy drama"],
+        "genre": "anime", "allGenres": ["anime", "animated series", "superhero", "science fantasy", "comedy drama", "comedy", "action-adventure", "action", "adventure"],
         "platform": "tv series", "allPlatforms": ["movies", "tv series", "video games"],
         "role": "main protagonist", "genRole": "good",
         "year": 2014, "decade": 2010,
@@ -168,13 +168,13 @@
       "select-name": "Flash (The Flash) [tv]",
       "shop": "https://galaxycon.com/collections/the-flash",
       "thumbnail": {
-        "title": "",
-        "image": "images/.webp"
+        "title": "The Flash",
+        "image": "https://cdn.shopify.com/s/files/1/0275/9209/7837/products/ScanMay04_2021_61_470x.jpg?v=1620239153"
       },
       "characteristics": {
         "gender": "male", "species": "Human",
         "appearsIn": "The Flash", "bothAppearsIn": ["Justice League", "Injustice"],
-        "genre": "superhero", "allGenres": ["superhero", "action adventure", "action", "adventure", "mystery", "drama", "sci-fi"],
+        "genre": "superhero", "allGenres": ["superhero", "sci-fi", "mystery", "drama", "action-adventure", "action", "adventure"],
         "platform": "tv series", "allPlatforms": ["movies", "video games", "tv series"],
         "role": "titular protagonist", "genRole": "good",
         "year": 2014, "decade": 2010,
@@ -186,8 +186,8 @@
       "select-name": "Frank N. Furter (The Rocky Horror Show) [mv]",
       "shop": "https://galaxycon.com/collections/rocky-horror-picture-show",
       "thumbnail": {
-        "title": "",
-        "image": "images/.webp"
+        "title": "Rocky Horror",
+        "image": "https://cdn.shopify.com/s/files/1/0275/9209/7837/t/5/assets/pf-362e0ebb--00RockyHorror.jpg?v=1623946891"
       },
       "characteristics": {
         "gender": "male", "species": "Transylvanian",
@@ -204,8 +204,8 @@
       "select-name": "Gill-man (The Black Lagoon) [mv]",
       "shop": "https://galaxycon.com/search?q=the+black+lagoon",
       "thumbnail": {
-        "title": "",
-        "image": "images/.webp"
+        "title": "The Black Lagoon",
+        "image": "https://cdn.shopify.com/s/files/1/0275/9209/7837/products/ScanMar08_2022_31_360x.jpg?v=1646850481"
       },
       "characteristics": {
         "gender": "male", "species": "Humanoid",
@@ -228,7 +228,7 @@
       "characteristics": {
         "gender": "male", "species": "Saiyan",
         "appearsIn": "Dragon Ball Z", "bothAppearsIn": ["Jump Force"],
-        "genre": "anime", "allGenres": ["anime", "action adventure", "action", "adventure", "drama", "comedy", "martial arts", "thriller", "sci-fi"],
+        "genre": "anime", "allGenres": ["anime", "martial arts", "thriller", "sci-fi", "drama", "comedy", "action-adventure", "action", "adventure"],
         "platform": "tv series", "allPlatforms": ["movies", "video games", "tv series"],
         "role": "main protagonist", "genRole": "good",
         "year": 1989, "decade": 1980,
@@ -240,13 +240,13 @@
       "select-name": "Harry Potter (Harry Potter Series) [mv]",
       "shop": "https://galaxycon.com/search?q=harry+potter",
       "thumbnail": {
-        "title": "",
-        "image": "images/.webp"
+        "title": "Harry Potter",
+        "image": "https://cdn.shopify.com/s/files/1/0275/9209/7837/articles/Matthew-Lewis-Private-Signing_360x.jpg?v=1655923081"
       },
       "characteristics": {
         "gender": "male", "species": "Human",
         "appearsIn": "Harry Potter", "bothAppearsIn": [],
-        "genre": "fantasy", "allGenres": ["fantasy", "narrative", "children's film", "adventure", "thriller", "mystery", "family film", "adaption", "action", "action adventure", "drama", "romance"],
+        "genre": "fantasy", "allGenres": ["fantasy", "narrative", "children's film", "thriller", "mystery", "family film", "adaption", "drama", "romance", "action-adventure", "action", "adventure"],
         "platform": "movies", "allPlatforms": ["movies", "video games"],
         "role": "titular protagonist", "genRole": "good",
         "year": 2001, "decade": 2000,
@@ -258,13 +258,13 @@
       "select-name": "Link (The Legend of Zelda) [vg]",
       "shop": "https://galaxycon.com/search?q=legend+of+zelda",
       "thumbnail": {
-        "title": "",
-        "image": "images/.webp"
+        "title": "Legend of Zelda",
+        "image": "https://cdn.shopify.com/s/files/1/0275/9209/7837/products/ScanApr27_2022_83_360x.jpg?v=1651086635"
       },
       "characteristics": {
         "gender": "female", "species": "Hylian",
         "appearsIn": "The Legend of Zelda", "bothAppearsIn": ["Super Smash Bros."],
-        "genre": "role-playing", "allGenres": ["action-adventure", "action", "role-playing", "action role-playing", "dungeon crawl"],
+        "genre": "role-playing", "allGenres": ["role-playing", "action role-playing", "dungeon crawl", "action-adventure", "action", "adventure"],
         "platform": "video games", "allPlatforms": ["movies", "tv series", "video games"],
         "role": "titular protagonist", "genRole": "good",
         "year": 1986, "decade": 1980,
@@ -276,13 +276,13 @@
       "select-name": "Mario (Super Mario Bros) [vg]",
       "shop": "https://galaxycon.com/collections/super-mario",
       "thumbnail": {
-        "title": "",
-        "image": "images/.webp"
+        "title": "Super Mario",
+        "image": "https://cdn.shopify.com/s/files/1/0275/9209/7837/products/PXL_20210622_131933223_470x.jpg?v=1624368670"
       },
       "characteristics": {
         "gender": "male", "species": "Human",
         "appearsIn": "Super Mario Bros.", "bothAppearsIn": ["Super Smash Bros."],
-        "genre": "platform", "allGenres": ["fantasy", "adventure", "platform"],
+        "genre": "platform", "allGenres": ["platform", "adventure", "fantasy"],
         "platform": "video games", "allPlatforms": ["tv series", "video games"],
         "role": "titular protagonist", "genRole": "good",
         "year": 1983, "decade": 1980,
@@ -294,13 +294,13 @@
       "select-name": "Morty Smith (Rick & Morty) [tv]",
       "shop": "https://galaxycon.com/collections/rick-and-morty",
       "thumbnail": {
-        "title": "",
-        "image": "images/.webp"
+        "title": "Rick & Morty",
+        "image": "https://cdn.shopify.com/s/files/1/0275/9209/7837/products/PXL_20220209_230111625_470x.jpg?v=1644693194"
       },
       "characteristics": {
         "gender": "male", "species": "Human",
         "appearsIn": "Rick & Morty", "bothAppearsIn": [],
-        "genre": "cartoon", "allGenres": ["comedy", "adventure", "sitcom", "dark comedy", "animated sitcom", "animated series", "fiction", "sci-fi", "cartoon"],
+        "genre": "cartoon", "allGenres": ["cartoon", "animated series", "animated sitcom", "sitcom", "sci-fi", "comedy", "dark comedy", "adventure", "fiction"],
         "platform": "tv series", "allPlatforms": ["tv series", "video games", "movies"],
         "role": "titular protagonist", "genRole": "good",
         "year": 2013, "decade": 2010,
@@ -318,7 +318,7 @@
       "characteristics": {
         "gender": "male", "species": "Human",
         "appearsIn": "Naruto", "bothAppearsIn": ["Jump Force"],
-        "genre": "anime", "allGenres": ["anime", "animated series", "manga", "adventure", "action", "action-adventure", "fantasy"],
+        "genre": "anime", "allGenres": ["anime", "animated series", "manga", "action-adventure", "adventure", "action", "fantasy"],
         "platform": "tv series", "allPlatforms": ["movies", "tv series", "video games"],
         "role": "titular protagonist", "genRole": "good",
         "year": 1999, "decade": 1900,
@@ -336,7 +336,7 @@
       "characteristics": {
         "gender": "female", "species": "Cambion",
         "appearsIn": "Teen Titans Go!", "bothAppearsIn": ["Teen Titans Go!", "Injustice"],
-        "genre": "cartoon", "allGenres": ["superhero", "comedy", "adventure", "action", "action-adventure", "children's television series", "slapstick", "animated series", "cartoon"],
+        "genre": "cartoon", "allGenres": ["cartoon", "animated series", "children's television series", "superhero", "comedy", "slapstick", "action-adventure", "adventure", "action"],
         "platform": "tv series", "allPlatforms": ["movies", "tv series", "video games"],
         "role": "main protagonist", "genRole": "good",
         "year": 2013, "decade": 2010,
@@ -348,13 +348,13 @@
       "select-name": "Rick O’Connell (The Mummy) [mv]",
       "shop": "https://galaxycon.com/search?q=mummy",
       "thumbnail": {
-        "title": "",
-        "image": "images/.webp"
+        "title": "The Mummy",
+        "image": "https://cdn.shopify.com/s/files/1/0275/9209/7837/products/ScanOct02_2021_24_360x.jpg?v=1633556805"
       },
       "characteristics": {
         "gender": "male", "species": "Human",
         "appearsIn": "The Mummy", "bothAppearsIn": [],
-        "genre": "action adventure", "allGenres": ["action adventure", "horror", "action", "adventure", "comedy", "fantasy", "mystery"],
+        "genre": "action-adventure", "allGenres": ["action-adventure", "fantasy", "horror", "comedy", "mystery", "action", "adventure"],
         "platform": "movies", "allPlatforms": ["movies", "tv series", "video games"],
         "role": "main protagonist", "genRole": "good",
         "year": 1999, "decade": 1990,
@@ -363,16 +363,16 @@
     },
     {
       "name": "Skeletor",
-      "select-name": "Skeletor (The Masters of the Universe) [tv]",
+      "select-name": "Skeletor (He-Man Masters of the Universe) [tv]",
       "shop": "https://galaxycon.com/search?q=masters+of+the+universe",
       "thumbnail": {
-        "title": "",
-        "image": "images/.webp"
+        "title": "Masters of the Universe",
+        "image": "https://cdn.shopify.com/s/files/1/0275/9209/7837/products/img527_1528c3d6-faa6-4cd5-92ac-ce101342cc57_360x.jpg?v=1650492541"
       },
       "characteristics": {
         "gender": "male", "species": "Demon",
-        "appearsIn": "The Masters of the Universe", "bothAppearsIn": [],
-        "genre": "anime", "allGenres": ["anime", "fantasy", "cartoon", "animated series", "sci-fi", "superhero", "children's television series", "action", "action adventure", "adventure"],
+        "appearsIn": "He-Man Masters of the Universe", "bothAppearsIn": [],
+        "genre": "anime", "allGenres": ["anime", "cartoon", "animated series", "fantasy", "sci-fi", "superhero", "children's television series", "action-adventure", "adventure", "action"],
         "platform": "tv series", "allPlatforms": ["movies", "tv series", "video games"],
         "role": "main antagonist", "genRole": "bad",
         "year": 1981, "decade": 1980,
@@ -384,13 +384,13 @@
       "select-name": "Superman (Superman) [mv]",
       "shop": "https://galaxycon.com/collections/superman",
       "thumbnail": {
-        "title": "",
-        "image": "images/.webp"
+        "title": "Superman",
+        "image": "https://cdn.shopify.com/s/files/1/0275/9209/7837/products/scan_friday_z_56_470x.jpg?v=1651526548"
       },
       "characteristics": {
         "gender": "male", "species": "Kryptonian",
         "appearsIn": "Superman", "bothAppearsIn": ["Batman v Superman: Dawn of Justice", "Justice League", "Injustice"],
-        "genre": "superhero", "allGenres": ["superhero", "action", "adventure", "action-adventure", "sci-fi", "children's film", "drama"],
+        "genre": "superhero", "allGenres": ["superhero", "sci-fi", "drama", "action-adventure", "action", "adventure", "children's film"],
         "platform": "movies", "allPlatforms": ["movies", "tv series", "video games"],
         "role": "titular protagonist", "genRole": "good",
         "year": 1933, "decade": 1930,
@@ -400,15 +400,15 @@
     {
       "name": "Wonder Woman",
       "select-name": "Wonder Woman (Wonder Woman) [tv]",
-      "shop": "https://galaxycon.com/search?q=wonder+woman",
+      "shop": "https://galaxycon.com/collections/justice-league",
       "thumbnail": {
-        "title": "",
-        "image": "images/.webp"
+        "title": "Justice League",
+        "image": "https://cdn.shopify.com/s/files/1/0275/9209/7837/products/img414_96fb9ff0-a6be-4a34-ad42-e2674cbe5a15_470x.jpg?v=1649873385"
       },
       "characteristics": {
         "gender": "female", "species": "Amazon",
         "appearsIn": "Wonder Woman", "bothAppearsIn":  ["Justice League", "Injustice"],
-        "genre": "superhero", "allGenres": ["superhero", "action", "adventure", "action-adventure", "sci-fi"],
+        "genre": "superhero", "allGenres": ["superhero", "sci-fi", "action-adventure", "action", "adventure"],
         "platform": "tv series", "allPlatforms": ["movies", "tv series", "video games"],
         "role": "titular protagonist", "genRole": "good",
         "year": 1941, "decade": 1940,
