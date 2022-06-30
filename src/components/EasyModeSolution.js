@@ -68,7 +68,7 @@ class EasyModeSolution extends Component {
     }
     let topRow = "Geekle 4 - " + this.props.mode + ' ' + numTurns + "/8\n\n";
     let grid = this.state.grid;
-    let link = 'https://galaxycon-geekle-app.netlify.app/'
+    let link = 'http://geekle.live/'
     return topRow + grid + link;
   }
 

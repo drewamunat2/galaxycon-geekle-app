@@ -7,8 +7,8 @@ function EasyModeNoSolution(props) {
 
   return (
     <Grid container>
-      <Grid item xs={2}></Grid>
-      <Grid item xs={8}>
+      <Grid item xs></Grid>
+      <Grid item xs={6}>
         <Typography display='block' id="rules-of-the-game" color="#086788" variant="h6" sx={{ mt: 2, mb: 0 }}>
           EASY MODE
         </Typography>
@@ -26,7 +26,7 @@ function EasyModeNoSolution(props) {
           Play Now 
         </Button>
       </Grid>
-      <Grid item xs={2}></Grid>
+      <Grid item xs></Grid>
     </Grid>
   );
 }
