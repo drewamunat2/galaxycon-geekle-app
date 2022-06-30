@@ -64,6 +64,17 @@ class Search extends Component {
     return guess;
   }
 
+  isYellowArrays = (guessedArray, solutionArray) => {
+    for (let l of solutionArray) {
+      for (let m of guessedArray) {
+        if (l === m) {
+          return l;
+        }
+      }
+    }
+    return '';
+  }
+
   assertColors = (guess) => {
     let colorObj = {
       "name": "#78586F40",
@@ -102,13 +113,13 @@ class Search extends Component {
     }
 
     //set show color
-
+    let bothAppearsIn = 0;
     //same show : set green
     if(guess.characteristics.appearsIn === this.props.solution.characteristics.appearsIn) {
       colorObj.appearsIn = "#6CA663";
       colorObj.appearsInColor = 'green';
-    } else if (guess.characteristics.bothAppearsIn[solutionName]) {
-      guess.characteristics.appearsIn = guess.characteristics.bothAppearsIn[solutionName];
+    } else if (bothAppearsIn = this.isYellowArrays(guess.characteristics.bothAppearsIn, this.props.solution.characteristics.bothAppearsIn)) {
+      guess.characteristics.appearsIn = bothAppearsIn;
       colorObj.appearsIn = "#E0CA3C";
       colorObj.appearsInColor = 'yellow';
     }

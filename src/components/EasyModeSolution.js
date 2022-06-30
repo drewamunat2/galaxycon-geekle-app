@@ -168,7 +168,7 @@ class EasyModeSolution extends Component {
           </Grid>
           <Grid item xs={5}>
             <Typography display='block' id="rules-of-the-game" color="#086788" variant="h4" sx={{ mt: 2, mb: 2 }}>
-              Shop Everything {this.props.solution.thumbnail.title}!!
+              Check out {this.props.solution.thumbnail.title} Collections {'&'} Events
             </Typography>
             <View style={styles.view}>
               <Link href={this.state.solutionLink}>
@@ -220,7 +220,7 @@ class EasyModeSolution extends Component {
           </Grid>
           <Grid item xs={2}></Grid> 
           <Typography display='block' id="rules-of-the-game" color="#086788" variant="h4" sx={{ mt: 2, mb: 2 }}>
-            Shop Everything {this.props.solution.thumbnail.title}!!
+            Check out {this.props.solution.thumbnail.title} Collections {'&'} Events
           </Typography>
           <Grid item xs={2}></Grid>
           <Grid item xs={8}>
@@ -263,25 +263,3 @@ class EasyModeSolution extends Component {
 
 export default EasyModeSolution;
 
-/*
-
-<Grid item /*sx={{display: {xs: 'none'}}}* xs={6}>
-<View style={styles.view}>
-<Link href="https://galaxycon.com/pages/raleigh" >
-  <Image
-    style={styles.raleigh}
-    source={Raleigh}
-  />
-</Link>
-</View>
-<View style={styles.view}>
-<Link href={this.props.solution.shop} >
-  <Image
-    style={styles.raleigh}
-    source={this.props.solution.thumbnail.image}
-  />
-</Link>
-</View>
-</Grid> 
-
-*/

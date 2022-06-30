@@ -6,11 +6,11 @@
       "shop": "https://galaxycon.com/collections/avatar-the-last-airbender",
       "thumbnail": {
         "title": "Avatar: The last Airbender",
-        "image": "images/AvatarThelastAirbender.png"
+        "image": "https://cdn.shopify.com/s/files/1/0275/9209/7837/products/8x10_526_171_1024x1024@2x.jpg?v=1654111078"
       },
       "characteristics": {
         "gender": "male", "species": "Human",
-        "appearsIn": "Avatar: The Last Airbender", "bothAppearsIn": {},
+        "appearsIn": "Avatar: The Last Airbender", "bothAppearsIn": [],
         "genre": "anime", "allGenres": ["anime", "action", "adventure", "action-adventure", "steampunk", "fantasy", "comedy", "children's television series, children's film"],
         "platform": "tv series", "allPlatforms": ["movies", "tv series", "video games"],
         "role": "main protagonist", "genRole": "good",
@@ -28,7 +28,7 @@
       },
       "characteristics": {
         "gender": "male", "species": "Human",
-        "appearsIn": "Pokémon", "bothAppearsIn": {},
+        "appearsIn": "Pokémon", "bothAppearsIn": [],
         "genre": "role-playing", "allGenres": ["anime", "role-playing", "action", "adventure", "action-adventure", "life simulation", "management"],
         "platform": "video games", "allPlatforms": ["movies", "tv series", "video games"],
         "role": "main protagonist", "genRole": "good",
@@ -46,13 +46,7 @@
       },
       "characteristics": {
         "gender": "male", "species": "Human",
-        "appearsIn": "Batman", "bothAppearsIn": {
-          "Superman": "Batman v Superman: Dawn of Justice",
-          "Wonder Woman": "Justice League",
-          "Daphne Blake": "Scooby-Doo Meets Batman",
-          "Raven": "Injustice",
-          "Flash": "Justice League"
-        },
+        "appearsIn": "Batman", "bothAppearsIn": ["Batman v Superman: Dawn of Justice", "Scooby-Doo Meets Batman", "Justice League", "Injustice"],
         "genre": "superhero", "allGenres": ["superhero", "action", "adventure", "action-adventure", "crime film", "drama", "mystery"],
         "platform": "movies", "allPlatforms": ["movies", "tv series", "video games"],
         "role": "titular protagonist", "genRole": "good",
@@ -70,7 +64,7 @@
       },
       "characteristics": {
         "gender": "female", "species": "Human",
-        "appearsIn": "Beauty and the Beast", "bothAppearsIn": {},
+        "appearsIn": "Beauty and the Beast", "bothAppearsIn": [],
         "genre": "romance", "allGenres": ["romance", "musical", "children's film", "fantasy", "realistic fiction"],
         "platform": "movies", "allPlatforms": ["movies", "tv series", "video games"],
         "role": "main protagonist", "genRole": "good",
@@ -88,9 +82,7 @@
       },
       "characteristics": {
         "gender": "female", "species": "Human",
-        "appearsIn": "The Powerpuff Girls", "bothAppearsIn": {
-          "Raven": "Teen Titans Go!"
-        },
+        "appearsIn": "The Powerpuff Girls", "bothAppearsIn":  ["Teen Titans Go!"],
         "genre": "cartoon", "allGenres": ["cartoon", "children's film", "comedy", "superhero", "animated series", "adventure", "children's television series", "sci-fi", "fantasy"],
         "network": "Cartoon Network",
         "platform": "tv series", "allPlatforms": ["tv series"],
@@ -109,7 +101,7 @@
       },
       "characteristics": {
         "gender": "male", "species": "Human",
-        "appearsIn": "Star Trek", "bothAppearsIn": {},
+        "appearsIn": "Star Trek", "bothAppearsIn": [],
         "genre": "sci-fi", "allGenres": ["sci-fi", "drama", "adventure", "action", "action adventure", "space western", "fiction"],
         "platform": "tv series", "allPlatforms": ["movies", "tv series", "video games"],
         "role": "main protagonist", "genRole": "good",
@@ -122,14 +114,12 @@
       "select-name": "Daphne Blake (Scooby-Doo) [tv]",
       "shop": "https://galaxycon.com/collections/scooby-doo",
       "thumbnail": {
-        "title": "",
-        "image": "images/.webp"
+        "title": "Scooby-Doo",
+        "image": "https://cdn.shopify.com/s/files/1/0275/9209/7837/products/img377_470x.jpg?v=1641843131"
       },
       "characteristics": {
         "gender": "female", "species": "Human",
-        "appearsIn": "Scooby-Doo", "bothAppearsIn": {
-          "Batman": "Scooby-Doo Meets Batman"
-        },
+        "appearsIn": "Scooby-Doo", "bothAppearsIn": ["Scooby-Doo Meets Batman"],
         "genre": "cartoon", "allGenres": ["cartoon", "animated series", "comedy", "children's television series", "adventure", "fiction", "mystery", "comedy horror"],
         "platform": "tv series", "allPlatforms": ["movies", "tv series", "video games"],
         "role": "main protagonist", "genRole": "good",
@@ -147,7 +137,7 @@
       },
       "characteristics": {
         "gender": "male", "species": "Human",
-        "appearsIn": "Star Wars", "bothAppearsIn": {},
+        "appearsIn": "Star Wars", "bothAppearsIn": [],
         "genre": "sci-fi", "allGenres": ["sci-fi", "action", "adventure", "action-adventure", "space opera", "fantasy"],
         "platform": "movies", "allPlatforms": ["movies", "tv series", "video games"],
         "role": "main antagonist", "genRole": "bad",
@@ -165,10 +155,7 @@
       },
       "characteristics": {
         "gender": "male", "species": "Humanoid",
-        "appearsIn": "My Hero Academia", "bothAppearsIn": {
-          "Goku": "Jump Force",
-          "Naruto Uzumaki": "Jump Force"
-        },
+        "appearsIn": "My Hero Academia", "bothAppearsIn": ["Jump Force"],
         "genre": "anime", "allGenres": ["anime", "superhero", "comedy", "animated series", "action adventure", "action", "adventure", "science fantasy", "comedy drama"],
         "platform": "tv series", "allPlatforms": ["movies", "tv series", "video games"],
         "role": "main protagonist", "genRole": "good",
@@ -186,12 +173,7 @@
       },
       "characteristics": {
         "gender": "male", "species": "Human",
-        "appearsIn": "The Flash", "bothAppearsIn": {
-          "Batman": "Justice League",
-          "Superman": "Justice League",
-          "Wonder Woman": "Justice League",
-          "Raven": "Injustice"
-        },
+        "appearsIn": "The Flash", "bothAppearsIn": ["Justice League", "Injustice"],
         "genre": "superhero", "allGenres": ["superhero", "action adventure", "action", "adventure", "mystery", "drama", "sci-fi"],
         "platform": "tv series", "allPlatforms": ["movies", "video games", "tv series"],
         "role": "titular protagonist", "genRole": "good",
@@ -209,7 +191,7 @@
       },
       "characteristics": {
         "gender": "male", "species": "Transylvanian",
-        "appearsIn": "The Rocky Horror Show", "bothAppearsIn": {},
+        "appearsIn": "The Rocky Horror Show", "bothAppearsIn": [],
         "genre": "horror", "allGenres": ["horror"],
         "platform": "movies", "allPlatforms": ["movies", "video games"],
         "role": "main antagonist", "genRole": "bad",
@@ -227,7 +209,7 @@
       },
       "characteristics": {
         "gender": "male", "species": "Humanoid",
-        "appearsIn": "The Black Lagoon", "bothAppearsIn": {},
+        "appearsIn": "The Black Lagoon", "bothAppearsIn": [],
         "genre": "horror", "allGenres": ["horror"],
         "platform": "movies", "allPlatforms": ["movies", "video games"],
         "role": "main antagonist", "genRole": "bad",
@@ -240,15 +222,12 @@
       "select-name": "Goku (Dragon Ball Z) [tv]",
       "shop": "https://galaxycon.com/collections/dragon-ball",
       "thumbnail": {
-        "title": "",
-        "image": "images/.webp"
+        "title": "Dragon Ball Z",
+        "image": "https://cdn.shopify.com/s/files/1/0275/9209/7837/products/ScanApr26_2022_21_ab788fd1-9988-40a4-bf4a-b00fd8022aae_1024x1024@2x.jpg?v=1656437971"
       },
       "characteristics": {
         "gender": "male", "species": "Saiyan",
-        "appearsIn": "Dragon Ball Z", "bothAppearsIn": {
-          "Deku": "Jump Force",
-          "Naruto Uzumaki": "Jump Force"
-        },
+        "appearsIn": "Dragon Ball Z", "bothAppearsIn": ["Jump Force"],
         "genre": "anime", "allGenres": ["anime", "action adventure", "action", "adventure", "drama", "comedy", "martial arts", "thriller", "sci-fi"],
         "platform": "tv series", "allPlatforms": ["movies", "video games", "tv series"],
         "role": "main protagonist", "genRole": "good",
@@ -266,7 +245,7 @@
       },
       "characteristics": {
         "gender": "male", "species": "Human",
-        "appearsIn": "Harry Potter", "bothAppearsIn": {},
+        "appearsIn": "Harry Potter", "bothAppearsIn": [],
         "genre": "fantasy", "allGenres": ["fantasy", "narrative", "children's film", "adventure", "thriller", "mystery", "family film", "adaption", "action", "action adventure", "drama", "romance"],
         "platform": "movies", "allPlatforms": ["movies", "video games"],
         "role": "titular protagonist", "genRole": "good",
@@ -284,9 +263,7 @@
       },
       "characteristics": {
         "gender": "female", "species": "Hylian",
-        "appearsIn": "The Legend of Zelda", "bothAppearsIn": {
-          "Mario": "Super Smash Bros."
-        },
+        "appearsIn": "The Legend of Zelda", "bothAppearsIn": ["Super Smash Bros."],
         "genre": "role-playing", "allGenres": ["action-adventure", "action", "role-playing", "action role-playing", "dungeon crawl"],
         "platform": "video games", "allPlatforms": ["movies", "tv series", "video games"],
         "role": "titular protagonist", "genRole": "good",
@@ -304,9 +281,7 @@
       },
       "characteristics": {
         "gender": "male", "species": "Human",
-        "appearsIn": "Super Mario Bros.", "bothAppearsIn": {
-          "Link": "Super Smash Bros."
-        },
+        "appearsIn": "Super Mario Bros.", "bothAppearsIn": ["Super Smash Bros."],
         "genre": "platform", "allGenres": ["fantasy", "adventure", "platform"],
         "platform": "video games", "allPlatforms": ["tv series", "video games"],
         "role": "titular protagonist", "genRole": "good",
@@ -324,7 +299,7 @@
       },
       "characteristics": {
         "gender": "male", "species": "Human",
-        "appearsIn": "Rick & Morty", "bothAppearsIn": {},
+        "appearsIn": "Rick & Morty", "bothAppearsIn": [],
         "genre": "cartoon", "allGenres": ["comedy", "adventure", "sitcom", "dark comedy", "animated sitcom", "animated series", "fiction", "sci-fi", "cartoon"],
         "platform": "tv series", "allPlatforms": ["tv series", "video games", "movies"],
         "role": "titular protagonist", "genRole": "good",
@@ -337,15 +312,12 @@
       "select-name": "Naruto Uzumaki (Naruto) [tv]",
       "shop": "https://galaxycon.com/search?q=naruto",
       "thumbnail": {
-        "title": "",
-        "image": "images/.webp"
+        "title": "Naruto",
+        "image": "https://cdn.shopify.com/s/files/1/0275/9209/7837/products/Scan_Jan_27_2022_2_360x.jpg?v=1643397632"
       },
       "characteristics": {
         "gender": "male", "species": "Human",
-        "appearsIn": "Naruto", "bothAppearsIn": {
-          "Deku": "Jump Force",
-          "Goku": "Jump Force"
-        },
+        "appearsIn": "Naruto", "bothAppearsIn": ["Jump Force"],
         "genre": "anime", "allGenres": ["anime", "animated series", "manga", "adventure", "action", "action-adventure", "fantasy"],
         "platform": "tv series", "allPlatforms": ["movies", "tv series", "video games"],
         "role": "titular protagonist", "genRole": "good",
@@ -358,18 +330,12 @@
       "select-name": "Raven (Teen Titans Go!) [tv]",
       "shop": "https://galaxycon.com/search?q=raven",
       "thumbnail": {
-        "title": "",
-        "image": "images/.webp"
+        "title": "Raven & Teen Titans Go!",
+        "image": "https://cdn.shopify.com/s/files/1/0275/9209/7837/products/ScanApr07_2022_26_360x.jpg?v=1649368838"
       },
       "characteristics": {
         "gender": "female", "species": "Cambion",
-        "appearsIn": "Teen Titans Go!", "bothAppearsIn": {
-          "Batman": "Injustice",
-          "Superman": "Injustice",
-          "Wonder Woman": "Injustice",
-          "Flash": "Injustice",
-          "Bubbles": "Teen Titans Go!"
-        },
+        "appearsIn": "Teen Titans Go!", "bothAppearsIn": ["Teen Titans Go!", "Injustice"],
         "genre": "cartoon", "allGenres": ["superhero", "comedy", "adventure", "action", "action-adventure", "children's television series", "slapstick", "animated series", "cartoon"],
         "platform": "tv series", "allPlatforms": ["movies", "tv series", "video games"],
         "role": "main protagonist", "genRole": "good",
@@ -387,7 +353,7 @@
       },
       "characteristics": {
         "gender": "male", "species": "Human",
-        "appearsIn": "The Mummy", "bothAppearsIn": {},
+        "appearsIn": "The Mummy", "bothAppearsIn": [],
         "genre": "action adventure", "allGenres": ["action adventure", "horror", "action", "adventure", "comedy", "fantasy", "mystery"],
         "platform": "movies", "allPlatforms": ["movies", "tv series", "video games"],
         "role": "main protagonist", "genRole": "good",
@@ -405,7 +371,7 @@
       },
       "characteristics": {
         "gender": "male", "species": "Demon",
-        "appearsIn": "The Masters of the Universe", "bothAppearsIn": {},
+        "appearsIn": "The Masters of the Universe", "bothAppearsIn": [],
         "genre": "anime", "allGenres": ["anime", "fantasy", "cartoon", "animated series", "sci-fi", "superhero", "children's television series", "action", "action adventure", "adventure"],
         "platform": "tv series", "allPlatforms": ["movies", "tv series", "video games"],
         "role": "main antagonist", "genRole": "bad",
@@ -423,12 +389,7 @@
       },
       "characteristics": {
         "gender": "male", "species": "Kryptonian",
-        "appearsIn": "Superman", "bothAppearsIn": {
-          "Batman": "Batman v Superman: Dawn of Justice",
-          "Wonder Woman": "Justice League",
-          "Raven": "Injustice",
-          "Flash": "Justice League"
-        },
+        "appearsIn": "Superman", "bothAppearsIn": ["Batman v Superman: Dawn of Justice", "Justice League", "Injustice"],
         "genre": "superhero", "allGenres": ["superhero", "action", "adventure", "action-adventure", "sci-fi", "children's film", "drama"],
         "platform": "movies", "allPlatforms": ["movies", "tv series", "video games"],
         "role": "titular protagonist", "genRole": "good",
@@ -446,12 +407,7 @@
       },
       "characteristics": {
         "gender": "female", "species": "Amazon",
-        "appearsIn": "Wonder Woman", "bothAppearsIn": {
-          "Batman": "Justice League",
-          "Superman": "Justice League",
-          "Raven": "Injustice",
-          "Flash": "Justice League"
-        },
+        "appearsIn": "Wonder Woman", "bothAppearsIn":  ["Justice League", "Injustice"],
         "genre": "superhero", "allGenres": ["superhero", "action", "adventure", "action-adventure", "sci-fi"],
         "platform": "tv series", "allPlatforms": ["movies", "tv series", "video games"],
         "role": "titular protagonist", "genRole": "good",
