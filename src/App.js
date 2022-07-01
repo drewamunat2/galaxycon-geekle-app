@@ -198,6 +198,10 @@ class App extends Component {
       this.setState({ 
         mode: JSON.parse(window.localStorage.getItem("mode"))
       });
+    } else{
+      this.setState({ 
+        mode: 'HARD'
+      });
     }
     if(JSON.parse(window.localStorage.getItem("totalGamesWon"))) {
       this.setState({ 
@@ -260,7 +264,8 @@ class App extends Component {
           isCorrect: false,
           outOfTurns: false,
           gameStarted: false,
-          tomorrow: this.getTomorrow()
+          tomorrow: this.getTomorrow(),
+          mode: 'HARD'
         });
         this.saveOutOfTurns();
         this.saveGameStarted();
@@ -271,6 +276,7 @@ class App extends Component {
         this.saveTurn();
         this.saveColors();
         this.saveCharacters();
+        this.saveMode();
       }
     }
   }

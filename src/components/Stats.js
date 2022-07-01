@@ -149,6 +149,7 @@ function Stats(props) {
               totalGamesPlayed={totalGamesPlayed}
               totalGamesWon={totalGamesWon}
               turn={turn}
+              mode={mode}
             />  
             <Grid container justifyContent="center" alignItems="center">
               <Grid item>
