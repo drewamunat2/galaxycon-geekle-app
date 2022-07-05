@@ -11,7 +11,7 @@
       "characteristics": {
         "gender": "male", "species": "Human",
         "appearsIn": "Avatar: The Last Airbender", "bothAppearsIn": [],
-        "genre": "anime", "allGenres": ["anime", "steampunk", "children's television series", "children's film", "comedy", "fantasy", "action-adventure", "action", "adventure"],
+        "genre": "cartoon", "allGenres": ["cartoon", "steampunk", "children's television series", "children's film", "comedy", "fantasy", "action-adventure", "action", "adventure"],
         "platform": "tv series", "allPlatforms": ["movies", "tv series", "video games"],
         "role": "main protagonist", "genRole": "good",
         "year": 2005, "decade": 2000,
@@ -266,7 +266,7 @@
         "appearsIn": "The Legend of Zelda", "bothAppearsIn": ["Super Smash Bros."],
         "genre": "role-playing", "allGenres": ["role-playing", "action role-playing", "dungeon crawl", "action-adventure", "action", "adventure"],
         "platform": "video games", "allPlatforms": ["movies", "tv series", "video games"],
-        "role": "titular protagonist", "genRole": "good",
+        "role": "main protagonist", "genRole": "good",
         "year": 1986, "decade": 1980,
         "id": 9
       }
