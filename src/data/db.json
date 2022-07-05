@@ -10,7 +10,7 @@
       },
       "characteristics": {
         "gender": "male", "species": "Human",
-        "appearsIn": "Avatar: The Last Airbender", "bothAppearsIn": [],
+        "appearsIn": "Avatar: The Last Airbender", "bothAppearsIn": ["Avatar: The Last Airbender", "The Legend of Korra", "ALL-STAR BRAWL"],
         "genre": "cartoon", "allGenres": ["cartoon", "steampunk", "children's television series", "children's film", "comedy", "fantasy", "action-adventure", "action", "adventure"],
         "platform": "tv series", "allPlatforms": ["movies", "tv series", "video games"],
         "role": "main protagonist", "genRole": "good",
@@ -28,7 +28,7 @@
       },
       "characteristics": {
         "gender": "male", "species": "Human",
-        "appearsIn": "Pokémon", "bothAppearsIn": [],
+        "appearsIn": "Pokémon", "bothAppearsIn": ["Pokémon"],
         "genre": "role-playing", "allGenres": ["role-playing", "life simulation", "management", "anime", "action-adventure", "action", "adventure"],
         "platform": "video games", "allPlatforms": ["movies", "tv series", "video games"],
         "role": "main protagonist", "genRole": "good",
@@ -46,7 +46,7 @@
       },
       "characteristics": {
         "gender": "male", "species": "Human",
-        "appearsIn": "Batman", "bothAppearsIn": ["Batman v Superman: Dawn of Justice", "Scooby-Doo Meets Batman", "Justice League", "Injustice"],
+        "appearsIn": "Batman", "bothAppearsIn": ["Batman", "Batman v Superman", "Batman vs Robin", "Batman vs Teenage Mutant Ninja Turtles", "Gotham", "Scooby-Doo Meets Batman", "The Batman/Tarzan Adventure Hour", "Super Friends", "Crisis on Infinite Earths", "Justice League", "Justice League vs Teen Titans",  "Young Justice", "Injustice", "MULTIVERUS", "Mortal Kombat vs. DC Universe", "Lego Dimensions"],
         "genre": "superhero", "allGenres": ["superhero", "crime film", "mystery", "drama", "action-adventure", "action", "adventure"],
         "platform": "movies", "allPlatforms": ["movies", "tv series", "video games"],
         "role": "titular protagonist", "genRole": "good",
@@ -64,7 +64,7 @@
       },
       "characteristics": {
         "gender": "female", "species": "Human",
-        "appearsIn": "Beauty and the Beast", "bothAppearsIn": [],
+        "appearsIn": "Beauty and the Beast", "bothAppearsIn": ["Beauty and the Beast", "Belle's Magical World", "House of Mouse", "Sofia the First", "Ralph Breaks the Internet", "Kingdom Hearts", "Disney Princess: Enchanted Journey", "Disney Heroes: Battle Mode", "Kinect: Disneyland Adventures"],
         "genre": "romance", "allGenres": ["romance", "musical", "children's film", "fantasy", "realistic fiction"],
         "platform": "movies", "allPlatforms": ["movies", "tv series", "video games"],
         "role": "main protagonist", "genRole": "good",
@@ -82,7 +82,7 @@
       },
       "characteristics": {
         "gender": "female", "species": "Human",
-        "appearsIn": "The Powerpuff Girls", "bothAppearsIn":  ["Teen Titans Go!"],
+        "appearsIn": "The Powerpuff Girls", "bothAppearsIn":  ["The Powerpuff Girls", "TTG v PPG", "Cartoon Network Racing", "Lego Dimensions"],
         "genre": "cartoon", "allGenres": ["cartoon", "children's television series", "children's film", "superhero", "sci-fi", "comedy", "animated series", "adventure", "fantasy"],
         "network": "Cartoon Network",
         "platform": "tv series", "allPlatforms": ["tv series"],
@@ -101,7 +101,7 @@
       },
       "characteristics": {
         "gender": "male", "species": "Human",
-        "appearsIn": "Star Trek", "bothAppearsIn": [],
+        "appearsIn": "Star Trek", "bothAppearsIn": ["Star Trek"],
         "genre": "sci-fi", "allGenres": ["sci-fi", "space western", "drama", "action-adventure", "adventure", "action", "fiction"],
         "platform": "tv series", "allPlatforms": ["movies", "tv series", "video games"],
         "role": "main protagonist", "genRole": "good",
@@ -119,7 +119,7 @@
       },
       "characteristics": {
         "gender": "female", "species": "Human",
-        "appearsIn": "Scooby-Doo", "bothAppearsIn": ["Scooby-Doo Meets Batman"],
+        "appearsIn": "Scooby-Doo", "bothAppearsIn": ["Scooby-Doo", "Scooby-Doo Meets Batman", "Scooby-Doo and Guess Who?", "Lego Dimensions"],
         "genre": "cartoon", "allGenres": ["cartoon", "animated series", "children's television series", "mystery", "comedy horror", "comedy", "adventure", "fiction"],
         "platform": "tv series", "allPlatforms": ["movies", "tv series", "video games"],
         "role": "main protagonist", "genRole": "good",
@@ -137,7 +137,7 @@
       },
       "characteristics": {
         "gender": "male", "species": "Human",
-        "appearsIn": "Star Wars", "bothAppearsIn": [],
+        "appearsIn": "Star Wars", "bothAppearsIn": ["Star Wars", "Star Wars: The Clone Wars", "Obi-Wan Kenobi", "Star Wars Rebels", "Star Wars: Force Arena", "Disney Infinity"],
         "genre": "sci-fi", "allGenres": ["sci-fi", "space opera", "action-adventure", "action", "adventure", "fantasy"],
         "platform": "movies", "allPlatforms": ["movies", "tv series", "video games"],
         "role": "main antagonist", "genRole": "bad",
@@ -155,7 +155,7 @@
       },
       "characteristics": {
         "gender": "male", "species": "Humanoid",
-        "appearsIn": "My Hero Academia", "bothAppearsIn": ["Jump Force"],
+        "appearsIn": "My Hero Academia", "bothAppearsIn": ["My Hero Academia", "My Hero's One Justice", "Jump Force"],
         "genre": "anime", "allGenres": ["anime", "animated series", "superhero", "science fantasy", "comedy drama", "comedy", "action-adventure", "action", "adventure"],
         "platform": "tv series", "allPlatforms": ["movies", "tv series", "video games"],
         "role": "main protagonist", "genRole": "good",
@@ -173,7 +173,7 @@
       },
       "characteristics": {
         "gender": "male", "species": "Human",
-        "appearsIn": "The Flash", "bothAppearsIn": ["Justice League", "Injustice"],
+        "appearsIn": "The Flash", "bothAppearsIn": ["The Flash", "Supergirl", "Arrow", "Scooby-Doo and Guess Who?", "Crisis on Infinite Earths", "DC Super Hero Girls", "Justice League", "Injustice"],
         "genre": "superhero", "allGenres": ["superhero", "sci-fi", "mystery", "drama", "action-adventure", "action", "adventure"],
         "platform": "tv series", "allPlatforms": ["movies", "video games", "tv series"],
         "role": "titular protagonist", "genRole": "good",
@@ -191,7 +191,7 @@
       },
       "characteristics": {
         "gender": "male", "species": "Transylvanian",
-        "appearsIn": "The Rocky Horror Show", "bothAppearsIn": [],
+        "appearsIn": "The Rocky Horror Show", "bothAppearsIn": ["The Rocky Horror Show", "The Rocky Horror Picture Show"],
         "genre": "horror", "allGenres": ["horror"],
         "platform": "movies", "allPlatforms": ["movies", "video games"],
         "role": "main antagonist", "genRole": "bad",
@@ -209,7 +209,7 @@
       },
       "characteristics": {
         "gender": "male", "species": "Humanoid",
-        "appearsIn": "The Black Lagoon", "bothAppearsIn": [],
+        "appearsIn": "The Black Lagoon", "bothAppearsIn": ["The Black Lagoon", "Monster Squad", "Revenge of the Creature", "The Creature Walks Among Us", "Monster Force"],
         "genre": "horror", "allGenres": ["horror"],
         "platform": "movies", "allPlatforms": ["movies", "video games"],
         "role": "main antagonist", "genRole": "bad",
@@ -227,7 +227,7 @@
       },
       "characteristics": {
         "gender": "male", "species": "Saiyan",
-        "appearsIn": "Dragon Ball Z", "bothAppearsIn": ["Jump Force"],
+        "appearsIn": "Dragon Ball Z", "bothAppearsIn": ["Dragon Ball Z", "Dragon Ball Super", "Jump Force"],
         "genre": "anime", "allGenres": ["anime", "martial arts", "thriller", "sci-fi", "drama", "comedy", "action-adventure", "action", "adventure"],
         "platform": "tv series", "allPlatforms": ["movies", "video games", "tv series"],
         "role": "main protagonist", "genRole": "good",
@@ -245,7 +245,7 @@
       },
       "characteristics": {
         "gender": "male", "species": "Human",
-        "appearsIn": "Harry Potter", "bothAppearsIn": [],
+        "appearsIn": "Harry Potter", "bothAppearsIn": ["Harry Potter", "Lego Dimensions"],
         "genre": "fantasy", "allGenres": ["fantasy", "narrative", "children's film", "thriller", "mystery", "family film", "adaption", "drama", "romance", "action-adventure", "action", "adventure"],
         "platform": "movies", "allPlatforms": ["movies", "video games"],
         "role": "titular protagonist", "genRole": "good",
@@ -335,7 +335,7 @@
       },
       "characteristics": {
         "gender": "female", "species": "Cambion",
-        "appearsIn": "Teen Titans Go!", "bothAppearsIn": ["Teen Titans Go!", "Injustice"],
+        "appearsIn": "Teen Titans Go!", "bothAppearsIn": ["Teen Titans Go!", "TTG v PPG", "Justice League vs Teen Titans", "Injustice", "Lego Dimensions"],
         "genre": "cartoon", "allGenres": ["cartoon", "animated series", "children's television series", "superhero", "comedy", "slapstick", "action-adventure", "adventure", "action"],
         "platform": "tv series", "allPlatforms": ["movies", "tv series", "video games"],
         "role": "main protagonist", "genRole": "good",
@@ -389,7 +389,7 @@
       },
       "characteristics": {
         "gender": "male", "species": "Kryptonian",
-        "appearsIn": "Superman", "bothAppearsIn": ["Batman v Superman: Dawn of Justice", "Justice League", "Injustice"],
+        "appearsIn": "Superman", "bothAppearsIn": ["Batman v Superman: Dawn of Justice", "Super Friends", "Justice League", "Injustice", "Lego Dimensions"],
         "genre": "superhero", "allGenres": ["superhero", "sci-fi", "drama", "action-adventure", "action", "adventure", "children's film"],
         "platform": "movies", "allPlatforms": ["movies", "tv series", "video games"],
         "role": "titular protagonist", "genRole": "good",
@@ -407,7 +407,7 @@
       },
       "characteristics": {
         "gender": "female", "species": "Amazon",
-        "appearsIn": "Wonder Woman", "bothAppearsIn":  ["Justice League", "Injustice"],
+        "appearsIn": "Wonder Woman", "bothAppearsIn":  ["DC Super Hero Girls", "Justice League", "Crisis on Infinite Earths", "Injustice", "Lego Dimensions"],
         "genre": "superhero", "allGenres": ["superhero", "sci-fi", "action-adventure", "action", "adventure"],
         "platform": "tv series", "allPlatforms": ["movies", "tv series", "video games"],
         "role": "titular protagonist", "genRole": "good",
