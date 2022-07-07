@@ -195,7 +195,7 @@ class Search extends Component {
       console.log(err);
     }*/
     const db = JSON.parse(JSON.stringify(data))
-    let nameType = this.state.showInfo ? "select-name" : "name"
+    let nameType = this.state.showInfo ? "selectName" : "name"
     for(let i = 0; i < db.characters.length; i++) {
       let char = db.characters[i]
       if(char[nameType] === guess) {
@@ -229,7 +229,7 @@ class Search extends Component {
   }
 
   getCharacters = () => {
-    let nameType = this.state.showInfo ? "select-name" : "name";
+    let nameType = this.state.showInfo ? "selectName" : "name";
     let nameArray = [];
     let nameObject = {
       id: '',
