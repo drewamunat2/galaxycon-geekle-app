@@ -114,7 +114,7 @@ function Help() {
           </Grid>
           <Grid container justifyContent="center" alignItems="center">
             <Typography id="rules-of-the-game" color="#086788" sx={{ mt: 1 }}>
-              Platform: correctly identifying an alternate platform of the target character
+              Platform: correctly identifying the owner of the target character
             </Typography>
           </Grid>
           <Grid container justifyContent="center" alignItems="center">
