@@ -148,7 +148,7 @@ class Search extends Component {
     if(guess.characteristics.platform === this.props.solution.characteristics.platform) {
       colorObj.platform = "#6CA663";
       colorObj.platformColor = 'green';
-    } else if(guess.characteristics.owner = this.props.solution.characteristics.owner) {
+    } else if(guess.characteristics.owner === this.props.solution.characteristics.owner) {
       colorObj.platform = "#E0CA3C";
       colorObj.platformColor = 'yellow';
     }
