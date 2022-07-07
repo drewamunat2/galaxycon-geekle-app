@@ -16,7 +16,7 @@ const style = {
   py: 2
 };
 
-function Settings(props) {
+function Settings() {
 
   const [open, setOpen] = useState(false);
     const handleOpen = () => {
@@ -56,7 +56,7 @@ function Settings(props) {
           <Grid container>
             <Grid item alignItems="left" textAlign='left' xs={6}>
               <Typography display='block' id="rules-of-the-game" color="#086788" variant="h6" sx={{ mt: 2, mb: 0 }}>
-                HARD MODE
+                DARK MODE
               </Typography>
               <Typography display='block' id="rules-of-the-game" color="#a8a8a8" sx={{ mb: 2, mt: -1 }}>
                 coming soon
@@ -71,15 +71,12 @@ function Settings(props) {
           <Grid container>
             <Grid item alignItems="left" textAlign='left' xs={6}>
               <Typography display='block' id="rules-of-the-game" color="#086788" variant="h6" sx={{ mt: 1, mb: 0 }}>
-                DARK MODE
-              </Typography>
-              <Typography display='block' id="rules-of-the-game" color="#a8a8a8" sx={{ mb: 2, mt: -1 }}>
-                coming soon
+                HARD MODE
               </Typography>
             </Grid>
             <Grid item alignItems="right" textAlign='right' xs={6}>
-              <Typography id="rules-of-the-game" color="#086788" sx={{ mb: 2, mt: 2 }}>
-                <Switch disabled />
+              <Typography id="rules-of-the-game" color="#a8a8a8" sx={{ mb: 2, mt: 2 }}>
+                Click the character info button!
               </Typography>
             </Grid>
           </Grid>

@@ -12,7 +12,7 @@
         "gender": "male", "species": "Human",
         "appearsIn": "Avatar: The Last Airbender", "bothAppearsIn": ["Avatar: The Last Airbender", "The Legend of Korra", "ALL-STAR BRAWL"],
         "genre": "cartoon", "allGenres": ["cartoon", "steampunk", "children's television series", "children's film", "comedy", "fantasy", "action-adventure", "action", "adventure"],
-        "platform": "tv series", "allPlatforms": ["movies", "tv series", "video games"],
+        "platform": "tv series", "allPlatforms": ["movies", "tv series", "video games"], "owner": "Nickelodeon", "trademarkOwner": "VIACOM INTERNATIONAL INC.", "network": "Nickelodeon",
         "role": "main protagonist", "genRole": "good",
         "year": 2005, "decade": 2000,
         "id": 14
@@ -30,7 +30,7 @@
         "gender": "male", "species": "Human",
         "appearsIn": "Pokémon", "bothAppearsIn": ["Pokémon"],
         "genre": "role-playing", "allGenres": ["role-playing", "life simulation", "management", "anime", "action-adventure", "action", "adventure"],
-        "platform": "video games", "allPlatforms": ["movies", "tv series", "video games"],
+        "platform": "video games", "allPlatforms": ["movies", "tv series", "video games"], "owner": "Nintendo", "trademarkOwner": "Nintendo", "network": "Nintendo",
         "role": "main protagonist", "genRole": "good",
         "year": 1996, "decade": 1990,
         "id": 17
@@ -48,7 +48,7 @@
         "gender": "male", "species": "Human",
         "appearsIn": "Batman", "bothAppearsIn": ["Batman", "Batman v Superman", "Batman vs Robin", "Batman vs Teenage Mutant Ninja Turtles", "Gotham", "Scooby-Doo Meets Batman", "The Batman/Tarzan Adventure Hour", "Super Friends", "Crisis on Infinite Earths", "Justice League", "Justice League vs Teen Titans",  "Young Justice", "Injustice", "MULTIVERUS", "Mortal Kombat vs. DC Universe", "Lego Dimensions"],
         "genre": "superhero", "allGenres": ["superhero", "crime film", "mystery", "drama", "action-adventure", "action", "adventure"],
-        "platform": "movies", "allPlatforms": ["movies", "tv series", "video games"],
+        "platform": "movies", "allPlatforms": ["movies", "tv series", "video games"], "owner": "DC Comics", "trademarkOwner": "DC COMICS", "distributor": "Warner Bros. Pictures",
         "role": "titular protagonist", "genRole": "good",
         "year": 1939, "decade": 1930,
         "id": 1
@@ -66,7 +66,7 @@
         "gender": "female", "species": "Human",
         "appearsIn": "Beauty and the Beast", "bothAppearsIn": ["Beauty and the Beast", "Belle's Magical World", "House of Mouse", "Sofia the First", "Ralph Breaks the Internet", "Kingdom Hearts", "Disney Princess: Enchanted Journey", "Disney Heroes: Battle Mode", "Kinect: Disneyland Adventures"],
         "genre": "romance", "allGenres": ["romance", "musical", "children's film", "fantasy", "realistic fiction"],
-        "platform": "movies", "allPlatforms": ["movies", "tv series", "video games"],
+        "platform": "movies", "allPlatforms": ["movies", "tv series", "video games"], "owner": "Disney", "trademarkOwner": "Disney Enterprises, Inc.", "distributor": "Walt Disney Studios Motion Pictures",
         "role": "main protagonist", "genRole": "good",
         "year": 1991, "decade": 1990,
         "id": 20
@@ -84,8 +84,7 @@
         "gender": "female", "species": "Human",
         "appearsIn": "The Powerpuff Girls", "bothAppearsIn":  ["The Powerpuff Girls", "TTG v PPG", "Cartoon Network Racing", "Lego Dimensions"],
         "genre": "cartoon", "allGenres": ["cartoon", "children's television series", "children's film", "superhero", "sci-fi", "comedy", "animated series", "adventure", "fantasy"],
-        "network": "Cartoon Network",
-        "platform": "tv series", "allPlatforms": ["tv series"],
+        "platform": "tv series", "allPlatforms": ["tv series", "video games"], "owner": "Turner Entertainment", "trademarkOwner": "The Cartoon Network, Inc.", "network": "Cartoon Network",
         "role": "deutertagonist", "genRole": "good",
         "year": 1998, "decade": 1990,
         "id": 2
@@ -103,7 +102,7 @@
         "gender": "male", "species": "Human",
         "appearsIn": "Star Trek", "bothAppearsIn": ["Star Trek"],
         "genre": "sci-fi", "allGenres": ["sci-fi", "space western", "drama", "action-adventure", "adventure", "action", "fiction"],
-        "platform": "tv series", "allPlatforms": ["movies", "tv series", "video games"],
+        "platform": "tv series", "allPlatforms": ["movies", "tv series", "video games"], "owner": "Paramount", "trademarkOwner": "CBS STUDIOS INC.", "network": "NBC",
         "role": "main protagonist", "genRole": "good",
         "year": 1966, "decade": 1960,
         "id": 3
@@ -121,7 +120,7 @@
         "gender": "female", "species": "Human",
         "appearsIn": "Scooby-Doo", "bothAppearsIn": ["Scooby-Doo", "Scooby-Doo Meets Batman", "Scooby-Doo and Guess Who?", "Lego Dimensions"],
         "genre": "cartoon", "allGenres": ["cartoon", "animated series", "children's television series", "mystery", "comedy horror", "comedy", "adventure", "fiction"],
-        "platform": "tv series", "allPlatforms": ["movies", "tv series", "video games"],
+        "platform": "tv series", "allPlatforms": ["movies", "tv series", "video games"], "owner": "Warner Bros", "trademarkOwner": "Hanna-Barbera Productions, Inc.", "network": "Cartoon Network",
         "role": "main protagonist", "genRole": "good",
         "year": 1969, "decade": 1960,
         "id": 19
@@ -139,7 +138,7 @@
         "gender": "male", "species": "Human",
         "appearsIn": "Star Wars", "bothAppearsIn": ["Star Wars", "Star Wars: The Clone Wars", "Obi-Wan Kenobi", "Star Wars Rebels", "Star Wars: Force Arena", "Disney Infinity"],
         "genre": "sci-fi", "allGenres": ["sci-fi", "space opera", "action-adventure", "action", "adventure", "fantasy"],
-        "platform": "movies", "allPlatforms": ["movies", "tv series", "video games"],
+        "platform": "movies", "allPlatforms": ["movies", "tv series", "video games"], "owner": "Disney", "trademarkOwner": "Disney Enterprises, Inc.", "distributor": "20th Century Studios",
         "role": "main antagonist", "genRole": "bad",
         "year": 1983, "decade": 1980,
         "id": 4
@@ -157,7 +156,7 @@
         "gender": "male", "species": "Humanoid",
         "appearsIn": "My Hero Academia", "bothAppearsIn": ["My Hero Academia", "My Hero's One Justice", "Jump Force"],
         "genre": "anime", "allGenres": ["anime", "animated series", "superhero", "science fantasy", "comedy drama", "comedy", "action-adventure", "action", "adventure"],
-        "platform": "tv series", "allPlatforms": ["movies", "tv series", "video games"],
+        "platform": "tv series", "allPlatforms": ["movies", "tv series", "video games"], "owner": "Kōhei Horikoshi", "trademarkOwner": "Haiwei Shi", "network": "Cartoon Network",
         "role": "main protagonist", "genRole": "good",
         "year": 2014, "decade": 2010,
         "id": 5
@@ -173,9 +172,9 @@
       },
       "characteristics": {
         "gender": "male", "species": "Human",
-        "appearsIn": "The Flash", "bothAppearsIn": ["The Flash", "Supergirl", "Arrow", "Scooby-Doo and Guess Who?", "Crisis on Infinite Earths", "DC Super Hero Girls", "Justice League", "Injustice"],
+        "appearsIn": "The Flash", "bothAppearsIn": ["The Flash", "Supergirl", "Arrow", "Scooby-Doo and Guess Who?", "Crisis on Infinite Earths", "DC Super Hero Girls", "Justice League", "Injustice", "Lego Dimensions", "Mortal Kombat vs. DC Universe"],
         "genre": "superhero", "allGenres": ["superhero", "sci-fi", "mystery", "drama", "action-adventure", "action", "adventure"],
-        "platform": "tv series", "allPlatforms": ["movies", "video games", "tv series"],
+        "platform": "tv series", "allPlatforms": ["movies", "video games", "tv series"], "owner": "DC Comics", "trademarkOwner": "DC COMICS", "network": "CW",
         "role": "titular protagonist", "genRole": "good",
         "year": 2014, "decade": 2010,
         "id": 23
@@ -193,7 +192,7 @@
         "gender": "male", "species": "Transylvanian",
         "appearsIn": "The Rocky Horror Show", "bothAppearsIn": ["The Rocky Horror Show", "The Rocky Horror Picture Show"],
         "genre": "horror", "allGenres": ["horror"],
-        "platform": "movies", "allPlatforms": ["movies", "video games"],
+        "platform": "movies", "allPlatforms": ["movies", "video games"], "owner": "20th Century Studios", "trademarkOwner": "20th Century Studios", "distributor": "20th Century Studios",
         "role": "main antagonist", "genRole": "bad",
         "year": 1973, "decade": 1970,
         "id": 6
@@ -211,7 +210,7 @@
         "gender": "male", "species": "Humanoid",
         "appearsIn": "The Black Lagoon", "bothAppearsIn": ["The Black Lagoon", "Monster Squad", "Revenge of the Creature", "The Creature Walks Among Us", "Monster Force"],
         "genre": "horror", "allGenres": ["horror"],
-        "platform": "movies", "allPlatforms": ["movies", "video games"],
+        "platform": "movies", "allPlatforms": ["movies", "video games"], "owner": "Universal Pictures", "trademarkOwner": "R. Josephs Sportswear, Inc.", "distributor": "Universal Pictures",
         "role": "main antagonist", "genRole": "bad",
         "year": 1954, "decade": 1950,
         "id": 7
@@ -229,7 +228,7 @@
         "gender": "male", "species": "Saiyan",
         "appearsIn": "Dragon Ball Z", "bothAppearsIn": ["Dragon Ball Z", "Dragon Ball Super", "Jump Force"],
         "genre": "anime", "allGenres": ["anime", "martial arts", "thriller", "sci-fi", "drama", "comedy", "action-adventure", "action", "adventure"],
-        "platform": "tv series", "allPlatforms": ["movies", "video games", "tv series"],
+        "platform": "tv series", "allPlatforms": ["movies", "video games", "tv series"], "owner": "Shueisha", "trademarkOwner": "Disney Enterprises, Inc.", "network": "Fuji Network System",
         "role": "main protagonist", "genRole": "good",
         "year": 1989, "decade": 1980,
         "id": 22
@@ -247,7 +246,7 @@
         "gender": "male", "species": "Human",
         "appearsIn": "Harry Potter", "bothAppearsIn": ["Harry Potter", "Lego Dimensions"],
         "genre": "fantasy", "allGenres": ["fantasy", "narrative", "children's film", "thriller", "mystery", "family film", "adaption", "drama", "romance", "action-adventure", "action", "adventure"],
-        "platform": "movies", "allPlatforms": ["movies", "video games"],
+        "platform": "movies", "allPlatforms": ["movies", "video games"], "owner": "Warner Bros. Pictures", "trademarkOwner": "Warner Bros. Entertainment Inc.", "distributor": "Warner Bros. Pictures",
         "role": "titular protagonist", "genRole": "good",
         "year": 2001, "decade": 2000,
         "id": 8
@@ -262,10 +261,10 @@
         "image": "https://cdn.shopify.com/s/files/1/0275/9209/7837/products/ScanApr27_2022_83_360x.jpg?v=1651086635"
       },
       "characteristics": {
-        "gender": "female", "species": "Hylian",
-        "appearsIn": "The Legend of Zelda", "bothAppearsIn": ["Super Smash Bros."],
+        "gender": "male", "species": "Hylian",
+        "appearsIn": "The Legend of Zelda", "bothAppearsIn": ["The Legend of Zelda", "The Super Mario Bros. Super Show!", "Super Smash Bros.", "SoulCalibur", "Hyrule Warriors"],
         "genre": "role-playing", "allGenres": ["role-playing", "action role-playing", "dungeon crawl", "action-adventure", "action", "adventure"],
-        "platform": "video games", "allPlatforms": ["movies", "tv series", "video games"],
+        "platform": "video games", "allPlatforms": ["movies", "tv series", "video games"], "owner": "Nintendo", "trademarkOwner": "Nintendo", "network": "Nintendo",
         "role": "main protagonist", "genRole": "good",
         "year": 1986, "decade": 1980,
         "id": 9
@@ -281,9 +280,9 @@
       },
       "characteristics": {
         "gender": "male", "species": "Human",
-        "appearsIn": "Super Mario Bros.", "bothAppearsIn": ["Super Smash Bros."],
+        "appearsIn": "Super Mario Bros.", "bothAppearsIn": ["Super Mario Bros.", "The Super Mario Bros. Super Show!", "Super Mario Kart", "Mario Party", "Mario Clash", "Mario Strikers", "Paper Mario", "Mario & Luigi", "Dr Mario", "Mario & Sonic at the Olympic Games", "Super Mario-Kun", "Super Smash Bros.", "Donkey Kong", "Yoshi's Island", "The Donkey Kong Show", "Mario & Wario", "Super Princess Peach"],
         "genre": "platform", "allGenres": ["platform", "adventure", "fantasy"],
-        "platform": "video games", "allPlatforms": ["tv series", "video games"],
+        "platform": "video games", "allPlatforms": ["tv series", "video games"], "owner": "Nintendo", "trademarkOwner": "Nintendo", "network": "Nintendo",
         "role": "titular protagonist", "genRole": "good",
         "year": 1983, "decade": 1980,
         "id": 10
@@ -299,9 +298,9 @@
       },
       "characteristics": {
         "gender": "male", "species": "Human",
-        "appearsIn": "Rick & Morty", "bothAppearsIn": [],
+        "appearsIn": "Rick & Morty", "bothAppearsIn": ["Rick & Morty", "Rick and Morty's Rushed Licensed Adventure"],
         "genre": "cartoon", "allGenres": ["cartoon", "animated series", "animated sitcom", "sitcom", "sci-fi", "comedy", "dark comedy", "adventure", "fiction"],
-        "platform": "tv series", "allPlatforms": ["tv series", "video games", "movies"],
+        "platform": "tv series", "allPlatforms": ["tv series", "video games", "movies"], "owner": "Warner Bros.", "trademarkOwner": "Cartoon Network, Inc.", "network": "Adult Swim",
         "role": "titular protagonist", "genRole": "good",
         "year": 2013, "decade": 2010,
         "id": 18
@@ -317,9 +316,9 @@
       },
       "characteristics": {
         "gender": "male", "species": "Human",
-        "appearsIn": "Naruto", "bothAppearsIn": ["Jump Force"],
+        "appearsIn": "Naruto", "bothAppearsIn": ["Naruto", "Boruto", "Jump Force"],
         "genre": "anime", "allGenres": ["anime", "animated series", "manga", "action-adventure", "adventure", "action", "fantasy"],
-        "platform": "tv series", "allPlatforms": ["movies", "tv series", "video games"],
+        "platform": "tv series", "allPlatforms": ["movies", "tv series", "video games"], "owner": "Masashi Kishimoto", "trademarkOwner": "SHUEISHA", "network": "TXN",
         "role": "titular protagonist", "genRole": "good",
         "year": 1999, "decade": 1900,
         "id": 15
@@ -337,7 +336,7 @@
         "gender": "female", "species": "Cambion",
         "appearsIn": "Teen Titans Go!", "bothAppearsIn": ["Teen Titans Go!", "TTG v PPG", "Justice League vs Teen Titans", "Injustice", "Lego Dimensions"],
         "genre": "cartoon", "allGenres": ["cartoon", "animated series", "children's television series", "superhero", "comedy", "slapstick", "action-adventure", "adventure", "action"],
-        "platform": "tv series", "allPlatforms": ["movies", "tv series", "video games"],
+        "platform": "tv series", "allPlatforms": ["movies", "tv series", "video games"], "owner": "Warner Bros.", "trademarkOwner": "DC COMICS", "network": "Cartoon Network",
         "role": "main protagonist", "genRole": "good",
         "year": 2013, "decade": 2010,
         "id": 21
@@ -353,9 +352,9 @@
       },
       "characteristics": {
         "gender": "male", "species": "Human",
-        "appearsIn": "The Mummy", "bothAppearsIn": [],
+        "appearsIn": "The Mummy", "bothAppearsIn": ["The Mummy"],
         "genre": "action-adventure", "allGenres": ["action-adventure", "fantasy", "horror", "comedy", "mystery", "action", "adventure"],
-        "platform": "movies", "allPlatforms": ["movies", "tv series", "video games"],
+        "platform": "movies", "allPlatforms": ["movies", "tv series", "video games"], "owner": "Stephen Sommers", "trademarkOwner": "UNIVERSAL CITY STUDIOS LLC.", "distributor": "Universal Pictures",
         "role": "main protagonist", "genRole": "good",
         "year": 1999, "decade": 1990,
         "id": 11
@@ -371,9 +370,9 @@
       },
       "characteristics": {
         "gender": "male", "species": "Demon",
-        "appearsIn": "He-Man Masters of the Universe", "bothAppearsIn": [],
+        "appearsIn": "He-Man and the Masters of the Universe", "bothAppearsIn": ["Masters of the Universe", "He-Man and the Masters of the Universe", "The New Adventures of He-Man", "Masters of the Universe"],
         "genre": "anime", "allGenres": ["anime", "cartoon", "animated series", "fantasy", "sci-fi", "superhero", "children's television series", "action-adventure", "adventure", "action"],
-        "platform": "tv series", "allPlatforms": ["movies", "tv series", "video games"],
+        "platform": "tv series", "allPlatforms": ["movies", "tv series", "video games"], "owner": "Mattel", "trademarkOwner": "MATTEL, INC.", "network": "Cartoon Network",
         "role": "main antagonist", "genRole": "bad",
         "year": 1981, "decade": 1980,
         "id": 12
@@ -389,9 +388,9 @@
       },
       "characteristics": {
         "gender": "male", "species": "Kryptonian",
-        "appearsIn": "Superman", "bothAppearsIn": ["Batman v Superman: Dawn of Justice", "Super Friends", "Justice League", "Injustice", "Lego Dimensions"],
+        "appearsIn": "Superman", "bothAppearsIn": ["Superman", "Batman v Superman: Dawn of Justice", "Justice League", "Super Friends", "Injustice", "MULTIVERUS", "Mortal Kombat vs. DC Universe", "Lego Dimensions", "Crisis on Infinite Earths", "Supergirl", "Harley Quinn"],
         "genre": "superhero", "allGenres": ["superhero", "sci-fi", "drama", "action-adventure", "action", "adventure", "children's film"],
-        "platform": "movies", "allPlatforms": ["movies", "tv series", "video games"],
+        "platform": "movies", "allPlatforms": ["movies", "tv series", "video games"], "owner": "DC Comics", "trademarkOwner": "DC COMICS", "distributor": "Warner Bros. Pictures",
         "role": "titular protagonist", "genRole": "good",
         "year": 1933, "decade": 1930,
         "id": 13
@@ -407,9 +406,9 @@
       },
       "characteristics": {
         "gender": "female", "species": "Amazon",
-        "appearsIn": "Wonder Woman", "bothAppearsIn":  ["DC Super Hero Girls", "Justice League", "Crisis on Infinite Earths", "Injustice", "Lego Dimensions"],
+        "appearsIn": "Wonder Woman", "bothAppearsIn":  ["Wonder Woman", "DC Super Hero Girls", "Justice League", "Crisis on Infinite Earths", "Injustice", "Lego Dimensions", "MULTIVERUS", "Mortal Kombat vs. DC Universe"],
         "genre": "superhero", "allGenres": ["superhero", "sci-fi", "action-adventure", "action", "adventure"],
-        "platform": "tv series", "allPlatforms": ["movies", "tv series", "video games"],
+        "platform": "tv series", "allPlatforms": ["movies", "tv series", "video games"], "owner": "DC Comics", "trademarkOwner": "DC COMICS", "network": "ABC",
         "role": "titular protagonist", "genRole": "good",
         "year": 1941, "decade": 1940,
         "id": 16
