@@ -311,7 +311,7 @@ class Search extends Component {
                 controlShouldRenderValue={false}
                 openMenuOnClick={true}
                 openMenuOnFocus={false}
-                captureMenuScroll={true}
+                captureMenuScroll={false}
                 escapeClearsValue={true}
                 menuShouldBlockScroll={true}
                 cacheOptions={true}
