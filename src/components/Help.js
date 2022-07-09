@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import IconButton from '@mui/material/IconButton';
 import { Modal, Typography, Grid, Box } from '@mui/material';
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
@@ -19,8 +19,9 @@ const section = {
   textDecoration: 'underline'
 }
 
-function Help() {
+function Help(props) {
 
+  const {openHelp} = props;
   const [open, setOpen] = useState(false);
   const handleOpen = () => {
       setOpen(true);
@@ -28,6 +29,13 @@ function Help() {
   const handleClose = () => {
       setOpen(false);
   };
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+    if(openHelp) {
+      setOpen(true);
+    }
+  },[openHelp]);
 
   return (
     <>
@@ -40,6 +48,7 @@ function Help() {
         open={open}
         onClose={handleClose}
         display='block'
+        disableAutoFocus={true}
         sx={{
           position: 'absolute',
           overflowY: 'auto',

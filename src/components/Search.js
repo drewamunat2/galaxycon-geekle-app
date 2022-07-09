@@ -27,12 +27,48 @@ const customStyles = {
     // override border radius to match the box
     borderRadius: 0,
     // kill the gap
-    marginTop: 0,
+    marginTop: 0
   }),
   menuList: base => ({
     ...base,
     // kill the white space on first and last option
     padding: 0
+  }),
+  option: base => ({
+    ...base,
+    cursor: 'grab'
+  })
+};
+
+const customStylesMobileBig = {
+  control: (base, state) => ({
+    ...base,
+    background: "#ffeeff",
+    // match with the menu
+    borderRadius: state.isFocused ? "3px 3px 0 0" : 3,
+    // Overwrittes the different states of border
+    borderColor: state.isFocused ? "#00d5ff" : state.isDisabled ? "#d3d3d3" : "blue",
+    cursor: state.isDisabled ? 'not-allowed' : 'text',
+    // Removes weird border around container
+    boxShadow: state.isFocused ? null : null,
+    "&:hover": {
+      // Overwrittes the different states of border
+      borderColor:  "#00d5ff",
+    },
+    height: "50px"
+  }),
+  menu: base => ({
+    ...base,
+    // override border radius to match the box
+    borderRadius: 0,
+    // kill the gap
+    marginTop: 0
+  }),
+  menuList: base => ({
+    ...base,
+    // kill the white space on first and last option
+    padding: 0,
+    height: '175px'
   }),
   option: base => ({
     ...base,
@@ -264,7 +300,6 @@ class Search extends Component {
   }
 
   showInfoState = () => {
-    console.log(this.state.showInfo);
     if (this.state.showInfo) {
       return 'ON';
     }
@@ -299,10 +334,39 @@ class Search extends Component {
             container
             alignItems="center"
             justifyContent="center"
+            sx={{ display: {xs:'none', sm:'flex'}}}
           >
             <Grid item xs={10} sm={8} md={7} lg={5} xl={3}>
               <Select 
                 styles={customStyles}
+                placeholder={null}
+                options={this.state.allCharactersNames}
+                onChange={this.handleChange}
+                autoFocus={false}
+                closeMenuOnSelect={true}
+                controlShouldRenderValue={false}
+                openMenuOnClick={true}
+                openMenuOnFocus={false}
+                captureMenuScroll={false}
+                escapeClearsValue={true}
+                menuShouldBlockScroll={true}
+                cacheOptions={true}
+                blurInputOnSelect={true}
+                components={{
+                  IndicatorSeparator: () => null
+                }}
+              />
+            </Grid>
+          </Grid>
+          <Grid
+            container
+            alignItems="center"
+            justifyContent="center"
+            sx={{ display: {xs:'flex', sm:'none'}}}
+          >
+            <Grid item xs={10} sm={8} md={7} lg={5} xl={3}>
+              <Select 
+                styles={customStylesMobileBig}
                 placeholder={null}
                 options={this.state.allCharactersNames}
                 onChange={this.handleChange}

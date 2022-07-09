@@ -22,7 +22,8 @@ class App extends Component {
       tomorrow: new Date(),
       time: new Date(),
       mode: 'HARD',
-      stats: {}
+      stats: {},
+      openHelp: false
     };
   }
 
@@ -108,7 +109,9 @@ class App extends Component {
     //const response = await axios.get(`http://192.168.1.18:3000/characters`);
     //const randomCharacter = response.data[Math.floor(Math.random() * response.data.length)];
     const db = JSON.parse(JSON.stringify(data));
-    const randomCharacter = db.characters[Math.floor(new Date(this.getTomorrow()).getTime() % db.characters.length)];
+    const randomCharacterDate = this.getTomorrow();
+    const bigNum = (randomCharacterDate.getDate() + 1) * (randomCharacterDate.getMonth() + 1) * randomCharacterDate.getFullYear();
+    const randomCharacter = db.characters[Math.floor(bigNum % db.characters.length)];
     return randomCharacter;
   }
 
@@ -148,7 +151,9 @@ class App extends Component {
     }
     const db = JSON.parse(JSON.stringify(data))
     console.log(this.state.tomorrow)
-    const randomCharacter = db.characters[Math.floor(new Date(this.getTomorrow()).getTime() % db.characters.length)];
+    const randomCharacterDate = this.getTomorrow();
+    const bigNum = (randomCharacterDate.getDate() + 1) * (randomCharacterDate.getMonth() + 1) * randomCharacterDate.getFullYear();
+    const randomCharacter = db.characters[Math.floor(bigNum % db.characters.length)];
     console.log(randomCharacter);
     this.setState(() => ({ 
       solution: randomCharacter
@@ -192,6 +197,10 @@ class App extends Component {
     if(JSON.parse(window.localStorage.getItem("totalGamesPlayed"))) {
       this.setState({ 
         totalGamesPlayed: JSON.parse(window.localStorage.getItem("totalGamesPlayed"))
+      });
+    } else {
+      this.setState({ 
+        openHelp: true
       });
     }
     if(JSON.parse(window.localStorage.getItem("mode"))) {
@@ -344,6 +353,7 @@ class App extends Component {
           timer={this.state.timer}
           turn={this.state.turn}
           mode={this.state.mode}
+          openHelp={this.state.openHelp}
         />
         <Title
           turn={this.state.turn}

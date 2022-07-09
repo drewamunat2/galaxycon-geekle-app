@@ -11,7 +11,7 @@ import Stats from './Stats';
 
 function Info(props) {
 
-  const {mode, solution, noTurn, turn, isCorrect, colors, timer, totalGamesWon, totalGamesPlayed } = props;
+  const {openHelp, mode, solution, noTurn, turn, isCorrect, colors, timer, totalGamesWon, totalGamesPlayed } = props;
 
   return (
     <>
@@ -28,7 +28,9 @@ function Info(props) {
         }}
       > 
       <IconButton />
-      <Help />
+      <Help 
+        openHelp={openHelp}
+      />
       <Settings />
       <Stats 
         solution={solution}
