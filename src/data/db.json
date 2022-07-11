@@ -489,15 +489,15 @@
     {
       "name": "Thanos",
       "selectName": "Thanos (Avengers) [mv]",
-      "shop": "https://galaxycon.com/search?q=naruto",
+      "shop": "https://galaxycon.com/collections/avengers",
       "thumbnail": {
-        "title": "Naruto",
-        "image": "https://cdn.shopify.com/s/files/1/0275/9209/7837/products/Scan_Jan_27_2022_2_360x.jpg?v=1643397632"
+        "title": "Avengers",
+        "image": "https://cdn.shopify.com/s/files/1/0275/9209/7837/products/PXL_20210630_153734463_1024x1024@2x.jpg?v=1625071098"
       },
       "characteristics": {
         "gender": "male", "species": "Eternal",
         "appearsIn": "Avengers", "bothAppearsIn": ["Avengers", "Guardians of the Galaxy", "The Super Hero Squad Show", "What If...?", "Marvel Super Heroes", "LEGO Marvel Superheroes", "Ultimate Alliance", "Marvel Strike Force", "Marvel Super War", "Thor", "Loki"],
-        "genre": "anime", "allGenres": ["anime", "animated series", "manga", "action-adventure", "adventure", "action", "fantasy"],
+        "genre": "superhero", "allGenres": ["superhero", "sci-fi", "action-adventure", "adventure", "action", "fantasy"],
         "platform": "movies", "allPlatforms": ["movies", "tv series", "video games"], "owner": "Marvel", "trademarkOwner": "Marvel Entertainment", "distributor": "Disney Enterprises, Inc.", "universe": "Marvel",
         "role": "main antagonist", "genRole": "bad",
         "year": 2012, "decade": 2010,
