@@ -46,7 +46,7 @@
       },
       "characteristics": {
         "gender": "male", "species": "Human",
-        "appearsIn": "Batman", "bothAppearsIn": ["Batman", "Batman v Superman", "Batman vs Robin", "Batman vs Teenage Mutant Ninja Turtles", "Gotham", "Scooby-Doo Meets Batman", "The Batman/Tarzan Adventure Hour", "Super Friends", "Crisis on Infinite Earths", "Justice League", "Justice League vs Teen Titans",  "Young Justice", "Injustice", "MULTIVERUS", "Mortal Kombat vs. DC Universe", "Lego Dimensions"],
+        "appearsIn": "Batman", "bothAppearsIn": ["Batman", "Batman v Superman", "Batman & Robin", "Batman vs Teenage Mutant Ninja Turtles", "Gotham", "Scooby-Doo! & Batman", "The Batman/Tarzan Adventure Hour", "Super Friends", "Legends of the Superheros", "Crisis on Infinite Earths", "Justice League", "Justice League vs Teen Titans",  "Young Justice", "Injustice", "MULTIVERSUS", "Mortal Kombat vs. DC Universe", "Lego Dimensions", "The Lego Movie", "Teen Titans Go! To the Movies", "Joker", "Harley Quinn"],
         "genre": "superhero", "allGenres": ["superhero", "crime film", "mystery", "drama", "action-adventure", "action", "adventure"],
         "platform": "movies", "allPlatforms": ["movies", "tv series", "video games"], "owner": "DC Comics", "trademarkOwner": "DC COMICS", "distributor": "Warner Bros. Pictures", "universe": "DC",
         "role": "titular protagonist", "genRole": "good",
@@ -70,6 +70,24 @@
         "role": "main protagonist", "genRole": "good",
         "year": 1991, "decade": 1990,
         "id": 20
+      }
+    },
+    {
+      "name": "Bowser",
+      "selectName": "Bowser (Super Mario Bros) [vg]",
+      "shop": "https://galaxycon.com/collections/super-mario",
+      "thumbnail": {
+        "title": "Super Mario",
+        "image": "https://cdn.shopify.com/s/files/1/0275/9209/7837/products/img437_5ca3b4bc-cbc7-4dc3-8dff-63899359ea65_470x.jpg?v=1624393163"
+      },
+      "characteristics": {
+        "gender": "male", "species": "Koopa",
+        "appearsIn": "Super Mario Bros.", "bothAppearsIn": ["Super Mario Bros.", "The Super Mario Bros. Super Show!", "Super Mario Kart", "Mario Party", "Mario Clash", "Mario Strikers", "Paper Mario", "Mario & Luigi", "Dr Mario", "Mario & Sonic at the Olympic Games", "Super Mario-Kun", "Super Smash Bros.", "Yoshi's Island", "Super Princess Peach"],
+        "genre": "platform", "allGenres": ["platform", "adventure", "fantasy"],
+        "platform": "video games", "allPlatforms": ["tv series", "video games"], "owner": "Nintendo", "trademarkOwner": "Nintendo", "network": "Nintendo", "universe": "Nintendo",
+        "role": "main antagonist", "genRole": "bad",
+        "year": 1985, "decade": 1980,
+        "id": 28
       }
     },
     {
@@ -118,7 +136,7 @@
       },
       "characteristics": {
         "gender": "female", "species": "Human",
-        "appearsIn": "Scooby-Doo", "bothAppearsIn": ["Scooby-Doo", "Scooby-Doo Meets Batman", "Scooby-Doo and Guess Who?", "Lego Dimensions"],
+        "appearsIn": "Scooby-Doo", "bothAppearsIn": ["Scooby-Doo", "Scooby-Doo! & Batman", "Scooby-Doo and Guess Who?", "Lego Dimensions"],
         "genre": "cartoon", "allGenres": ["cartoon", "animated series", "children's television series", "mystery", "comedy horror", "comedy", "adventure", "fiction"],
         "platform": "tv series", "allPlatforms": ["movies", "tv series", "video games"], "owner": "Warner Bros", "trademarkOwner": "Hanna-Barbera Productions, Inc.", "network": "Cartoon Network", "universe": "Hanna-Barbera",
         "role": "main protagonist", "genRole": "good",
@@ -172,7 +190,7 @@
       },
       "characteristics": {
         "gender": "male", "species": "Human",
-        "appearsIn": "The Flash", "bothAppearsIn": ["The Flash", "Supergirl", "Arrow", "Scooby-Doo and Guess Who?", "Crisis on Infinite Earths", "DC Super Hero Girls", "Justice League", "Injustice", "Lego Dimensions", "Mortal Kombat vs. DC Universe"],
+        "appearsIn": "The Flash", "bothAppearsIn": ["The Flash", "Supergirl", "Arrow", "Scooby-Doo and Guess Who?", "Crisis on Infinite Earths", "Legends of the Superheros", "Justice League", "Injustice", "Mortal Kombat vs. DC Universe", "Lego Dimensions", "The Lego Movie", "DC Super Hero Girls", "Teen Titans Go! To the Movies"],
         "genre": "superhero", "allGenres": ["superhero", "sci-fi", "mystery", "drama", "action-adventure", "action", "adventure"],
         "platform": "tv series", "allPlatforms": ["movies", "video games", "tv series"], "owner": "DC Comics", "trademarkOwner": "DC COMICS", "network": "CW", "universe": "DC",
         "role": "titular protagonist", "genRole": "good", 
@@ -235,6 +253,42 @@
       }
     },
     {
+      "name": "Green Lantern",
+      "selectName": "Green Lantern (Green Lantern) [tv]",
+      "shop": "https://galaxycon.com/collections/justice-league",
+      "thumbnail": {
+        "title": "Justice League",
+        "image": "https://cdn.shopify.com/s/files/1/0275/9209/7837/products/Josh-Keaton-Green-Lantern-8x10-Photo-Signed-Autographed-JSA-Certified-COA-GalaxyCon-1611265622_022a0d47-c332-4d31-95ae-b80bad19c125_360x.jpg?v=1611272370"
+      },
+      "characteristics": {
+        "gender": "male", "species": "Human",
+        "appearsIn": "Green Lantern", "bothAppearsIn": ["Green Lantern", "Justice League", "Legends of the Superheros", "Injustice", "Mortal Kombat vs. DC Universe", "The Lego Movie", "Teen Titans Go! To the Movies"],
+        "genre": "superhero", "allGenres": ["superhero", "sci-fi", "thriller", "action-adventure", "action", "adventure", "fantasy"],
+        "platform": "tv series", "allPlatforms": ["movies", "video games", "tv series"], "owner": "DC Comics", "trademarkOwner": "DC COMICS", "distributor": "Cartoon Network", "universe": "DC",
+        "role": "titular protagonist", "genRole": "good",
+        "year": 1940, "decade": 1940,
+        "id": 24
+      }
+    },
+    {
+      "name": "Harley Quinn",
+      "selectName": "Harley Quinn (The Batman) [mv]",
+      "shop": "https://galaxycon.com/collections/batman",
+      "thumbnail": {
+        "title": "Batman",
+        "image": "https://cdn.shopify.com/s/files/1/0275/9209/7837/products/Scan_Apr_07_2022_41_470x.jpg?v=1649371682"
+      },
+      "characteristics": {
+        "gender": "female", "species": "Human",
+        "appearsIn": "Batman", "bothAppearsIn": ["Harley Quinn", "Gotham Girls", "Suicide Squad", "Birds of Prey", "Gotham", "The Lego Batman Movie", "Lego DC Super-Villains", "Justice League", "Injustice", "Infinite Crisis", "Teen Titans Go! & DC Super Hero Girls", "MULTIVERSUS", "Scooby-Doo! & Batman", "Batgirl", "Red Hood", "Joker"],
+        "genre": "superhero", "allGenres": ["superhero", "crime film", "mystery", "drama", "action-adventure", "action", "adventure"],
+        "platform": "movies", "allPlatforms": ["movies", "tv series", "video games"], "owner": "DC Comics", "trademarkOwner": "DC COMICS", "distributor": "Warner Bros. Pictures", "universe": "DC",
+        "role": "secondary antagonist", "genRole": "bad",
+        "year": 1992, "decade": 1990,
+        "id": 27
+      }
+    },
+    {
       "name": "Harry Potter",
       "selectName": "Harry Potter (Harry Potter Series) [mv]",
       "shop": "https://galaxycon.com/search?q=harry+potter",
@@ -250,6 +304,42 @@
         "role": "titular protagonist", "genRole": "good",
         "year": 2001, "decade": 2000,
         "id": 8
+      }
+    },
+    {
+      "name": "Homelander",
+      "selectName": "Homelander (The Boys) [tv]",
+      "shop": "https://galaxycon.com/collections/the-boys",
+      "thumbnail": {
+        "title": "The Boys",
+        "image": "https://cdn.shopify.com/s/files/1/0275/9209/7837/products/TheBoysColorTradeExclusive_1024x1024@2x.jpg?v=1648236755"
+      },
+      "characteristics": {
+        "gender": "male", "species": "Supe",
+        "appearsIn": "The Boys", "bothAppearsIn": ["The Boys", "Diabolical", "Death Battle", "Seven on 7"],
+        "genre": "superhero", "allGenres": ["superhero", "superhero fiction", "dark comedy", "drama", "comedy", "satire", "action"],
+        "platform": "tv series", "allPlatforms": ["tv series"], "owner": "Amazon", "trademarkOwner": "Dynamite Entertainment", "network": "Amazon Prime Video", "universe": "Vought Cinematic",
+        "role": "main antagonist", "genRole": "bad",
+        "year": 2019, "decade": 2010,
+        "id": 26
+      }
+    },
+    {
+      "name": "Joker",
+      "selectName": "Joker (Batman) [mv]",
+      "shop": "https://galaxycon.com/collections/batman",
+      "thumbnail": {
+        "title": "Batman",
+        "image": "https://cdn.shopify.com/s/files/1/0275/9209/7837/products/img643_57ec5f59-17a2-4802-bc8e-b2c0a4af8c69_1024x1024@2x.jpg?v=1642531198"
+      },
+      "characteristics": {
+        "gender": "male", "species": "Human",
+        "appearsIn": "Batman", "bothAppearsIn": ["Joker", "Batman", "Batman vs Teenage Mutant Ninja Turtles", "LEGO DC Super-Villains", "Suicide Squad", "Gotham", "Super Friends", "Justice League", "Injustice", "Mortal Kombat vs. DC Universe", "Arena of Valor", "Lego Dimensions", "The Lego Movie", "SINoALICE", "Teen Titans Go! To the Movies", "Scooby-Doo! & Batman", "DC Super Hero Girls", "Harley Quinn", "Birds of Prey", "Batman & Robin"],
+        "genre": "superhero", "allGenres": ["superhero", "crime film", "mystery", "drama", "action-adventure", "action", "adventure"],
+        "platform": "movies", "allPlatforms": ["movies", "tv series", "video games"], "owner": "DC Comics", "trademarkOwner": "DC COMICS", "distributor": "Warner Bros. Pictures", "universe": "DC",
+          "role": "main antagonist", "genRole": "bad",
+        "year": 1940, "decade": 1940,
+        "id": 25
       }
     },
     {
@@ -334,7 +424,7 @@
       },
       "characteristics": {
         "gender": "female", "species": "Cambion",
-        "appearsIn": "Teen Titans Go!", "bothAppearsIn": ["Teen Titans Go!", "TTG v PPG", "Justice League vs Teen Titans", "Injustice", "Lego Dimensions"],
+        "appearsIn": "Teen Titans Go!", "bothAppearsIn": ["Teen Titans Go!", "Teen Titans Go! To the Movies", "TTG v PPG", "Justice League vs Teen Titans", "Teen Titans Go! & DC Super Hero Girls", "Injustice", "Lego Dimensions"],
         "genre": "cartoon", "allGenres": ["cartoon", "animated series", "children's television series", "superhero", "comedy", "slapstick", "action-adventure", "adventure", "action"],
         "platform": "tv series", "allPlatforms": ["movies", "tv series", "video games"], "owner": "Warner Bros", "trademarkOwner": "DC COMICS", "network": "Cartoon Network", "universe": "DC",
         "role": "main protagonist", "genRole": "good",
@@ -388,12 +478,30 @@
       },
       "characteristics": {
         "gender": "male", "species": "Kryptonian",
-        "appearsIn": "Superman", "bothAppearsIn": ["Superman", "Batman v Superman: Dawn of Justice", "Justice League", "Super Friends", "Injustice", "MULTIVERUS", "Mortal Kombat vs. DC Universe", "Lego Dimensions", "Crisis on Infinite Earths", "Supergirl", "Harley Quinn"],
+        "appearsIn": "Superman", "bothAppearsIn": ["Superman", "Batman v Superman: Dawn of Justice", "Justice League", "Super Friends", "Injustice", "MULTIVERSUS", "Mortal Kombat vs. DC Universe", "Crisis on Infinite Earths", "Supergirl", "Harley Quinn", "Lego Dimensions", "The Lego Movie", "Teen Titans Go! To the Movies", "Harley Quinn"],
         "genre": "superhero", "allGenres": ["superhero", "sci-fi", "drama", "action-adventure", "action", "adventure", "children's film"],
         "platform": "movies", "allPlatforms": ["movies", "tv series", "video games"], "owner": "DC Comics", "trademarkOwner": "DC COMICS", "distributor": "Warner Bros. Pictures", "universe": "DC",
         "role": "titular protagonist", "genRole": "good",
         "year": 1933, "decade": 1930,
         "id": 13
+      }
+    },
+    {
+      "name": "Thanos",
+      "selectName": "Thanos (Avengers) [mv]",
+      "shop": "https://galaxycon.com/search?q=naruto",
+      "thumbnail": {
+        "title": "Naruto",
+        "image": "https://cdn.shopify.com/s/files/1/0275/9209/7837/products/Scan_Jan_27_2022_2_360x.jpg?v=1643397632"
+      },
+      "characteristics": {
+        "gender": "male", "species": "Eternal",
+        "appearsIn": "Avengers", "bothAppearsIn": ["Avengers", "Guardians of the Galaxy", "The Super Hero Squad Show", "What If...?", "Marvel Super Heroes", "LEGO Marvel Superheroes", "Ultimate Alliance", "Marvel Strike Force", "Marvel Super War", "Thor", "Loki"],
+        "genre": "anime", "allGenres": ["anime", "animated series", "manga", "action-adventure", "adventure", "action", "fantasy"],
+        "platform": "movies", "allPlatforms": ["movies", "tv series", "video games"], "owner": "Marvel", "trademarkOwner": "Marvel Entertainment", "distributor": "Disney Enterprises, Inc.", "universe": "Marvel",
+        "role": "main antagonist", "genRole": "bad",
+        "year": 2012, "decade": 2010,
+        "id": 29
       }
     },
     {
@@ -406,7 +514,7 @@
       },
       "characteristics": {
         "gender": "female", "species": "Amazon",
-        "appearsIn": "Wonder Woman", "bothAppearsIn":  ["Wonder Woman", "DC Super Hero Girls", "Justice League", "Crisis on Infinite Earths", "Injustice", "Lego Dimensions", "MULTIVERUS", "Mortal Kombat vs. DC Universe"],
+        "appearsIn": "Wonder Woman", "bothAppearsIn":  ["Wonder Woman", "DC Super Hero Girls", "Justice League", "Crisis on Infinite Earths", "Injustice", "MULTIVERSUS", "Mortal Kombat vs. DC Universe", "Lego Dimensions", "The Lego Movie", "Teen Titans Go! To the Movies", "Harley Quinn"],
         "genre": "superhero", "allGenres": ["superhero", "sci-fi", "action-adventure", "action", "adventure"],
         "platform": "tv series", "allPlatforms": ["movies", "tv series", "video games"], "owner": "DC Comics", "trademarkOwner": "DC COMICS", "network": "ABC", "universe": "DC",
         "role": "titular protagonist", "genRole": "good",
