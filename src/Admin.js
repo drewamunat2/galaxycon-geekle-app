@@ -8,12 +8,37 @@ class App extends Component {
     super(props);
     this.state = {
       user: '',
-      authenticate: false
+      authenticate: false,
+      addState: {}
     };
   }
 
+  saveAddState = () => {
+    window.localStorage.setItem("addState", JSON.stringify(this.state.addState));
+    console.log("saved to localStorage");
+  };
+
+  componentDidUpdate (prevProps, prevState) {
+    if(prevState.addState !== this.state.addState) {
+      console.log("did update addState");
+      this.saveAddState();
+    }
+  }
+
   componentDidMount() {
-    this.setState({authenticate: false});
+    this.setState({authenticate: true});
+    if(JSON.parse(window.localStorage.getItem("addState"))) {
+      this.setState({ 
+        addState: JSON.parse(window.localStorage.getItem("addState"))
+      });
+    }
+  }
+
+  updateAddState = (newState) => {
+    this.setState({ 
+      addState: newState
+    });
+    console.log("state updated");
   }
   
   render() {
@@ -41,7 +66,10 @@ class App extends Component {
               Log Out
             </Button>
           </Box>
-          <EditAPI />
+          <EditAPI 
+            updateAddState={this.updateAddState}
+            addState={this.state.addState}
+          />
         </>
       );
     }

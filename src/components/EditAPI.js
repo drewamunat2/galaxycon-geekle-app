@@ -16,7 +16,10 @@ const theme = createTheme({
   }
 });
 
-function EditAPI() {
+function EditAPI(props) {
+
+  const { updateAddState, addState } = props;
+
   return (
     <ThemeProvider theme={theme}>
       <Box 
@@ -31,7 +34,10 @@ function EditAPI() {
             Edit Geekle Characters API
           </Typography>
         </Grid>
-        <AddCharacter />
+        <AddCharacter 
+          updateAddState={updateAddState}
+          addState={addState}
+        />
       </Box>
     </ThemeProvider>
   );
