@@ -39,7 +39,8 @@
       "role": "main protagonist",
       "genRole": "good",
       "year": 2005,
-      "decade": 2000
+      "decade": 2000,
+      "num": 0
     },
     {
       "name": "Ash Ketchum",
@@ -76,7 +77,8 @@
       "role": "main protagonist",
       "genRole": "good",
       "year": 1996,
-      "decade": 1990
+      "decade": 1990,
+      "num": 1
     },
     {
       "name": "Batman",
@@ -133,7 +135,8 @@
       "role": "titular protagonist",
       "genRole": "good",
       "year": 1939,
-      "decade": 1930
+      "decade": 1930,
+      "num": 2
     },
     {
       "name": "Belle",
@@ -176,7 +179,8 @@
       "role": "main protagonist",
       "genRole": "good",
       "year": 1991,
-      "decade": 1990
+      "decade": 1990,
+      "num": 3
     },
     {
       "name": "Bowser",
@@ -221,7 +225,8 @@
       "role": "main antagonist",
       "genRole": "bad",
       "year": 1985,
-      "decade": 1980
+      "decade": 1980,
+      "num": 4
     },
     {
       "name": "Bubbles",
@@ -262,7 +267,8 @@
       "role": "deutertagonist",
       "genRole": "good",
       "year": 1998,
-      "decade": 1990
+      "decade": 1990,
+      "num": 5
     },
     {
       "name": "Captain Kirk",
@@ -299,7 +305,8 @@
       "role": "main protagonist",
       "genRole": "good",
       "year": 1966,
-      "decade": 1960
+      "decade": 1960,
+      "num": 6
     },
     {
       "name": "Daphne Blake",
@@ -340,7 +347,8 @@
       "role": "main protagonist",
       "genRole": "good",
       "year": 1969,
-      "decade": 1960
+      "decade": 1960,
+      "num": 7
     },
     {
       "name": "Darth Vader",
@@ -381,7 +389,8 @@
       "role": "main antagonist",
       "genRole": "bad",
       "year": 1983,
-      "decade": 1980
+      "decade": 1980,
+      "num": 8
     },
     {
       "name": "Deku",
@@ -422,7 +431,8 @@
       "role": "main protagonist",
       "genRole": "good",
       "year": 2014,
-      "decade": 2010
+      "decade": 2010,
+      "num": 9
     },
     {
       "name": "Flash",
@@ -471,7 +481,8 @@
       "role": "titular protagonist",
       "genRole": "good",
       "year": 2014,
-      "decade": 2010
+      "decade": 2010,
+      "num": 10
     },
     {
       "name": "Frank N. Furter",
@@ -502,7 +513,8 @@
       "role": "main antagonist",
       "genRole": "bad",
       "year": 1973,
-      "decade": 1970
+      "decade": 1970,
+      "num": 11
     },
     {
       "name": "Gill-man",
@@ -536,7 +548,8 @@
       "role": "main antagonist",
       "genRole": "bad",
       "year": 1954,
-      "decade": 1950
+      "decade": 1950,
+      "num": 12
     },
     {
       "name": "Goku",
@@ -577,7 +590,8 @@
       "role": "main protagonist",
       "genRole": "good",
       "year": 1989,
-      "decade": 1980
+      "decade": 1980,
+      "num": 13
     },
     {
       "name": "Green Lantern",
@@ -620,7 +634,8 @@
       "role": "titular protagonist",
       "genRole": "good",
       "year": 1940,
-      "decade": 1940
+      "decade": 1940,
+      "num": 14
     },
     {
       "name": "Harley Quinn",
@@ -676,7 +691,8 @@
         "genRole": "bad",
         "year": 1992,
         "decade": 1990,
-        "id": 27
+        "id": 27,
+        "num": 15
       }
     },
     {
@@ -719,7 +735,8 @@
       "role": "titular protagonist",
       "genRole": "good",
       "year": 2001,
-      "decade": 2000
+      "decade": 2000,
+      "num": 16
     },
     {
       "name": "Homelander",
@@ -757,7 +774,8 @@
       "role": "main antagonist",
       "genRole": "bad",
       "year": 2019,
-      "decade": 2010
+      "decade": 2010,
+      "num": 17
     },
     {
       "name": "Joker",
@@ -813,7 +831,8 @@
       "role": "main antagonist",
       "genRole": "bad",
       "year": 1940,
-      "decade": 1940
+      "decade": 1940,
+      "num": 18
     },
     {
       "name": "Link",
@@ -853,7 +872,8 @@
       "role": "main protagonist",
       "genRole": "good",
       "year": 1986,
-      "decade": 1980
+      "decade": 1980,
+      "num": 19
     },
     {
       "name": "Mario",
@@ -901,7 +921,8 @@
       "role": "titular protagonist",
       "genRole": "good",
       "year": 1983,
-      "decade": 1980
+      "decade": 1980,
+      "num": 20
     },
     {
       "name": "Morty Smith",
@@ -941,7 +962,8 @@
       "role": "titular protagonist",
       "genRole": "good",
       "year": 2013,
-      "decade": 2010
+      "decade": 2010,
+      "num": 21
     },
     {
       "name": "Naruto Uzumaki",
@@ -980,7 +1002,8 @@
       "role": "titular protagonist",
       "genRole": "good",
       "year": 1999,
-      "decade": 1900
+      "decade": 1900,
+      "num": 22
     },
     {
       "name": "Raven",
@@ -1025,7 +1048,8 @@
       "role": "main protagonist",
       "genRole": "good",
       "year": 2013,
-      "decade": 2010
+      "decade": 2010,
+      "num": 23
     },
     {
       "name": "Rick O’Connell",
@@ -1062,7 +1086,8 @@
       "role": "main protagonist",
       "genRole": "good",
       "year": 1999,
-      "decade": 1990
+      "decade": 1990,
+      "num": 24
     },
     {
       "name": "Skeletor",
@@ -1105,7 +1130,8 @@
       "role": "main antagonist",
       "genRole": "bad",
       "year": 1981,
-      "decade": 1980
+      "decade": 1980,
+      "num": 25
     },
     {
       "name": "Superman",
@@ -1155,7 +1181,8 @@
       "role": "titular protagonist",
       "genRole": "good",
       "year": 1933,
-      "decade": 1930
+      "decade": 1930,
+      "num": 26
     },
     {
       "name": "Thanos",
@@ -1201,7 +1228,8 @@
       "role": "main antagonist",
       "genRole": "bad",
       "year": 2012,
-      "decade": 2010
+      "decade": 2010,
+      "num": 27
     },
     {
       "name": "Wonder Woman",
@@ -1246,7 +1274,8 @@
       "role": "titular protagonist",
       "genRole": "good",
       "year": 1941,
-      "decade": 1940
+      "decade": 1940,
+      "num": 28
     }
   ]
 }
