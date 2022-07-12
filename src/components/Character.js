@@ -86,7 +86,7 @@ function Character(props) {
             backgroundColor: `${genderColor}`,
           }}
         >
-          {character.characteristics.gender}
+          {character.gender}
         </Paper>
       </Grid>
       <Grid item xs={2} sm={2} lg>
@@ -103,7 +103,7 @@ function Character(props) {
             backgroundColor: `${roleColor}`,
           }}
         >
-          {character.characteristics.role}
+          {character.role}
         </Paper>
       </Grid>
       <Grid item xs={2} sm={2} lg>
@@ -120,7 +120,7 @@ function Character(props) {
             backgroundColor: `${appearsInColor}`,
           }}
         >
-          {character.characteristics.appearsIn}
+          {character.appearsIn}
         </Paper>
       </Grid>
       <Grid item xs={2} sm={2} lg>
@@ -137,7 +137,7 @@ function Character(props) {
             backgroundColor: `${genreColor}`,
           }}
         >
-          {character.characteristics.genre}
+          {character.genre}
         </Paper>
       </Grid>
       <Grid item xs={2} sm={2} lg>
@@ -154,7 +154,7 @@ function Character(props) {
             backgroundColor: `${platformColor}`,
           }}
         >
-          {character.characteristics.platform}
+          {character.platform}
         </Paper>
       </Grid>
       <Grid item xs={2} sm={2} lg>
@@ -171,7 +171,7 @@ function Character(props) {
             backgroundColor: `${yearColor}`,
           }}
         >
-          {character.characteristics.year} <i className={`${arrow}`}>{icon}</i>
+          {character.year} <i className={`${arrow}`}>{icon}</i>
         </Paper>
       </Grid>
       <Grid item xs={0} lg={2}>

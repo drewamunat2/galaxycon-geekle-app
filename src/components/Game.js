@@ -10,9 +10,9 @@ function Game(props) {
 
   //arrow icon class
   const arrow = (year) => {
-    if (year < solution.characteristics.year) {
+    if (year < solution.year) {
       return 'bi-BsArrowUp';
-    } else if (year > solution.characteristics.year) {
+    } else if (year > solution.year) {
       return 'bi-BsArrowDown';
     }
     return '';
@@ -20,9 +20,9 @@ function Game(props) {
 
   //show respective arrow icon
   const icon = (year) => {
-    if (year < solution.characteristics.year) {
+    if (year < solution.year) {
       return '↑';
-    } else if (year > solution.characteristics.year) {
+    } else if (year > solution.year) {
       return '↓';
     }
     return '';
@@ -59,8 +59,8 @@ function Game(props) {
                   platformColor={colorMap.colors.platform}
                   roleColor={colorMap.colors.role}
                   yearColor={colorMap.colors.year}
-                  arrow={arrow(character.characteristics.year)}
-                  icon={icon(character.characteristics.year)} />
+                  arrow={arrow(character.year)}
+                  icon={icon(character.year)} />
               </Grid>
             
           )

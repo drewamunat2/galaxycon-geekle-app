@@ -90,7 +90,7 @@ class EasyModeSolution extends Component {
       eventLink: "https://galaxycon.com/pages/raleigh",
       eventImg: "https://cdn.shopify.com/s/files/1/0275/9209/7837/t/5/assets/raleighnew1080-1-1653068224677.png?v=1653068230",
       solutionLink: this.props.solution.shop,
-      solutionImg: this.props.solution.thumbnail.image,
+      solutionImg: this.props.solution.image,
     });
   }
 
@@ -168,7 +168,7 @@ class EasyModeSolution extends Component {
           </Grid>
           <Grid item xs={5}>
             <Typography display='block' id="rules-of-the-game" color="#086788" variant="h4" sx={{ mt: 2, mb: 2 }}>
-              Check out {this.props.solution.thumbnail.title} Collections {'&'} Events
+              Check out {this.props.solution.title} Collections {'&'} Events
             </Typography>
             <View style={styles.view}>
               <Link href={this.state.solutionLink}>
@@ -220,7 +220,7 @@ class EasyModeSolution extends Component {
           </Grid>
           <Grid item xs={2}></Grid> 
           <Typography display='block' id="rules-of-the-game" color="#086788" variant="h4" sx={{ mt: 2, mb: 2 }}>
-            Check out {this.props.solution.thumbnail.title} Collections {'&'} Events
+            Check out {this.props.solution.title} Collections {'&'} Events
           </Typography>
           <Grid item xs={2}></Grid>
           <Grid item xs={8}>

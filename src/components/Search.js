@@ -96,7 +96,7 @@ class Search extends Component {
   };
 
   switchGenres = (guess, genre) => {
-    guess.characteristics.genre = genre;
+    guess.genre = genre;
     return guess;
   }
 
@@ -140,40 +140,40 @@ class Search extends Component {
     //set gender color
 
     //same gender : set green
-    if(guess.characteristics.gender === this.props.solution.characteristics.gender) {
+    if(guess.gender === this.props.solution.gender) {
       colorObj.gender = "#6CA663";
       colorObj.genderColor = 'green';
-    } else if(guess.characteristics.species === this.props.solution.characteristics.species) {
+    } else if(guess.species === this.props.solution.species) {
       colorObj.gender = "#E0CA3C";
       colorObj.genderColor = 'yellow';
     }
 
     //set show color
-    let bothAppearsIn = this.isYellowArrays(guess.characteristics.bothAppearsIn, this.props.solution.characteristics.bothAppearsIn);
+    let bothAppearsIn = this.isYellowArrays(guess.bothAppearsIn, this.props.solution.bothAppearsIn);
     //same show : set green
-    if(guess.characteristics.appearsIn === this.props.solution.characteristics.appearsIn) {
+    if(guess.appearsIn === this.props.solution.appearsIn) {
       colorObj.appearsIn = "#6CA663";
       colorObj.appearsInColor = 'green';
     } else if (bothAppearsIn) {
-      guess.characteristics.appearsIn = bothAppearsIn;
+      guess.appearsIn = bothAppearsIn;
       colorObj.appearsIn = "#E0CA3C";
       colorObj.appearsInColor = 'yellow';
     }
 
     //set genre color
 
-    let bothGenres = this.isYellowArrays(guess.characteristics.allGenres, this.props.solution.characteristics.allGenres);
+    let bothGenres = this.isYellowArrays(guess.allGenres, this.props.solution.allGenres);
 
     //same genre : set green
-    if(guess.characteristics.genre === this.props.solution.characteristics.genre) {
+    if(guess.genre === this.props.solution.genre) {
       colorObj.genre = "#6CA663";
       colorObj.genreColor = 'green';
-    } else if (this.isYellow(this.props.solution.characteristics.genre, guess.characteristics.allGenres)) {
-      guess = this.switchGenres(guess, this.props.solution.characteristics.genre);
+    } else if (this.isYellow(this.props.solution.genre, guess.allGenres)) {
+      guess = this.switchGenres(guess, this.props.solution.genre);
       colorObj.genre = "#6CA663";
       colorObj.genreColor = 'green';
     } else if (bothGenres) {
-      guess.characteristics.genre = bothGenres;
+      guess.genre = bothGenres;
       colorObj.genre = "#E0CA3C";
       colorObj.genreColor = 'yellow';
     }
@@ -181,10 +181,10 @@ class Search extends Component {
     //set platform color
 
     //same platform : set green
-    if(guess.characteristics.platform === this.props.solution.characteristics.platform) {
+    if(guess.platform === this.props.solution.platform) {
       colorObj.platform = "#6CA663";
       colorObj.platformColor = 'green';
-    } else if(guess.characteristics.universe === this.props.solution.characteristics.universe) {
+    } else if(guess.universe === this.props.solution.universe) {
       colorObj.platform = "#E0CA3C";
       colorObj.platformColor = 'yellow';
     }
@@ -192,10 +192,10 @@ class Search extends Component {
     //set role color
 
     //same role : set green
-    if(guess.characteristics.role === this.props.solution.characteristics.role) {
+    if(guess.role === this.props.solution.role) {
       colorObj.role = "#6CA663";
       colorObj.roleColor = 'green';
-    } else if(guess.characteristics.genRole === this.props.solution.characteristics.genRole) {
+    } else if(guess.genRole === this.props.solution.genRole) {
       colorObj.role = "#E0CA3C";
       colorObj.roleColor = 'yellow';
     }
@@ -203,10 +203,10 @@ class Search extends Component {
     //set year color
 
     //same year : set green
-    if(guess.characteristics.year === this.props.solution.characteristics.year) {
+    if(guess.year === this.props.solution.year) {
       colorObj.year = "#6CA663";
       colorObj.yearColor = 'green';
-    } else if(guess.characteristics.decade === this.props.solution.characteristics.decade) {
+    } else if(guess.decade === this.props.solution.decade) {
       colorObj.year = "#E0CA3C";
       colorObj.yearColor = 'yellow';
     }
