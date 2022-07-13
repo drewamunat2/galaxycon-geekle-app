@@ -230,7 +230,8 @@ export default function CharacterDataGrid() {
           '& .MuiDataGrid-cell': {
             align: "center",
             overflow: "scroll"
-          }
+          },
+          bgcolor: '#ffdff050'
         }}
         getRowClassName='cell--textCenter'
       /> : <Grid container alignItems="center" justifyContent='center' sx={{mt: 15, width: '100%'}}><CircularProgress /></Grid>}
