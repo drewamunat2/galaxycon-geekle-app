@@ -81,11 +81,19 @@ class AddCharacter extends Component {
   }
 
   stringToArray = (string) => {
-    return string.split(", ");
+    let array = []
+    if(string){
+      array = string.split(", ");
+    }
+    return array;
   }
 
   stringToInt = (string) => {
-    return parseInt(string, 10);
+    let integer = 0;
+    if(string){
+      integer = parseInt(string, 10);
+    }
+    return integer;
   }
 
   organizeForm = () => {
@@ -109,9 +117,11 @@ class AddCharacter extends Component {
   submitForm = (formData) => {
     client.post('', formData)
     .then(function (response) {
-      console.log(response);
-    });
-    this.resetState();
+      this.resetState();
+    })
+    .finally(function (response) {  
+      alert(response);
+    })
   }
 
   handleOnChange = (e) => {
@@ -142,71 +152,71 @@ class AddCharacter extends Component {
         <Grid container justifyContent="center" alignItems="center" alignSelf='center' sx={style}>
           <Grid container justifyContent="center" alignItems="center" alignSelf='center' sx={{my:1}}>
             <Typography sx={{mr: 1}}>name: </Typography> 
-            <Input name="name" value={this.state.name} onChange={this.handleOnChange} sx={{mr: 2, p:.25}}/>
+            <Input name="name" autoComplete="off" value={this.state.name} onChange={this.handleOnChange} sx={{mr: 2, p:.25}}/>
             <Typography sx={{mr: 1}}>selectName: </Typography> 
-            <Input name="selectName" value={this.state.selectName} onChange={this.handleOnChange} sx={{width: 400, p:.25}}/>
+            <Input name="selectName" autoComplete="off" value={this.state.selectName} onChange={this.handleOnChange} sx={{width: 400, p:.25}}/>
           </Grid>
           <Grid container justifyContent="center" alignItems="center" alignSelf='center' sx={{my:1}}>
             <Typography sx={{mr: 1}}> shop: </Typography>
-            <Input name="shop" value={this.state.shop} onChange={this.handleOnChange} sx={{width: 700, p:.25}}/>
+            <Input name="shop" autoComplete="off" value={this.state.shop} onChange={this.handleOnChange} sx={{width: 700, p:.25}}/>
           </Grid>
           <Grid container justifyContent="center" alignItems="center" alignSelf='center' sx={{my:1}}>
             <Typography sx={{mr: 1}}> title: </Typography>
-            <Input name="title" value={this.state.title} onChange={this.handleOnChange} sx={{mr: 2, p:.25}}/>
+            <Input name="title" autoComplete="off" value={this.state.title} onChange={this.handleOnChange} sx={{mr: 2, p:.25}}/>
             <Typography sx={{mr: 1}}>image: </Typography> 
-            <Input name="image" value={this.state.image} onChange={this.handleOnChange} sx={{width: 500, p:.25}}/>
+            <Input name="image" autoComplete="off" value={this.state.image} onChange={this.handleOnChange} sx={{width: 500, p:.25}}/>
           </Grid>
           <Grid container justifyContent="center" alignItems="center" alignSelf='center' sx={{my:1}}>
             <Typography sx={{mr: 1}}> gender: </Typography>
-            <Input name="gender" value={this.state.gender} onChange={this.handleOnChange} sx={{mr: 2, p:.25}}/>
+            <Input name="gender" autoComplete="off" value={this.state.gender} onChange={this.handleOnChange} sx={{mr: 2, p:.25}}/>
             <Typography sx={{mr: 1}}>species: </Typography> 
-            <Input name="species" value={this.state.species} onChange={this.handleOnChange} sx={{p:.25}}/>
+            <Input name="species" autoComplete="off" value={this.state.species} onChange={this.handleOnChange} sx={{p:.25}}/>
           </Grid>
           <Grid container justifyContent="center" alignItems="center" alignSelf='center' sx={{my:1}}>
             <Typography sx={{mr: 1}}> appearsIn: </Typography>
-            <Input name="appearsIn" value={this.state.appearsIn} onChange={this.handleOnChange} sx={{mr: 2, p:.25}}/>
+            <Input name="appearsIn" autoComplete="off" value={this.state.appearsIn} onChange={this.handleOnChange} sx={{mr: 2, p:.25}}/>
             <Typography sx={{mr: 1}}>bothAppearsIn: </Typography> 
-            <Input name="bothAppearsIn" value={this.state.bothAppearsIn} onChange={this.handleOnChange} sx={{width: 500, p:.25}}/>
+            <Input name="bothAppearsIn" autoComplete="off" value={this.state.bothAppearsIn} onChange={this.handleOnChange} sx={{width: 500, p:.25}}/>
           </Grid>
           <Grid container justifyContent="center" alignItems="center" alignSelf='center' sx={{my:1}}>
             <Typography sx={{mr: 1}}> genre: </Typography>
-            <Input name="genre" value={this.state.genre} onChange={this.handleOnChange} sx={{mr: 2, p:.25}}/>
+            <Input name="genre" autoComplete="off" value={this.state.genre} onChange={this.handleOnChange} sx={{mr: 2, p:.25}}/>
             <Typography sx={{mr: 1}}>allGenres: </Typography> 
-            <Input name="allGenres" value={this.state.allGenres} onChange={this.handleOnChange} sx={{width: 500, p:.25}}/>
+            <Input name="allGenres" autoComplete="off" value={this.state.allGenres} onChange={this.handleOnChange} sx={{width: 500, p:.25}}/>
           </Grid>
           <Grid container justifyContent="center" alignItems="center" alignSelf='center' sx={{my:1}}>
             <Typography sx={{mr: 1}}> platform: </Typography>
-            <Input name="platform" value={this.state.platform} onChange={this.handleOnChange} sx={{mr: 2, p:.25}}/>
+            <Input name="platform" autoComplete="off" value={this.state.platform} onChange={this.handleOnChange} sx={{mr: 2, p:.25}}/>
             <Typography sx={{mr: 1}}>allPlatforms: </Typography> 
-            <Input name="allPlatforms" value={this.state.allPlatforms} onChange={this.handleOnChange} sx={{width: 500, p:.25}}/>
+            <Input name="allPlatforms" autoComplete="off" value={this.state.allPlatforms} onChange={this.handleOnChange} sx={{width: 500, p:.25}}/>
           </Grid>
           <Grid container justifyContent="center" alignItems="center" alignSelf='center' sx={{my:1}}>
             <Typography sx={{mr: 1}}> owner: </Typography>
-            <Input name="owner" value={this.state.owner} onChange={this.handleOnChange} sx={{mr: 2, p:.25}}/>
+            <Input name="owner" autoComplete="off" value={this.state.owner} onChange={this.handleOnChange} sx={{mr: 2, p:.25}}/>
             <Typography sx={{mr: 1}}>trademarkOwner: </Typography> 
-            <Input name="trademarkOwner" value={this.state.trademarkOwner} onChange={this.handleOnChange} sx={{p:.25}}/>
+            <Input name="trademarkOwner" autoComplete="off" value={this.state.trademarkOwner} onChange={this.handleOnChange} sx={{p:.25}}/>
           </Grid>
           <Grid container justifyContent="center" alignItems="center" alignSelf='center' sx={{my:1}}>
             <Typography sx={{mr: 1}}> network: </Typography>
-            <Input name="network" value={this.state.network} onChange={this.handleOnChange} sx={{mr: 2, p:.25}}/>
+            <Input name="network" autoComplete="off" value={this.state.network} onChange={this.handleOnChange} sx={{mr: 2, p:.25}}/>
             <Typography sx={{mr: 1}}>universe: </Typography> 
-            <Input name="universe" value={this.state.universe} onChange={this.handleOnChange} sx={{p:.25}}/>
+            <Input name="universe" autoComplete="off" value={this.state.universe} onChange={this.handleOnChange} sx={{p:.25}}/>
           </Grid>
           <Grid container justifyContent="center" alignItems="center" alignSelf='center' sx={{my:1}}>
             <Typography sx={{mr: 1}}> role: </Typography>
-            <Input name="role" value={this.state.role} onChange={this.handleOnChange} sx={{mr: 2, p:.25}}/>
+            <Input name="role" autoComplete="off" value={this.state.role} onChange={this.handleOnChange} sx={{mr: 2, p:.25}}/>
             <Typography sx={{mr: 1}}>genRole: </Typography> 
-            <Input name="genRole" value={this.state.genRole} onChange={this.handleOnChange} sx={{p:.25}}/>
+            <Input name="genRole" autoComplete="off" value={this.state.genRole} onChange={this.handleOnChange} sx={{p:.25}}/>
           </Grid>
           <Grid container justifyContent="center" alignItems="center" alignSelf='center' sx={{my:1}}>
             <Typography sx={{mr: 1}}> year: </Typography>
-            <Input name="year" value={this.state.year} onChange={this.handleOnChange} sx={{mr: 2, p:.25}}/>
+            <Input name="year" autoComplete="off" value={this.state.year} onChange={this.handleOnChange} sx={{mr: 2, p:.25}}/>
             <Typography sx={{mr: 1}}>decade: </Typography> 
-            <Input name="decade" value={this.state.decade} onChange={this.handleOnChange} sx={{p:.25}}/>
+            <Input name="decade" autoComplete="off" value={this.state.decade} onChange={this.handleOnChange} sx={{p:.25}}/>
           </Grid>
           <Grid container justifyContent="center" alignItems="center" alignSelf='center' sx={{my:1}}>
             <Typography sx={{mr: 1}}>num: </Typography> 
-            <Input name="num" value={this.state.num} onChange={this.handleOnChange} sx={{p:.25}}/>
+            <Input name="num" autoComplete="off" value={this.state.num} onChange={this.handleOnChange} sx={{p:.25}}/>
           </Grid>
           <Grid container justifyContent="center" alignItems="center" alignSelf='center' sx={{my:1}}>
             <Button variant="contained" sx={{m:1, width:200}} onClick={this.organizeForm}>Submit</Button>
