@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 //import axios from "axios";
-import { Box, Button, Container, Paper, Typography } from "@mui/material";
+import { Container, Paper, Typography } from "@mui/material";
 
 import CharacterDataGrid from "./components/CharacterDataGrid";
 
