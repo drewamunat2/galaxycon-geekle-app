@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Typography, Grid, Input, Button } from "@mui/material";
+import { Typography, Grid, Input, Button, Box } from "@mui/material";
 import axios from "axios";
 
 const client = axios.create({
@@ -8,7 +8,7 @@ const client = axios.create({
 
 
 const style = {
-  minWidth: 800,
+  minWidth: 900,
   maxHeight: 500,
   bgcolor: '#00000040',
   width: '70%', mx:'15%',
@@ -17,7 +17,7 @@ const style = {
 };
 
 const headerStyle = {
-  minWidth: 800,
+  minWidth: 900,
   mt: 6,
   bgcolor: '#00000050',
   width: '70%', mx:'15%',
@@ -144,6 +144,9 @@ class AddCharacter extends Component {
   render() {
     return (
       <>
+      <Box sx={{
+        overflowX: 'auto', WebkitTextSizeAdjust: 'none'
+      }}>
         <Grid container justifyContent="center" alignItems="center" alignSelf='center' sx={headerStyle}>
           <Typography id="help-modal" variant="h4" component="h4" sx={{textDecoration: 'underline'}}>
             Add a Character
@@ -223,6 +226,7 @@ class AddCharacter extends Component {
             <Button variant="contained" sx={{m:1, width:100, bgcolor: '#ff0000', '&:hover': {backgroundColor: '#ff0000'}}} onClick={this.resetState}>Clear</Button>
           </Grid>
         </Grid>
+        </Box>
       </>
     );
   }

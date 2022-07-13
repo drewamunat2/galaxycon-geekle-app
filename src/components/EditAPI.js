@@ -25,9 +25,6 @@ function EditAPI(props) {
       <Box 
         justifyContent="center"
         alignItems="center"
-        sx={{
-          overflowX: 'auto', WebkitTextSizeAdjust: 'none',
-        }}
       > 
         <Grid container justifyContent="center" alignItems="center" sx={{mb: 2}}>
           <Typography id="help-modal" color="#086788" variant="h3" component="h2">
