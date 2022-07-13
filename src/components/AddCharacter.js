@@ -107,7 +107,10 @@ class AddCharacter extends Component {
   }
 
   submitForm = (formData) => {
-    client.post('', formData).then(() => {console.alert("success")});
+    client.post('', formData)
+    .then(function (response) {
+      console.log(response);
+    });
     this.resetState();
   }
 
