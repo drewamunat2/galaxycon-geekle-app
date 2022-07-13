@@ -162,7 +162,7 @@ const columns = [
   {
     field: 'shop',
     headerName: 'shop link',
-    width: 300,
+    width: 500,
     editable: false,
     align: 'left',
     headerAlign: 'left',
@@ -183,6 +183,17 @@ export default function CharacterDataGrid() {
     setRows(rows);
   }
 
+  const arrayToString = (array) => {
+    let string = '';
+    const length = array.length;
+    for (let i = 0; i < length - 1; i++) {
+      string += array[i].toString();
+      string += ', ';
+    }
+    string += array[length - 1].toString();
+    return string;
+  }
+
   useEffect(() => {
     getData();
   }, []);
@@ -193,11 +204,14 @@ export default function CharacterDataGrid() {
       for (let character of characters) {
         let buildChacter = {name: '', gender: '', species: '', role: '', genRole: '', appearsIn: '', bothAppearsIn: '', genre: '', allGenres: '', platform: '', allPlatforms: '', owner: '', trademarkOwner: '', network: '', universe: '', shop: '', title: '', year: 0, decade: 0, id:0};
         for (let characteristic in character) {
-          if(characteristic !== '__v' && characteristic !== '_id' && characteristic !== 'image' && characteristic !== 'createdAt' && characteristic !== 'updatedAt' && characteristic !== 'num') {
+          if(characteristic !== '__v' && characteristic !== '_id' && characteristic !== 'image' && characteristic !== 'createdAt' && characteristic !== 'updatedAt' && characteristic !== 'num' && characteristic !== 'bothAppearsIn' && characteristic !== 'allGenres' && characteristic !== 'allPlatforms') {
             buildChacter[characteristic] = character[characteristic];
           }
         }
         buildChacter.id = character.num.toString();
+        buildChacter.bothAppearsIn = arrayToString(character.bothAppearsIn);
+        buildChacter.allGenres = arrayToString(character.allGenres);
+        buildChacter.allPlatforms = arrayToString(character.allPlatforms);
         buildRows.push(buildChacter);
       }
       createRows(buildRows);
