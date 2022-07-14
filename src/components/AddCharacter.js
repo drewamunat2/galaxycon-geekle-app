@@ -216,10 +216,6 @@ class AddCharacter extends Component {
             <Input name="decade" autoComplete="off" value={this.state.decade} onChange={this.handleOnChange} sx={{p:.25}}/>
           </Grid>
           <Grid container justifyContent="center" alignItems="center" alignSelf='center' sx={{my:1}}>
-            <Typography sx={{mr: 1}}>num: </Typography> 
-            <Input name="num" autoComplete="off" value={this.state.num} onChange={this.handleOnChange} sx={{p:.25}}/>
-          </Grid>
-          <Grid container justifyContent="center" alignItems="center" alignSelf='center' sx={{my:1}}>
             <Button variant="contained" sx={{m:1, width:200}} onClick={this.organizeForm}>Submit</Button>
             <Button variant="contained" sx={{m:1, width:100, bgcolor: '#ff0000', '&:hover': {backgroundColor: '#ff0000'}}} onClick={this.resetState}>Clear</Button>
           </Grid>
