@@ -315,12 +315,13 @@
       "title": "Scooby-Doo",
       "image": "https://cdn.shopify.com/s/files/1/0275/9209/7837/products/img377_470x.jpg?v=1641843131",
       "gender": "female",
-      "species": "Human",
+      "species": "human",
       "appearsIn": "Scooby-Doo",
       "bothAppearsIn": [
         "Scooby-Doo",
         "Scooby-Doo! & Batman",
         "Scooby-Doo and Guess Who?",
+        "Scooby-Doo Meets The Addams Family",
         "Lego Dimensions"
       ],
       "genre": "cartoon",
@@ -357,7 +358,7 @@
       "title": "Star Wars",
       "image": "https://cdn.shopify.com/s/files/1/0275/9209/7837/t/5/assets/pf-307226c9--00Starwars.jpg?v=1624378371",
       "gender": "male",
-      "species": "Human",
+      "species": "human",
       "appearsIn": "Star Wars",
       "bothAppearsIn": [
         "Star Wars",
@@ -1092,7 +1093,7 @@
       "title": "Masters of the Universe",
       "image": "https://cdn.shopify.com/s/files/1/0275/9209/7837/products/img527_1528c3d6-faa6-4cd5-92ac-ce101342cc57_360x.jpg?v=1650492541",
       "gender": "male",
-      "species": "Demon",
+      "species": "demon",
       "appearsIn": "He-Man and the Masters of the Universe",
       "bothAppearsIn": [
         "Masters of the Universe",
@@ -1136,7 +1137,7 @@
       "title": "Superman",
       "image": "https://cdn.shopify.com/s/files/1/0275/9209/7837/products/scan_friday_z_56_470x.jpg?v=1651526548",
       "gender": "male",
-      "species": "Kryptonian",
+      "species": "kryptonian",
       "appearsIn": "Superman",
       "bothAppearsIn": [
         "Superman",
@@ -1187,7 +1188,7 @@
       "title": "Avengers",
       "image": "https://cdn.shopify.com/s/files/1/0275/9209/7837/products/PXL_20210630_153734463_1024x1024@2x.jpg?v=1625071098",
       "gender": "male",
-      "species": "Eternal",
+      "species": "eternal",
       "appearsIn": "Avengers",
       "bothAppearsIn": [
         "Avengers",

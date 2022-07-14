@@ -55,7 +55,7 @@ const columns = [
   {
     field: 'appearsIn',
     headerName: 'main appearance',
-    width: 200,
+    width: 300,
     editable: false,
     align: 'center',
     headerAlign: 'center',

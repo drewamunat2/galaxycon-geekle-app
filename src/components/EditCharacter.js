@@ -98,8 +98,8 @@ class EditCharacter extends Component {
   submitForm = (id, character) => {
     console.log(id);
     client.put(id, character)
-    .then(function (response) {
-      alert('success. Hit clear to edit another character and refresh');
+    .then(() => {
+      alert('success. Hit clear and refresh to edit another character');
       this.resetState();
     })
   }
