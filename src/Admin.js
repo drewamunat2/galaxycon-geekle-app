@@ -11,6 +11,7 @@ class App extends Component {
       authenticate: false,
       addState: {},
       editState: {},
+      numCharacters: 0,
     };
   }
 
@@ -22,12 +23,19 @@ class App extends Component {
     window.localStorage.setItem("editState", JSON.stringify(this.state.editState));
   };
 
+  saveNumCharacters = () => {
+    window.localStorage.setItem("numCharacters", JSON.stringify(this.state.numCharacters));
+  };
+
   componentDidUpdate (prevProps, prevState) {
     if(prevState.addState !== this.state.addState) {
       this.saveAddState();
     }
     if(prevState.editState !== this.state.editState) {
       this.saveEditState();
+    }
+    if(prevState.numCharacters !== this.state.numCharacters) {
+      this.saveNumCharacters();
     }
   }
 
@@ -43,6 +51,11 @@ class App extends Component {
         editState: JSON.parse(window.localStorage.getItem("editState"))
       });
     }
+    if(JSON.parse(window.localStorage.getItem("numCharacters"))) {
+      this.setState({ 
+        numCharacters: JSON.parse(window.localStorage.getItem("numCharacters"))
+      });
+    }
   }
 
   updateAddState = (newState) => {
@@ -54,6 +67,12 @@ class App extends Component {
   updateEditState = (newState) => {
     this.setState({ 
       editState: newState
+    });
+  }
+
+  updateNumCharacters = (newState) => {
+    this.setState({ 
+      numCharacters: newState
     });
   }
   
@@ -87,6 +106,8 @@ class App extends Component {
             addState={this.state.addState}
             updateEditState={this.updateEditState}
             editState={this.state.editState}
+            numCharacters={this.state.numCharacters}
+            updateNumCharacters={this.updateNumCharacters}
           />
         </>
       );

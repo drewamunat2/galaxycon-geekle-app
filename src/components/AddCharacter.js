@@ -50,7 +50,6 @@ class AddCharacter extends Component {
       genRole: '',
       year: '',
       decade: '',
-      num: '',
     };
   }
 
@@ -77,7 +76,6 @@ class AddCharacter extends Component {
       genRole: '',
       year: '',
       decade: '',
-      num: '',
     });
   }
 
@@ -101,13 +99,12 @@ class AddCharacter extends Component {
     const formData = this.state;
     const year = this.stringToInt(this.state.year);
     const decade = this.stringToInt(this.state.decade);
-    const num = this.stringToInt(this.state.num);
     const bothAppearsIn = this.stringToArray(this.state.bothAppearsIn);
     const allGenres = this.stringToArray(this.state.allGenres);
     const allPlatforms = this.stringToArray(this.state.allPlatforms);
     formData.year = year;
     formData.decade = decade;
-    formData.num = num;
+    formData.num = this.props.numCharacters;
     formData.bothAppearsIn = bothAppearsIn;
     formData.allGenres = allGenres;
     formData.allPlatforms = allPlatforms;
