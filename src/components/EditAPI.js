@@ -36,6 +36,7 @@ function EditAPI(props) {
           updateAddState={updateAddState}
           addState={addState}
           numCharacters={numCharacters}
+          updateNumCharacters={updateNumCharacters}
         />
         <EditCharacter 
           updateEditState={updateEditState}

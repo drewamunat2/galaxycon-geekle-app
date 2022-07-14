@@ -117,6 +117,7 @@ class AddCharacter extends Component {
     .then(function (response) {
       alert('success please refresh to add another character');
       this.resetState();
+      this.props.updateNumCharacters(character.num + 1);
     })
     .catch(function (response) {  
       alert('fail');
