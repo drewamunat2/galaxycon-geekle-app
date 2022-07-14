@@ -279,6 +279,20 @@ class Search extends Component {
       };
       nameArray.push(nameObject);
     };
+    console.log(nameArray);
+    nameArray.sort((a, b) => {
+      let fa = a.label.toLowerCase(),
+          fb = b.label.toLowerCase();
+  
+      if (fa < fb) {
+          return -1;
+      }
+      if (fa > fb) {
+          return 1;
+      }
+      return 0;
+  });
+    console.log(nameArray);
     this.setState({allCharactersNames: nameArray});
   }
 
