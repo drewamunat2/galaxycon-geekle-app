@@ -42,7 +42,8 @@ class EditCharacter extends Component {
     this.setState({
       name: '',
       field: '',
-      input: ''
+      input: '',
+      character: {}
     });
   }
 
@@ -62,32 +63,47 @@ class EditCharacter extends Component {
     return integer;
   }
 
-  organizeForm = () => {
+  handleSubmit = () => {
     const formData = this.state;
-    const year = this.stringToInt(this.state.year);
-    const decade = this.stringToInt(this.state.decade);
-    const num = this.stringToInt(this.state.num);
-    const bothAppearsIn = this.stringToArray(this.state.bothAppearsIn);
-    const allGenres = this.stringToArray(this.state.allGenres);
-    const allPlatforms = this.stringToArray(this.state.allPlatforms);
-    formData.year = year;
-    formData.decade = decade;
-    formData.num = num;
-    formData.bothAppearsIn = bothAppearsIn;
-    formData.allGenres = allGenres;
-    formData.allPlatforms = allPlatforms;
-    console.log(formData);
-    this.submitForm(formData);
+    if(formData.name && formData.field && formData.input) {
+      if(formData.character){
+        console.log(formData.character);
+        const id = formData.character._id;
+        delete formData.character._id;
+        delete formData.character.__v;
+        delete formData.character.updatedAt;
+        delete formData.character.createdAt;
+        const formattedInput = this.formatInput(formData.field, formData.input);
+        formData.character[formData.field] = formattedInput;
+        this.submitForm(id, formData.character);
+      } else {
+        alert('finding character. try again in a second');
+      }
+    } else {
+      alert('Please complete form');
+    }
   }
 
-  submitForm = (formData) => {
-    client.post('', formData)
+  formatInput = (field, input) => {
+    let newInput = input;
+    if(field === 'year' || field === 'decade' || field === 'num') {
+      newInput = this.stringToInt(input);
+    }
+    else if(field === 'bothAppearsIn' || field === 'allGenres' || field === 'allPlatforms') {
+      newInput = this.stringToArray(input);
+    }
+    return newInput;
+  }
+
+  submitForm = (id, character) => {
+    console.log(id);
+    client.put(id, character)
     .then(function (response) {
+      alert('success. Hit clear to edit another character and refresh');
       this.resetState();
-      alert(response.message);
     })
-    .finally(function (response) {  
-      alert(response.message);
+    .catch(function (response) {  
+      alert('fail');
     })
   }
 
@@ -102,10 +118,11 @@ class EditCharacter extends Component {
   };
 
   getCharacter = async (name) => {
-    const { data } = await axios.get(`https://geekle-galaxycon.herokuapp.com/api/characters?name=${name}`);
-    this.setState({character: data.data});
-    console.log(data);
-    console.log(data.data.name + ": " + data.data)
+    console.log(name)
+    const { data } = await axios.get(`https://geekle-galaxycon.herokuapp.com/api/getCharacter?name=${name}`);
+    this.setState({character: data.data[0]});
+    console.log(data.data[0]);
+    console.log(data.data[0].name + ": " + data.data[0])
   }
 
   handleFieldChange = (event) => {
@@ -114,7 +131,6 @@ class EditCharacter extends Component {
 
   handleNameChange = (event) => {
     this.setState({name: event.target.value});
-    console.log(event.target.value);
     this.getCharacter(event.target.value);
   };
 
@@ -212,7 +228,7 @@ class EditCharacter extends Component {
             <Input name="input" autoComplete="off" placeholder="input new characteristic..." value={this.state.input} onChange={this.handleOnChange} sx={{width: 600, p:.25}}/>
           </Grid>
           <Grid container justifyContent="center" alignItems="center" alignSelf='center' sx={{my:1}}>
-            <Button variant="contained" sx={{m:1, width:200}} onClick={this.organizeForm}>Update</Button>
+            <Button variant="contained" sx={{m:1, width:200}} onClick={this.handleSubmit}>Update</Button>
             <Button variant="contained" sx={{m:1, width:100, bgcolor: '#ff0000', '&:hover': {backgroundColor: '#ff0000'}}} onClick={this.resetState}>Clear</Button>
           </Grid>
         </Grid>

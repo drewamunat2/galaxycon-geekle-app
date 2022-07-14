@@ -115,14 +115,14 @@ class AddCharacter extends Component {
     this.submitForm(formData);
   }
 
-  submitForm = (formData) => {
-    client.post('', formData)
+  submitForm = (character) => {
+    client.post('', character)
     .then(function (response) {
+      alert('success please refresh to add another character');
       this.resetState();
-      alert(response.message);
     })
-    .finally(function (response) {  
-      alert(response.message);
+    .catch(function (response) {  
+      alert('fail');
     })
   }
 
