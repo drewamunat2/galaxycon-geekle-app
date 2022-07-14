@@ -32,7 +32,8 @@ class EditCharacter extends Component {
     this.state = {
       name: '',
       field: '',
-      input: ''
+      input: '',
+      names: []
     };
   }
 
@@ -89,23 +90,25 @@ class EditCharacter extends Component {
   }
 
   handleOnChange = (e) => {
-    console.log("handleOnChange")
     const { value, name } = e.target;
     this.setState({ [name] : value });
   }
 
+  getNames = async () => {
+    const { data } = await axios.get(`https://geekle-galaxycon.herokuapp.com/api/names`);
+    this.setState({names: data.names});
+    console.log(data.names)
+  };
+
   handleFieldChange = (event) => {
-    console.log(event.target.value)
     this.setState({field: event.target.value});
   };
 
   handleNameChange = (event) => {
-    console.log(event.target.value)
     this.setState({name: event.target.value});
   };
 
   componentDidUpdate (prevProps, prevState) {
-    console.log("state update")
     if(prevState !== this.state) {
       this.props.updateEditState(this.state);
     }
@@ -113,6 +116,7 @@ class EditCharacter extends Component {
 
   componentDidMount() {
     this.setState(this.props.editState);
+    this.getNames();
   }
 
   render() {
@@ -128,7 +132,7 @@ class EditCharacter extends Component {
         </Grid>
         <Grid container justifyContent="center" alignItems="center" alignSelf='center' sx={style}>
           <Grid container justifyContent="center" alignItems="center" alignSelf='center' sx={{my:1}}>
-            <FormControl variant="standard" sx={{mr: 2, p:.25, width: 200, mt:-1}}>
+            <FormControl variant="filled" sx={{mr: 2, p:.25, width: 200, mt:-1}}>
               <InputLabel id="name-select-label">Name</InputLabel>
               <Select
                 labelId="name-select-label"
@@ -136,20 +140,24 @@ class EditCharacter extends Component {
                 value={this.state.name}
                 onChange={this.handleNameChange}
                 label="Name"
-                defaultValue="Name"
-                
                 sx={{
-                  p:1
+                  p:1,
+                  bgcolor: '#eddee1'
                 }}
               >
-                <MenuItem value="Name">
+                <MenuItem value="">
                   <em>None</em>
                 </MenuItem>
-                <MenuItem value="Batman">Batman</MenuItem>
-                <MenuItem value="Aang">Aang</MenuItem>
+                {this.state.names.length > 0 && this.state.names.map(option => {
+                  return (
+                    <MenuItem value={option}>
+                      {option}
+                    </MenuItem>
+                  )
+                })}
               </Select>
             </FormControl>            
-            <FormControl variant="standard" sx={{mr: 2, p:.25, width: 200, mt:-1}}>
+            <FormControl variant="filled" sx={{mr: 2, p:.25, width: 200, mt:-1}}>
               <InputLabel id="field-select-label">Field</InputLabel>
               <Select
                 labelId="field-select-label"
@@ -157,17 +165,36 @@ class EditCharacter extends Component {
                 value={this.state.field}
                 onChange={this.handleFieldChange}
                 label="Field"
-                defaultValue="Field"
                 sx={{
-                  p:1
+                  p:1,
+                  bgcolor: '#eddee1'
                 }}
               >
-                <MenuItem value="Field">
+                <MenuItem value="">
                   <em>None</em>
                 </MenuItem>
                 <MenuItem value="name">name</MenuItem>
-                <MenuItem value="selectName">selectName</MenuItem>
-                <MenuItem value="shop">shop</MenuItem>
+                <MenuItem value="selectName">name for easy mode</MenuItem>
+                <MenuItem value="shop">shop link</MenuItem>
+                <MenuItem value="title">name of shop</MenuItem>
+                <MenuItem value="image">shop image</MenuItem>
+                <MenuItem value="gender">gender</MenuItem>
+                <MenuItem value="species">species</MenuItem>
+                <MenuItem value="appearsIn">main appearance</MenuItem>
+                <MenuItem value="bothAppearsIn">every appearance</MenuItem>
+                <MenuItem value="genre">genre</MenuItem>
+                <MenuItem value="allGenres">allGenres</MenuItem>
+                <MenuItem value="platform">platform</MenuItem>
+                <MenuItem value="allPlatforms">all platforms</MenuItem>
+                <MenuItem value="owner">owner</MenuItem>
+                <MenuItem value="trademarkOwner">trademark owner</MenuItem>
+                <MenuItem value="network">network</MenuItem>
+                <MenuItem value="universe">universe</MenuItem>
+                <MenuItem value="role">role</MenuItem>
+                <MenuItem value="genRole">good or bad</MenuItem>
+                <MenuItem value="year">year</MenuItem>
+                <MenuItem value="decade">decade</MenuItem>
+                <MenuItem value="num">id</MenuItem>
               </Select>
             </FormControl>
           </Grid>
