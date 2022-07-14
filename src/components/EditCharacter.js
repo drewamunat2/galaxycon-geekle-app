@@ -102,9 +102,6 @@ class EditCharacter extends Component {
       alert('success. Hit clear to edit another character and refresh');
       this.resetState();
     })
-    .catch(function (response) {  
-      alert('fail');
-    })
   }
 
   handleOnChange = (e) => {

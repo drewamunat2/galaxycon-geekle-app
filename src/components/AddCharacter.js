@@ -115,12 +115,9 @@ class AddCharacter extends Component {
   submitForm = (character) => {
     client.post('', character)
     .then(function (response) {
-      alert('success please refresh to add another character');
+      alert('success please hit clear and refresh to add another character');
       this.resetState();
       this.props.updateNumCharacters(character.num + 1);
-    })
-    .catch(function (response) {  
-      alert('fail');
     })
   }
 
