@@ -33,7 +33,8 @@ class EditCharacter extends Component {
       name: '',
       field: '',
       input: '',
-      names: []
+      names: [],
+      character: {}
     };
   }
 
@@ -83,9 +84,10 @@ class EditCharacter extends Component {
     client.post('', formData)
     .then(function (response) {
       this.resetState();
+      alert(response.message);
     })
     .finally(function (response) {  
-      alert(response);
+      alert(response.message);
     })
   }
 
@@ -97,8 +99,14 @@ class EditCharacter extends Component {
   getNames = async () => {
     const { data } = await axios.get(`https://geekle-galaxycon.herokuapp.com/api/names`);
     this.setState({names: data.names});
-    console.log(data.names)
   };
+
+  getCharacter = async (name) => {
+    const { data } = await axios.get(`https://geekle-galaxycon.herokuapp.com/api/characters?name=${name}`);
+    this.setState({character: data.data});
+    console.log(data);
+    console.log(data.data.name + ": " + data.data)
+  }
 
   handleFieldChange = (event) => {
     this.setState({field: event.target.value});
@@ -106,6 +114,8 @@ class EditCharacter extends Component {
 
   handleNameChange = (event) => {
     this.setState({name: event.target.value});
+    console.log(event.target.value);
+    this.getCharacter(event.target.value);
   };
 
   componentDidUpdate (prevProps, prevState) {
@@ -150,7 +160,7 @@ class EditCharacter extends Component {
                 </MenuItem>
                 {this.state.names.length > 0 && this.state.names.map(option => {
                   return (
-                    <MenuItem value={option}>
+                    <MenuItem key={option} value={option}>
                       {option}
                     </MenuItem>
                   )

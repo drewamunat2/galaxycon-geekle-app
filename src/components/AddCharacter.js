@@ -119,7 +119,7 @@ class AddCharacter extends Component {
     client.post('', formData)
     .then(function (response) {
       this.resetState();
-      alert('success');
+      alert(response.message);
     })
     .finally(function (response) {  
       alert(response.message);
@@ -127,13 +127,11 @@ class AddCharacter extends Component {
   }
 
   handleOnChange = (e) => {
-    console.log("handleOnChange")
     const { value, name } = e.target;
     this.setState({ [name] : value });
   }
 
   componentDidUpdate (prevProps, prevState) {
-    console.log("state update")
     if(prevState !== this.state) {
       this.props.updateAddState(this.state);
     }
