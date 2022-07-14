@@ -9,19 +9,29 @@ class App extends Component {
     this.state = {
       user: '',
       authenticate: false,
-      addState: {}
+      addState: {},
+      editState: {},
     };
   }
 
   saveAddState = () => {
     window.localStorage.setItem("addState", JSON.stringify(this.state.addState));
-    console.log("saved to localStorage");
+    console.log("saved add to localStorage");
+  };
+
+  saveEditState = () => {
+    window.localStorage.setItem("editState", JSON.stringify(this.state.editState));
+    console.log("saved edit to localStorage");
   };
 
   componentDidUpdate (prevProps, prevState) {
     if(prevState.addState !== this.state.addState) {
       console.log("did update addState");
       this.saveAddState();
+    }
+    if(prevState.editState !== this.state.editState) {
+      console.log("did update editState");
+      this.saveEditState();
     }
   }
 
@@ -32,13 +42,25 @@ class App extends Component {
         addState: JSON.parse(window.localStorage.getItem("addState"))
       });
     }
+    if(JSON.parse(window.localStorage.getItem("editState"))) {
+      this.setState({ 
+        editState: JSON.parse(window.localStorage.getItem("editState"))
+      });
+    }
   }
 
   updateAddState = (newState) => {
     this.setState({ 
       addState: newState
     });
-    console.log("state updated");
+    console.log("state add updated");
+  }
+
+  updateEditState = (newState) => {
+    this.setState({ 
+      editState: newState
+    });
+    console.log("state edit updated");
   }
   
   render() {
@@ -69,6 +91,8 @@ class App extends Component {
           <EditAPI 
             updateAddState={this.updateAddState}
             addState={this.state.addState}
+            updateEditState={this.updateEditState}
+            editState={this.state.editState}
           />
         </>
       );

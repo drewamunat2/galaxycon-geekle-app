@@ -13,7 +13,8 @@ const style = {
   bgcolor: '#00000040',
   width: '70%', mx:'15%',
   overflowX: 'auto', WebkitTextSizeAdjust: 'none',
-  pt: 2
+  pt: 2,
+  mb: 12
 };
 
 const headerStyle = {

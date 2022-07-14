@@ -3,6 +3,7 @@ import { Box } from "@mui/system";
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 import AddCharacter from "./AddCharacter";
+import EditCharacter from "./EditCharacter";
 
 const theme = createTheme({
   components: {
@@ -18,7 +19,7 @@ const theme = createTheme({
 
 function EditAPI(props) {
 
-  const { updateAddState, addState } = props;
+  const { updateAddState, addState, editState, updateEditState } = props;
 
   return (
     <ThemeProvider theme={theme}>
@@ -34,6 +35,10 @@ function EditAPI(props) {
         <AddCharacter 
           updateAddState={updateAddState}
           addState={addState}
+        />
+        <EditCharacter 
+          updateEditState={updateEditState}
+          editState={editState}
         />
       </Box>
     </ThemeProvider>
