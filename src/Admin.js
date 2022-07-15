@@ -12,6 +12,7 @@ class App extends Component {
       addState: {},
       editState: {},
       numCharacters: 0,
+      deleteState: {}
     };
   }
 
@@ -23,9 +24,14 @@ class App extends Component {
     window.localStorage.setItem("editState", JSON.stringify(this.state.editState));
   };
 
+  saveDeleteState = () => {
+    window.localStorage.setItem("deleteState", JSON.stringify(this.state.deleteState));
+  };
+
   saveNumCharacters = () => {
     window.localStorage.setItem("numCharacters", JSON.stringify(this.state.numCharacters));
   };
+
 
   componentDidUpdate (prevProps, prevState) {
     if(prevState.addState !== this.state.addState) {
@@ -36,6 +42,9 @@ class App extends Component {
     }
     if(prevState.numCharacters !== this.state.numCharacters) {
       this.saveNumCharacters();
+    }
+    if(prevState.deleteState !== this.state.deleteState) {
+      this.saveDeleteState();
     }
   }
 
@@ -49,6 +58,11 @@ class App extends Component {
     if(JSON.parse(window.localStorage.getItem("editState"))) {
       this.setState({ 
         editState: JSON.parse(window.localStorage.getItem("editState"))
+      });
+    }
+    if(JSON.parse(window.localStorage.getItem("deleteState"))) {
+      this.setState({ 
+        deleteState: JSON.parse(window.localStorage.getItem("deleteState"))
       });
     }
     if(JSON.parse(window.localStorage.getItem("numCharacters"))) {
@@ -67,6 +81,12 @@ class App extends Component {
   updateEditState = (newState) => {
     this.setState({ 
       editState: newState
+    });
+  }
+
+  updateDeleteState = (newState) => {
+    this.setState({ 
+      deleteState: newState
     });
   }
 
@@ -106,6 +126,8 @@ class App extends Component {
             addState={this.state.addState}
             updateEditState={this.updateEditState}
             editState={this.state.editState}
+            updateDeleteState={this.updateDeleteState}
+            deleteState={this.state.deleteState}
             numCharacters={this.state.numCharacters}
             updateNumCharacters={this.updateNumCharacters}
           />

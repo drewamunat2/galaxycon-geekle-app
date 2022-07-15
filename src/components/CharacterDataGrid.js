@@ -31,7 +31,7 @@ const columns = [
   {
     field: 'species',
     headerName: 'species',
-    width: 100,
+    width: 150,
     editable: false,
     align: 'center',
     headerAlign: 'center',
@@ -202,7 +202,7 @@ export default function CharacterDataGrid() {
     let buildRows = [];
     if(characters.length > 0) {
       for (let character of characters) {
-        let buildChacter = {name: '', gender: '', species: '', role: '', genRole: '', appearsIn: '', bothAppearsIn: '', genre: '', allGenres: '', platform: '', allPlatforms: '', owner: '', trademarkOwner: '', network: '', universe: '', shop: '', title: '', year: 0, decade: 0, id:0};
+        let buildChacter = {name: '', gender: '', species: '', role: '', genRole: '', appearsIn: '', bothAppearsIn: '', genre: '', allGenres: '', platform: '', allPlatforms: '', owner: '', trademarkOwner: '', network: '', universe: '', shop: '', title: '', year: 0, decade: 0, id: 0};
         for (let characteristic in character) {
           if(characteristic !== '__v' && characteristic !== '_id' && characteristic !== 'image' && characteristic !== 'createdAt' && characteristic !== 'updatedAt' && characteristic !== 'num' && characteristic !== 'bothAppearsIn' && characteristic !== 'allGenres' && characteristic !== 'allPlatforms') {
             buildChacter[characteristic] = character[characteristic];
@@ -214,6 +214,7 @@ export default function CharacterDataGrid() {
         buildChacter.allPlatforms = arrayToString(character.allPlatforms);
         buildRows.push(buildChacter);
       }
+      buildRows.sort((a, b) => (a.id - b.id));
       createRows(buildRows);
       setShowData(true);
     }
