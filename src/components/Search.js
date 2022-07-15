@@ -1,9 +1,8 @@
 import React, { Component } from "react";
 import { Button, Grid } from "@mui/material";
 import PropTypes from "prop-types";
-//import axios from "axios";
+import axios from "axios";
 import Select from 'react-select'
-import data from '../data/db.json';
 
 const customStyles = {
   control: (base, state) => ({
@@ -219,17 +218,20 @@ class Search extends Component {
     this.props.updateGameStarted(true);
   };
 
-  fetchCharacter = /*async*/ (guess) => {
-    /*const characterAPI = 'http://192.168.1.18:3000/characters?name=';
+  fetchCharacter = async (guess) => {
+    if(this.state.showInfo === "selectName") {
+      guess = guess.split('(')[0];
+      console.log(guess);
+    }
+    const characterAPI = 'https://geekle-galaxycon.herokuapp.com/api/getCharacter?name=';
     const char = guess;
     try {
       const response = await axios.get(`${characterAPI}${char}`);
-      const data = response.data;
-      this.props.updateCharacters(data[0]);
+      const data = response.data.data;
       this.assertColors(data[0]);
     } catch (err) {
       console.log(err);
-    }*/
+    }/*
     const db = JSON.parse(JSON.stringify(data))
     let nameType = this.state.showInfo ? "selectName" : "name"
     for(let i = 0; i < db.characters.length; i++) {
@@ -237,33 +239,35 @@ class Search extends Component {
       if(char[nameType] === guess) {
         this.assertColors(char);
       }
-    }
+    }*/
   };
 
   componentDidMount = async () => {
-    /*const charactersAPI = 'http://192.168.1.18:3000/characters';
+    this.getCharacters();
+  }
+
+  getCharacters = async () => {
+    let nameType = this.state.showInfo ? "selectName" : "name";
     let nameArray = [];
     let nameObject = {
       id: '',
       value: ''
     };
-    try {
-      const response = await axios.get(`${charactersAPI}`);
-      const data = response.data;
-      data.forEach(n => {
-        nameObject = {
-          label: n.name,
-          value: n.name
-        };
-        nameArray.push(nameObject);
-      });
-      this.setState({allCharactersNames: nameArray});
+    try{
+    const { data } = await axios.get(`https://geekle-galaxycon.herokuapp.com/api/${nameType}s`);
+    for(let i = 0; i < data.names.length; i++) {
+      nameObject = {
+        label: data.names[i],
+        value: data.names[i]
+      };
+      nameArray.push(nameObject);
+    };
+    this.setState({allCharactersNames: nameArray});
     } catch (err) {
       console.log(err);
-    }*/
-    this.getCharacters();
+    }
   }
-
+/*
   getCharacters = () => {
     let nameType = this.state.showInfo ? "selectName" : "name";
     let nameArray = [];
@@ -294,7 +298,7 @@ class Search extends Component {
   });
     console.log(nameArray);
     this.setState({allCharactersNames: nameArray});
-  }
+  }*/
 
   componentDidUpdate (prevProps, prevState) {
     if(prevState.showInfo !== this.state.showInfo){

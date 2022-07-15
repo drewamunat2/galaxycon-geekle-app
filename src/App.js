@@ -3,9 +3,8 @@ import Header from "./components/Header";
 import Title from "./components/Title";
 import Search from "./components/Search";
 import Game from "./components/Game";
-//import axios from "axios";
+import axios from "axios";
 import { Box } from "@mui/material";
-import data from './data/db.json';
 class App extends Component {
   constructor(props) {
     super(props);
@@ -105,14 +104,21 @@ class App extends Component {
     }));
   }
 
-  setSolution = () => {
-    //const response = await axios.get(`http://192.168.1.18:3000/characters`);
-    //const randomCharacter = response.data[Math.floor(Math.random() * response.data.length)];
-    const db = JSON.parse(JSON.stringify(data));
-    const randomCharacterDate = this.getTomorrow();
-    const bigNum = (randomCharacterDate.getDate() + 1) * (randomCharacterDate.getMonth() + 1) * randomCharacterDate.getFullYear();
-    const randomCharacter = db.characters[Math.floor(bigNum % db.characters.length)];
-    return randomCharacter;
+  setSolution = async () => {
+    const solutionDate = this.getTomorrow();
+    const bigNum = solutionDate.getDate() * (solutionDate.getMonth() + 1) * solutionDate.getFullYear();
+    try{
+      const response = await axios.get(`https://geekle-galaxycon.herokuapp.com/api/solution?num=${bigNum}`);
+      const data = response.data;
+      const solution = data.solution;
+      delete solution._id;
+      delete solution.__v;
+      delete solution.updatedAt;
+      delete solution.createdAt;
+      return solution;
+    } catch (err) {
+      console.log(err);
+    }
   }
 
   getTimeRemaining = () => {
@@ -138,8 +144,6 @@ class App extends Component {
 
   //set a random character as the solution
   componentDidMount = async () => {
-    //const response = await axios.get(`http://192.168.1.18:3000/characters`);
-    //const randomCharacter = response.data[Math.floor(Math.random() * response.data.length)];
     if(JSON.parse(window.localStorage.getItem("changeTime"))) {     
       this.setState({ 
         tomorrow: JSON.parse(window.localStorage.getItem("changeTime"))
@@ -149,15 +153,25 @@ class App extends Component {
         tomorrow: this.getTomorrow()
       }));
     }
-    const db = JSON.parse(JSON.stringify(data))
-    console.log(this.state.tomorrow)
-    const randomCharacterDate = this.getTomorrow();
-    const bigNum = (randomCharacterDate.getDate() + 1) * (randomCharacterDate.getMonth() + 1) * randomCharacterDate.getFullYear();
-    const randomCharacter = db.characters[Math.floor(bigNum % db.characters.length)];
-    console.log(randomCharacter);
-    this.setState(() => ({ 
-      solution: randomCharacter
-    }));
+    //const db = JSON.parse(JSON.stringify(data))
+    //console.log(this.state.tomorrow)
+    const solutionDate = this.getTomorrow();
+    const bigNum = solutionDate.getDate() * (solutionDate.getMonth() + 1) * solutionDate.getFullYear();
+    try{
+      const response = await axios.get(`https://geekle-galaxycon.herokuapp.com/api/solution?num=${bigNum}`);
+      const data = response.data;
+      const solution = data.solution;
+      delete solution._id;
+      delete solution.__v;
+      delete solution.updatedAt;
+      delete solution.createdAt;
+      console.log(solution);
+      this.setState(() => ({ 
+      solution: solution
+      }));
+    } catch (err) {
+      console.log(err);
+    }
     this.getTime();
     this.setRightNow();
     const interval = setInterval(() => {
