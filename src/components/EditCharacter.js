@@ -73,9 +73,10 @@ class EditCharacter extends Component {
         delete formData.character.__v;
         delete formData.character.updatedAt;
         delete formData.character.createdAt;
+        const oldFieldValue = formData.character[formData.field]
         const formattedInput = this.formatInput(formData.field, formData.input);
         formData.character[formData.field] = formattedInput;
-        this.submitForm(id, formData.character);
+        this.submitForm(id, formData.character, oldFieldValue);
       } else {
         alert('finding character. try again in a second');
       }
@@ -95,11 +96,25 @@ class EditCharacter extends Component {
     return newInput;
   }
 
-  submitForm = (id, character) => {
+  emailBody = (character) => {
+    return JSON.stringify(character);
+  }
+
+  emailSubject = (oldFieldValue) => {
+    return 'Edit: ' + this.state.name + ' field: ' + this.state.field + ' from: ' + oldFieldValue + ' to: ' + this.state.input;
+  }
+
+  emailTo = () => {
+    return 'drew@superconventions.com';
+  }
+  
+
+  submitForm = (id, character, oldFieldValue) => {
     console.log(id);
     client.put(id, character)
     .then(() => {
       alert('success. Hit clear and refresh to edit another character');
+      window.open(`mailto:${this.emailTo()}?subject=${this.emailSubject(oldFieldValue)}&body=${this.emailBody(character)}`);
       this.resetState();
     })
   }

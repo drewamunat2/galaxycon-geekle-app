@@ -112,10 +112,23 @@ class AddCharacter extends Component {
     this.submitForm(formData);
   }
 
+  emailBody = () => {
+    return JSON.stringify(this.state);
+  }
+
+  emailSubject = () => {
+    return 'ADD: ' + this.state.name;
+  }
+
+  emailTo = () => {
+    return 'drew@superconventions.com';
+  }
+
   submitForm = (character) => {
     client.post('', character)
     .then(() => {
       alert('success please hit clear and refresh to add another character');
+      window.open(`mailto:${this.emailTo()}?subject=${this.emailSubject()}&body=${this.emailBody()}`);
       this.resetState();
       this.props.updateNumCharacters(character.num + 1);
     })
