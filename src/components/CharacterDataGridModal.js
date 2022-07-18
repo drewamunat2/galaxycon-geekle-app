@@ -8,6 +8,7 @@ import { createTheme } from '@mui/material/styles';
 
 const style = {
   maxWidth: '1300px',
+  minWidth: '350px',
   bgcolor: '#eddee1',
   borderRadius: '10px',
   margin: '2% auto',

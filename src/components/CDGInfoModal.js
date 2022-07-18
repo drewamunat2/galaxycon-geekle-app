@@ -5,7 +5,7 @@ import InfoIcon from '@mui/icons-material/Info';
 import CloseIcon from '@mui/icons-material/Close';
 
 const style = {
-  maxWidth: '350px',
+  maxWidth: '375px',
   bgcolor: '#eddee1',
   borderRadius: '10px',
   margin: '50px auto',
@@ -52,15 +52,15 @@ function CDGInfoModal() {
               How To Use
             </Typography>
           </Grid>
-          <Grid container justifyContent="center" alignItems="center" sx={{mt: 3}}>
+          <Grid container justifyContent="center" alignItems="center" sx={{mt: 1}}>
             <Typography display='block' id="rules-of-the-game" color="#086788" variant="h7">
               Easy Mode is activated, which allows access to the full character list data.
               Each category is sortable and filterable, with the option to hide and show each column.
-              "All appearances, platforms, and genres" categories are hidden and can be unhidden if needed.
+              Yellow hint categories are hidden and can be unhidden if needed.
             </Typography>
           </Grid>  
           <Grid container justifyContent="center" alignItems="center" sx={{my: 1}}>
-            <Typography id="help-modal" color="#086788" variant="h6" component="h2">
+            <Typography id="help-modal" color="#086788" variant="h5" component="h2">
               Symbols in Column Header
             </Typography>
             <Typography display='block' id="rules-of-the-game" color="#08678890" variant="h7">
@@ -68,11 +68,28 @@ function CDGInfoModal() {
             </Typography>
           </Grid>
           <Grid container justifyContent="center" alignItems="center">
-            <Typography display='block' id="rules-of-the-game" color="#086788" variant="h7">
+            <Typography display='block' id="rules-of-the-game" color="#086788" variant="h6">
               <b>⬆</b>: sort rows by a specific column
             </Typography>
+            <Typography display='block' id="rules-of-the-game" color="#086788" variant="h6">
+              <b>︙</b>: more advanced filtering such as:
+            </Typography>
+          </Grid>
+          <Grid container justifyContent="left" textAlign="left">
+            <Typography display='block' id="rules-of-the-game" color="#086788" variant="h7" sx={{mt:1}}>
+            <b>Sort by ASC</b>: sort rows based on this column's category in ascending order
+            </Typography>
             <Typography display='block' id="rules-of-the-game" color="#086788" variant="h7">
-              <b>︙</b>: more advanced filtering
+            <b>Sort by DESC</b>: sort rows based on this column's category in descending order
+            </Typography>
+            <Typography display='block' id="rules-of-the-game" color="#086788" variant="h7">
+            <b>Filter</b>: open filter window 
+            </Typography>
+            <Typography display='block' id="rules-of-the-game" color="#086788" variant="h7">
+            <b>Hide</b>: hide a specific column from the data grid
+            </Typography>
+            <Typography display='block' id="rules-of-the-game" color="#086788" variant="h7">
+            <b>Show colums</b>: open column control menu
             </Typography>
           </Grid>  
         </Grid>

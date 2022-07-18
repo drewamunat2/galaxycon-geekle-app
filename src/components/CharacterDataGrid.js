@@ -35,6 +35,7 @@ const columns = [
     editable: false,
     align: 'center',
     headerAlign: 'center',
+    hide: true
   },
   {
     field: 'role',
@@ -51,6 +52,7 @@ const columns = [
     editable: false,
     align: 'center',
     headerAlign: 'center',
+    hide: true
   },
   {
     field: 'appearsIn',
@@ -83,6 +85,7 @@ const columns = [
     editable: false,
     align: 'center',
     headerAlign: 'center',
+    hide: true
   },
   {
     field: 'trademarkOwner',
@@ -91,6 +94,7 @@ const columns = [
     editable: false,
     align: 'center',
     headerAlign: 'center',
+    hide: true
   },
   {
     field: 'network',
@@ -99,6 +103,7 @@ const columns = [
     editable: false,
     align: 'center',
     headerAlign: 'center',
+    hide: true
   },
   {
     field: 'universe',
@@ -107,6 +112,7 @@ const columns = [
     editable: false,
     align: 'center',
     headerAlign: 'center',
+    hide: true
   },
   {
     field: 'year',
@@ -123,6 +129,7 @@ const columns = [
     editable: false,
     align: 'center',
     headerAlign: 'center',
+    hide: true
   },
   {
     field: 'allPlatforms',
