@@ -14,7 +14,7 @@ root.render(
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="admin" element={<Admin />} />
-        <Route path="characters" element={<CharacterList />} />
+        <Route path="characters-in-geekle" element={<CharacterList />} />
       </Routes>
     </Router>
   </React.StrictMode>
