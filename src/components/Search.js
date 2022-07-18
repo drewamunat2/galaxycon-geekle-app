@@ -1,8 +1,22 @@
 import React, { Component } from "react";
-import { Button, Grid } from "@mui/material";
+import { Grid } from "@mui/material";
 import PropTypes from "prop-types";
 import axios from "axios";
 import Select from 'react-select'
+import CharacterDataGridModal from "./CharacterDataGridModal";
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+
+const theme = createTheme({
+  MuiIconButton: {
+    styleOverrides: {
+      root: {
+        "&:hover" :{
+          backgroundColor: 'transparent'
+        }
+      }
+    }
+  },
+});
 
 const customStyles = {
   control: (base, state) => ({
@@ -81,7 +95,8 @@ class Search extends Component {
     this.state = {
       currentGuess: '',
       allCharactersNames: [],
-      showInfo: ''
+      showInfo: '',
+      openModal: false
     };
   }
 
@@ -267,61 +282,15 @@ class Search extends Component {
       console.log(err);
     }
   }
-/*
-  getCharacters = () => {
-    let nameType = this.state.showInfo ? "selectName" : "name";
-    let nameArray = [];
-    let nameObject = {
-      id: '',
-      value: ''
-    };
-    const db = JSON.parse(JSON.stringify(data));
-    for(let i = 0; i < db.characters.length; i++) {
-      nameObject = {
-        label: db.characters[i][nameType],
-        value: db.characters[i][nameType]
-      };
-      nameArray.push(nameObject);
-    };
-    console.log(nameArray);
-    nameArray.sort((a, b) => {
-      let fa = a.label.toLowerCase(),
-          fb = b.label.toLowerCase();
-  
-      if (fa < fb) {
-          return -1;
-      }
-      if (fa > fb) {
-          return 1;
-      }
-      return 0;
-  });
-    console.log(nameArray);
-    this.setState({allCharactersNames: nameArray});
-  }*/
 
   componentDidUpdate (prevProps, prevState) {
     if(prevState.showInfo !== this.state.showInfo){
       this.getCharacters();
-      this.props.updateMode()
     }
   }
 
   handleChange = (selectedOption) => {
     this.fetchCharacter(selectedOption.label);
-  }
-
-  handleClick = () => {
-    this.setState((prevState) => ({
-      showInfo: !prevState.showInfo
-    }));
-  }
-
-  showInfoState = () => {
-    if (this.state.showInfo) {
-      return 'ON';
-    }
-    return 'OFF';
   }
 
   render() {
@@ -404,19 +373,12 @@ class Search extends Component {
               />
             </Grid>
           </Grid>
-          <Grid
-            container
-            alignItems="center"
-            justifyContent="center"
-          >
-            <Button 
-              variant="contained" 
-              sx={{my: 1, borderColor: "blue", color: '#FFF0FF', borderRadius: 5}}
-              onClick={() => this.handleClick()}
-            >
-              📋 Character Info {this.showInfoState()}
-            </Button>
-          </Grid>
+          <ThemeProvider theme={theme}>
+            <CharacterDataGridModal
+              updateMode={this.props.updateMode}
+              mode={this.props.mode}
+            />
+          </ThemeProvider>
         </>
       );
     }
@@ -428,5 +390,6 @@ export default Search;
 Search.propTypes = {
   updateCharacters: PropTypes.func.isRequired,
   updateColors: PropTypes.func.isRequired,
-  updateOutOfTurns: PropTypes.func.isRequired
+  updateOutOfTurns: PropTypes.func.isRequired,
+  updateMode: PropTypes.func.isRequired,
 };

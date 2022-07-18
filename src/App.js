@@ -165,7 +165,6 @@ class App extends Component {
       delete solution.__v;
       delete solution.updatedAt;
       delete solution.createdAt;
-      console.log(solution);
       this.setState(() => ({ 
       solution: solution
       }));
@@ -384,6 +383,7 @@ class App extends Component {
           isCorrect={this.state.isCorrect}
           updateGameStarted={this.updateGameStarted}
           updateMode={this.updateMode}
+          mode={this.state.mode}
         />
         <Game 
           characters={this.state.characters}

@@ -132,6 +132,7 @@ const columns = [
     sortable: false,
     align: 'center',
     headerAlign: 'center',
+    hide: true
   },
   {
     field: 'allGenres',
@@ -141,6 +142,7 @@ const columns = [
     sortable: false,
     align: 'left',
     headerAlign: 'left',
+    hide: true
   },
   {
     field: 'bothAppearsIn',
@@ -150,6 +152,7 @@ const columns = [
     sortable: false,
     align: 'left',
     headerAlign: 'left',
+    hide: true
   },
   {
     field: 'title',
@@ -158,6 +161,7 @@ const columns = [
     editable: false,
     align: 'center',
     headerAlign: 'center',
+    hide: true
   },
   {
     field: 'shop',
@@ -166,6 +170,7 @@ const columns = [
     editable: false,
     align: 'left',
     headerAlign: 'left',
+    hide: true
   },
 ];
 
@@ -234,7 +239,6 @@ export default function CharacterDataGrid() {
           },
           bgcolor: '#ffdff050'
         }}
-        getRowClassName='cell--textCenter'
       /> : <Grid container alignItems="center" justifyContent='center' sx={{mt: 15, width: '100%'}}><CircularProgress /></Grid>}
     </Box>
   );

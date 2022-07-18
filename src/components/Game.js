@@ -41,28 +41,27 @@ function Game(props) {
         characters.map((character, index) => {
           colorMap = colors.find(item => item.key === character.name);
           return (
-              <Grid
-                container
-                key={index}
-                justifyContent="center"
-                alignItems="center"
-                sx={{
-                  minWidth: 823
-                }}
-              >
-                <Character
-                  character={character}
-                  nameColor={colorMap.colors.name}
-                  genderColor={colorMap.colors.gender}
-                  appearsInColor={colorMap.colors.appearsIn}
-                  genreColor={colorMap.colors.genre}
-                  platformColor={colorMap.colors.platform}
-                  roleColor={colorMap.colors.role}
-                  yearColor={colorMap.colors.year}
-                  arrow={arrow(character.year)}
-                  icon={icon(character.year)} />
-              </Grid>
-            
+            <Grid
+              container
+              key={index}
+              justifyContent="center"
+              alignItems="center"
+              sx={{
+                minWidth: 823
+              }}
+            >
+              <Character
+                character={character}
+                nameColor={colorMap.colors.name}
+                genderColor={colorMap.colors.gender}
+                appearsInColor={colorMap.colors.appearsIn}
+                genreColor={colorMap.colors.genre}
+                platformColor={colorMap.colors.platform}
+                roleColor={colorMap.colors.role}
+                yearColor={colorMap.colors.year}
+                arrow={arrow(character.year)}
+                icon={icon(character.year)} />
+            </Grid>
           )
         })
       }

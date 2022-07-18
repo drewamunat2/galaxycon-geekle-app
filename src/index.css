@@ -9,6 +9,10 @@ html, body {
   width: 400;
 }
 
+body::backdrop {
+  background-color: #fff0ff;
+}
+
 .title {
   font-size: 700;
 }

@@ -1,10 +1,5 @@
-import IconButton from '@mui/material/IconButton';
-//import logo from '../assets/GalaxyconlogoSmall.jpeg'
-//import HistoryIcon from '@mui/icons-material/History';
-//import TimelineIcon from '@mui/icons-material/Timeline';
-//import InfoIcon from '@mui/icons-material/Info';
+import { Paper, IconButton } from '@mui/material';
 
-import { Paper } from '@mui/material';
 import Settings from './Settings';
 import Help from './Help';
 import Stats from './Stats';
