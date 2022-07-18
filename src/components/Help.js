@@ -39,7 +39,7 @@ function Help(props) {
 
   return (
     <>
-      <IconButton color="primary" onClick={handleOpen}>
+      <IconButton color="primary" onClick={handleOpen} sx={{"&:hover": {color: '#086788'}}}>
         <HelpOutlineIcon/>
       </IconButton>
       <Modal

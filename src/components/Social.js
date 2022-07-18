@@ -29,28 +29,29 @@ function Social() {
           backgroundColor: '#fff0ff'
         }}
       > 
-        <IconButton color="primary" href='https://www.facebook.com/galaxyconlive/'>
+        <IconButton color="primary" href='https://www.facebook.com/galaxyconlive/' sx={{"&:hover": {color: '#086788'}}}>
           <FacebookIcon/>
         </IconButton>
-        <IconButton color="primary" href='https://www.instagram.com/galaxyconlive/'>
+        <IconButton color="primary" href='https://www.instagram.com/galaxyconlive/' sx={{"&:hover": {color: '#086788'}}}>
           <InstagramIcon/>
         </IconButton>
-        <IconButton color="primary" href='https://twitter.com/galaxyconlive'>
+        <IconButton color="primary" href='https://twitter.com/galaxyconlive' sx={{"&:hover": {color: '#086788'}}}>
           <TwitterIcon/>
         </IconButton>
-        <IconButton color="primary" href='https://www.youtube.com/galaxycon'>
+        <IconButton color="primary" href='https://www.youtube.com/galaxycon' sx={{"&:hover": {color: '#086788'}}}>
           <FaYoutube/>
         </IconButton>
-        <IconButton color="primary" href='https://www.tiktok.com/@galaxycon'>
+        <IconButton color="primary" href='https://www.tiktok.com/@galaxycon' sx={{"&:hover": {color: '#086788'}}}>
           <FaTiktok/>
         </IconButton>
         <IconButton 
           color="primary" 
-          href='mailto:info@galaxycon.com?subject=Geekle Help'
+          href='mailto:info@galaxycon.com?subject=Geekle Help' 
+          sx={{"&:hover": {color: '#086788'}}}
         >
           <EmailIcon/>
         </IconButton>
-        <IconButton color="primary" href='https://galaxycon.com/'>
+        <IconButton color="primary" href='https://galaxycon.com/' sx={{"&:hover": {color: '#086788'}}}>
           <LanguageIcon/>
         </IconButton>
         <IconButton />
@@ -74,6 +75,7 @@ function Social() {
           aria-label="Open Social Media"
           title="Open Social Media"
           color="primary"
+          sx={{"&:hover": {color: '#086788'}}}
         >
           <AiOutlineMenu/>
         </IconButton>
@@ -93,28 +95,29 @@ function Social() {
           }}
         >
           <MenuItem>
-            <IconButton color="primary" href='https://www.facebook.com/galaxyconlive/'>
+            <IconButton color="primary" href='https://www.facebook.com/galaxyconlive/' sx={{"&:hover": {color: '#086788'}}}>
               <FacebookIcon/>
             </IconButton>
-            <IconButton color="primary" href='https://www.instagram.com/galaxyconlive/'>
+            <IconButton color="primary" href='https://www.instagram.com/galaxyconlive/' sx={{"&:hover": {color: '#086788'}}}>
               <InstagramIcon/>
             </IconButton>
-            <IconButton color="primary" href='https://twitter.com/galaxyconlive'>
+            <IconButton color="primary" href='https://twitter.com/galaxyconlive' sx={{"&:hover": {color: '#086788'}}}>
               <TwitterIcon/>
             </IconButton>
-            <IconButton color="primary" href='https://www.youtube.com/galaxycon'>
+            <IconButton color="primary" href='https://www.youtube.com/galaxycon' sx={{"&:hover": {color: '#086788'}}}>
               <FaYoutube/>
             </IconButton>
-            <IconButton color="primary" href='https://www.tiktok.com/@galaxycon'>
+            <IconButton color="primary" href='https://www.tiktok.com/@galaxycon' sx={{"&:hover": {color: '#086788'}}}>
               <FaTiktok/>
             </IconButton>
             <IconButton 
               color="primary" 
               href='mailto:info@galaxycon.com?subject=Geekle Help'
+              sx={{"&:hover": {color: '#086788'}}}
             >
               <EmailIcon/>
             </IconButton>
-            <IconButton color="primary" href='https://galaxycon.com/'>
+            <IconButton color="primary" href='https://galaxycon.com/' sx={{"&:hover": {color: '#086788'}}}>
               <LanguageIcon/>
             </IconButton>
           </MenuItem>

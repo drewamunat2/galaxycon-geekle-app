@@ -168,7 +168,7 @@ function Stats(props) {
   } else {
     return (
       <>
-        <IconButton color="primary" onClick={handleOpen}>
+        <IconButton color="primary" onClick={handleOpen} sx={{"&:hover": {color: '#086788'}}}>
           <IoIosStats/>
         </IconButton>
         <Modal

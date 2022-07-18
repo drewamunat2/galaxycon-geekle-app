@@ -7,17 +7,74 @@ import CharacterDataGridModal from "./CharacterDataGridModal";
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 const theme = createTheme({
-  MuiIconButton: {
-    styleOverrides: {
-      root: {
-        "&:hover" :{
+  palette: {
+    primary: {
+      main: '#78586F90',
+      dark: '#78586F',
+    },
+    secondary: {
+      main: '#fff0ff',
+    },
+    success: {
+      main: '#6CA663',
+    },
+    warning: {
+      main: '#E0CA3C',
+    },
+    info: {
+      main: '#086788'
+    }
+  },
+  components: {
+    MuiMenu: {
+      styleOverrides: {
+        list: {
+          backgroundColor: '#fff0ff',
+        }
+      }
+    },
+    MuiIconButton: {
+      styleOverrides: {
+        root: {
+          "&:hover" :{
+            backgroundColor: 'transparent'
+          }
+        }
+      }
+    },
+    MuiMenuItem: {
+      styleOverrides: {
+        root: {
+          "&:hover" :{
+            backgroundColor: 'transparent'
+          }
+        }
+      }
+    },
+    MuiCard: {
+      styleOverrides: {
+        root: {
+          backgroundColor: 'transparent',
+          boxShadow: 'none'
+        }
+      }
+    },
+    MuiCardHeader: {
+      styleOverrides: {
+        root: {
+          backgroundColor: 'transparent',
+        }
+      }
+    },
+    MuiCardMedia: {
+      styleOverrides: {
+        root: {
           backgroundColor: 'transparent'
         }
       }
     }
   },
 });
-
 const customStyles = {
   control: (base, state) => ({
     ...base,
@@ -286,6 +343,9 @@ class Search extends Component {
   componentDidUpdate (prevProps, prevState) {
     if(prevState.showInfo !== this.state.showInfo){
       this.getCharacters();
+    }
+    if(prevProps.mode !== this.props.mode){
+      this.setState({showInfo: this.props.mode});
     }
   }
 

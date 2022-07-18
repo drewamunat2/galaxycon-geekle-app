@@ -103,7 +103,7 @@ export default function CharacterDataGridModal (props) {
         <Grid container sx={style}>
           <Grid container justifyContent="right" alignItems="center" sx={{bgcolor: '#ffdff050'}}>
             <Grid item xs>
-              <Typography id="rules-of-the-game" color="#086788" sx={{ mb: 2, mt: 2 }}>
+              <Typography id="rules-of-the-game" color="#086788" sx={{ mb: 0, mt: 2 }}>
                 Full Character List <CDGInfoModal />
               </Typography>
             </Grid>

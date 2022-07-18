@@ -28,7 +28,7 @@ function Settings() {
 
   return (
     <>
-      <IconButton color="primary" onClick={handleOpen}>
+      <IconButton color="primary" onClick={handleOpen} sx={{"&:hover": {color: '#086788'}}}>
         <SettingsIcon/>
       </IconButton>
       <Modal

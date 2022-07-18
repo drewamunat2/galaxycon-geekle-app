@@ -2,14 +2,13 @@ import { useState } from 'react';
 import IconButton from '@mui/material/IconButton';
 import { Modal, Grid, Typography } from '@mui/material';
 import InfoIcon from '@mui/icons-material/Info';
-
 import CloseIcon from '@mui/icons-material/Close';
 
 const style = {
   maxWidth: '350px',
   bgcolor: '#eddee1',
   borderRadius: '10px',
-  margin: '30px auto',
+  margin: '50px auto',
   textAlign: 'center',
   boxShadow: '2px 2px 10px rgba(0,0,0,0.3)',
   px: 3,
@@ -28,7 +27,7 @@ function CDGInfoModal() {
 
   return (
     <>
-      <IconButton color="primary" onClick={handleOpen}>
+      <IconButton color="primary" onClick={handleOpen} sx={{"&:hover": {color: '#086788'}}}>
         <InfoIcon/>
       </IconButton>
       <Modal
@@ -54,12 +53,26 @@ function CDGInfoModal() {
             </Typography>
           </Grid>
           <Grid container justifyContent="center" alignItems="center" sx={{mt: 3}}>
-            <Typography display='block' id="rules-of-the-game" color="#086788" variant="h6">
+            <Typography display='block' id="rules-of-the-game" color="#086788" variant="h7">
               Easy Mode is activated, which allows access to the full character list data.
               Each category is sortable and filterable, with the option to hide and show each column.
               "All appearances, platforms, and genres" categories are hidden and can be unhidden if needed.
-              To sort rows by a specific column, hit the arrow in the column header to indicate sorting in ascending or descending order. 
-              For more advanced filtering, click the three dots in the column header.
+            </Typography>
+          </Grid>  
+          <Grid container justifyContent="center" alignItems="center" sx={{my: 1}}>
+            <Typography id="help-modal" color="#086788" variant="h6" component="h2">
+              Symbols in Column Header
+            </Typography>
+            <Typography display='block' id="rules-of-the-game" color="#08678890" variant="h7">
+              (hover over the column header to see symbols)
+            </Typography>
+          </Grid>
+          <Grid container justifyContent="center" alignItems="center">
+            <Typography display='block' id="rules-of-the-game" color="#086788" variant="h7">
+              <b>⬆</b>: sort rows by a specific column
+            </Typography>
+            <Typography display='block' id="rules-of-the-game" color="#086788" variant="h7">
+              <b>︙</b>: more advanced filtering
             </Typography>
           </Grid>  
         </Grid>
