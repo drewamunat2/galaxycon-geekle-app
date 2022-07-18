@@ -30,6 +30,7 @@ const theme = createTheme({
 
 export default function CharacterDataGridModal (props) {
 
+
   const { updateMode, mode } = props;
 
   const big = useMediaQuery(theme.breakpoints.up('laptop'));
@@ -52,7 +53,6 @@ export default function CharacterDataGridModal (props) {
       updateMode();
       setColor('green');
     }
-    console.log(53)
   }, [showInfo, updateMode]);
 
   //checks if mode is EASY on mounting
@@ -61,9 +61,7 @@ export default function CharacterDataGridModal (props) {
       setColor('green');
       setShowInfo(true);
     }
-    console.log(61)
   }, [mode]);
-
 
   return (
     <>
