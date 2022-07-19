@@ -291,9 +291,8 @@ class Search extends Component {
   };
 
   fetchCharacter = async (guess) => {
-    if(this.state.showInfo === "selectName") {
+    if(this.state.showInfo) {
       guess = guess.split('(')[0];
-      console.log(guess);
     }
     const characterAPI = 'https://geekle-galaxycon.herokuapp.com/api/getCharacter?name=';
     const char = guess;
@@ -344,9 +343,10 @@ class Search extends Component {
     if(prevState.showInfo !== this.state.showInfo){
       this.getCharacters();
     }
-    if(prevProps.mode !== this.props.mode){
-      this.setState({showInfo: this.props.mode});
-    }
+  }
+
+  updateShowInfo = () => {
+    this.setState({showInfo: true});
   }
 
   handleChange = (selectedOption) => {
@@ -437,6 +437,7 @@ class Search extends Component {
             <CharacterDataGridModal
               updateMode={this.props.updateMode}
               mode={this.props.mode}
+              updateShowInfo={this.updateShowInfo}
             />
           </ThemeProvider>
         </>

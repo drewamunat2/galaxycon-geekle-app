@@ -18,7 +18,7 @@ const columns = [
     description: 'This column has a value getter and is not sortable.',
     width: 160,
     align: 'center',
-    headerAlign: 'center',
+    headerAlign: 'center'
   },
   {
     field: 'gender',
@@ -35,7 +35,7 @@ const columns = [
     editable: false,
     align: 'center',
     headerAlign: 'center',
-    hide: true
+    //hide: true
   },
   {
     field: 'role',
@@ -52,7 +52,7 @@ const columns = [
     editable: false,
     align: 'center',
     headerAlign: 'center',
-    hide: true
+    //hide: true
   },
   {
     field: 'appearsIn',
@@ -81,11 +81,11 @@ const columns = [
   {
     field: 'owner',
     headerName: 'owner',
-    width: 150,
+    width: 250,
     editable: false,
     align: 'center',
     headerAlign: 'center',
-    hide: true
+    //hide: true
   },
   {
     field: 'trademarkOwner',
@@ -94,7 +94,7 @@ const columns = [
     editable: false,
     align: 'center',
     headerAlign: 'center',
-    hide: true
+    //hide: true
   },
   {
     field: 'network',
@@ -103,7 +103,7 @@ const columns = [
     editable: false,
     align: 'center',
     headerAlign: 'center',
-    hide: true
+    //hide: true
   },
   {
     field: 'universe',
@@ -112,7 +112,7 @@ const columns = [
     editable: false,
     align: 'center',
     headerAlign: 'center',
-    hide: true
+    //hide: true
   },
   {
     field: 'year',
@@ -129,7 +129,7 @@ const columns = [
     editable: false,
     align: 'center',
     headerAlign: 'center',
-    hide: true
+    //hide: true
   },
   {
     field: 'allPlatforms',
@@ -139,7 +139,7 @@ const columns = [
     sortable: false,
     align: 'center',
     headerAlign: 'center',
-    hide: true
+    //hide: true
   },
   {
     field: 'allGenres',
@@ -149,7 +149,7 @@ const columns = [
     sortable: false,
     align: 'left',
     headerAlign: 'left',
-    hide: true
+    //hide: true
   },
   {
     field: 'bothAppearsIn',
@@ -159,7 +159,7 @@ const columns = [
     sortable: false,
     align: 'left',
     headerAlign: 'left',
-    hide: true
+    //hide: true
   },
   {
     field: 'title',
@@ -168,7 +168,7 @@ const columns = [
     editable: false,
     align: 'center',
     headerAlign: 'center',
-    hide: true
+    //hide: true
   },
   {
     field: 'shop',
@@ -177,7 +177,7 @@ const columns = [
     editable: false,
     align: 'left',
     headerAlign: 'left',
-    hide: true
+    //hide: true
   },
 ];
 
@@ -239,6 +239,11 @@ export default function CharacterDataGrid() {
         columns={columns}
         disableSelectionOnClick
         hideFooter
+        /*initialState={{
+          sorting: {
+            sortModel: [{field: 'name', sort:'asc'}]
+          }
+        }}*/
         sx={{
           '& .MuiDataGrid-cell': {
             align: "center",

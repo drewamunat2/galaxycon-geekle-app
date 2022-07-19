@@ -16,6 +16,7 @@ const style = {
   textAlign: 'center',
   boxShadow: '2px 2px 10px rgba(0,0,0,0.3)',
   px: 3,
+  overflow: 'scroll',
   py: 2
 };
 
@@ -38,6 +39,7 @@ const styleNoSolution = {
   margin: '10% auto',
   textAlign: 'center',
   boxShadow: '2px 2px 10px rgba(0,0,0,0.3)',
+  overflow: 'scroll',
   px: 3,
   py: 2
 };
@@ -82,7 +84,6 @@ function Stats(props) {
           disableAutoFocus={true}
           sx={{
             position: 'absolute',
-            overflow: 'scroll',
             display: { xs: 'none', lg: 'flex'}
           }}
         >
@@ -127,7 +128,6 @@ function Stats(props) {
           disableAutoFocus={true}
           sx={{
             position: 'absolute',
-            overflow: 'scroll',
             display: { xs: 'flex', lg: 'none'}
           }}
         >
@@ -179,7 +179,6 @@ function Stats(props) {
           display='block'
           sx={{
             position: 'absolute',
-            overflow: 'scroll',
           }}
         >
           <Grid container sx={styleNoSolution}>

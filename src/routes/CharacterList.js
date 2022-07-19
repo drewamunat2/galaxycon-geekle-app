@@ -2,7 +2,7 @@ import React, { Component } from "react";
 //import axios from "axios";
 import { Container, Paper, Typography } from "@mui/material";
 
-import CharacterDataGrid from "./components/CharacterDataGrid";
+import CharacterDataGrid from "../components/CharacterDataGrid";
 
 class CharacterList extends Component {
   constructor(props) {

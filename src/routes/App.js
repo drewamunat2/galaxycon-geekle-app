@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import Header from "./components/Header";
-import Title from "./components/Title";
-import Search from "./components/Search";
-import Game from "./components/Game";
+import Header from "../components/Header";
+import Title from "../components/Title";
+import Search from "../components/Search";
+import Game from "../components/Game";
 import axios from "axios";
 import { Box } from "@mui/material";
 class App extends Component {

@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@auth0/auth0-react": "^1.10.2",
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",
     "@mui/icons-material": "^5.8.2",
@@ -16,6 +17,7 @@
     "easymde": "^2.16.1",
     "prop-types": "^15.8.1",
     "react": "^18.1.0",
+    "react-auth-kit": "^2.1.0",
     "react-copy-to-clipboard": "^5.1.0",
     "react-countdown": "^2.3.2",
     "react-datalist-input": "^3.0.6",

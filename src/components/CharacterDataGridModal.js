@@ -31,7 +31,7 @@ const theme = createTheme({
 export default function CharacterDataGridModal (props) {
 
 
-  const { updateMode, mode } = props;
+  const { updateMode, mode, updateShowInfo } = props;
 
   const big = useMediaQuery(theme.breakpoints.up('laptop'));
 
@@ -51,17 +51,19 @@ export default function CharacterDataGridModal (props) {
   useEffect(() => {
     if(showInfo){
       updateMode();
+      updateShowInfo();
       setColor('green');
     }
-  }, [showInfo, updateMode]);
+  }, [showInfo, updateMode, updateShowInfo]);
 
   //checks if mode is EASY on mounting
   useEffect(() => {
     if(mode === 'EASY'){
       setColor('green');
       setShowInfo(true);
+      updateShowInfo();
     }
-  }, [mode]);
+  }, [mode, updateShowInfo]);
 
   return (
     <>

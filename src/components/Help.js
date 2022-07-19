@@ -51,7 +51,7 @@ function Help(props) {
         disableAutoFocus={true}
         sx={{
           position: 'absolute',
-          overflowY: 'auto',
+          overflow: 'scroll',
         }}
       >
         <Grid container sx={style}>
@@ -69,7 +69,7 @@ function Help(props) {
             <Typography id="rules-of-the-game" color="#086788" sx={{ mb: 2, mt: 2 }}>
               Guess the Galaxycon character in as few tries as possible, where 
               each character guessed will provide hints about the 
-              target character
+              mystery character
             </Typography>
           </Grid>
           <Grid container justifyContent="center" alignItems="center">
@@ -84,7 +84,7 @@ function Help(props) {
           </Grid>
           <Grid container justifyContent="center" alignItems="center">
             <Typography id="rules-of-the-game" color="#086788" sx={{ mb: 1 }}>
-              Leave character info off for HARD mode, or for hints switch it on for EASY mode
+              Leave character info off for HARD mode, or for hints open it up for EASY mode
             </Typography>
           </Grid>
           <Grid container justifyContent="center" alignItems="center">
@@ -103,32 +103,32 @@ function Help(props) {
           </Grid>
           <Grid container justifyContent="center" alignItems="center">
             <Typography id="rules-of-the-game" color="#086788" sx={{ mt: 1 }}>
-              Gender: correctly identifying the species
+              Gender: correctly identifying the species of the mystery character
             </Typography>
           </Grid>
           <Grid container justifyContent="center" alignItems="center">
             <Typography id="rules-of-the-game" color="#086788" sx={{ mt: 1 }}>
-              Role: correctly identifying whether the character is good or bad
+              Role: correctly identifying whether the mystery character is good or bad
             </Typography>
           </Grid>
           <Grid container justifyContent="center" alignItems="center">
             <Typography component='div' id="rules-of-the-game" color="#086788" sx={{ mt: 1 }}>
-              Appears In: correctly identifying a shared appearance with the target character
+              Appears In: correctly identifying a shared appearance with the mystery character
             </Typography>
           </Grid>
           <Grid container justifyContent="center" alignItems="center">
             <Typography id="rules-of-the-game" color="#086788" sx={{ mt: 1 }}>
-              Genre: correctly identifying a sub-genre of what the target character appears in 
+              Genre: correctly identifying a sub-genre of what the mystery character appears in 
             </Typography>
           </Grid>
           <Grid container justifyContent="center" alignItems="center">
             <Typography id="rules-of-the-game" color="#086788" sx={{ mt: 1 }}>
-              Platform: correctly identifying the universe of the target character
+              Platform: correctly identifying the universe of the mystery character
             </Typography>
           </Grid>
           <Grid container justifyContent="center" alignItems="center">
             <Typography id="rules-of-the-game" color="#086788" sx={{ mt: 1, mb:2 }}>
-              Year: correctly identifying the decade
+              Year: correctly identifying the decade of the mystery character's creation
             </Typography>
           </Grid>
           <Grid container justifyContent="center" alignItems="center">
