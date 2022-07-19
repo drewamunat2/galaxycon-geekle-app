@@ -302,15 +302,7 @@ class Search extends Component {
       this.assertColors(data[0]);
     } catch (err) {
       console.log(err);
-    }/*
-    const db = JSON.parse(JSON.stringify(data))
-    let nameType = this.state.showInfo ? "selectName" : "name"
-    for(let i = 0; i < db.characters.length; i++) {
-      let char = db.characters[i]
-      if(char[nameType] === guess) {
-        this.assertColors(char);
-      }
-    }*/
+    }
   };
 
   componentDidMount = async () => {
