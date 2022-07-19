@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-//import axios from "axios";
 import { Container, Paper, Typography } from "@mui/material";
+import {withIsAuthenticated} from 'react-auth-kit';
+import { Navigate } from "react-router-dom";
 
 import CharacterDataGrid from "../components/CharacterDataGrid";
 
@@ -35,30 +36,37 @@ class CharacterList extends Component {
   }
   
   render() {
-    return (
-      <Container>
-        <Paper 
-          elevation={0} 
-          square={true}
-          sx={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            textAlign: "center",
-            verticalAlign: "middle",
-            backgroundColor: '#fff0ff',
-            mt: 3,
-            mb: 3
-          }}
-        > 
-          <Typography id="Geekle-Character-List" color="#086788" variant="h3" component="h2">
-            Geekle Character List
-          </Typography>
-        </Paper>
-        <CharacterDataGrid />
-      </Container>
-    );
+    if(this.props.isAuthenticated()){
+      return (
+        <Container>
+          Hello {this.props.authState.user} <button onClick={() => this.props.signOut()}>Sign Out</button>
+          <Paper 
+            elevation={0} 
+            square={true}
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              textAlign: "center",
+              verticalAlign: "middle",
+              backgroundColor: '#fff0ff',
+              mt: 3,
+              mb: 3
+            }}
+          > 
+            <Typography id="Geekle-Character-List" color="#086788" variant="h3" component="h2">
+              Geekle Character List
+            </Typography>
+          </Paper>
+          <CharacterDataGrid />
+        </Container>
+      );
+    } else {
+      return (
+        <Navigate to="/login" replace={true} />
+      )
+    }
   }
 }
 
-export default CharacterList;
+export default withIsAuthenticated(CharacterList);

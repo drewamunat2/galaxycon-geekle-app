@@ -1,21 +1,20 @@
 import React from 'react';
 import './index.css'
 import * as ReactDOM from 'react-dom/client';
-import App from './routes/App';
-import Admin from './routes/Admin';
-import CharacterList from './routes/CharacterList';
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { AuthProvider } from 'react-auth-kit'
+import RouteComponent from './RouteComponent';
+import refreshApi from "./auth/refreshApi";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <React.StrictMode>
-    <Router>
-        <Routes>
-          <Route path="/" element={<App />} />
-          <Route path="/admin" element={<Admin />} />   
-          <Route path="/characters-in-geekle" element={<CharacterList />} />
-        </Routes>
-    </Router>
+    <AuthProvider 
+      authType = {'cookie'}
+      authName={'_auth'}
+      refresh={refreshApi}
+    >
+        <RouteComponent />
+    </AuthProvider>
   </React.StrictMode>
 );
