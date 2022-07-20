@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Grid } from "@mui/material";
+import { Grid, CircularProgress } from "@mui/material";
 import PropTypes from "prop-types";
 import axios from "axios";
 import Select from 'react-select'
@@ -369,7 +369,7 @@ class Search extends Component {
     } else {
       return (
         <>
-          <Grid
+          {this.state.allCharactersNames ? <Grid
             container
             alignItems="center"
             justifyContent="center"
@@ -396,8 +396,8 @@ class Search extends Component {
                 }}
               />
             </Grid>
-          </Grid>
-          <Grid
+          </Grid> : <Grid container alignItems="center" justifyContent='center' sx={{mt: 15, width: '100%', display: {xs:'none', sm:'flex'}}}><CircularProgress /></Grid>}
+          {this.state.allCharactersNames ? <Grid
             container
             alignItems="center"
             justifyContent="center"
@@ -424,7 +424,7 @@ class Search extends Component {
                 }}
               />
             </Grid>
-          </Grid>
+          </Grid> : <Grid container alignItems="center" justifyContent='center' sx={{mt: 15, width: '100%', display: {xs:'flex', sm:'none'}}}><CircularProgress /></Grid>}
           <ThemeProvider theme={theme}>
             <CharacterDataGridModal
               updateMode={this.props.updateMode}
