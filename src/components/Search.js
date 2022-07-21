@@ -153,7 +153,8 @@ class Search extends Component {
       currentGuess: '',
       allCharactersNames: [],
       showInfo: '',
-      openModal: false
+      openModal: false,
+      showSearchBar: false
     };
   }
 
@@ -325,7 +326,7 @@ class Search extends Component {
       };
       nameArray.push(nameObject);
     };
-    this.setState({allCharactersNames: nameArray});
+    this.setState({allCharactersNames: nameArray, showSearchBar: true});
     } catch (err) {
       console.log(err);
     }
@@ -369,7 +370,7 @@ class Search extends Component {
     } else {
       return (
         <>
-          {this.state.allCharactersNames ? <Grid
+          {this.state.showSearchBar ? <Grid
             container
             alignItems="center"
             justifyContent="center"
@@ -397,7 +398,7 @@ class Search extends Component {
               />
             </Grid>
           </Grid> : <Grid container alignItems="center" justifyContent='center' sx={{mt: 15, width: '100%', display: {xs:'none', sm:'flex'}}}><CircularProgress /></Grid>}
-          {this.state.allCharactersNames ? <Grid
+          {this.state.showSearchBar ? <Grid
             container
             alignItems="center"
             justifyContent="center"
