@@ -6,6 +6,180 @@ import CloseIcon from '@mui/icons-material/Close';
 import PropTypes from "prop-types";
 import { createTheme } from '@mui/material/styles';
 
+const initialState = {sorting: {
+  sortModel: [{field: 'name', sort:'asc'}]
+}}
+
+const columns = [
+  {
+    field: 'name',
+    headerName: 'Full name',
+    description: 'This column has a value getter and is not sortable.',
+    width: 160,
+    align: 'center',
+    headerAlign: 'center'
+  },
+  {
+    field: 'gender',
+    headerName: 'gender',
+    width: 100,
+    editable: false,
+    align: 'center',
+    headerAlign: 'center',
+  },
+  {
+    field: 'species',
+    headerName: 'species',
+    width: 150,
+    editable: false,
+    align: 'center',
+    headerAlign: 'center',
+    hide: true
+  },
+  {
+    field: 'role',
+    headerName: 'role',
+    width: 200,
+    editable: false,	
+    align: 'center',
+    headerAlign: 'center',
+  },
+  {
+    field: 'genRole',
+    headerName: 'general role',
+    width: 100,
+    editable: false,
+    align: 'center',
+    headerAlign: 'center',
+    hide: true
+  },
+  {
+    field: 'appearsIn',
+    headerName: 'main appearance',
+    width: 300,
+    editable: false,
+    align: 'center',
+    headerAlign: 'center',
+  },
+  {
+    field: 'genre',
+    headerName: 'main genre',
+    width: 150,
+    editable: false,
+    align: 'center',
+    headerAlign: 'center',
+  },
+  {
+    field: 'platform',
+    headerName: 'main platform',
+    width: 150,
+    editable: false,
+    align: 'center',
+    headerAlign: 'center',
+  },
+  {
+    field: 'owner',
+    headerName: 'owner',
+    width: 250,
+    editable: false,
+    align: 'center',
+    headerAlign: 'center',
+    hide: true
+  },
+  {
+    field: 'trademarkOwner',
+    headerName: 'trademark owner',
+    width: 250,
+    editable: false,
+    align: 'center',
+    headerAlign: 'center',
+    hide: true
+  },
+  {
+    field: 'network',
+    headerName: 'network',
+    width: 250,
+    editable: false,
+    align: 'center',
+    headerAlign: 'center',
+    hide: true
+  },
+  {
+    field: 'universe',
+    headerName: 'universe',
+    width: 150,
+    editable: false,
+    align: 'center',
+    headerAlign: 'center',
+    hide: true
+  },
+  {
+    field: 'year',
+    headerName: 'year',
+    width: 100,
+    editable: false,
+    align: 'center',
+    headerAlign: 'center',
+  },
+  {
+    field: 'decade',
+    headerName: 'decade',
+    width: 100,
+    editable: false,
+    align: 'center',
+    headerAlign: 'center',
+    hide: true
+  },
+  {
+    field: 'allPlatforms',
+    headerName: 'full platform list',
+    width: 250,
+    editable: false,
+    sortable: false,
+    align: 'center',
+    headerAlign: 'center',
+    hide: true
+  },
+  {
+    field: 'allGenres',
+    headerName: 'full genre list',
+    width: 950,
+    editable: false,
+    sortable: false,
+    align: 'left',
+    headerAlign: 'left',
+    hide: true
+  },
+  {
+    field: 'bothAppearsIn',
+    headerName: 'all appearances',
+    width: 2500,
+    editable: false,
+    sortable: false,
+    align: 'left',
+    headerAlign: 'left',
+    hide: true
+  },
+  {
+    field: 'title',
+    headerName: 'shop name',
+    width: 250,
+    editable: false,
+    align: 'center',
+    headerAlign: 'center',
+    hide: true
+  },
+  {
+    field: 'shop',
+    headerName: 'shop link',
+    width: 500,
+    editable: false,
+    align: 'left',
+    headerAlign: 'left',
+    hide: true
+  },
+];
+
 const style = {
   maxWidth: '1300px',
   minWidth: '350px',
@@ -115,7 +289,7 @@ export default function CharacterDataGridModal (props) {
               </IconButton>
             </Grid>
           </Grid>
-          <CharacterDataGrid sx={{mt:-3}}/>
+          <CharacterDataGrid columns={columns} initialState={initialState} sx={{mt:-3}}/>
         </Grid>
       </Modal>
     </>

@@ -71,7 +71,7 @@ function Settings() {
           <Grid container>
             <Grid item alignItems="left" textAlign='left' xs={6}>
               <Typography display='block' id="rules-of-the-game" color="#086788" variant="h6" sx={{ mt: 1, mb: 0 }}>
-                HARD MODE
+                EASY MODE
               </Typography>
             </Grid>
             <Grid item alignItems="right" textAlign='right' xs={6}>

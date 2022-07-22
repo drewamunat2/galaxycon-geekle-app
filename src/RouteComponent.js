@@ -3,7 +3,6 @@ import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
 import { RequireAuth } from 'react-auth-kit'
 import App from './routes/App';
 import Admin from './routes/Admin';
-import CharacterList from './routes/CharacterList';
 import Login from './routes/Login';
 
 export default function RouteComponent(){
@@ -15,11 +14,6 @@ export default function RouteComponent(){
           <Route path="/admin" element={
             <RequireAuth loginPath={'/login'}> 
               <Admin /> 
-            </RequireAuth>}
-          />
-          <Route path="/characters-in-geekle" element={
-            <RequireAuth loginPath={'/login'}> 
-              <CharacterList /> 
             </RequireAuth>}
           />
         </Routes>

@@ -28,7 +28,7 @@ function EditAPI(props) {
         justifyContent="center"
         alignItems="center"
       > 
-        <Grid container justifyContent="center" alignItems="center" sx={{mb: 2}}>
+        <Grid container justifyContent="center" alignItems="center" sx={{mt: 10, mb: 2}}>
           <Typography id="help-modal" color="#086788" variant="h3" component="h2">
             Edit Geekle Characters API
           </Typography>

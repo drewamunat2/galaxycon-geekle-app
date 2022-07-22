@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import EditAPI from "../components/EditAPI";
-import {withIsAuthenticated} from 'react-auth-kit';
-import { Navigate } from "react-router-dom";
+import AuthHeader from "../components/AuthHeader";
+import CharacterList from '../components/CharacterList';
 
 class Admin extends Component {
   constructor(props) {
@@ -97,9 +97,9 @@ class Admin extends Component {
   }
   
   render() {
-    if(this.props.isAuthenticated()){
       return (
         <>
+          <AuthHeader />
           <EditAPI 
             updateAddState={this.updateAddState}
             addState={this.state.addState}
@@ -110,14 +110,10 @@ class Admin extends Component {
             numCharacters={this.state.numCharacters}
             updateNumCharacters={this.updateNumCharacters}
           />
+          <CharacterList />
         </>
       );
-    } else {
-      return(
-        <Navigate to="/login" replace={true} />
-      )
-    }
   }
 }
 
-export default withIsAuthenticated(Admin);
+export default Admin;

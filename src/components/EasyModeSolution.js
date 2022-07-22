@@ -8,13 +8,6 @@ import PercentagesEasy from './PercentagesEasy';
 import { Snackbar } from '@mui/material';
 import Alert from '@mui/material/Alert';
 
-//import NarutoUzumaki from '../assets/NarutoUzumaki.webp'
-//import Raven from '../assets/Raven.webp'
-//import DarthVader from '../data/images/DarthVader.png'
-//import Raleigh from '../data/images/Raleigh.png'
-
-
-
 const styles = StyleSheet.create({
   img: {
     width: 335,
@@ -100,19 +93,6 @@ class EasyModeSolution extends Component {
     }
     return '#FF4242'
   };
-
-  /*link = () => {
-    let store = "https://galaxycon.com/search?q=";
-    let name = this.props.solution.name;
-    let link = store + name;
-    return link;
-  }
-
-  pic = () => {
-    let name = this.props.solution.name;
-    let link = name.replace(/\s/g, '');
-    return require(link);
-  }*/
 
   render () {
     return (

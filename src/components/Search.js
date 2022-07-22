@@ -1,10 +1,12 @@
-import React, { Component } from "react";
-import { Grid, CircularProgress } from "@mui/material";
+import React, { Component, Suspense } from "react";
+import { Grid } from "@mui/material";
 import PropTypes from "prop-types";
 import axios from "axios";
 import Select from 'react-select'
-import CharacterDataGridModal from "./CharacterDataGridModal";
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import SyncLoader from "react-spinners/SyncLoader";
+
+const CharacterDataGridModal = React.lazy(() => import('./CharacterDataGridModal'));
 
 const theme = createTheme({
   palette: {
@@ -154,7 +156,7 @@ class Search extends Component {
       allCharactersNames: [],
       showInfo: '',
       openModal: false,
-      showSearchBar: false
+      isLoading: true
     };
   }
 
@@ -326,7 +328,7 @@ class Search extends Component {
       };
       nameArray.push(nameObject);
     };
-    this.setState({allCharactersNames: nameArray, showSearchBar: true});
+    this.setState({allCharactersNames: nameArray, isLoading: false});
     } catch (err) {
       console.log(err);
     }
@@ -370,7 +372,7 @@ class Search extends Component {
     } else {
       return (
         <>
-          {this.state.showSearchBar ? <Grid
+          <Grid
             container
             alignItems="center"
             justifyContent="center"
@@ -392,13 +394,14 @@ class Search extends Component {
                 menuShouldBlockScroll={true}
                 cacheOptions={true}
                 blurInputOnSelect={true}
+                isLoading={this.state.isLoading}
                 components={{
                   IndicatorSeparator: () => null
                 }}
               />
             </Grid>
-          </Grid> : <Grid container alignItems="center" justifyContent='center' sx={{mt: 15, width: '100%', display: {xs:'none', sm:'flex'}}}><CircularProgress /></Grid>}
-          {this.state.showSearchBar ? <Grid
+          </Grid>
+          <Grid
             container
             alignItems="center"
             justifyContent="center"
@@ -420,19 +423,22 @@ class Search extends Component {
                 menuShouldBlockScroll={true}
                 cacheOptions={true}
                 blurInputOnSelect={true}
+                isLoading={this.state.isLoading}
                 components={{
                   IndicatorSeparator: () => null
                 }}
               />
             </Grid>
-          </Grid> : <Grid container alignItems="center" justifyContent='center' sx={{mt: 15, width: '100%', display: {xs:'flex', sm:'none'}}}><CircularProgress /></Grid>}
-          <ThemeProvider theme={theme}>
-            <CharacterDataGridModal
-              updateMode={this.props.updateMode}
-              mode={this.props.mode}
-              updateShowInfo={this.updateShowInfo}
-            />
-          </ThemeProvider>
+          </Grid> 
+          <Suspense fallback={<Grid container alignItems="center" justifyContent='center' sx={{width: '100%'}}><SyncLoader /></Grid>}>
+            <ThemeProvider theme={theme}>
+              <CharacterDataGridModal
+                updateMode={this.props.updateMode}
+                mode={this.props.mode}
+                updateShowInfo={this.updateShowInfo}
+              />
+              </ThemeProvider> 
+          </Suspense>
         </>
       );
     }

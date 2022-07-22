@@ -10,4 +10,4 @@ class Logout extends React.Component {
     }
 }
 
-export default withSignIn(Logout)
+export default withSignOut(Logout)

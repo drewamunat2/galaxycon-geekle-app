@@ -1,8 +1,7 @@
 import { Paper, IconButton } from '@mui/material';
-
 import Settings from './Settings';
-import Help from './Help';
 import Stats from './Stats';
+import Help from './Help';
 
 function Info(props) {
 
