@@ -153,8 +153,6 @@ class App extends Component {
         tomorrow: this.getTomorrow()
       }));
     }
-    //const db = JSON.parse(JSON.stringify(data))
-    //console.log(this.state.tomorrow)
     const solutionDate = this.getTomorrow();
     const bigNum = solutionDate.getDate() * (solutionDate.getMonth() + 1) * solutionDate.getFullYear();
     try{
@@ -277,7 +275,6 @@ class App extends Component {
     }
     if(this.state.time !== prevState.time) {
       if(this.state.time.getTime() >= new Date(this.state.tomorrow).getTime()) {
-        console.log("reset!")
         this.setState({ 
           characters: [],
           solution: this.setSolution(),

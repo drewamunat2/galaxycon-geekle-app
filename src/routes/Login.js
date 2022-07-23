@@ -71,10 +71,9 @@ export default function Login () {
     if(data.get('username') !== '' && data.get('password') !== ''){
     setShowUsernameError(false);
     setShowPasswordError(false);
-    const formData = {username: data.get('username'), password: data.get('password'),}
-    console.log(formData)
+    const formData = {username: data.get('username'), password: data.get('password')}
       e.preventDefault()
-      axios.post('http://localhost:5050/authenticate', formData)
+      axios.post('https://geekle-galaxycon.herokuapp.com/authenticate', formData)
       .then((res)=>{
           if(res.status === 200){
               if(signIn({token: res.data.token,

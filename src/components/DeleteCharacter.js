@@ -76,7 +76,6 @@ class DeleteCharacter extends Component {
   }
 
   submitForm = (id) => {
-    console.log(id);
     client.delete(id)
     .then(() => {
       alert('success. Hit clear and refresh to delete another character');
@@ -93,16 +92,12 @@ class DeleteCharacter extends Component {
   getNames = async () => {
     const { data } = await axios.get(`https://geekle-galaxycon.herokuapp.com/api/names`);
     this.setState({names: data.names});
-    console.log(data.names.length)
     this.props.updateNumCharacters(data.names.length);
   };
 
   getCharacter = async (name) => {
-    console.log(name)
     const { data } = await axios.get(`https://geekle-galaxycon.herokuapp.com/api/getCharacter?name=${name}`);
     this.setState({character: data.data[0]});
-    console.log(data.data[0]);
-    console.log(data.data[0].name + ": " + data.data[0])
   }
 
   handleNameChange = (event) => {
