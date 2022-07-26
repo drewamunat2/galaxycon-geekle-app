@@ -284,7 +284,8 @@ class App extends Component {
           outOfTurns: false,
           gameStarted: false,
           tomorrow: this.getTomorrow(),
-          mode: 'HARD'
+          mode: 'HARD',
+          openHelp: false
         });
         this.saveOutOfTurns();
         this.saveGameStarted();
