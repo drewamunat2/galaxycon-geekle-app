@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import axios from 'axios'
 import { useSignIn } from 'react-auth-kit'
-import { useNavigate, Navigate } from 'react-router-dom'
+import { Navigate } from 'react-router-dom'
 import {useIsAuthenticated} from 'react-auth-kit';
 
 import Avatar from '@mui/material/Avatar';
@@ -49,7 +49,7 @@ function FormError(props) {
 
   return (
     <>
-      <Typography component="h7" variant="h" color='error'>
+      <Typography variant="h7" color='error'>
         {showMessage()}
       </Typography>
     </>
@@ -59,12 +59,12 @@ function FormError(props) {
 const theme = createTheme();
 
 export default function Login () {
-  const navigate = useNavigate()
-  const signIn = useSignIn()
-  const isAuthenticated = useIsAuthenticated()
-  const [showIncorrectError, setShowIncorrectError] = useState(false)
-  const [showUsernameError, setShowUsernameError] = useState(false)
-  const [showPasswordError, setShowPasswordError] = useState(false)
+  const signIn = useSignIn();
+  const isAuthenticated = useIsAuthenticated();
+  const [showIncorrectError, setShowIncorrectError] = useState(false);
+  const [showUsernameError, setShowUsernameError] = useState(false);
+  const [showPasswordError, setShowPasswordError] = useState(false);
+  const [authToken, setAuthToken] = useState('');
 
   const onSubmit = (e) => {
     const data = new FormData(e.currentTarget);
@@ -82,8 +82,9 @@ export default function Login () {
                           authState: {name: res.data.name, uid: res.data.uid},
                           /*refreshToken: res.data.refreshToken,                    // Only if you are using refreshToken feature
                           refreshTokenExpireIn: res.data.refreshTokenExpireIn*/})){ // Only if you are using refreshToken feature 
-                navigate("/admin");
                 setShowIncorrectError(false);
+                setAuthToken(res.data.token);
+                console.log(res.data.token)
               }else {
                 alert("Error Occoured. Try Again");
                 setShowIncorrectError(true);
@@ -95,7 +96,7 @@ export default function Login () {
   }
 
   if(isAuthenticated()){
-    return (<Navigate to={'/admin'} replace/>);
+    return (<Navigate to={'/admin'} state={{token: authToken }} replace/>);
   } else {
     return (
       <ThemeProvider theme={theme}>

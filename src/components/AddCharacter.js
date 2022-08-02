@@ -6,10 +6,6 @@ const client = axios.create({
   baseURL: "https://geekle-galaxycon.herokuapp.com/api/characters" 
 });
 
-const config = {
-  headers: { Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiQ0xJRU5UIn0.zv1234WBhwy8IBW4LnQrEAW9T8e_EAfb1Kk45mV0QLM` }
-};
-
 const style = {
   minWidth: 900,
   maxHeight: 500,
@@ -128,7 +124,7 @@ class AddCharacter extends Component {
   }
 
   submitForm = (character) => {
-    client.post('', character, config)
+    client.post('', character, {headers: {Authorization: `Bearer ${this.props.token}`}})
     .then(() => {
       alert('success please hit clear and refresh to add another character');
       window.open(`mailto:${this.emailTo()}?subject=${this.emailSubject()}&body=${this.emailBody()}`);

@@ -6,10 +6,6 @@ const client = axios.create({
   baseURL: "https://geekle-galaxycon.herokuapp.com/api/characters" 
 });
 
-const config = {
-  headers: { Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiQ0xJRU5UIn0.zv1234WBhwy8IBW4LnQrEAW9T8e_EAfb1Kk45mV0QLM` }
-};
-
 const style = {
   minWidth: 900,
   maxHeight: 500,
@@ -112,7 +108,7 @@ class EditCharacter extends Component {
   
 
   submitForm = (id, character, oldFieldValue) => {
-    const put = client.put(id, character, config)
+    const put = client.put(id, character, {headers: {Authorization: `Bearer ${this.props.token}`}})
     .then(() => {
       alert('success. Hit clear and refresh to edit another character');
       window.open(`mailto:${this.emailTo()}?subject=${this.emailSubject(oldFieldValue)}&body=${this.emailBody(character)}`);
@@ -156,6 +152,7 @@ class EditCharacter extends Component {
   componentDidMount() {
     this.setState(this.props.editState);
     this.getNames();
+    console.log(this.props.token)
   }
 
   render() {

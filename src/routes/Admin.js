@@ -109,6 +109,7 @@ class Admin extends Component {
             deleteState={this.state.deleteState}
             numCharacters={this.state.numCharacters}
             updateNumCharacters={this.updateNumCharacters}
+            token={this.props.location.state.token}
           />
           <CharacterList />
         </>

@@ -2,7 +2,7 @@ import React from "react"
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
 import { RequireAuth } from 'react-auth-kit'
 import App from './routes/App';
-import Admin from './routes/Admin';
+import WrappedAdmin from './components/WrappedAdmin';
 import Login from './routes/Login';
 
 export default function RouteComponent(){
@@ -13,7 +13,7 @@ export default function RouteComponent(){
           <Route path={'/login'} element={<Login/>}/>
           <Route path="/admin" element={
             <RequireAuth loginPath={'/login'}> 
-              <Admin /> 
+              <WrappedAdmin /> 
             </RequireAuth>}
           />
         </Routes>

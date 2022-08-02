@@ -20,7 +20,7 @@ const theme = createTheme({
 
 function EditAPI(props) {
 
-  const { updateAddState, addState, editState, updateEditState, deleteState, updateDeleteState, numCharacters, updateNumCharacters } = props;
+  const { token, updateAddState, addState, editState, updateEditState, deleteState, updateDeleteState, numCharacters, updateNumCharacters } = props;
 
   return (
     <ThemeProvider theme={theme}>
@@ -38,17 +38,20 @@ function EditAPI(props) {
           addState={addState}
           numCharacters={numCharacters}
           updateNumCharacters={updateNumCharacters}
+          token={token}
         />
         <EditCharacter 
           updateEditState={updateEditState}
           editState={editState}
           updateNumCharacters={updateNumCharacters}
+          token={token}
         />
         <DeleteCharacter 
           updateDeleteState={updateDeleteState}
           deleteState={deleteState}
           numCharacters={numCharacters}
           updateNumCharacters={updateNumCharacters}
+          token={token}
         />
       </Box>
     </ThemeProvider>
