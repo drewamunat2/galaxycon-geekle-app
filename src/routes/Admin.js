@@ -8,7 +8,6 @@ class Admin extends Component {
     super(props);
     this.state = {
       user: '',
-      authenticate: false,
       addState: {},
       editState: {},
       numCharacters: 0,
@@ -49,7 +48,6 @@ class Admin extends Component {
   }
 
   componentDidMount() {
-    this.setState({authenticate: true});
     if(JSON.parse(window.localStorage.getItem("addState"))) {
       this.setState({ 
         addState: JSON.parse(window.localStorage.getItem("addState"))
@@ -109,7 +107,7 @@ class Admin extends Component {
             deleteState={this.state.deleteState}
             numCharacters={this.state.numCharacters}
             updateNumCharacters={this.updateNumCharacters}
-            token={this.props.location.state.token}
+            token={this.props.location.state ? this.props.location.state.token : ''}
           />
           <CharacterList />
         </>
