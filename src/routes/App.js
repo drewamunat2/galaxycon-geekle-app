@@ -108,7 +108,7 @@ class App extends Component {
     const solutionDate = this.getTomorrow();
     const bigNum = solutionDate.getDate() * (solutionDate.getMonth() + 1) * solutionDate.getFullYear();
     try{
-      const response = await axios.get(`https://geekle-galaxycon.herokuapp.com/api/solution?num=${bigNum}`);
+      const response = await axios.get(`https://galaxycon-geekle-api.herokuapp.com/api/solution?num=${bigNum}`);
       const data = response.data;
       const solution = data.solution;
       delete solution._id;
@@ -156,7 +156,7 @@ class App extends Component {
     const solutionDate = this.getTomorrow();
     const bigNum = solutionDate.getDate() * (solutionDate.getMonth() + 1) * solutionDate.getFullYear();
     try{
-      const response = await axios.get(`https://geekle-galaxycon.herokuapp.com/api/solution?num=${bigNum}`);
+      const response = await axios.get(`https://galaxycon-geekle-api.herokuapp.com/api/solution?num=${bigNum}`);
       const data = response.data;
       const solution = data.solution;
       delete solution._id;

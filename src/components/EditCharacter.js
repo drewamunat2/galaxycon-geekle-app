@@ -3,7 +3,7 @@ import { Typography, Grid, Input, Button, Box, InputLabel, MenuItem, FormControl
 import axios from "axios";
 
 const client = axios.create({
-  baseURL: "https://geekle-galaxycon.herokuapp.com/api/characters" 
+  baseURL: "https://galaxycon-geekle-api.herokuapp.com/api/characters" 
 });
 
 const style = {
@@ -123,13 +123,13 @@ class EditCharacter extends Component {
   }
 
   getNames = async () => {
-    const { data } = await axios.get(`https://geekle-galaxycon.herokuapp.com/api/names`);
+    const { data } = await axios.get(`https://galaxycon-geekle-api.herokuapp.com/api/names`);
     this.setState({names: data.names});
     this.props.updateNumCharacters(data.names.length);
   };
 
   getCharacter = async (name) => {
-    const { data } = await axios.get(`https://geekle-galaxycon.herokuapp.com/api/getCharacter?name=${name}`);
+    const { data } = await axios.get(`https://galaxycon-geekle-api.herokuapp.com/api/getCharacter?name=${name}`);
     console.log(data.data[0])
     this.setState({character: data.data[0]});
   }

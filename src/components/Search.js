@@ -297,7 +297,7 @@ class Search extends Component {
     if(this.state.showInfo) {
       guess = guess.split('(')[0];
     }
-    const characterAPI = 'https://geekle-galaxycon.herokuapp.com/api/getCharacter?name=';
+    const characterAPI = 'https://galaxycon-geekle-api.herokuapp.com/api/getCharacter?name=';
     const char = guess;
     try {
       const response = await axios.get(`${characterAPI}${char}`);
@@ -320,7 +320,7 @@ class Search extends Component {
       value: ''
     };
     try{
-    const { data } = await axios.get(`https://geekle-galaxycon.herokuapp.com/api/${nameType}s`);
+    const { data } = await axios.get(`https://galaxycon-geekle-api.herokuapp.com/api/${nameType}s`);
     for(let i = 0; i < data.names.length; i++) {
       nameObject = {
         label: data.names[i],

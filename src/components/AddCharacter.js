@@ -3,7 +3,7 @@ import { Typography, Grid, Input, Button, Box } from "@mui/material";
 import axios from "axios";
 
 const client = axios.create({
-  baseURL: "https://geekle-galaxycon.herokuapp.com/api/characters" 
+  baseURL: "https://galaxycon-geekle-api.herokuapp.com/api/characters" 
 });
 
 const style = {

@@ -14,7 +14,7 @@ export default function CharacterDataGrid(props) {
   const [showData, setShowData] = useState(false);
 
   const getData = async () => {
-    const { data } = await axios.get(`https://geekle-galaxycon.herokuapp.com/api/characters`);
+    const { data } = await axios.get(`https://galaxycon-geekle-api.herokuapp.com/api/characters`);
     setCharacters(data.data);
   };
 
